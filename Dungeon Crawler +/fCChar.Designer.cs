@@ -95,6 +95,20 @@
             this.RollLabel4 = new System.Windows.Forms.Label();
             this.RollLabel3 = new System.Windows.Forms.Label();
             this.RollLabel2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.PBSTRLabel = new System.Windows.Forms.Label();
+            this.PBCHALabel = new System.Windows.Forms.Label();
+            this.PBWISLabel = new System.Windows.Forms.Label();
+            this.PBINTLabel = new System.Windows.Forms.Label();
+            this.PBCONLabel = new System.Windows.Forms.Label();
+            this.PBDEXLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -110,6 +124,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BLanguagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProficienciesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // CCharMenuStrip
@@ -144,6 +160,18 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.textBox6);
+            this.tabPage5.Controls.Add(this.textBox5);
+            this.tabPage5.Controls.Add(this.textBox4);
+            this.tabPage5.Controls.Add(this.textBox3);
+            this.tabPage5.Controls.Add(this.textBox2);
+            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.PBDEXLabel);
+            this.tabPage5.Controls.Add(this.PBCONLabel);
+            this.tabPage5.Controls.Add(this.PBINTLabel);
+            this.tabPage5.Controls.Add(this.PBWISLabel);
+            this.tabPage5.Controls.Add(this.PBCHALabel);
+            this.tabPage5.Controls.Add(this.PBSTRLabel);
             this.tabPage5.Controls.Add(this.RollLabel2);
             this.tabPage5.Controls.Add(this.RollLabel3);
             this.tabPage5.Controls.Add(this.RollLabel4);
@@ -171,6 +199,7 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Ability Score";
             this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // tabPage1
             // 
@@ -197,7 +226,7 @@
             // LanguagesGrid
             // 
             this.LanguagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LanguagesGrid.Location = new System.Drawing.Point(430, 492);
+            this.LanguagesGrid.Location = new System.Drawing.Point(430, 474);
             this.LanguagesGrid.Name = "LanguagesGrid";
             this.LanguagesGrid.Size = new System.Drawing.Size(240, 151);
             this.LanguagesGrid.TabIndex = 22;
@@ -213,7 +242,7 @@
             // LanguagesLabel
             // 
             this.LanguagesLabel.AutoSize = true;
-            this.LanguagesLabel.Location = new System.Drawing.Point(285, 492);
+            this.LanguagesLabel.Location = new System.Drawing.Point(285, 474);
             this.LanguagesLabel.Name = "LanguagesLabel";
             this.LanguagesLabel.Size = new System.Drawing.Size(63, 13);
             this.LanguagesLabel.TabIndex = 20;
@@ -318,7 +347,7 @@
             // LevelingGrid
             // 
             this.LevelingGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LevelingGrid.Location = new System.Drawing.Point(393, 221);
+            this.LevelingGrid.Location = new System.Drawing.Point(830, 29);
             this.LevelingGrid.Name = "LevelingGrid";
             this.LevelingGrid.Size = new System.Drawing.Size(240, 150);
             this.LevelingGrid.TabIndex = 28;
@@ -334,7 +363,7 @@
             // LevelingLabel
             // 
             this.LevelingLabel.AutoSize = true;
-            this.LevelingLabel.Location = new System.Drawing.Point(276, 221);
+            this.LevelingLabel.Location = new System.Drawing.Point(713, 29);
             this.LevelingLabel.Name = "LevelingLabel";
             this.LevelingLabel.Size = new System.Drawing.Size(80, 13);
             this.LevelingLabel.TabIndex = 26;
@@ -372,6 +401,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridView2);
+            this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Controls.Add(this.CharacteristicsGrid);
             this.tabPage3.Controls.Add(this.CharacteristicsLabel);
             this.tabPage3.Controls.Add(this.BEquipmentGrid);
@@ -388,11 +419,12 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Background";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // CharacteristicsGrid
             // 
             this.CharacteristicsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CharacteristicsGrid.Location = new System.Drawing.Point(908, 29);
+            this.CharacteristicsGrid.Location = new System.Drawing.Point(833, 29);
             this.CharacteristicsGrid.Name = "CharacteristicsGrid";
             this.CharacteristicsGrid.Size = new System.Drawing.Size(240, 150);
             this.CharacteristicsGrid.TabIndex = 32;
@@ -400,7 +432,7 @@
             // CharacteristicsLabel
             // 
             this.CharacteristicsLabel.AutoSize = true;
-            this.CharacteristicsLabel.Location = new System.Drawing.Point(725, 29);
+            this.CharacteristicsLabel.Location = new System.Drawing.Point(650, 29);
             this.CharacteristicsLabel.Name = "CharacteristicsLabel";
             this.CharacteristicsLabel.Size = new System.Drawing.Size(133, 13);
             this.CharacteristicsLabel.TabIndex = 31;
@@ -627,7 +659,7 @@
             // 
             // RollButton
             // 
-            this.RollButton.Location = new System.Drawing.Point(261, 24);
+            this.RollButton.Location = new System.Drawing.Point(556, 24);
             this.RollButton.Name = "RollButton";
             this.RollButton.Size = new System.Drawing.Size(75, 23);
             this.RollButton.TabIndex = 0;
@@ -646,7 +678,7 @@
             // PointBuyLabel
             // 
             this.PointBuyLabel.AutoSize = true;
-            this.PointBuyLabel.Location = new System.Drawing.Point(36, 350);
+            this.PointBuyLabel.Location = new System.Drawing.Point(36, 273);
             this.PointBuyLabel.Name = "PointBuyLabel";
             this.PointBuyLabel.Size = new System.Drawing.Size(92, 13);
             this.PointBuyLabel.TabIndex = 2;
@@ -654,7 +686,7 @@
             // 
             // STRButton
             // 
-            this.STRButton.Location = new System.Drawing.Point(261, 140);
+            this.STRButton.Location = new System.Drawing.Point(260, 191);
             this.STRButton.Name = "STRButton";
             this.STRButton.Size = new System.Drawing.Size(75, 23);
             this.STRButton.TabIndex = 3;
@@ -663,7 +695,7 @@
             // 
             // DEXButton
             // 
-            this.DEXButton.Location = new System.Drawing.Point(379, 140);
+            this.DEXButton.Location = new System.Drawing.Point(378, 191);
             this.DEXButton.Name = "DEXButton";
             this.DEXButton.Size = new System.Drawing.Size(75, 23);
             this.DEXButton.TabIndex = 4;
@@ -672,7 +704,7 @@
             // 
             // CONButton
             // 
-            this.CONButton.Location = new System.Drawing.Point(496, 140);
+            this.CONButton.Location = new System.Drawing.Point(495, 191);
             this.CONButton.Name = "CONButton";
             this.CONButton.Size = new System.Drawing.Size(75, 23);
             this.CONButton.TabIndex = 5;
@@ -681,7 +713,7 @@
             // 
             // INTButton
             // 
-            this.INTButton.Location = new System.Drawing.Point(616, 140);
+            this.INTButton.Location = new System.Drawing.Point(615, 191);
             this.INTButton.Name = "INTButton";
             this.INTButton.Size = new System.Drawing.Size(75, 23);
             this.INTButton.TabIndex = 6;
@@ -690,7 +722,7 @@
             // 
             // WISButton
             // 
-            this.WISButton.Location = new System.Drawing.Point(741, 140);
+            this.WISButton.Location = new System.Drawing.Point(740, 191);
             this.WISButton.Name = "WISButton";
             this.WISButton.Size = new System.Drawing.Size(75, 23);
             this.WISButton.TabIndex = 7;
@@ -699,7 +731,7 @@
             // 
             // CHAButton
             // 
-            this.CHAButton.Location = new System.Drawing.Point(860, 140);
+            this.CHAButton.Location = new System.Drawing.Point(859, 191);
             this.CHAButton.Name = "CHAButton";
             this.CHAButton.Size = new System.Drawing.Size(75, 23);
             this.CHAButton.TabIndex = 8;
@@ -708,42 +740,42 @@
             // 
             // STRTextBox
             // 
-            this.STRTextBox.Location = new System.Drawing.Point(275, 104);
+            this.STRTextBox.Location = new System.Drawing.Point(274, 155);
             this.STRTextBox.Name = "STRTextBox";
             this.STRTextBox.Size = new System.Drawing.Size(48, 20);
             this.STRTextBox.TabIndex = 9;
             // 
             // CHATextBox
             // 
-            this.CHATextBox.Location = new System.Drawing.Point(873, 104);
+            this.CHATextBox.Location = new System.Drawing.Point(872, 155);
             this.CHATextBox.Name = "CHATextBox";
             this.CHATextBox.Size = new System.Drawing.Size(48, 20);
             this.CHATextBox.TabIndex = 10;
             // 
             // WISTextBox
             // 
-            this.WISTextBox.Location = new System.Drawing.Point(755, 104);
+            this.WISTextBox.Location = new System.Drawing.Point(754, 155);
             this.WISTextBox.Name = "WISTextBox";
             this.WISTextBox.Size = new System.Drawing.Size(48, 20);
             this.WISTextBox.TabIndex = 11;
             // 
             // INTTextBox
             // 
-            this.INTTextBox.Location = new System.Drawing.Point(630, 104);
+            this.INTTextBox.Location = new System.Drawing.Point(629, 155);
             this.INTTextBox.Name = "INTTextBox";
             this.INTTextBox.Size = new System.Drawing.Size(48, 20);
             this.INTTextBox.TabIndex = 12;
             // 
             // CONTextBox
             // 
-            this.CONTextBox.Location = new System.Drawing.Point(509, 104);
+            this.CONTextBox.Location = new System.Drawing.Point(508, 155);
             this.CONTextBox.Name = "CONTextBox";
             this.CONTextBox.Size = new System.Drawing.Size(48, 20);
             this.CONTextBox.TabIndex = 13;
             // 
             // DEXTextBox
             // 
-            this.DEXTextBox.Location = new System.Drawing.Point(393, 104);
+            this.DEXTextBox.Location = new System.Drawing.Point(392, 155);
             this.DEXTextBox.Name = "DEXTextBox";
             this.DEXTextBox.Size = new System.Drawing.Size(48, 20);
             this.DEXTextBox.TabIndex = 14;
@@ -751,7 +783,7 @@
             // RollLabel1
             // 
             this.RollLabel1.AutoSize = true;
-            this.RollLabel1.Location = new System.Drawing.Point(390, 29);
+            this.RollLabel1.Location = new System.Drawing.Point(294, 93);
             this.RollLabel1.Name = "RollLabel1";
             this.RollLabel1.Size = new System.Drawing.Size(16, 13);
             this.RollLabel1.TabIndex = 15;
@@ -760,7 +792,7 @@
             // RollLabel6
             // 
             this.RollLabel6.AutoSize = true;
-            this.RollLabel6.Location = new System.Drawing.Point(984, 29);
+            this.RollLabel6.Location = new System.Drawing.Point(888, 93);
             this.RollLabel6.Name = "RollLabel6";
             this.RollLabel6.Size = new System.Drawing.Size(16, 13);
             this.RollLabel6.TabIndex = 16;
@@ -769,7 +801,7 @@
             // RollLabel5
             // 
             this.RollLabel5.AutoSize = true;
-            this.RollLabel5.Location = new System.Drawing.Point(870, 29);
+            this.RollLabel5.Location = new System.Drawing.Point(774, 93);
             this.RollLabel5.Name = "RollLabel5";
             this.RollLabel5.Size = new System.Drawing.Size(16, 13);
             this.RollLabel5.TabIndex = 17;
@@ -778,7 +810,7 @@
             // RollLabel4
             // 
             this.RollLabel4.AutoSize = true;
-            this.RollLabel4.Location = new System.Drawing.Point(752, 29);
+            this.RollLabel4.Location = new System.Drawing.Point(656, 93);
             this.RollLabel4.Name = "RollLabel4";
             this.RollLabel4.Size = new System.Drawing.Size(16, 13);
             this.RollLabel4.TabIndex = 18;
@@ -787,7 +819,7 @@
             // RollLabel3
             // 
             this.RollLabel3.AutoSize = true;
-            this.RollLabel3.Location = new System.Drawing.Point(627, 29);
+            this.RollLabel3.Location = new System.Drawing.Point(531, 93);
             this.RollLabel3.Name = "RollLabel3";
             this.RollLabel3.Size = new System.Drawing.Size(16, 13);
             this.RollLabel3.TabIndex = 19;
@@ -796,11 +828,123 @@
             // RollLabel2
             // 
             this.RollLabel2.AutoSize = true;
-            this.RollLabel2.Location = new System.Drawing.Point(506, 29);
+            this.RollLabel2.Location = new System.Drawing.Point(410, 93);
             this.RollLabel2.Name = "RollLabel2";
             this.RollLabel2.Size = new System.Drawing.Size(16, 13);
             this.RollLabel2.TabIndex = 20;
             this.RollLabel2.Text = "---";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(833, 211);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 33;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(833, 402);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 34;
+            // 
+            // PBSTRLabel
+            // 
+            this.PBSTRLabel.AutoSize = true;
+            this.PBSTRLabel.Location = new System.Drawing.Point(136, 305);
+            this.PBSTRLabel.Name = "PBSTRLabel";
+            this.PBSTRLabel.Size = new System.Drawing.Size(50, 13);
+            this.PBSTRLabel.TabIndex = 21;
+            this.PBSTRLabel.Text = "Strength:";
+            // 
+            // PBCHALabel
+            // 
+            this.PBCHALabel.AutoSize = true;
+            this.PBCHALabel.Location = new System.Drawing.Point(136, 483);
+            this.PBCHALabel.Name = "PBCHALabel";
+            this.PBCHALabel.Size = new System.Drawing.Size(53, 13);
+            this.PBCHALabel.TabIndex = 22;
+            this.PBCHALabel.Text = "Charisma:";
+            // 
+            // PBWISLabel
+            // 
+            this.PBWISLabel.AutoSize = true;
+            this.PBWISLabel.Location = new System.Drawing.Point(136, 448);
+            this.PBWISLabel.Name = "PBWISLabel";
+            this.PBWISLabel.Size = new System.Drawing.Size(48, 13);
+            this.PBWISLabel.TabIndex = 23;
+            this.PBWISLabel.Text = "Wisdom:";
+            // 
+            // PBINTLabel
+            // 
+            this.PBINTLabel.AutoSize = true;
+            this.PBINTLabel.Location = new System.Drawing.Point(136, 414);
+            this.PBINTLabel.Name = "PBINTLabel";
+            this.PBINTLabel.Size = new System.Drawing.Size(68, 13);
+            this.PBINTLabel.TabIndex = 24;
+            this.PBINTLabel.Text = "Intellegence:";
+            // 
+            // PBCONLabel
+            // 
+            this.PBCONLabel.AutoSize = true;
+            this.PBCONLabel.Location = new System.Drawing.Point(136, 380);
+            this.PBCONLabel.Name = "PBCONLabel";
+            this.PBCONLabel.Size = new System.Drawing.Size(65, 13);
+            this.PBCONLabel.TabIndex = 25;
+            this.PBCONLabel.Text = "Constitution:";
+            // 
+            // PBDEXLabel
+            // 
+            this.PBDEXLabel.AutoSize = true;
+            this.PBDEXLabel.Location = new System.Drawing.Point(136, 343);
+            this.PBDEXLabel.Name = "PBDEXLabel";
+            this.PBDEXLabel.Size = new System.Drawing.Size(51, 13);
+            this.PBDEXLabel.TabIndex = 26;
+            this.PBDEXLabel.Text = "Dexterity:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(233, 302);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(48, 20);
+            this.textBox1.TabIndex = 27;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(233, 480);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(48, 20);
+            this.textBox2.TabIndex = 28;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(233, 445);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(48, 20);
+            this.textBox3.TabIndex = 29;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(233, 411);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(48, 20);
+            this.textBox4.TabIndex = 30;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(233, 377);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(48, 20);
+            this.textBox5.TabIndex = 31;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(233, 340);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(48, 20);
+            this.textBox6.TabIndex = 32;
             // 
             // CChar
             // 
@@ -845,6 +989,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BLanguagesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProficienciesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -919,6 +1065,20 @@
         private System.Windows.Forms.Label PointBuyLabel;
         private System.Windows.Forms.Label ClassicLabel;
         private System.Windows.Forms.Button RollButton;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label PBDEXLabel;
+        private System.Windows.Forms.Label PBCONLabel;
+        private System.Windows.Forms.Label PBINTLabel;
+        private System.Windows.Forms.Label PBWISLabel;
+        private System.Windows.Forms.Label PBCHALabel;
+        private System.Windows.Forms.Label PBSTRLabel;
     }
 }
 

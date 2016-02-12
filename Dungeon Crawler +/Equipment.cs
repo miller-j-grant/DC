@@ -60,7 +60,7 @@ namespace Dungeon_Crawler__
 
         // doesn't like my constructors at he moment, but it's 5am and I'm tired soooooo I'll worry about that later
 
-        public Armor(String name)
+        public void Armor(String name)
         {
             if (name.Equals("Padded"))
             {
@@ -80,12 +80,12 @@ namespace Dungeon_Crawler__
             }
         }
 
-        public Weapon(String name)
+        public void Weapon(String name)
         {
 
         }
 
-        public Tool(String name)
+        public void Tool(String name)
         {
 
         }

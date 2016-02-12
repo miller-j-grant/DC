@@ -4,3 +4,7 @@ C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Splash.resources
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.pdb
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb

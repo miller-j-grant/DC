@@ -26,5 +26,15 @@ namespace Dungeon_Crawler__
         {
 
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
