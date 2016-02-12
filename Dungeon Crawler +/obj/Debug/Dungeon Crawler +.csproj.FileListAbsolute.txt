@@ -1,0 +1,6 @@
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe.config
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csprojResolveAssemblyReference.cache
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.CChar.resources
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Splash.resources
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache

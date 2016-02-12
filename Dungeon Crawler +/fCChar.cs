@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DungeonCrawler
+namespace Dungeon_Crawler__
 {
-    public partial class Form1 : Form
+    public partial class CChar : Form
     {
-        public Form1()
+        public CChar()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
