@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,49 +13,58 @@ namespace Dungeon_Crawler__
     // but it is technically optional, sooooooo ><
     class Background
     {
-        private String skill;
-        private String tool;
-        private String lang;
-        private String equip;
-        private String ft;
+        private ArrayList prof;
+        private ArrayList lang;
+        private ArrayList equip;
+        private int wealth;
+        private string ft;
 
         // extra is for like Charlatan "Favorite Schemes"
-        private String extra;
+        private string []extra;
 
         // Personality Trait
-        private String person;
-        private String ideal;
-        private String bond;
-        private String flaw;
+        private string[] person;
+        private string[] ideal;
+        private string[] bond;
+        private string[] flaw;
 
         public Background()
         {
 
         }
 
-        public Background(String bg)
+        public Background(string bg)
         {
             if (bg.Equals("Acolyte"))
             {
-                skill = "Insight, Religion";
-                lang = "Two of your choice";
-                equip = "Holy Symbol, Prayer book or prayer wheel, "
-                    + "5 sticks of incense, Vestments, Common clothes, 15gp";
+                prof.Add("Insight");
+                prof.Add("Religion");
+
+                lang.Add("Two of your choice");
+
+                equip.Add("Holy Symbol");
+                equip.Add("Prayer book or prayer wheel");
+                equip.Add("5 sticks of incense");
+                equip.Add("Vestments");
+                equip.Add("Common clothes");
+
+                // in gp
+                wealth = 15;
                 ft = "Shelther of the Faithful";
 
                 // OTL fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-                person = "1: I idolize a particular hero of my faith, and constantly refer to that person's deeds and example. "
-                    + "2: I can find common ground between the fiercest enemies, empathizing with them and always working toward peace. "
-                    + "etc";
+                person = new string[] { "1: I idolize a particular hero of my faith, and constantly refer to that person's deeds and example.",
+                    "2: I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+                    "etc" };
 
-                ideal = "1: Tradtion - The ancient traditions of worship and sacrifice must be preserved and upheld. "
-                    + "etc.";
+                ideal = new string[] { "1: Tradtion - The ancient traditions of worship and sacrifice must be preserved and upheld.",
+                    "etc." };
 
-                bond = "1: I would die to recover an ancient relic of m faith that was lost long ago. "
-                    + "etc.";
+                bond = new string[] { "1: I would die to recover an ancient relic of m faith that was lost long ago.",
+                    "etc." };
 
-                flaw = "1: I judge others harshly, and myself even more severely. "
-                    + "etc.";
+                flaw = new string[] { "1: I judge others harshly, and myself even more severely.",
+                    "etc." };
 
                 if(bg.Equals("Charlatan"))
                 {

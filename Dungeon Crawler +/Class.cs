@@ -1,31 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace Dungeon_Crawler__
 {
     class Class
     {
-
+        private string className;
         private int hit;
 
-        // Proficiences, could be broken down into armor, weapons, tools, 
-        // don't think needed per say, but it would shorten the string
-        private String prof;
-        private String saves;
-        private String skills;
+        // Proficiences ArrayList contains saves, skills, equipment
+        private ArrayList prof;
+
+        // Static Array for now, might make it an ArrayList later
+        private ArrayList skills;
+        private int choose;
+
 
         // Soon TM
         // Since equipment has their own stats, probably should make a class. 
         // Will need to seperate into armor, weapons, tools
         // private Item() equip; <- jk not in this class or right now, but commenting as we might do something with it laster
-        private String equip;
+        private string[] equip;
         private int wealth;
 
         // Features
-        private String ft;
+        private ArrayList ft;
+
+        // might need its own class @_@
+        private ArrayList spells;
 
 
         public Class()
@@ -33,24 +34,42 @@ namespace Dungeon_Crawler__
 
         }
 
-        public Class(string pickClass)
+        public Class(string selectClass)
         {
-            if(pickClass.Equals("Barbarian"))
+            if(selectClass.Equals("Barbarian"))
             {
+                className = "Barbarian";
                 hit = 12;
                 // long strings might get long
-                prof = "Light armor, Medium armor, Shields, "
-                    + "Simple weapons, Martial weapons";
-                saves = "Strength, Constitution";
-                skills = "Animal Handling, Athletics, Intimidation, Nature, Preception, Survival";
-                // not quite sure how to go about these 
-                equip = "Greataxe or an martial weapon, Two handaxes or any simple weapon, "
-                    + "An explorer's pack and four javelins";
-                // 2d4 x 10gp; for now I'm putting average
-                wealth = 40;
+                prof.Add("Strength");
+                prof.Add("Constituion");
+                prof.Add("Light armor");
+                prof.Add("Medium armor");
+                prof.Add("Shields");
+                prof.Add("Simple weapons");
+                prof.Add("Martial weapons");
+                
+                // number of skills to be selected
+                choose = 2;
+                //skills are to be selected from the amount above and then added to the prof Arraylist
+                skills.Add("Animal Handling");
+                skills.Add("Athletics");
+                skills.Add("Intimidation");
+                skills.Add("Nature");
+                skills.Add("Preception");
+                skills.Add("Survival");
+                // not quite sure how to go about these, selected items will be added to inventory ArrayList
+                equip = new string[] { "Greataxe or an martial weapon", "Two handaxes or any simple weapon",
+                    "An explorer's pack and four javelins" };
+
+                // send className to calculations to get wealth back
+                wealth = Calculations.calcWealth(className);
+
                 // we'll have to decide how to put more features if we add level > 1 characters
                 // maybe a level up method here in class. Dunno.
-                ft = "Rage, Unarmored Defense";
+                ft.Add("Rage");
+                ft.Add("Unarmored Defense");
+
             }
         }
 
