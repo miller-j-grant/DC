@@ -9,15 +9,17 @@ namespace Dungeon_Crawler__
     class Equipment
     {
 
-        private String equip;
+        private string equip;
 
-        private String type;
+        private string type;
+        private string subtype;
 
         // might wanna do this in terms of cp and convert?
         private int cost;
 
         //weight
         private int lb;
+
 
         //armor only
         private int ac;
@@ -27,14 +29,20 @@ namespace Dungeon_Crawler__
         Boolean steath;
 
         // weapon only
-        private String roll;
+        private string roll;
         // damage type: piercing, bludgeoning, slashing, -
-        private String damage;
-        private String prop;
+        private string damage;
+        // properties
+        private string[] prop;
 
+
+        public Equipment()
+        {
+
+        }
 
         // equipment is split into  three categories: Armor, Weapon, Tool
-        public Equipment(String cate, String name)
+        public Equipment(string cate, string name)
         {
 
             if (cate.Equals("Armor"))
@@ -60,14 +68,14 @@ namespace Dungeon_Crawler__
 
         // doesn't like my constructors at he moment, but it's 5am and I'm tired soooooo I'll worry about that later
 
-        public Armor(String name)
+        public void Armor(string name)
         {
             if (name.Equals("Padded"))
             {
                 // converted to cp
                 cost = 500;
                 lb = 8;
-
+                subtype = "Light";
                 ac = 11;
                 maxdex = 0;
                 reqstr = 0;
@@ -80,12 +88,12 @@ namespace Dungeon_Crawler__
             }
         }
 
-        public Weapon(String name)
+        public void Weapon(string name)
         {
 
         }
 
-        public Tool(String name)
+        public void Tool(string name)
         {
 
         }

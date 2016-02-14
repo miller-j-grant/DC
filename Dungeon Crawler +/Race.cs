@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,51 +17,50 @@ namespace Dungeon_Crawler__
     {
 
         // racial ability score bonuses
-        private int str;
-        private int dex;
-        private int con;
-        private int intel;
-        private int wis;
-        private int cha;
+        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+        private int[] stats;
 
         // size could either be a String that we read or a number that we correspond with a size
         // might be easier to do number, but we'll see
-        private String size;
+        private string size;
 
         private int speed;
 
-        private String traits;
+        private ArrayList traits;
 
-        private String languages;
+        private ArrayList languages;
 
         // this might be dumb, but it's like 3:45am so whatever
-        private string subrace;
+        private ArrayList subrace;
 
         public Race()
         {
-            str = 0;
-            dex = 0;
-            con = 0;
-            intel = 0;
-            wis = 0;
-            cha = 0;
+            stats = new int[6] { 0, 0, 0, 0, 0, 0 };
 
-            size = "Medium";
+            size = null;
 
-            speed = 30;
+            speed = 0;
 
-            languages = "Common";
+            languages = null;
         }
 
         public Race(string race)
         {
             if (race.Equals("Elf")){
-                dex = 2;
+                stats = new int[6] { 0, 2, 0, 0, 0, 0 };
                 size = "Medium";
                 speed = 30;
-                traits = "Darkvision, Keen Senses, Fey Ancestry, Trance";
-                languages = "Common, Elvish";
-                subrace = "High Elf, Wood Elves, Drow";
+                traits.Add("Darkvision");
+                traits.Add("Keen Senses");
+                traits.Add("Fey Ancestry");
+                traits.Add("Trance");
+
+                languages.Add("Common");
+                languages.Add("Elvish");
+
+                subrace.Add("High Elf");
+                subrace.Add("Wood Elves");
+                subrace.Add("Drow");
             }
 
             if (race.Equals("Dwarf"))
