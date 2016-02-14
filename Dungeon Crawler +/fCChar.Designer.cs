@@ -1,6 +1,6 @@
 ﻿namespace Dungeon_Crawler__
 {
-    partial class CChar
+    partial class fCChar
     {
         /// <summary>
         /// Required designer variable.
@@ -32,100 +32,118 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CCharTab = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pointsLabel = new System.Windows.Forms.Label();
+            this.pointsRemainingLabel = new System.Windows.Forms.Label();
+            this.strCostLabel = new System.Windows.Forms.Label();
+            this.dexCostLabel = new System.Windows.Forms.Label();
+            this.conCostLabel = new System.Windows.Forms.Label();
+            this.intCostLabel = new System.Windows.Forms.Label();
+            this.wisCostLabel = new System.Windows.Forms.Label();
+            this.chaCostLabel = new System.Windows.Forms.Label();
+            this.costLabel = new System.Windows.Forms.Label();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.DEXUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CONUpDown = new System.Windows.Forms.NumericUpDown();
+            this.INTUpDown = new System.Windows.Forms.NumericUpDown();
+            this.WISUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CHAUpDown = new System.Windows.Forms.NumericUpDown();
+            this.STRUpDown = new System.Windows.Forms.NumericUpDown();
+            this.pbDexLabel = new System.Windows.Forms.Label();
+            this.pbConLabel = new System.Windows.Forms.Label();
+            this.pbIntLabel = new System.Windows.Forms.Label();
+            this.pbWisLabel = new System.Windows.Forms.Label();
+            this.pbChaLabel = new System.Windows.Forms.Label();
+            this.pbStrLabel = new System.Windows.Forms.Label();
+            this.rollLabel2 = new System.Windows.Forms.Label();
+            this.rollLabel3 = new System.Windows.Forms.Label();
+            this.rollLabel4 = new System.Windows.Forms.Label();
+            this.rollLabel5 = new System.Windows.Forms.Label();
+            this.rollLabel6 = new System.Windows.Forms.Label();
+            this.rollLabel1 = new System.Windows.Forms.Label();
+            this.dexTextBox = new System.Windows.Forms.TextBox();
+            this.conTextBox = new System.Windows.Forms.TextBox();
+            this.intTextBox = new System.Windows.Forms.TextBox();
+            this.wisTextBox = new System.Windows.Forms.TextBox();
+            this.chaTextBox = new System.Windows.Forms.TextBox();
+            this.strTextBox = new System.Windows.Forms.TextBox();
+            this.chaButton = new System.Windows.Forms.Button();
+            this.wisButton = new System.Windows.Forms.Button();
+            this.intButton = new System.Windows.Forms.Button();
+            this.conButton = new System.Windows.Forms.Button();
+            this.dexButton = new System.Windows.Forms.Button();
+            this.strButton = new System.Windows.Forms.Button();
+            this.pointBuyLabel = new System.Windows.Forms.Label();
+            this.classicLabel = new System.Windows.Forms.Label();
+            this.rollButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.LanguagesGrid = new System.Windows.Forms.DataGridView();
-            this.TraitsGrid = new System.Windows.Forms.DataGridView();
-            this.LanguagesLabel = new System.Windows.Forms.Label();
-            this.TraitsLabel = new System.Windows.Forms.Label();
-            this.SpeedDisplayLabel = new System.Windows.Forms.Label();
-            this.SizeDisplayLabel = new System.Windows.Forms.Label();
-            this.SpeedLabel = new System.Windows.Forms.Label();
-            this.SizeLabel = new System.Windows.Forms.Label();
-            this.ASMDisplayLabel = new System.Windows.Forms.Label();
-            this.ASMLabel = new System.Windows.Forms.Label();
-            this.RaceBox = new System.Windows.Forms.ListBox();
+            this.languagesGrid = new System.Windows.Forms.DataGridView();
+            this.traitsGrid = new System.Windows.Forms.DataGridView();
+            this.languagesLabel = new System.Windows.Forms.Label();
+            this.traitsLabel = new System.Windows.Forms.Label();
+            this.speedDisplayLabel = new System.Windows.Forms.Label();
+            this.sizeDisplayLabel = new System.Windows.Forms.Label();
+            this.speedLabel = new System.Windows.Forms.Label();
+            this.sizeLabel = new System.Windows.Forms.Label();
+            this.asmDisplayLabel = new System.Windows.Forms.Label();
+            this.asmLabel = new System.Windows.Forms.Label();
+            this.raceBox = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.LevelingGrid = new System.Windows.Forms.DataGridView();
-            this.FeaturesGrid = new System.Windows.Forms.DataGridView();
-            this.LevelingLabel = new System.Windows.Forms.Label();
-            this.FeaturesLabel = new System.Windows.Forms.Label();
-            this.ClassBox = new System.Windows.Forms.ListBox();
+            this.levelingGrid = new System.Windows.Forms.DataGridView();
+            this.featuresGrid = new System.Windows.Forms.DataGridView();
+            this.levelingLabel = new System.Windows.Forms.Label();
+            this.featuresLabel = new System.Windows.Forms.Label();
+            this.classBox = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.CharacteristicsGrid = new System.Windows.Forms.DataGridView();
-            this.CharacteristicsLabel = new System.Windows.Forms.Label();
-            this.BEquipmentGrid = new System.Windows.Forms.DataGridView();
-            this.BLanguagesGrid = new System.Windows.Forms.DataGridView();
-            this.ProficienciesGrid = new System.Windows.Forms.DataGridView();
-            this.BEquipmentLabel = new System.Windows.Forms.Label();
-            this.BLanguagesLabel = new System.Windows.Forms.Label();
-            this.ProficienciesLabel = new System.Windows.Forms.Label();
-            this.BackgroundBox = new System.Windows.Forms.ListBox();
+            this.flawGrid = new System.Windows.Forms.DataGridView();
+            this.bondGrid = new System.Windows.Forms.DataGridView();
+            this.idealGrid = new System.Windows.Forms.DataGridView();
+            this.personalityGrid = new System.Windows.Forms.DataGridView();
+            this.characteristicsLabel = new System.Windows.Forms.Label();
+            this.bEquipmentGrid = new System.Windows.Forms.DataGridView();
+            this.bLanguagesGrid = new System.Windows.Forms.DataGridView();
+            this.proficienciesGrid = new System.Windows.Forms.DataGridView();
+            this.bEquipmentLabel = new System.Windows.Forms.Label();
+            this.bLanguagesLabel = new System.Windows.Forms.Label();
+            this.proficienciesLabel = new System.Windows.Forms.Label();
+            this.backgroundBox = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.AbilityPic = new System.Windows.Forms.PictureBox();
-            this.STRLabel = new System.Windows.Forms.Label();
-            this.DEXLabel = new System.Windows.Forms.Label();
-            this.CONLabel = new System.Windows.Forms.Label();
-            this.INTLabel = new System.Windows.Forms.Label();
-            this.CHALabel = new System.Windows.Forms.Label();
-            this.WISLabel = new System.Windows.Forms.Label();
-            this.CHAModLabel = new System.Windows.Forms.Label();
-            this.WISModLabel = new System.Windows.Forms.Label();
-            this.INTModLabel = new System.Windows.Forms.Label();
-            this.CONModLabel = new System.Windows.Forms.Label();
-            this.DEXModLabel = new System.Windows.Forms.Label();
-            this.STRModLabel = new System.Windows.Forms.Label();
-            this.RollButton = new System.Windows.Forms.Button();
-            this.ClassicLabel = new System.Windows.Forms.Label();
-            this.PointBuyLabel = new System.Windows.Forms.Label();
-            this.STRButton = new System.Windows.Forms.Button();
-            this.DEXButton = new System.Windows.Forms.Button();
-            this.CONButton = new System.Windows.Forms.Button();
-            this.INTButton = new System.Windows.Forms.Button();
-            this.WISButton = new System.Windows.Forms.Button();
-            this.CHAButton = new System.Windows.Forms.Button();
-            this.STRTextBox = new System.Windows.Forms.TextBox();
-            this.CHATextBox = new System.Windows.Forms.TextBox();
-            this.WISTextBox = new System.Windows.Forms.TextBox();
-            this.INTTextBox = new System.Windows.Forms.TextBox();
-            this.CONTextBox = new System.Windows.Forms.TextBox();
-            this.DEXTextBox = new System.Windows.Forms.TextBox();
-            this.RollLabel1 = new System.Windows.Forms.Label();
-            this.RollLabel6 = new System.Windows.Forms.Label();
-            this.RollLabel5 = new System.Windows.Forms.Label();
-            this.RollLabel4 = new System.Windows.Forms.Label();
-            this.RollLabel3 = new System.Windows.Forms.Label();
-            this.RollLabel2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.PBSTRLabel = new System.Windows.Forms.Label();
-            this.PBCHALabel = new System.Windows.Forms.Label();
-            this.PBWISLabel = new System.Windows.Forms.Label();
-            this.PBINTLabel = new System.Windows.Forms.Label();
-            this.PBCONLabel = new System.Windows.Forms.Label();
-            this.PBDEXLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.strLabel = new System.Windows.Forms.Label();
+            this.dexLabel = new System.Windows.Forms.Label();
+            this.conLabel = new System.Windows.Forms.Label();
+            this.intLabel = new System.Windows.Forms.Label();
+            this.chaLabel = new System.Windows.Forms.Label();
+            this.wisLabel = new System.Windows.Forms.Label();
+            this.chaModLabel = new System.Windows.Forms.Label();
+            this.wisModLabel = new System.Windows.Forms.Label();
+            this.intModLabel = new System.Windows.Forms.Label();
+            this.conModLabel = new System.Windows.Forms.Label();
+            this.dexModLabel = new System.Windows.Forms.Label();
+            this.strModLabel = new System.Windows.Forms.Label();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DEXUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CONUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INTUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WISUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHAUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STRUpDown)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LanguagesGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TraitsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.languagesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traitsGrid)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LevelingGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FeaturesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelingGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.featuresGrid)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CharacteristicsGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BEquipmentGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BLanguagesGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProficienciesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flawGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bondGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idealGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalityGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // CCharMenuStrip
@@ -160,39 +178,49 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.textBox6);
-            this.tabPage5.Controls.Add(this.textBox5);
-            this.tabPage5.Controls.Add(this.textBox4);
-            this.tabPage5.Controls.Add(this.textBox3);
-            this.tabPage5.Controls.Add(this.textBox2);
-            this.tabPage5.Controls.Add(this.textBox1);
-            this.tabPage5.Controls.Add(this.PBDEXLabel);
-            this.tabPage5.Controls.Add(this.PBCONLabel);
-            this.tabPage5.Controls.Add(this.PBINTLabel);
-            this.tabPage5.Controls.Add(this.PBWISLabel);
-            this.tabPage5.Controls.Add(this.PBCHALabel);
-            this.tabPage5.Controls.Add(this.PBSTRLabel);
-            this.tabPage5.Controls.Add(this.RollLabel2);
-            this.tabPage5.Controls.Add(this.RollLabel3);
-            this.tabPage5.Controls.Add(this.RollLabel4);
-            this.tabPage5.Controls.Add(this.RollLabel5);
-            this.tabPage5.Controls.Add(this.RollLabel6);
-            this.tabPage5.Controls.Add(this.RollLabel1);
-            this.tabPage5.Controls.Add(this.DEXTextBox);
-            this.tabPage5.Controls.Add(this.CONTextBox);
-            this.tabPage5.Controls.Add(this.INTTextBox);
-            this.tabPage5.Controls.Add(this.WISTextBox);
-            this.tabPage5.Controls.Add(this.CHATextBox);
-            this.tabPage5.Controls.Add(this.STRTextBox);
-            this.tabPage5.Controls.Add(this.CHAButton);
-            this.tabPage5.Controls.Add(this.WISButton);
-            this.tabPage5.Controls.Add(this.INTButton);
-            this.tabPage5.Controls.Add(this.CONButton);
-            this.tabPage5.Controls.Add(this.DEXButton);
-            this.tabPage5.Controls.Add(this.STRButton);
-            this.tabPage5.Controls.Add(this.PointBuyLabel);
-            this.tabPage5.Controls.Add(this.ClassicLabel);
-            this.tabPage5.Controls.Add(this.RollButton);
+            this.tabPage5.Controls.Add(this.pointsLabel);
+            this.tabPage5.Controls.Add(this.pointsRemainingLabel);
+            this.tabPage5.Controls.Add(this.strCostLabel);
+            this.tabPage5.Controls.Add(this.dexCostLabel);
+            this.tabPage5.Controls.Add(this.conCostLabel);
+            this.tabPage5.Controls.Add(this.intCostLabel);
+            this.tabPage5.Controls.Add(this.wisCostLabel);
+            this.tabPage5.Controls.Add(this.chaCostLabel);
+            this.tabPage5.Controls.Add(this.costLabel);
+            this.tabPage5.Controls.Add(this.resetButton);
+            this.tabPage5.Controls.Add(this.DEXUpDown);
+            this.tabPage5.Controls.Add(this.CONUpDown);
+            this.tabPage5.Controls.Add(this.INTUpDown);
+            this.tabPage5.Controls.Add(this.WISUpDown);
+            this.tabPage5.Controls.Add(this.CHAUpDown);
+            this.tabPage5.Controls.Add(this.STRUpDown);
+            this.tabPage5.Controls.Add(this.pbDexLabel);
+            this.tabPage5.Controls.Add(this.pbConLabel);
+            this.tabPage5.Controls.Add(this.pbIntLabel);
+            this.tabPage5.Controls.Add(this.pbWisLabel);
+            this.tabPage5.Controls.Add(this.pbChaLabel);
+            this.tabPage5.Controls.Add(this.pbStrLabel);
+            this.tabPage5.Controls.Add(this.rollLabel2);
+            this.tabPage5.Controls.Add(this.rollLabel3);
+            this.tabPage5.Controls.Add(this.rollLabel4);
+            this.tabPage5.Controls.Add(this.rollLabel5);
+            this.tabPage5.Controls.Add(this.rollLabel6);
+            this.tabPage5.Controls.Add(this.rollLabel1);
+            this.tabPage5.Controls.Add(this.dexTextBox);
+            this.tabPage5.Controls.Add(this.conTextBox);
+            this.tabPage5.Controls.Add(this.intTextBox);
+            this.tabPage5.Controls.Add(this.wisTextBox);
+            this.tabPage5.Controls.Add(this.chaTextBox);
+            this.tabPage5.Controls.Add(this.strTextBox);
+            this.tabPage5.Controls.Add(this.chaButton);
+            this.tabPage5.Controls.Add(this.wisButton);
+            this.tabPage5.Controls.Add(this.intButton);
+            this.tabPage5.Controls.Add(this.conButton);
+            this.tabPage5.Controls.Add(this.dexButton);
+            this.tabPage5.Controls.Add(this.strButton);
+            this.tabPage5.Controls.Add(this.pointBuyLabel);
+            this.tabPage5.Controls.Add(this.classicLabel);
+            this.tabPage5.Controls.Add(this.rollButton);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1203, 683);
@@ -201,19 +229,412 @@
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // pointsLabel
+            // 
+            this.pointsLabel.AutoSize = true;
+            this.pointsLabel.Location = new System.Drawing.Point(138, 523);
+            this.pointsLabel.Name = "pointsLabel";
+            this.pointsLabel.Size = new System.Drawing.Size(92, 13);
+            this.pointsLabel.TabIndex = 49;
+            this.pointsLabel.Text = "Remaining Points:";
+            // 
+            // pointsRemainingLabel
+            // 
+            this.pointsRemainingLabel.AutoSize = true;
+            this.pointsRemainingLabel.Location = new System.Drawing.Point(311, 523);
+            this.pointsRemainingLabel.Name = "pointsRemainingLabel";
+            this.pointsRemainingLabel.Size = new System.Drawing.Size(19, 13);
+            this.pointsRemainingLabel.TabIndex = 48;
+            this.pointsRemainingLabel.Text = "27";
+            // 
+            // strCostLabel
+            // 
+            this.strCostLabel.AutoSize = true;
+            this.strCostLabel.Location = new System.Drawing.Point(311, 305);
+            this.strCostLabel.Name = "strCostLabel";
+            this.strCostLabel.Size = new System.Drawing.Size(13, 13);
+            this.strCostLabel.TabIndex = 47;
+            this.strCostLabel.Text = "0";
+            // 
+            // dexCostLabel
+            // 
+            this.dexCostLabel.AutoSize = true;
+            this.dexCostLabel.Location = new System.Drawing.Point(311, 343);
+            this.dexCostLabel.Name = "dexCostLabel";
+            this.dexCostLabel.Size = new System.Drawing.Size(13, 13);
+            this.dexCostLabel.TabIndex = 46;
+            this.dexCostLabel.Text = "0";
+            // 
+            // conCostLabel
+            // 
+            this.conCostLabel.AutoSize = true;
+            this.conCostLabel.Location = new System.Drawing.Point(311, 380);
+            this.conCostLabel.Name = "conCostLabel";
+            this.conCostLabel.Size = new System.Drawing.Size(13, 13);
+            this.conCostLabel.TabIndex = 45;
+            this.conCostLabel.Text = "0";
+            // 
+            // intCostLabel
+            // 
+            this.intCostLabel.AutoSize = true;
+            this.intCostLabel.Location = new System.Drawing.Point(311, 414);
+            this.intCostLabel.Name = "intCostLabel";
+            this.intCostLabel.Size = new System.Drawing.Size(13, 13);
+            this.intCostLabel.TabIndex = 44;
+            this.intCostLabel.Text = "0";
+            // 
+            // wisCostLabel
+            // 
+            this.wisCostLabel.AutoSize = true;
+            this.wisCostLabel.Location = new System.Drawing.Point(311, 448);
+            this.wisCostLabel.Name = "wisCostLabel";
+            this.wisCostLabel.Size = new System.Drawing.Size(13, 13);
+            this.wisCostLabel.TabIndex = 43;
+            this.wisCostLabel.Text = "0";
+            // 
+            // chaCostLabel
+            // 
+            this.chaCostLabel.AutoSize = true;
+            this.chaCostLabel.Location = new System.Drawing.Point(311, 483);
+            this.chaCostLabel.Name = "chaCostLabel";
+            this.chaCostLabel.Size = new System.Drawing.Size(13, 13);
+            this.chaCostLabel.TabIndex = 42;
+            this.chaCostLabel.Text = "0";
+            // 
+            // costLabel
+            // 
+            this.costLabel.AutoSize = true;
+            this.costLabel.Location = new System.Drawing.Point(311, 273);
+            this.costLabel.Name = "costLabel";
+            this.costLabel.Size = new System.Drawing.Size(31, 13);
+            this.costLabel.TabIndex = 41;
+            this.costLabel.Text = "Cost:";
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(39, 300);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(83, 23);
+            this.resetButton.TabIndex = 40;
+            this.resetButton.Text = "Reset Scores";
+            this.resetButton.UseVisualStyleBackColor = true;
+            // 
+            // DEXUpDown
+            // 
+            this.DEXUpDown.Location = new System.Drawing.Point(224, 341);
+            this.DEXUpDown.Name = "DEXUpDown";
+            this.DEXUpDown.Size = new System.Drawing.Size(41, 20);
+            this.DEXUpDown.TabIndex = 39;
+            this.DEXUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // CONUpDown
+            // 
+            this.CONUpDown.Location = new System.Drawing.Point(224, 378);
+            this.CONUpDown.Name = "CONUpDown";
+            this.CONUpDown.Size = new System.Drawing.Size(41, 20);
+            this.CONUpDown.TabIndex = 38;
+            this.CONUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // INTUpDown
+            // 
+            this.INTUpDown.Location = new System.Drawing.Point(224, 412);
+            this.INTUpDown.Name = "INTUpDown";
+            this.INTUpDown.Size = new System.Drawing.Size(41, 20);
+            this.INTUpDown.TabIndex = 37;
+            this.INTUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // WISUpDown
+            // 
+            this.WISUpDown.Location = new System.Drawing.Point(224, 446);
+            this.WISUpDown.Name = "WISUpDown";
+            this.WISUpDown.Size = new System.Drawing.Size(41, 20);
+            this.WISUpDown.TabIndex = 36;
+            this.WISUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // CHAUpDown
+            // 
+            this.CHAUpDown.Location = new System.Drawing.Point(224, 481);
+            this.CHAUpDown.Name = "CHAUpDown";
+            this.CHAUpDown.Size = new System.Drawing.Size(41, 20);
+            this.CHAUpDown.TabIndex = 35;
+            this.CHAUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // STRUpDown
+            // 
+            this.STRUpDown.Location = new System.Drawing.Point(224, 303);
+            this.STRUpDown.Name = "STRUpDown";
+            this.STRUpDown.Size = new System.Drawing.Size(41, 20);
+            this.STRUpDown.TabIndex = 34;
+            this.STRUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // pbDexLabel
+            // 
+            this.pbDexLabel.AutoSize = true;
+            this.pbDexLabel.Location = new System.Drawing.Point(136, 343);
+            this.pbDexLabel.Name = "pbDexLabel";
+            this.pbDexLabel.Size = new System.Drawing.Size(51, 13);
+            this.pbDexLabel.TabIndex = 26;
+            this.pbDexLabel.Text = "Dexterity:";
+            // 
+            // pbConLabel
+            // 
+            this.pbConLabel.AutoSize = true;
+            this.pbConLabel.Location = new System.Drawing.Point(136, 380);
+            this.pbConLabel.Name = "pbConLabel";
+            this.pbConLabel.Size = new System.Drawing.Size(65, 13);
+            this.pbConLabel.TabIndex = 25;
+            this.pbConLabel.Text = "Constitution:";
+            // 
+            // pbIntLabel
+            // 
+            this.pbIntLabel.AutoSize = true;
+            this.pbIntLabel.Location = new System.Drawing.Point(136, 414);
+            this.pbIntLabel.Name = "pbIntLabel";
+            this.pbIntLabel.Size = new System.Drawing.Size(68, 13);
+            this.pbIntLabel.TabIndex = 24;
+            this.pbIntLabel.Text = "Intellegence:";
+            // 
+            // pbWisLabel
+            // 
+            this.pbWisLabel.AutoSize = true;
+            this.pbWisLabel.Location = new System.Drawing.Point(136, 448);
+            this.pbWisLabel.Name = "pbWisLabel";
+            this.pbWisLabel.Size = new System.Drawing.Size(48, 13);
+            this.pbWisLabel.TabIndex = 23;
+            this.pbWisLabel.Text = "Wisdom:";
+            // 
+            // pbChaLabel
+            // 
+            this.pbChaLabel.AutoSize = true;
+            this.pbChaLabel.Location = new System.Drawing.Point(136, 483);
+            this.pbChaLabel.Name = "pbChaLabel";
+            this.pbChaLabel.Size = new System.Drawing.Size(53, 13);
+            this.pbChaLabel.TabIndex = 22;
+            this.pbChaLabel.Text = "Charisma:";
+            // 
+            // pbStrLabel
+            // 
+            this.pbStrLabel.AutoSize = true;
+            this.pbStrLabel.Location = new System.Drawing.Point(136, 305);
+            this.pbStrLabel.Name = "pbStrLabel";
+            this.pbStrLabel.Size = new System.Drawing.Size(50, 13);
+            this.pbStrLabel.TabIndex = 21;
+            this.pbStrLabel.Text = "Strength:";
+            // 
+            // rollLabel2
+            // 
+            this.rollLabel2.AutoSize = true;
+            this.rollLabel2.Location = new System.Drawing.Point(277, 78);
+            this.rollLabel2.Name = "rollLabel2";
+            this.rollLabel2.Size = new System.Drawing.Size(16, 13);
+            this.rollLabel2.TabIndex = 20;
+            this.rollLabel2.Text = "---";
+            // 
+            // rollLabel3
+            // 
+            this.rollLabel3.AutoSize = true;
+            this.rollLabel3.Location = new System.Drawing.Point(398, 78);
+            this.rollLabel3.Name = "rollLabel3";
+            this.rollLabel3.Size = new System.Drawing.Size(16, 13);
+            this.rollLabel3.TabIndex = 19;
+            this.rollLabel3.Text = "---";
+            // 
+            // rollLabel4
+            // 
+            this.rollLabel4.AutoSize = true;
+            this.rollLabel4.Location = new System.Drawing.Point(523, 78);
+            this.rollLabel4.Name = "rollLabel4";
+            this.rollLabel4.Size = new System.Drawing.Size(16, 13);
+            this.rollLabel4.TabIndex = 18;
+            this.rollLabel4.Text = "---";
+            // 
+            // rollLabel5
+            // 
+            this.rollLabel5.AutoSize = true;
+            this.rollLabel5.Location = new System.Drawing.Point(641, 78);
+            this.rollLabel5.Name = "rollLabel5";
+            this.rollLabel5.Size = new System.Drawing.Size(16, 13);
+            this.rollLabel5.TabIndex = 17;
+            this.rollLabel5.Text = "---";
+            // 
+            // rollLabel6
+            // 
+            this.rollLabel6.AutoSize = true;
+            this.rollLabel6.Location = new System.Drawing.Point(755, 78);
+            this.rollLabel6.Name = "rollLabel6";
+            this.rollLabel6.Size = new System.Drawing.Size(16, 13);
+            this.rollLabel6.TabIndex = 16;
+            this.rollLabel6.Text = "---";
+            // 
+            // rollLabel1
+            // 
+            this.rollLabel1.AutoSize = true;
+            this.rollLabel1.Location = new System.Drawing.Point(161, 78);
+            this.rollLabel1.Name = "rollLabel1";
+            this.rollLabel1.Size = new System.Drawing.Size(16, 13);
+            this.rollLabel1.TabIndex = 15;
+            this.rollLabel1.Text = "---";
+            // 
+            // dexTextBox
+            // 
+            this.dexTextBox.Location = new System.Drawing.Point(259, 140);
+            this.dexTextBox.Name = "dexTextBox";
+            this.dexTextBox.Size = new System.Drawing.Size(48, 20);
+            this.dexTextBox.TabIndex = 14;
+            // 
+            // conTextBox
+            // 
+            this.conTextBox.Location = new System.Drawing.Point(375, 140);
+            this.conTextBox.Name = "conTextBox";
+            this.conTextBox.Size = new System.Drawing.Size(48, 20);
+            this.conTextBox.TabIndex = 13;
+            // 
+            // intTextBox
+            // 
+            this.intTextBox.Location = new System.Drawing.Point(496, 140);
+            this.intTextBox.Name = "intTextBox";
+            this.intTextBox.Size = new System.Drawing.Size(48, 20);
+            this.intTextBox.TabIndex = 12;
+            // 
+            // wisTextBox
+            // 
+            this.wisTextBox.Location = new System.Drawing.Point(621, 140);
+            this.wisTextBox.Name = "wisTextBox";
+            this.wisTextBox.Size = new System.Drawing.Size(48, 20);
+            this.wisTextBox.TabIndex = 11;
+            // 
+            // chaTextBox
+            // 
+            this.chaTextBox.Location = new System.Drawing.Point(739, 140);
+            this.chaTextBox.Name = "chaTextBox";
+            this.chaTextBox.Size = new System.Drawing.Size(48, 20);
+            this.chaTextBox.TabIndex = 10;
+            // 
+            // strTextBox
+            // 
+            this.strTextBox.Location = new System.Drawing.Point(141, 140);
+            this.strTextBox.Name = "strTextBox";
+            this.strTextBox.Size = new System.Drawing.Size(48, 20);
+            this.strTextBox.TabIndex = 9;
+            // 
+            // chaButton
+            // 
+            this.chaButton.Location = new System.Drawing.Point(726, 176);
+            this.chaButton.Name = "chaButton";
+            this.chaButton.Size = new System.Drawing.Size(75, 23);
+            this.chaButton.TabIndex = 8;
+            this.chaButton.Text = "Charisma";
+            this.chaButton.UseVisualStyleBackColor = true;
+            // 
+            // wisButton
+            // 
+            this.wisButton.Location = new System.Drawing.Point(607, 176);
+            this.wisButton.Name = "wisButton";
+            this.wisButton.Size = new System.Drawing.Size(75, 23);
+            this.wisButton.TabIndex = 7;
+            this.wisButton.Text = "Wisdom";
+            this.wisButton.UseVisualStyleBackColor = true;
+            // 
+            // intButton
+            // 
+            this.intButton.Location = new System.Drawing.Point(482, 176);
+            this.intButton.Name = "intButton";
+            this.intButton.Size = new System.Drawing.Size(75, 23);
+            this.intButton.TabIndex = 6;
+            this.intButton.Text = "Intelligence";
+            this.intButton.UseVisualStyleBackColor = true;
+            // 
+            // conButton
+            // 
+            this.conButton.Location = new System.Drawing.Point(362, 176);
+            this.conButton.Name = "conButton";
+            this.conButton.Size = new System.Drawing.Size(75, 23);
+            this.conButton.TabIndex = 5;
+            this.conButton.Text = "Constitution";
+            this.conButton.UseVisualStyleBackColor = true;
+            // 
+            // dexButton
+            // 
+            this.dexButton.Location = new System.Drawing.Point(245, 176);
+            this.dexButton.Name = "dexButton";
+            this.dexButton.Size = new System.Drawing.Size(75, 23);
+            this.dexButton.TabIndex = 4;
+            this.dexButton.Text = "Dexterity";
+            this.dexButton.UseVisualStyleBackColor = true;
+            // 
+            // strButton
+            // 
+            this.strButton.Location = new System.Drawing.Point(127, 176);
+            this.strButton.Name = "strButton";
+            this.strButton.Size = new System.Drawing.Size(75, 23);
+            this.strButton.TabIndex = 3;
+            this.strButton.Text = "Strength";
+            this.strButton.UseVisualStyleBackColor = true;
+            // 
+            // pointBuyLabel
+            // 
+            this.pointBuyLabel.AutoSize = true;
+            this.pointBuyLabel.Location = new System.Drawing.Point(36, 273);
+            this.pointBuyLabel.Name = "pointBuyLabel";
+            this.pointBuyLabel.Size = new System.Drawing.Size(92, 13);
+            this.pointBuyLabel.TabIndex = 2;
+            this.pointBuyLabel.Text = "Point Buy System:";
+            // 
+            // classicLabel
+            // 
+            this.classicLabel.AutoSize = true;
+            this.classicLabel.Location = new System.Drawing.Point(36, 29);
+            this.classicLabel.Name = "classicLabel";
+            this.classicLabel.Size = new System.Drawing.Size(181, 13);
+            this.classicLabel.TabIndex = 1;
+            this.classicLabel.Text = "Classic Attribute Generation (Rolling):";
+            // 
+            // rollButton
+            // 
+            this.rollButton.Location = new System.Drawing.Point(421, 29);
+            this.rollButton.Name = "rollButton";
+            this.rollButton.Size = new System.Drawing.Size(75, 23);
+            this.rollButton.TabIndex = 0;
+            this.rollButton.Text = "Roll! (4d6)";
+            this.rollButton.UseVisualStyleBackColor = true;
+            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.LanguagesGrid);
-            this.tabPage1.Controls.Add(this.TraitsGrid);
-            this.tabPage1.Controls.Add(this.LanguagesLabel);
-            this.tabPage1.Controls.Add(this.TraitsLabel);
-            this.tabPage1.Controls.Add(this.SpeedDisplayLabel);
-            this.tabPage1.Controls.Add(this.SizeDisplayLabel);
-            this.tabPage1.Controls.Add(this.SpeedLabel);
-            this.tabPage1.Controls.Add(this.SizeLabel);
-            this.tabPage1.Controls.Add(this.ASMDisplayLabel);
-            this.tabPage1.Controls.Add(this.ASMLabel);
-            this.tabPage1.Controls.Add(this.RaceBox);
+            this.tabPage1.Controls.Add(this.languagesGrid);
+            this.tabPage1.Controls.Add(this.traitsGrid);
+            this.tabPage1.Controls.Add(this.languagesLabel);
+            this.tabPage1.Controls.Add(this.traitsLabel);
+            this.tabPage1.Controls.Add(this.speedDisplayLabel);
+            this.tabPage1.Controls.Add(this.sizeDisplayLabel);
+            this.tabPage1.Controls.Add(this.speedLabel);
+            this.tabPage1.Controls.Add(this.sizeLabel);
+            this.tabPage1.Controls.Add(this.asmDisplayLabel);
+            this.tabPage1.Controls.Add(this.asmLabel);
+            this.tabPage1.Controls.Add(this.raceBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -223,98 +644,98 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // LanguagesGrid
+            // languagesGrid
             // 
-            this.LanguagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LanguagesGrid.Location = new System.Drawing.Point(430, 474);
-            this.LanguagesGrid.Name = "LanguagesGrid";
-            this.LanguagesGrid.Size = new System.Drawing.Size(240, 151);
-            this.LanguagesGrid.TabIndex = 22;
+            this.languagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.languagesGrid.Location = new System.Drawing.Point(430, 474);
+            this.languagesGrid.Name = "languagesGrid";
+            this.languagesGrid.Size = new System.Drawing.Size(240, 151);
+            this.languagesGrid.TabIndex = 22;
             // 
-            // TraitsGrid
+            // traitsGrid
             // 
-            this.TraitsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TraitsGrid.Location = new System.Drawing.Point(430, 181);
-            this.TraitsGrid.Name = "TraitsGrid";
-            this.TraitsGrid.Size = new System.Drawing.Size(240, 150);
-            this.TraitsGrid.TabIndex = 21;
+            this.traitsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.traitsGrid.Location = new System.Drawing.Point(430, 181);
+            this.traitsGrid.Name = "traitsGrid";
+            this.traitsGrid.Size = new System.Drawing.Size(240, 150);
+            this.traitsGrid.TabIndex = 21;
             // 
-            // LanguagesLabel
+            // languagesLabel
             // 
-            this.LanguagesLabel.AutoSize = true;
-            this.LanguagesLabel.Location = new System.Drawing.Point(285, 474);
-            this.LanguagesLabel.Name = "LanguagesLabel";
-            this.LanguagesLabel.Size = new System.Drawing.Size(63, 13);
-            this.LanguagesLabel.TabIndex = 20;
-            this.LanguagesLabel.Text = "Languages:";
+            this.languagesLabel.AutoSize = true;
+            this.languagesLabel.Location = new System.Drawing.Point(285, 474);
+            this.languagesLabel.Name = "languagesLabel";
+            this.languagesLabel.Size = new System.Drawing.Size(63, 13);
+            this.languagesLabel.TabIndex = 20;
+            this.languagesLabel.Text = "Languages:";
             // 
-            // TraitsLabel
+            // traitsLabel
             // 
-            this.TraitsLabel.AutoSize = true;
-            this.TraitsLabel.Location = new System.Drawing.Point(285, 181);
-            this.TraitsLabel.Name = "TraitsLabel";
-            this.TraitsLabel.Size = new System.Drawing.Size(36, 13);
-            this.TraitsLabel.TabIndex = 19;
-            this.TraitsLabel.Text = "Traits:";
+            this.traitsLabel.AutoSize = true;
+            this.traitsLabel.Location = new System.Drawing.Point(285, 181);
+            this.traitsLabel.Name = "traitsLabel";
+            this.traitsLabel.Size = new System.Drawing.Size(36, 13);
+            this.traitsLabel.TabIndex = 19;
+            this.traitsLabel.Text = "Traits:";
             // 
-            // SpeedDisplayLabel
+            // speedDisplayLabel
             // 
-            this.SpeedDisplayLabel.AutoSize = true;
-            this.SpeedDisplayLabel.Location = new System.Drawing.Point(427, 128);
-            this.SpeedDisplayLabel.Name = "SpeedDisplayLabel";
-            this.SpeedDisplayLabel.Size = new System.Drawing.Size(16, 13);
-            this.SpeedDisplayLabel.TabIndex = 17;
-            this.SpeedDisplayLabel.Text = "---";
+            this.speedDisplayLabel.AutoSize = true;
+            this.speedDisplayLabel.Location = new System.Drawing.Point(427, 128);
+            this.speedDisplayLabel.Name = "speedDisplayLabel";
+            this.speedDisplayLabel.Size = new System.Drawing.Size(16, 13);
+            this.speedDisplayLabel.TabIndex = 17;
+            this.speedDisplayLabel.Text = "---";
             // 
-            // SizeDisplayLabel
+            // sizeDisplayLabel
             // 
-            this.SizeDisplayLabel.AutoSize = true;
-            this.SizeDisplayLabel.Location = new System.Drawing.Point(427, 80);
-            this.SizeDisplayLabel.Name = "SizeDisplayLabel";
-            this.SizeDisplayLabel.Size = new System.Drawing.Size(16, 13);
-            this.SizeDisplayLabel.TabIndex = 16;
-            this.SizeDisplayLabel.Text = "---";
+            this.sizeDisplayLabel.AutoSize = true;
+            this.sizeDisplayLabel.Location = new System.Drawing.Point(427, 80);
+            this.sizeDisplayLabel.Name = "sizeDisplayLabel";
+            this.sizeDisplayLabel.Size = new System.Drawing.Size(16, 13);
+            this.sizeDisplayLabel.TabIndex = 16;
+            this.sizeDisplayLabel.Text = "---";
             // 
-            // SpeedLabel
+            // speedLabel
             // 
-            this.SpeedLabel.AutoSize = true;
-            this.SpeedLabel.Location = new System.Drawing.Point(285, 128);
-            this.SpeedLabel.Name = "SpeedLabel";
-            this.SpeedLabel.Size = new System.Drawing.Size(41, 13);
-            this.SpeedLabel.TabIndex = 4;
-            this.SpeedLabel.Text = "Speed:";
+            this.speedLabel.AutoSize = true;
+            this.speedLabel.Location = new System.Drawing.Point(285, 128);
+            this.speedLabel.Name = "speedLabel";
+            this.speedLabel.Size = new System.Drawing.Size(41, 13);
+            this.speedLabel.TabIndex = 4;
+            this.speedLabel.Text = "Speed:";
             // 
-            // SizeLabel
+            // sizeLabel
             // 
-            this.SizeLabel.AutoSize = true;
-            this.SizeLabel.Location = new System.Drawing.Point(285, 80);
-            this.SizeLabel.Name = "SizeLabel";
-            this.SizeLabel.Size = new System.Drawing.Size(30, 13);
-            this.SizeLabel.TabIndex = 3;
-            this.SizeLabel.Text = "Size:";
+            this.sizeLabel.AutoSize = true;
+            this.sizeLabel.Location = new System.Drawing.Point(285, 80);
+            this.sizeLabel.Name = "sizeLabel";
+            this.sizeLabel.Size = new System.Drawing.Size(30, 13);
+            this.sizeLabel.TabIndex = 3;
+            this.sizeLabel.Text = "Size:";
             // 
-            // ASMDisplayLabel
+            // asmDisplayLabel
             // 
-            this.ASMDisplayLabel.AutoSize = true;
-            this.ASMDisplayLabel.Location = new System.Drawing.Point(427, 29);
-            this.ASMDisplayLabel.Name = "ASMDisplayLabel";
-            this.ASMDisplayLabel.Size = new System.Drawing.Size(16, 13);
-            this.ASMDisplayLabel.TabIndex = 2;
-            this.ASMDisplayLabel.Text = "---";
+            this.asmDisplayLabel.AutoSize = true;
+            this.asmDisplayLabel.Location = new System.Drawing.Point(427, 29);
+            this.asmDisplayLabel.Name = "asmDisplayLabel";
+            this.asmDisplayLabel.Size = new System.Drawing.Size(16, 13);
+            this.asmDisplayLabel.TabIndex = 2;
+            this.asmDisplayLabel.Text = "---";
             // 
-            // ASMLabel
+            // asmLabel
             // 
-            this.ASMLabel.AutoSize = true;
-            this.ASMLabel.Location = new System.Drawing.Point(285, 29);
-            this.ASMLabel.Name = "ASMLabel";
-            this.ASMLabel.Size = new System.Drawing.Size(113, 13);
-            this.ASMLabel.TabIndex = 1;
-            this.ASMLabel.Text = "Ability Score Modifiers:";
+            this.asmLabel.AutoSize = true;
+            this.asmLabel.Location = new System.Drawing.Point(285, 29);
+            this.asmLabel.Name = "asmLabel";
+            this.asmLabel.Size = new System.Drawing.Size(113, 13);
+            this.asmLabel.TabIndex = 1;
+            this.asmLabel.Text = "Ability Score Modifiers:";
             // 
-            // RaceBox
+            // raceBox
             // 
-            this.RaceBox.FormattingEnabled = true;
-            this.RaceBox.Items.AddRange(new object[] {
+            this.raceBox.FormattingEnabled = true;
+            this.raceBox.Items.AddRange(new object[] {
             "Dwarf",
             "Elf",
             "Halfling",
@@ -324,18 +745,19 @@
             "Half-Elf",
             "Half-Orc",
             "Tiefling"});
-            this.RaceBox.Location = new System.Drawing.Point(0, 0);
-            this.RaceBox.Name = "RaceBox";
-            this.RaceBox.Size = new System.Drawing.Size(233, 563);
-            this.RaceBox.TabIndex = 0;
+            this.raceBox.Location = new System.Drawing.Point(0, 0);
+            this.raceBox.Name = "raceBox";
+            this.raceBox.Size = new System.Drawing.Size(233, 563);
+            this.raceBox.TabIndex = 0;
+            this.raceBox.SelectedIndexChanged += new System.EventHandler(this.raceBox_SelectedIndexChanged);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.LevelingGrid);
-            this.tabPage2.Controls.Add(this.FeaturesGrid);
-            this.tabPage2.Controls.Add(this.LevelingLabel);
-            this.tabPage2.Controls.Add(this.FeaturesLabel);
-            this.tabPage2.Controls.Add(this.ClassBox);
+            this.tabPage2.Controls.Add(this.levelingGrid);
+            this.tabPage2.Controls.Add(this.featuresGrid);
+            this.tabPage2.Controls.Add(this.levelingLabel);
+            this.tabPage2.Controls.Add(this.featuresLabel);
+            this.tabPage2.Controls.Add(this.classBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -344,44 +766,44 @@
             this.tabPage2.Text = "Class";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // LevelingGrid
+            // levelingGrid
             // 
-            this.LevelingGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LevelingGrid.Location = new System.Drawing.Point(830, 29);
-            this.LevelingGrid.Name = "LevelingGrid";
-            this.LevelingGrid.Size = new System.Drawing.Size(240, 150);
-            this.LevelingGrid.TabIndex = 28;
+            this.levelingGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.levelingGrid.Location = new System.Drawing.Point(830, 29);
+            this.levelingGrid.Name = "levelingGrid";
+            this.levelingGrid.Size = new System.Drawing.Size(240, 150);
+            this.levelingGrid.TabIndex = 28;
             // 
-            // FeaturesGrid
+            // featuresGrid
             // 
-            this.FeaturesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FeaturesGrid.Location = new System.Drawing.Point(393, 31);
-            this.FeaturesGrid.Name = "FeaturesGrid";
-            this.FeaturesGrid.Size = new System.Drawing.Size(240, 150);
-            this.FeaturesGrid.TabIndex = 27;
+            this.featuresGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.featuresGrid.Location = new System.Drawing.Point(393, 31);
+            this.featuresGrid.Name = "featuresGrid";
+            this.featuresGrid.Size = new System.Drawing.Size(240, 150);
+            this.featuresGrid.TabIndex = 27;
             // 
-            // LevelingLabel
+            // levelingLabel
             // 
-            this.LevelingLabel.AutoSize = true;
-            this.LevelingLabel.Location = new System.Drawing.Point(713, 29);
-            this.LevelingLabel.Name = "LevelingLabel";
-            this.LevelingLabel.Size = new System.Drawing.Size(80, 13);
-            this.LevelingLabel.TabIndex = 26;
-            this.LevelingLabel.Text = "Leveling Table:";
+            this.levelingLabel.AutoSize = true;
+            this.levelingLabel.Location = new System.Drawing.Point(713, 29);
+            this.levelingLabel.Name = "levelingLabel";
+            this.levelingLabel.Size = new System.Drawing.Size(80, 13);
+            this.levelingLabel.TabIndex = 26;
+            this.levelingLabel.Text = "Leveling Table:";
             // 
-            // FeaturesLabel
+            // featuresLabel
             // 
-            this.FeaturesLabel.AutoSize = true;
-            this.FeaturesLabel.Location = new System.Drawing.Point(276, 31);
-            this.FeaturesLabel.Name = "FeaturesLabel";
-            this.FeaturesLabel.Size = new System.Drawing.Size(79, 13);
-            this.FeaturesLabel.TabIndex = 24;
-            this.FeaturesLabel.Text = "Class Features:";
+            this.featuresLabel.AutoSize = true;
+            this.featuresLabel.Location = new System.Drawing.Point(276, 31);
+            this.featuresLabel.Name = "featuresLabel";
+            this.featuresLabel.Size = new System.Drawing.Size(79, 13);
+            this.featuresLabel.TabIndex = 24;
+            this.featuresLabel.Text = "Class Features:";
             // 
-            // ClassBox
+            // classBox
             // 
-            this.ClassBox.FormattingEnabled = true;
-            this.ClassBox.Items.AddRange(new object[] {
+            this.classBox.FormattingEnabled = true;
+            this.classBox.Items.AddRange(new object[] {
             "Barbarian",
             "Bard",
             "Cleric",
@@ -394,24 +816,26 @@
             "Sorcerer",
             "Warlock",
             "Wizard"});
-            this.ClassBox.Location = new System.Drawing.Point(0, 0);
-            this.ClassBox.Name = "ClassBox";
-            this.ClassBox.Size = new System.Drawing.Size(233, 563);
-            this.ClassBox.TabIndex = 0;
+            this.classBox.Location = new System.Drawing.Point(0, 0);
+            this.classBox.Name = "classBox";
+            this.classBox.Size = new System.Drawing.Size(233, 563);
+            this.classBox.TabIndex = 0;
+            this.classBox.SelectedIndexChanged += new System.EventHandler(this.classBox_SelectedIndexChanged);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.CharacteristicsGrid);
-            this.tabPage3.Controls.Add(this.CharacteristicsLabel);
-            this.tabPage3.Controls.Add(this.BEquipmentGrid);
-            this.tabPage3.Controls.Add(this.BLanguagesGrid);
-            this.tabPage3.Controls.Add(this.ProficienciesGrid);
-            this.tabPage3.Controls.Add(this.BEquipmentLabel);
-            this.tabPage3.Controls.Add(this.BLanguagesLabel);
-            this.tabPage3.Controls.Add(this.ProficienciesLabel);
-            this.tabPage3.Controls.Add(this.BackgroundBox);
+            this.tabPage3.Controls.Add(this.flawGrid);
+            this.tabPage3.Controls.Add(this.bondGrid);
+            this.tabPage3.Controls.Add(this.idealGrid);
+            this.tabPage3.Controls.Add(this.personalityGrid);
+            this.tabPage3.Controls.Add(this.characteristicsLabel);
+            this.tabPage3.Controls.Add(this.bEquipmentGrid);
+            this.tabPage3.Controls.Add(this.bLanguagesGrid);
+            this.tabPage3.Controls.Add(this.proficienciesGrid);
+            this.tabPage3.Controls.Add(this.bEquipmentLabel);
+            this.tabPage3.Controls.Add(this.bLanguagesLabel);
+            this.tabPage3.Controls.Add(this.proficienciesLabel);
+            this.tabPage3.Controls.Add(this.backgroundBox);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -421,78 +845,102 @@
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // CharacteristicsGrid
+            // flawGrid
             // 
-            this.CharacteristicsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CharacteristicsGrid.Location = new System.Drawing.Point(833, 29);
-            this.CharacteristicsGrid.Name = "CharacteristicsGrid";
-            this.CharacteristicsGrid.Size = new System.Drawing.Size(240, 150);
-            this.CharacteristicsGrid.TabIndex = 32;
+            this.flawGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.flawGrid.Location = new System.Drawing.Point(833, 398);
+            this.flawGrid.Name = "flawGrid";
+            this.flawGrid.Size = new System.Drawing.Size(240, 150);
+            this.flawGrid.TabIndex = 35;
             // 
-            // CharacteristicsLabel
+            // bondGrid
             // 
-            this.CharacteristicsLabel.AutoSize = true;
-            this.CharacteristicsLabel.Location = new System.Drawing.Point(650, 29);
-            this.CharacteristicsLabel.Name = "CharacteristicsLabel";
-            this.CharacteristicsLabel.Size = new System.Drawing.Size(133, 13);
-            this.CharacteristicsLabel.TabIndex = 31;
-            this.CharacteristicsLabel.Text = "Suggested Characteristics:";
+            this.bondGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bondGrid.Location = new System.Drawing.Point(955, 211);
+            this.bondGrid.Name = "bondGrid";
+            this.bondGrid.Size = new System.Drawing.Size(240, 150);
+            this.bondGrid.TabIndex = 34;
             // 
-            // BEquipmentGrid
+            // idealGrid
             // 
-            this.BEquipmentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BEquipmentGrid.Location = new System.Drawing.Point(381, 402);
-            this.BEquipmentGrid.Name = "BEquipmentGrid";
-            this.BEquipmentGrid.Size = new System.Drawing.Size(240, 150);
-            this.BEquipmentGrid.TabIndex = 30;
+            this.idealGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.idealGrid.Location = new System.Drawing.Point(709, 211);
+            this.idealGrid.Name = "idealGrid";
+            this.idealGrid.Size = new System.Drawing.Size(240, 150);
+            this.idealGrid.TabIndex = 33;
             // 
-            // BLanguagesGrid
+            // personalityGrid
             // 
-            this.BLanguagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BLanguagesGrid.Location = new System.Drawing.Point(381, 211);
-            this.BLanguagesGrid.Name = "BLanguagesGrid";
-            this.BLanguagesGrid.Size = new System.Drawing.Size(240, 150);
-            this.BLanguagesGrid.TabIndex = 29;
+            this.personalityGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.personalityGrid.Location = new System.Drawing.Point(833, 29);
+            this.personalityGrid.Name = "personalityGrid";
+            this.personalityGrid.Size = new System.Drawing.Size(240, 150);
+            this.personalityGrid.TabIndex = 32;
             // 
-            // ProficienciesGrid
+            // characteristicsLabel
             // 
-            this.ProficienciesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProficienciesGrid.Location = new System.Drawing.Point(381, 29);
-            this.ProficienciesGrid.Name = "ProficienciesGrid";
-            this.ProficienciesGrid.Size = new System.Drawing.Size(240, 150);
-            this.ProficienciesGrid.TabIndex = 28;
+            this.characteristicsLabel.AutoSize = true;
+            this.characteristicsLabel.Location = new System.Drawing.Point(650, 29);
+            this.characteristicsLabel.Name = "characteristicsLabel";
+            this.characteristicsLabel.Size = new System.Drawing.Size(133, 13);
+            this.characteristicsLabel.TabIndex = 31;
+            this.characteristicsLabel.Text = "Suggested Characteristics:";
             // 
-            // BEquipmentLabel
+            // bEquipmentGrid
             // 
-            this.BEquipmentLabel.AutoSize = true;
-            this.BEquipmentLabel.Location = new System.Drawing.Point(268, 402);
-            this.BEquipmentLabel.Name = "BEquipmentLabel";
-            this.BEquipmentLabel.Size = new System.Drawing.Size(60, 13);
-            this.BEquipmentLabel.TabIndex = 3;
-            this.BEquipmentLabel.Text = "Equipment:";
+            this.bEquipmentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bEquipmentGrid.Location = new System.Drawing.Point(381, 318);
+            this.bEquipmentGrid.Name = "bEquipmentGrid";
+            this.bEquipmentGrid.Size = new System.Drawing.Size(240, 150);
+            this.bEquipmentGrid.TabIndex = 30;
             // 
-            // BLanguagesLabel
+            // bLanguagesGrid
             // 
-            this.BLanguagesLabel.AutoSize = true;
-            this.BLanguagesLabel.Location = new System.Drawing.Point(268, 211);
-            this.BLanguagesLabel.Name = "BLanguagesLabel";
-            this.BLanguagesLabel.Size = new System.Drawing.Size(63, 13);
-            this.BLanguagesLabel.TabIndex = 2;
-            this.BLanguagesLabel.Text = "Languages:";
+            this.bLanguagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bLanguagesGrid.Location = new System.Drawing.Point(381, 211);
+            this.bLanguagesGrid.Name = "bLanguagesGrid";
+            this.bLanguagesGrid.Size = new System.Drawing.Size(240, 75);
+            this.bLanguagesGrid.TabIndex = 29;
             // 
-            // ProficienciesLabel
+            // proficienciesGrid
             // 
-            this.ProficienciesLabel.AutoSize = true;
-            this.ProficienciesLabel.Location = new System.Drawing.Point(268, 29);
-            this.ProficienciesLabel.Name = "ProficienciesLabel";
-            this.ProficienciesLabel.Size = new System.Drawing.Size(70, 13);
-            this.ProficienciesLabel.TabIndex = 1;
-            this.ProficienciesLabel.Text = "Proficiencies:";
+            this.proficienciesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.proficienciesGrid.Location = new System.Drawing.Point(381, 29);
+            this.proficienciesGrid.Name = "proficienciesGrid";
+            this.proficienciesGrid.Size = new System.Drawing.Size(240, 150);
+            this.proficienciesGrid.TabIndex = 28;
             // 
-            // BackgroundBox
+            // bEquipmentLabel
             // 
-            this.BackgroundBox.FormattingEnabled = true;
-            this.BackgroundBox.Items.AddRange(new object[] {
+            this.bEquipmentLabel.AutoSize = true;
+            this.bEquipmentLabel.Location = new System.Drawing.Point(268, 318);
+            this.bEquipmentLabel.Name = "bEquipmentLabel";
+            this.bEquipmentLabel.Size = new System.Drawing.Size(60, 13);
+            this.bEquipmentLabel.TabIndex = 3;
+            this.bEquipmentLabel.Text = "Equipment:";
+            // 
+            // bLanguagesLabel
+            // 
+            this.bLanguagesLabel.AutoSize = true;
+            this.bLanguagesLabel.Location = new System.Drawing.Point(268, 211);
+            this.bLanguagesLabel.Name = "bLanguagesLabel";
+            this.bLanguagesLabel.Size = new System.Drawing.Size(63, 13);
+            this.bLanguagesLabel.TabIndex = 2;
+            this.bLanguagesLabel.Text = "Languages:";
+            // 
+            // proficienciesLabel
+            // 
+            this.proficienciesLabel.AutoSize = true;
+            this.proficienciesLabel.Location = new System.Drawing.Point(268, 29);
+            this.proficienciesLabel.Name = "proficienciesLabel";
+            this.proficienciesLabel.Size = new System.Drawing.Size(70, 13);
+            this.proficienciesLabel.TabIndex = 1;
+            this.proficienciesLabel.Text = "Proficiencies:";
+            // 
+            // backgroundBox
+            // 
+            this.backgroundBox.FormattingEnabled = true;
+            this.backgroundBox.Items.AddRange(new object[] {
             "Acolyte",
             "Charlatan",
             "Criminal",
@@ -506,10 +954,11 @@
             "Sailor",
             "Soldier",
             "Urchin"});
-            this.BackgroundBox.Location = new System.Drawing.Point(0, 0);
-            this.BackgroundBox.Name = "BackgroundBox";
-            this.BackgroundBox.Size = new System.Drawing.Size(230, 563);
-            this.BackgroundBox.TabIndex = 0;
+            this.backgroundBox.Location = new System.Drawing.Point(0, 0);
+            this.backgroundBox.Name = "backgroundBox";
+            this.backgroundBox.Size = new System.Drawing.Size(230, 563);
+            this.backgroundBox.TabIndex = 0;
+            this.backgroundBox.SelectedIndexChanged += new System.EventHandler(this.backgroundBox_SelectedIndexChanged);
             // 
             // tabPage4
             // 
@@ -531,466 +980,184 @@
             this.AbilityPic.TabStop = false;
             this.AbilityPic.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // STRLabel
-            // 
-            this.STRLabel.AutoSize = true;
-            this.STRLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STRLabel.Location = new System.Drawing.Point(25, 74);
-            this.STRLabel.Name = "STRLabel";
-            this.STRLabel.Size = new System.Drawing.Size(51, 37);
-            this.STRLabel.TabIndex = 4;
-            this.STRLabel.Text = "10";
-            this.STRLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // DEXLabel
-            // 
-            this.DEXLabel.AutoSize = true;
-            this.DEXLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DEXLabel.Location = new System.Drawing.Point(25, 185);
-            this.DEXLabel.Name = "DEXLabel";
-            this.DEXLabel.Size = new System.Drawing.Size(51, 37);
-            this.DEXLabel.TabIndex = 5;
-            this.DEXLabel.Text = "10";
-            this.DEXLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CONLabel
-            // 
-            this.CONLabel.AutoSize = true;
-            this.CONLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CONLabel.Location = new System.Drawing.Point(25, 294);
-            this.CONLabel.Name = "CONLabel";
-            this.CONLabel.Size = new System.Drawing.Size(51, 37);
-            this.CONLabel.TabIndex = 6;
-            this.CONLabel.Text = "10";
-            this.CONLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // INTLabel
-            // 
-            this.INTLabel.AutoSize = true;
-            this.INTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INTLabel.Location = new System.Drawing.Point(25, 407);
-            this.INTLabel.Name = "INTLabel";
-            this.INTLabel.Size = new System.Drawing.Size(51, 37);
-            this.INTLabel.TabIndex = 7;
-            this.INTLabel.Text = "10";
-            this.INTLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CHALabel
-            // 
-            this.CHALabel.AutoSize = true;
-            this.CHALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHALabel.Location = new System.Drawing.Point(25, 628);
-            this.CHALabel.Name = "CHALabel";
-            this.CHALabel.Size = new System.Drawing.Size(51, 37);
-            this.CHALabel.TabIndex = 6;
-            this.CHALabel.Text = "10";
-            this.CHALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // WISLabel
-            // 
-            this.WISLabel.AutoSize = true;
-            this.WISLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WISLabel.Location = new System.Drawing.Point(25, 519);
-            this.WISLabel.Name = "WISLabel";
-            this.WISLabel.Size = new System.Drawing.Size(51, 37);
-            this.WISLabel.TabIndex = 7;
-            this.WISLabel.Text = "10";
-            this.WISLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CHAModLabel
-            // 
-            this.CHAModLabel.AutoSize = true;
-            this.CHAModLabel.Location = new System.Drawing.Point(48, 675);
-            this.CHAModLabel.Name = "CHAModLabel";
-            this.CHAModLabel.Size = new System.Drawing.Size(13, 13);
-            this.CHAModLabel.TabIndex = 6;
-            this.CHAModLabel.Text = "0";
-            this.CHAModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // WISModLabel
-            // 
-            this.WISModLabel.AutoSize = true;
-            this.WISModLabel.Location = new System.Drawing.Point(48, 568);
-            this.WISModLabel.Name = "WISModLabel";
-            this.WISModLabel.Size = new System.Drawing.Size(13, 13);
-            this.WISModLabel.TabIndex = 7;
-            this.WISModLabel.Text = "0";
-            this.WISModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // INTModLabel
-            // 
-            this.INTModLabel.AutoSize = true;
-            this.INTModLabel.Location = new System.Drawing.Point(48, 459);
-            this.INTModLabel.Name = "INTModLabel";
-            this.INTModLabel.Size = new System.Drawing.Size(13, 13);
-            this.INTModLabel.TabIndex = 8;
-            this.INTModLabel.Text = "0";
-            this.INTModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CONModLabel
-            // 
-            this.CONModLabel.AutoSize = true;
-            this.CONModLabel.Location = new System.Drawing.Point(48, 350);
-            this.CONModLabel.Name = "CONModLabel";
-            this.CONModLabel.Size = new System.Drawing.Size(13, 13);
-            this.CONModLabel.TabIndex = 9;
-            this.CONModLabel.Text = "0";
-            this.CONModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // DEXModLabel
-            // 
-            this.DEXModLabel.AutoSize = true;
-            this.DEXModLabel.Location = new System.Drawing.Point(48, 236);
-            this.DEXModLabel.Name = "DEXModLabel";
-            this.DEXModLabel.Size = new System.Drawing.Size(13, 13);
-            this.DEXModLabel.TabIndex = 10;
-            this.DEXModLabel.Text = "0";
-            this.DEXModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // STRModLabel
-            // 
-            this.STRModLabel.AutoSize = true;
-            this.STRModLabel.Location = new System.Drawing.Point(48, 125);
-            this.STRModLabel.Name = "STRModLabel";
-            this.STRModLabel.Size = new System.Drawing.Size(13, 13);
-            this.STRModLabel.TabIndex = 11;
-            this.STRModLabel.Text = "0";
-            this.STRModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RollButton
-            // 
-            this.RollButton.Location = new System.Drawing.Point(556, 24);
-            this.RollButton.Name = "RollButton";
-            this.RollButton.Size = new System.Drawing.Size(75, 23);
-            this.RollButton.TabIndex = 0;
-            this.RollButton.Text = "Roll! (4d6)";
-            this.RollButton.UseVisualStyleBackColor = true;
-            // 
-            // ClassicLabel
-            // 
-            this.ClassicLabel.AutoSize = true;
-            this.ClassicLabel.Location = new System.Drawing.Point(36, 29);
-            this.ClassicLabel.Name = "ClassicLabel";
-            this.ClassicLabel.Size = new System.Drawing.Size(181, 13);
-            this.ClassicLabel.TabIndex = 1;
-            this.ClassicLabel.Text = "Classic Attribute Generation (Rolling):";
-            // 
-            // PointBuyLabel
-            // 
-            this.PointBuyLabel.AutoSize = true;
-            this.PointBuyLabel.Location = new System.Drawing.Point(36, 273);
-            this.PointBuyLabel.Name = "PointBuyLabel";
-            this.PointBuyLabel.Size = new System.Drawing.Size(92, 13);
-            this.PointBuyLabel.TabIndex = 2;
-            this.PointBuyLabel.Text = "Point Buy System:";
-            // 
-            // STRButton
-            // 
-            this.STRButton.Location = new System.Drawing.Point(260, 191);
-            this.STRButton.Name = "STRButton";
-            this.STRButton.Size = new System.Drawing.Size(75, 23);
-            this.STRButton.TabIndex = 3;
-            this.STRButton.Text = "Strength";
-            this.STRButton.UseVisualStyleBackColor = true;
-            // 
-            // DEXButton
-            // 
-            this.DEXButton.Location = new System.Drawing.Point(378, 191);
-            this.DEXButton.Name = "DEXButton";
-            this.DEXButton.Size = new System.Drawing.Size(75, 23);
-            this.DEXButton.TabIndex = 4;
-            this.DEXButton.Text = "Dexterity";
-            this.DEXButton.UseVisualStyleBackColor = true;
-            // 
-            // CONButton
-            // 
-            this.CONButton.Location = new System.Drawing.Point(495, 191);
-            this.CONButton.Name = "CONButton";
-            this.CONButton.Size = new System.Drawing.Size(75, 23);
-            this.CONButton.TabIndex = 5;
-            this.CONButton.Text = "Constitution";
-            this.CONButton.UseVisualStyleBackColor = true;
-            // 
-            // INTButton
-            // 
-            this.INTButton.Location = new System.Drawing.Point(615, 191);
-            this.INTButton.Name = "INTButton";
-            this.INTButton.Size = new System.Drawing.Size(75, 23);
-            this.INTButton.TabIndex = 6;
-            this.INTButton.Text = "Intelligence";
-            this.INTButton.UseVisualStyleBackColor = true;
-            // 
-            // WISButton
-            // 
-            this.WISButton.Location = new System.Drawing.Point(740, 191);
-            this.WISButton.Name = "WISButton";
-            this.WISButton.Size = new System.Drawing.Size(75, 23);
-            this.WISButton.TabIndex = 7;
-            this.WISButton.Text = "Wisdom";
-            this.WISButton.UseVisualStyleBackColor = true;
-            // 
-            // CHAButton
-            // 
-            this.CHAButton.Location = new System.Drawing.Point(859, 191);
-            this.CHAButton.Name = "CHAButton";
-            this.CHAButton.Size = new System.Drawing.Size(75, 23);
-            this.CHAButton.TabIndex = 8;
-            this.CHAButton.Text = "Charisma";
-            this.CHAButton.UseVisualStyleBackColor = true;
-            // 
-            // STRTextBox
-            // 
-            this.STRTextBox.Location = new System.Drawing.Point(274, 155);
-            this.STRTextBox.Name = "STRTextBox";
-            this.STRTextBox.Size = new System.Drawing.Size(48, 20);
-            this.STRTextBox.TabIndex = 9;
-            // 
-            // CHATextBox
-            // 
-            this.CHATextBox.Location = new System.Drawing.Point(872, 155);
-            this.CHATextBox.Name = "CHATextBox";
-            this.CHATextBox.Size = new System.Drawing.Size(48, 20);
-            this.CHATextBox.TabIndex = 10;
-            // 
-            // WISTextBox
-            // 
-            this.WISTextBox.Location = new System.Drawing.Point(754, 155);
-            this.WISTextBox.Name = "WISTextBox";
-            this.WISTextBox.Size = new System.Drawing.Size(48, 20);
-            this.WISTextBox.TabIndex = 11;
-            // 
-            // INTTextBox
-            // 
-            this.INTTextBox.Location = new System.Drawing.Point(629, 155);
-            this.INTTextBox.Name = "INTTextBox";
-            this.INTTextBox.Size = new System.Drawing.Size(48, 20);
-            this.INTTextBox.TabIndex = 12;
-            // 
-            // CONTextBox
-            // 
-            this.CONTextBox.Location = new System.Drawing.Point(508, 155);
-            this.CONTextBox.Name = "CONTextBox";
-            this.CONTextBox.Size = new System.Drawing.Size(48, 20);
-            this.CONTextBox.TabIndex = 13;
-            // 
-            // DEXTextBox
-            // 
-            this.DEXTextBox.Location = new System.Drawing.Point(392, 155);
-            this.DEXTextBox.Name = "DEXTextBox";
-            this.DEXTextBox.Size = new System.Drawing.Size(48, 20);
-            this.DEXTextBox.TabIndex = 14;
-            // 
-            // RollLabel1
-            // 
-            this.RollLabel1.AutoSize = true;
-            this.RollLabel1.Location = new System.Drawing.Point(294, 93);
-            this.RollLabel1.Name = "RollLabel1";
-            this.RollLabel1.Size = new System.Drawing.Size(16, 13);
-            this.RollLabel1.TabIndex = 15;
-            this.RollLabel1.Text = "---";
-            // 
-            // RollLabel6
-            // 
-            this.RollLabel6.AutoSize = true;
-            this.RollLabel6.Location = new System.Drawing.Point(888, 93);
-            this.RollLabel6.Name = "RollLabel6";
-            this.RollLabel6.Size = new System.Drawing.Size(16, 13);
-            this.RollLabel6.TabIndex = 16;
-            this.RollLabel6.Text = "---";
-            // 
-            // RollLabel5
-            // 
-            this.RollLabel5.AutoSize = true;
-            this.RollLabel5.Location = new System.Drawing.Point(774, 93);
-            this.RollLabel5.Name = "RollLabel5";
-            this.RollLabel5.Size = new System.Drawing.Size(16, 13);
-            this.RollLabel5.TabIndex = 17;
-            this.RollLabel5.Text = "---";
-            // 
-            // RollLabel4
-            // 
-            this.RollLabel4.AutoSize = true;
-            this.RollLabel4.Location = new System.Drawing.Point(656, 93);
-            this.RollLabel4.Name = "RollLabel4";
-            this.RollLabel4.Size = new System.Drawing.Size(16, 13);
-            this.RollLabel4.TabIndex = 18;
-            this.RollLabel4.Text = "---";
-            // 
-            // RollLabel3
-            // 
-            this.RollLabel3.AutoSize = true;
-            this.RollLabel3.Location = new System.Drawing.Point(531, 93);
-            this.RollLabel3.Name = "RollLabel3";
-            this.RollLabel3.Size = new System.Drawing.Size(16, 13);
-            this.RollLabel3.TabIndex = 19;
-            this.RollLabel3.Text = "---";
-            // 
-            // RollLabel2
-            // 
-            this.RollLabel2.AutoSize = true;
-            this.RollLabel2.Location = new System.Drawing.Point(410, 93);
-            this.RollLabel2.Name = "RollLabel2";
-            this.RollLabel2.Size = new System.Drawing.Size(16, 13);
-            this.RollLabel2.TabIndex = 20;
-            this.RollLabel2.Text = "---";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(833, 211);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 33;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(833, 402);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 34;
-            // 
-            // PBSTRLabel
-            // 
-            this.PBSTRLabel.AutoSize = true;
-            this.PBSTRLabel.Location = new System.Drawing.Point(136, 305);
-            this.PBSTRLabel.Name = "PBSTRLabel";
-            this.PBSTRLabel.Size = new System.Drawing.Size(50, 13);
-            this.PBSTRLabel.TabIndex = 21;
-            this.PBSTRLabel.Text = "Strength:";
-            // 
-            // PBCHALabel
-            // 
-            this.PBCHALabel.AutoSize = true;
-            this.PBCHALabel.Location = new System.Drawing.Point(136, 483);
-            this.PBCHALabel.Name = "PBCHALabel";
-            this.PBCHALabel.Size = new System.Drawing.Size(53, 13);
-            this.PBCHALabel.TabIndex = 22;
-            this.PBCHALabel.Text = "Charisma:";
-            // 
-            // PBWISLabel
-            // 
-            this.PBWISLabel.AutoSize = true;
-            this.PBWISLabel.Location = new System.Drawing.Point(136, 448);
-            this.PBWISLabel.Name = "PBWISLabel";
-            this.PBWISLabel.Size = new System.Drawing.Size(48, 13);
-            this.PBWISLabel.TabIndex = 23;
-            this.PBWISLabel.Text = "Wisdom:";
-            // 
-            // PBINTLabel
-            // 
-            this.PBINTLabel.AutoSize = true;
-            this.PBINTLabel.Location = new System.Drawing.Point(136, 414);
-            this.PBINTLabel.Name = "PBINTLabel";
-            this.PBINTLabel.Size = new System.Drawing.Size(68, 13);
-            this.PBINTLabel.TabIndex = 24;
-            this.PBINTLabel.Text = "Intellegence:";
-            // 
-            // PBCONLabel
-            // 
-            this.PBCONLabel.AutoSize = true;
-            this.PBCONLabel.Location = new System.Drawing.Point(136, 380);
-            this.PBCONLabel.Name = "PBCONLabel";
-            this.PBCONLabel.Size = new System.Drawing.Size(65, 13);
-            this.PBCONLabel.TabIndex = 25;
-            this.PBCONLabel.Text = "Constitution:";
-            // 
-            // PBDEXLabel
-            // 
-            this.PBDEXLabel.AutoSize = true;
-            this.PBDEXLabel.Location = new System.Drawing.Point(136, 343);
-            this.PBDEXLabel.Name = "PBDEXLabel";
-            this.PBDEXLabel.Size = new System.Drawing.Size(51, 13);
-            this.PBDEXLabel.TabIndex = 26;
-            this.PBDEXLabel.Text = "Dexterity:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(233, 302);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(48, 20);
-            this.textBox1.TabIndex = 27;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(233, 480);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(48, 20);
-            this.textBox2.TabIndex = 28;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(233, 445);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(48, 20);
-            this.textBox3.TabIndex = 29;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(233, 411);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(48, 20);
-            this.textBox4.TabIndex = 30;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(233, 377);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(48, 20);
-            this.textBox5.TabIndex = 31;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(233, 340);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(48, 20);
-            this.textBox6.TabIndex = 32;
-            // 
-            // CChar
+            // strLabel
+            // 
+            this.strLabel.AutoSize = true;
+            this.strLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strLabel.Location = new System.Drawing.Point(25, 74);
+            this.strLabel.Name = "strLabel";
+            this.strLabel.Size = new System.Drawing.Size(51, 37);
+            this.strLabel.TabIndex = 4;
+            this.strLabel.Text = "10";
+            this.strLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dexLabel
+            // 
+            this.dexLabel.AutoSize = true;
+            this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dexLabel.Location = new System.Drawing.Point(25, 185);
+            this.dexLabel.Name = "dexLabel";
+            this.dexLabel.Size = new System.Drawing.Size(51, 37);
+            this.dexLabel.TabIndex = 5;
+            this.dexLabel.Text = "10";
+            this.dexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // conLabel
+            // 
+            this.conLabel.AutoSize = true;
+            this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conLabel.Location = new System.Drawing.Point(25, 294);
+            this.conLabel.Name = "conLabel";
+            this.conLabel.Size = new System.Drawing.Size(51, 37);
+            this.conLabel.TabIndex = 6;
+            this.conLabel.Text = "10";
+            this.conLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // intLabel
+            // 
+            this.intLabel.AutoSize = true;
+            this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intLabel.Location = new System.Drawing.Point(25, 407);
+            this.intLabel.Name = "intLabel";
+            this.intLabel.Size = new System.Drawing.Size(51, 37);
+            this.intLabel.TabIndex = 7;
+            this.intLabel.Text = "10";
+            this.intLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chaLabel
+            // 
+            this.chaLabel.AutoSize = true;
+            this.chaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chaLabel.Location = new System.Drawing.Point(25, 628);
+            this.chaLabel.Name = "chaLabel";
+            this.chaLabel.Size = new System.Drawing.Size(51, 37);
+            this.chaLabel.TabIndex = 6;
+            this.chaLabel.Text = "10";
+            this.chaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wisLabel
+            // 
+            this.wisLabel.AutoSize = true;
+            this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wisLabel.Location = new System.Drawing.Point(25, 519);
+            this.wisLabel.Name = "wisLabel";
+            this.wisLabel.Size = new System.Drawing.Size(51, 37);
+            this.wisLabel.TabIndex = 7;
+            this.wisLabel.Text = "10";
+            this.wisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chaModLabel
+            // 
+            this.chaModLabel.AutoSize = true;
+            this.chaModLabel.Location = new System.Drawing.Point(48, 675);
+            this.chaModLabel.Name = "chaModLabel";
+            this.chaModLabel.Size = new System.Drawing.Size(13, 13);
+            this.chaModLabel.TabIndex = 6;
+            this.chaModLabel.Text = "0";
+            this.chaModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wisModLabel
+            // 
+            this.wisModLabel.AutoSize = true;
+            this.wisModLabel.Location = new System.Drawing.Point(48, 568);
+            this.wisModLabel.Name = "wisModLabel";
+            this.wisModLabel.Size = new System.Drawing.Size(13, 13);
+            this.wisModLabel.TabIndex = 7;
+            this.wisModLabel.Text = "0";
+            this.wisModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // intModLabel
+            // 
+            this.intModLabel.AutoSize = true;
+            this.intModLabel.Location = new System.Drawing.Point(48, 459);
+            this.intModLabel.Name = "intModLabel";
+            this.intModLabel.Size = new System.Drawing.Size(13, 13);
+            this.intModLabel.TabIndex = 8;
+            this.intModLabel.Text = "0";
+            this.intModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // conModLabel
+            // 
+            this.conModLabel.AutoSize = true;
+            this.conModLabel.Location = new System.Drawing.Point(48, 350);
+            this.conModLabel.Name = "conModLabel";
+            this.conModLabel.Size = new System.Drawing.Size(13, 13);
+            this.conModLabel.TabIndex = 9;
+            this.conModLabel.Text = "0";
+            this.conModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dexModLabel
+            // 
+            this.dexModLabel.AutoSize = true;
+            this.dexModLabel.Location = new System.Drawing.Point(48, 236);
+            this.dexModLabel.Name = "dexModLabel";
+            this.dexModLabel.Size = new System.Drawing.Size(13, 13);
+            this.dexModLabel.TabIndex = 10;
+            this.dexModLabel.Text = "0";
+            this.dexModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // strModLabel
+            // 
+            this.strModLabel.AutoSize = true;
+            this.strModLabel.Location = new System.Drawing.Point(48, 125);
+            this.strModLabel.Name = "strModLabel";
+            this.strModLabel.Size = new System.Drawing.Size(13, 13);
+            this.strModLabel.TabIndex = 11;
+            this.strModLabel.Text = "0";
+            this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fCChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 775);
-            this.Controls.Add(this.CHAModLabel);
-            this.Controls.Add(this.WISModLabel);
-            this.Controls.Add(this.INTModLabel);
-            this.Controls.Add(this.CONModLabel);
-            this.Controls.Add(this.DEXModLabel);
-            this.Controls.Add(this.STRModLabel);
-            this.Controls.Add(this.CHALabel);
-            this.Controls.Add(this.WISLabel);
-            this.Controls.Add(this.DEXLabel);
-            this.Controls.Add(this.STRLabel);
-            this.Controls.Add(this.INTLabel);
-            this.Controls.Add(this.CONLabel);
+            this.Controls.Add(this.chaModLabel);
+            this.Controls.Add(this.wisModLabel);
+            this.Controls.Add(this.intModLabel);
+            this.Controls.Add(this.conModLabel);
+            this.Controls.Add(this.dexModLabel);
+            this.Controls.Add(this.strModLabel);
+            this.Controls.Add(this.chaLabel);
+            this.Controls.Add(this.wisLabel);
+            this.Controls.Add(this.dexLabel);
+            this.Controls.Add(this.strLabel);
+            this.Controls.Add(this.intLabel);
+            this.Controls.Add(this.conLabel);
             this.Controls.Add(this.AbilityPic);
             this.Controls.Add(this.CCharTab);
             this.Controls.Add(this.CCharMenuStrip);
             this.MainMenuStrip = this.CCharMenuStrip;
-            this.Name = "CChar";
+            this.Name = "fCChar";
             this.Text = "Dungeon Crawler +";
             this.CCharMenuStrip.ResumeLayout(false);
             this.CCharMenuStrip.PerformLayout();
             this.CCharTab.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DEXUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CONUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INTUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WISUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHAUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STRUpDown)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LanguagesGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TraitsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.languagesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traitsGrid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LevelingGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FeaturesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.levelingGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.featuresGrid)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CharacteristicsGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BEquipmentGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BLanguagesGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProficienciesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flawGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bondGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idealGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalityGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1005,80 +1172,91 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.PictureBox AbilityPic;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ListBox RaceBox;
-        private System.Windows.Forms.ListBox ClassBox;
-        private System.Windows.Forms.ListBox BackgroundBox;
+        private System.Windows.Forms.ListBox raceBox;
+        private System.Windows.Forms.ListBox classBox;
+        private System.Windows.Forms.ListBox backgroundBox;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Label STRLabel;
-        private System.Windows.Forms.Label DEXLabel;
-        private System.Windows.Forms.Label CONLabel;
-        private System.Windows.Forms.Label INTLabel;
-        private System.Windows.Forms.Label CHALabel;
-        private System.Windows.Forms.Label WISLabel;
-        private System.Windows.Forms.Label CHAModLabel;
-        private System.Windows.Forms.Label WISModLabel;
-        private System.Windows.Forms.Label INTModLabel;
-        private System.Windows.Forms.Label CONModLabel;
-        private System.Windows.Forms.Label DEXModLabel;
-        private System.Windows.Forms.Label STRModLabel;
-        private System.Windows.Forms.Label LanguagesLabel;
-        private System.Windows.Forms.Label TraitsLabel;
-        private System.Windows.Forms.Label SpeedDisplayLabel;
-        private System.Windows.Forms.Label SizeDisplayLabel;
-        private System.Windows.Forms.Label SpeedLabel;
-        private System.Windows.Forms.Label SizeLabel;
-        private System.Windows.Forms.Label ASMDisplayLabel;
-        private System.Windows.Forms.Label ASMLabel;
-        private System.Windows.Forms.DataGridView LanguagesGrid;
-        private System.Windows.Forms.DataGridView TraitsGrid;
-        private System.Windows.Forms.DataGridView LevelingGrid;
-        private System.Windows.Forms.DataGridView FeaturesGrid;
-        private System.Windows.Forms.Label LevelingLabel;
-        private System.Windows.Forms.Label FeaturesLabel;
-        private System.Windows.Forms.DataGridView CharacteristicsGrid;
-        private System.Windows.Forms.Label CharacteristicsLabel;
-        private System.Windows.Forms.DataGridView BEquipmentGrid;
-        private System.Windows.Forms.DataGridView BLanguagesGrid;
-        private System.Windows.Forms.DataGridView ProficienciesGrid;
-        private System.Windows.Forms.Label BEquipmentLabel;
-        private System.Windows.Forms.Label BLanguagesLabel;
-        private System.Windows.Forms.Label ProficienciesLabel;
+        private System.Windows.Forms.Label strLabel;
+        private System.Windows.Forms.Label dexLabel;
+        private System.Windows.Forms.Label conLabel;
+        private System.Windows.Forms.Label intLabel;
+        private System.Windows.Forms.Label chaLabel;
+        private System.Windows.Forms.Label wisLabel;
+        private System.Windows.Forms.Label chaModLabel;
+        private System.Windows.Forms.Label wisModLabel;
+        private System.Windows.Forms.Label intModLabel;
+        private System.Windows.Forms.Label conModLabel;
+        private System.Windows.Forms.Label dexModLabel;
+        private System.Windows.Forms.Label strModLabel;
+        private System.Windows.Forms.Label languagesLabel;
+        private System.Windows.Forms.Label traitsLabel;
+        private System.Windows.Forms.Label speedDisplayLabel;
+        private System.Windows.Forms.Label sizeDisplayLabel;
+        private System.Windows.Forms.Label speedLabel;
+        private System.Windows.Forms.Label sizeLabel;
+        private System.Windows.Forms.Label asmDisplayLabel;
+        private System.Windows.Forms.Label asmLabel;
+        private System.Windows.Forms.DataGridView languagesGrid;
+        private System.Windows.Forms.DataGridView traitsGrid;
+        private System.Windows.Forms.DataGridView levelingGrid;
+        private System.Windows.Forms.DataGridView featuresGrid;
+        private System.Windows.Forms.Label levelingLabel;
+        private System.Windows.Forms.Label featuresLabel;
+        private System.Windows.Forms.DataGridView personalityGrid;
+        private System.Windows.Forms.Label characteristicsLabel;
+        private System.Windows.Forms.DataGridView bEquipmentGrid;
+        private System.Windows.Forms.DataGridView bLanguagesGrid;
+        private System.Windows.Forms.DataGridView proficienciesGrid;
+        private System.Windows.Forms.Label bEquipmentLabel;
+        private System.Windows.Forms.Label bLanguagesLabel;
+        private System.Windows.Forms.Label proficienciesLabel;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label RollLabel2;
-        private System.Windows.Forms.Label RollLabel3;
-        private System.Windows.Forms.Label RollLabel4;
-        private System.Windows.Forms.Label RollLabel5;
-        private System.Windows.Forms.Label RollLabel6;
-        private System.Windows.Forms.Label RollLabel1;
-        private System.Windows.Forms.TextBox DEXTextBox;
-        private System.Windows.Forms.TextBox CONTextBox;
-        private System.Windows.Forms.TextBox INTTextBox;
-        private System.Windows.Forms.TextBox WISTextBox;
-        private System.Windows.Forms.TextBox CHATextBox;
-        private System.Windows.Forms.TextBox STRTextBox;
-        private System.Windows.Forms.Button CHAButton;
-        private System.Windows.Forms.Button WISButton;
-        private System.Windows.Forms.Button INTButton;
-        private System.Windows.Forms.Button CONButton;
-        private System.Windows.Forms.Button DEXButton;
-        private System.Windows.Forms.Button STRButton;
-        private System.Windows.Forms.Label PointBuyLabel;
-        private System.Windows.Forms.Label ClassicLabel;
-        private System.Windows.Forms.Button RollButton;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label PBDEXLabel;
-        private System.Windows.Forms.Label PBCONLabel;
-        private System.Windows.Forms.Label PBINTLabel;
-        private System.Windows.Forms.Label PBWISLabel;
-        private System.Windows.Forms.Label PBCHALabel;
-        private System.Windows.Forms.Label PBSTRLabel;
+        private System.Windows.Forms.Label rollLabel2;
+        private System.Windows.Forms.Label rollLabel3;
+        private System.Windows.Forms.Label rollLabel4;
+        private System.Windows.Forms.Label rollLabel5;
+        private System.Windows.Forms.Label rollLabel6;
+        private System.Windows.Forms.Label rollLabel1;
+        private System.Windows.Forms.TextBox dexTextBox;
+        private System.Windows.Forms.TextBox conTextBox;
+        private System.Windows.Forms.TextBox intTextBox;
+        private System.Windows.Forms.TextBox wisTextBox;
+        private System.Windows.Forms.TextBox chaTextBox;
+        private System.Windows.Forms.TextBox strTextBox;
+        private System.Windows.Forms.Button chaButton;
+        private System.Windows.Forms.Button wisButton;
+        private System.Windows.Forms.Button intButton;
+        private System.Windows.Forms.Button conButton;
+        private System.Windows.Forms.Button dexButton;
+        private System.Windows.Forms.Button strButton;
+        private System.Windows.Forms.Label pointBuyLabel;
+        private System.Windows.Forms.Label classicLabel;
+        private System.Windows.Forms.Button rollButton;
+        private System.Windows.Forms.DataGridView bondGrid;
+        private System.Windows.Forms.DataGridView idealGrid;
+        private System.Windows.Forms.Label pbDexLabel;
+        private System.Windows.Forms.Label pbConLabel;
+        private System.Windows.Forms.Label pbIntLabel;
+        private System.Windows.Forms.Label pbWisLabel;
+        private System.Windows.Forms.Label pbChaLabel;
+        private System.Windows.Forms.Label pbStrLabel;
+        private System.Windows.Forms.NumericUpDown STRUpDown;
+        private System.Windows.Forms.NumericUpDown DEXUpDown;
+        private System.Windows.Forms.NumericUpDown CONUpDown;
+        private System.Windows.Forms.NumericUpDown INTUpDown;
+        private System.Windows.Forms.NumericUpDown WISUpDown;
+        private System.Windows.Forms.NumericUpDown CHAUpDown;
+        private System.Windows.Forms.Label pointsLabel;
+        private System.Windows.Forms.Label pointsRemainingLabel;
+        private System.Windows.Forms.Label strCostLabel;
+        private System.Windows.Forms.Label dexCostLabel;
+        private System.Windows.Forms.Label conCostLabel;
+        private System.Windows.Forms.Label intCostLabel;
+        private System.Windows.Forms.Label wisCostLabel;
+        private System.Windows.Forms.Label chaCostLabel;
+        private System.Windows.Forms.Label costLabel;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.DataGridView flawGrid;
     }
 }
 
