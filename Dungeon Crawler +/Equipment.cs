@@ -9,31 +9,31 @@ namespace Dungeon_Crawler__
     class Equipment
     {
 
-        private string equip;
+        private string equip { get; }
 
-        private string type;
-        private string subtype;
+        private string type { get; }
+        private string subtype { get; }
 
         // might wanna do this in terms of cp and convert?
-        private int cost;
+        private int cost { get; }
 
         //weight
-        private int lb;
+        private int lb { get; }
 
 
         //armor only
-        private int ac;
-        private int maxdex;
-        private int reqstr;
+        private int ac { get; }
+        private int maxdex { get; }
+        private int reqstr { get; }
         // true: gives disadvantage to steath; false: does not
-        Boolean steath;
+        Boolean steath { get; }
 
         // weapon only
-        private string roll;
+        private string roll { get; }
         // damage type: piercing, bludgeoning, slashing, -
-        private string damage;
+        private string damage { get; }
         // properties
-        private string[] prop;
+        private string[] prop { get; }
 
 
         public Equipment()

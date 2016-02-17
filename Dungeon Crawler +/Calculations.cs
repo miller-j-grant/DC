@@ -9,7 +9,7 @@ namespace Dungeon_Crawler__
 {
     public class Calculations
     {
-        
+
         // This class is for any and all calculations needed in the program
         // this includes: stat mods, hit points, initiavtive, passive wisdom, 
         // proficiency bonus, armor class, attack bonus, and wealth
@@ -26,6 +26,13 @@ namespace Dungeon_Crawler__
 
         private static int[] mods;
 
+        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
+        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
+        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
+        // 15 Sleight of Hand, 16 Stealth, 17 Survival
+        private static int[] skills;
+        private static int[] saves;
+
         private static Random r = new Random();
         private static int roll;
         private static int drop;
@@ -37,7 +44,7 @@ namespace Dungeon_Crawler__
             return roll;
         }
 
-        public static int rollAbility()
+        public static int rollAbilityScore()
         {
             drop = 0;
             abilityscore = 0;
@@ -45,7 +52,7 @@ namespace Dungeon_Crawler__
             {
                 roll = r.Next(1, 6);
                 abilityscore = abilityscore + roll;
-                if(drop > roll)
+                if (drop > roll)
                 {
                     drop = roll;
                 }
@@ -54,17 +61,199 @@ namespace Dungeon_Crawler__
             return abilityscore;
         }
 
+        public static int[] calcSkills(int[] mod, ArrayList prof, int probonus)
+        {
+            skills = new int[18];
+            for (int x = 0; x < 5; x++)
+            {
+                switch (x)
+                {
+                    // Str skill: Athletics
+                    case 0:
+                        if (prof.Contains("Athletics") == true)
+                            skills[3] = (mod[x] + probonus);
+                        else
+                            skills[3] = mod[x];
+                        break;
+
+                    // Dex skills: Abcrobatics, Sleight of Hand, Stealth
+                    case 1:
+                        if (prof.Contains("Acrobatics") == true)
+                            skills[0] = (mod[x] + probonus);
+                        else
+                            skills[0] = mod[x];
+
+                        if (prof.Contains("Sleight of Hand") == true)
+                            skills[15] = (mod[x] + probonus);
+                        else
+                            skills[15] = mod[x];
+
+                        if (prof.Contains("Stealth") == true)
+                            skills[16] = (mod[x] + probonus);
+                        else
+                            skills[16] = mod[x];
+                        break;
+
+                    // no constituion skills 
+                    case 2:
+                        break;
+
+                    // int skills: Arcana, History, Investigation, Nature, Religion
+                    case 3:
+                        if (prof.Contains("Arcana") == true)
+                            skills[2] = (mod[x] + probonus);
+                        else
+                            skills[2] = mod[x];
+
+                        if (prof.Contains("History") == true)
+                            skills[6] = (mod[x] + probonus);
+                        else
+                            skills[6] = mod[x];
+
+                        if (prof.Contains("Investigation") == true)
+                            skills[8] = (mod[x] + probonus);
+                        else
+                            skills[8] = mod[x];
+
+                        if (prof.Contains("Nature") == true)
+                            skills[10] = (mod[x] + probonus);
+                        else
+                            skills[10] = mod[x];
+
+                        if (prof.Contains("Religion") == true)
+                            skills[14] = (mod[x] + probonus);
+                        else
+                            skills[14] = mod[x];
+
+                        break;
+
+                    // Wis skills: Animal Handling, Insight, Medicine, Perception, Survival
+                    case 4:
+                        if (prof.Contains("Animal Handling") == true)
+                            skills[1] = (mod[x] + probonus);
+                        else
+                            skills[1] = mod[x];
+
+                        if (prof.Contains("Insight") == true)
+                            skills[6] = (mod[x] + probonus);
+                        else
+                            skills[6] = mod[x];
+
+                        if (prof.Contains("Medicine") == true)
+                            skills[9] = (mod[x] + probonus);
+                        else
+                            skills[9] = mod[x];
+
+                        if (prof.Contains("Perception") == true)
+                            skills[11] = (mod[x] + probonus);
+                        else
+                            skills[11] = mod[x];
+
+                        if (prof.Contains("Survival") == true)
+                            skills[17] = (mod[x] + probonus);
+                        else
+                            skills[17] = mod[x];
+
+                        break;
+
+                    // Cha skills: Deception, Intimidation, Performance, Persuassion
+                    case 5:
+                        if (prof.Contains("Deception") == true)
+                            skills[4] = (mod[x] + probonus);
+                        else
+                            skills[4] = mod[x];
+
+                        if (prof.Contains("Intimidation") == true)
+                            skills[7] = (mod[x] + probonus);
+                        else
+                            skills[7] = mod[x];
+
+                        if (prof.Contains("Performance") == true)
+                            skills[12] = (mod[x] + probonus);
+                        else
+                            skills[12] = mod[x];
+
+                        if (prof.Contains("Persuassion") == true)
+                            skills[13] = (mod[x] + probonus);
+                        else
+                            skills[13] = mod[x];
+
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            return skills;
+        }
+
+        public static int[] calcSaves(int[] mod, ArrayList prof, int probonus)
+        {
+            saves = new int[6];
+            for (int x = 0; x < 5; x++)
+            {
+                switch (x)
+                {
+                    case 0:
+                            if (prof.Contains("Strength") == true)
+                                saves[x] = (mod[x] + probonus);
+                            else
+                                saves[x] = mod[x];
+                            break;
+
+                    case 1:
+                        if (prof.Contains("Dexterity") == true)
+                            saves[x] = (mod[x] + probonus);
+                        else
+                            saves[x] = mod[x];
+                        break;
+
+                    case 2:
+                        if (prof.Contains("Constitution") == true)
+                            saves[x] = (mod[x] + probonus);
+                        else
+                            saves[x] = mod[x];
+                        break;
+
+                    case 3:
+                        if (prof.Contains("Wisdom") == true)
+                            saves[x] = (mod[x] + probonus);
+                        else
+                            saves[x] = mod[x];
+                        break;
+
+                    case 4:
+                        if (prof.Contains("Intelligence") == true)
+                            saves[x] = (mod[x] + probonus);
+                        else
+                            saves[x] = mod[x];
+                        break;
+
+                    case 5:
+                        if (prof.Contains("Charisma") == true)
+                            saves[x] = (mod[x] + probonus);
+                        else
+                            saves[x] = mod[x];
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            return saves;
+        }
+
         public static int[] calcMods(int[] m)
         {
             mods = new int[6];
-            for(int x = 0; x < (m.Length-1); x++)
+            for (int x = 0; x < (m.Length - 1); x++)
             {
-                if(m[x] == 1)
+                if (m[x] == 1)
                 {
                     mods[x] = -5;
                 }
 
-                if (m[x] == 2 || m[x] ==3)
+                if (m[x] == 2 || m[x] == 3)
                 {
                     mods[x] = -4;
                 }
@@ -138,7 +327,7 @@ namespace Dungeon_Crawler__
                 {
                     mods[x] = 10;
                 }
-                
+
             }
             return mods;
         }
@@ -146,7 +335,7 @@ namespace Dungeon_Crawler__
         public static int calcHP(int lvl, int conMod, int hd)
         {
             hp = hd + conMod;
-            for(int x = 1; x < lvl; x++)
+            for (int x = 1; x < lvl; x++)
             {
                 hp = (hp + r.Next(1, hd) + conMod);
             }
@@ -172,12 +361,9 @@ namespace Dungeon_Crawler__
                 return 2;
         }
 
-        public static int calcPassWis(int wisMod, ArrayList prof, int probonus, int extra) 
+        public static int calcPassWis(int percep)
         {
-            if (prof.Contains("Perception") == true)
-                return passwis = (10 + wisMod + probonus + extra);
-            else
-                return passwis = (10 + wisMod + extra);
+            return (10 + percep);
         }
 
         public static int calcInitiative(int dexMod, int extra)
@@ -188,7 +374,7 @@ namespace Dungeon_Crawler__
         public static int calcWealth(String pClass)
         {
             wealth = 0;
-            if(pClass.Equals("Monk"))
+            if (pClass.Equals("Monk"))
             {
                 for (int x = 1; x < 5; x++)
                 {
@@ -197,7 +383,7 @@ namespace Dungeon_Crawler__
                 return wealth;
             }
 
-            if(pClass.Equals("Druid") || pClass.Equals("Barbarian"))
+            if (pClass.Equals("Druid") || pClass.Equals("Barbarian"))
             {
                 for (int x = 1; x < 2; x++)
                 {
@@ -234,6 +420,19 @@ namespace Dungeon_Crawler__
             }
 
         }
+
+        //addTo calculators
+
+        public static int addToStat(int[] stats, int s, int amount)
+        {
+            return (stats[s] + amount);
+        }
+
+        public static int addToSkill(int[] skills, int s, int amount)
+        {
+            return (skills[s] + amount);
+        }
+
 
     }
 

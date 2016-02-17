@@ -4,29 +4,29 @@ namespace Dungeon_Crawler__
 {
     class Class
     {
-        private string className;
-        private int hit;
+        private string className { get; }
+        private int hit { get; }
 
         // Proficiences ArrayList contains saves, skills, equipment
-        private ArrayList prof;
+        private ArrayList prof { get; }
 
         // Static Array for now, might make it an ArrayList later
-        private ArrayList skills;
-        private int choose;
+        private ArrayList skills { get; }
+        private int choose { get; }
 
 
         // Soon TM
         // Since equipment has their own stats, probably should make a class. 
         // Will need to seperate into armor, weapons, tools
         // private Item() equip; <- jk not in this class or right now, but commenting as we might do something with it laster
-        private string[] equip;
-        private int wealth;
+        private string[] equip { get; }
+        private int wealth { get; }
 
         // Features
-        private ArrayList ft;
+        private ArrayList ft { get; }
 
         // might need its own class @_@
-        private ArrayList spells;
+        private ArrayList spells { get; };
 
 
         public Class()
