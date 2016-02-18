@@ -43,47 +43,47 @@ namespace Dungeon_Crawler__
             string curItem = raceBox.SelectedItem.ToString();
 
             //Update data and display based on the currently selected item.
-            if (curItem == "Dwarf")
+            if (curItem.Equals("Dwarf"))
+            {
+                
+            }
+
+            if (curItem.Equals("Elf"))
             {
 
             }
 
-            if (curItem == "Elf")
+            if (curItem.Equals("Halfling"))
             {
 
             }
 
-            if (curItem == "Halfling")
+            if (curItem.Equals("Human"))
             {
 
             }
 
-            if (curItem == "Human")
+            if (curItem.Equals("Dragonborn"))
             {
 
             }
 
-            if (curItem == "Dragonborn")
+            if (curItem.Equals("Gnome"))
             {
 
             }
 
-            if (curItem == "Gnome")
+            if (curItem.Equals("Half-Elf"))
             {
 
             }
 
-            if (curItem == "Half-Elf")
+            if (curItem.Equals("Half-Orc"))
             {
 
             }
 
-            if (curItem == "Half-Orc")
-            {
-
-            }
-
-            if (curItem == "Tiefling")
+            if (curItem.Equals("Tiefling"))
             {
 
             }
@@ -94,62 +94,62 @@ namespace Dungeon_Crawler__
             //Get the currently selected item.
             string curItem = classBox.SelectedItem.ToString();
 
-            if (curItem == "Barbarian")
+            if (curItem.Equals("Barbarian"))
             {
 
             }
 
-            if (curItem == "Bard")
+            if (curItem.Equals("Bard"))
             {
 
             }
 
-            if (curItem == "Cleric")
+            if (curItem.Equals("Cleric"))
             {
 
             }
 
-            if (curItem == "Druid")
+            if (curItem.Equals("Druid"))
             {
 
             }
 
-            if (curItem == "Fighter")
+            if (curItem.Equals("Fighter"))
             {
 
             }
 
-            if (curItem == "Monk")
+            if (curItem.Equals("Monk"))
             {
 
             }
 
-            if (curItem == "Paladin")
+            if (curItem.Equals("Paladin"))
             {
 
             }
 
-            if (curItem == "Ranger")
+            if (curItem.Equals("Ranger"))
             {
 
             }
 
-            if (curItem == "Rogue")
+            if (curItem.Equals("Rogue"))
             {
 
             }
 
-            if (curItem == "Sorcerer")
+            if (curItem.Equals("Sorcerer"))
             {
 
             }
 
-            if (curItem == "Warlock")
+            if (curItem.Equals("Warlock"))
             {
 
             }
 
-            if (curItem == "Wizard")
+            if (curItem.Equals("Wizard"))
             {
 
             }
@@ -160,67 +160,67 @@ namespace Dungeon_Crawler__
             //Get currently selected item.
             string curItem = classBox.SelectedItem.ToString();
 
-            if (curItem == "Acolyte")
+            if (curItem.Equals("Acolyte"))
             {
 
             }
 
-            if (curItem == "Charlatan")
+            if (curItem.Equals("Charlatan"))
             {
 
             }
 
-            if (curItem == "Criminal")
+            if (curItem.Equals("Criminal"))
             {
 
             }
 
-            if (curItem == "Entertainer")
+            if (curItem.Equals("Entertainer"))
             {
 
             }
 
-            if (curItem == "Folk Hero")
+            if (curItem.Equals("Folk Hero"))
             {
 
             }
 
-            if (curItem == "Guild Artisan")
+            if (curItem.Equals("Guild Artisan"))
             {
 
             }
 
-            if (curItem == "Hermit")
+            if (curItem.Equals("Hermit"))
             {
 
             }
 
-            if (curItem == "Noble")
+            if (curItem.Equals("Noble"))
             {
 
             }
 
-            if (curItem == "Outlander")
+            if (curItem.Equals("Outlander"))
             {
 
             }
 
-            if (curItem == "Sage")
+            if (curItem.Equals("Sage"))
             {
 
             }
 
-            if (curItem == "Sailor")
+            if (curItem.Equals("Sailor"))
             {
 
             }
 
-            if (curItem == "Soldier")
+            if (curItem.Equals("Soldier"))
             {
 
             }
 
-            if (curItem == "Urchin")
+            if (curItem.Equals("Urchin"))
             {
 
             }
