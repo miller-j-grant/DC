@@ -19,30 +19,27 @@ namespace Dungeon_Crawler__
         
         // racial ability score bonuses
         // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
-        private int[] stats;
+        private int[] stats { get; }
 
         // size could either be a String that we read or a number that we correspond with a size
         // might be easier to do number, but we'll see
-        private string size;
+        private string size { get; }
 
-        private int speed;
+        private int speed { get; }
 
-        private ArrayList traits;
+        private ArrayList traits { get; }
 
-        private ArrayList languages;
+        private ArrayList languages { get; }
 
         // this might be dumb, but it's like 3:45am so whatever
-        private ArrayList subrace;
+        private ArrayList subrace { get; }
 
         public Race()
         {
             stats = new int[6] { 0, 0, 0, 0, 0, 0 };
-
-            size = null;
-
-            speed = 0;
-
-            languages = null;
+            traits = new ArrayList();
+            languages = new ArrayList();
+            subrace = new ArrayList();
         }
 
         public Race(string race)

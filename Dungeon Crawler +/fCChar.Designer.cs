@@ -120,6 +120,9 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
+            this.Trait = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -647,6 +650,8 @@
             // languagesGrid
             // 
             this.languagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.languagesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.languages});
             this.languagesGrid.Location = new System.Drawing.Point(430, 474);
             this.languagesGrid.Name = "languagesGrid";
             this.languagesGrid.Size = new System.Drawing.Size(240, 151);
@@ -655,6 +660,9 @@
             // traitsGrid
             // 
             this.traitsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.traitsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Trait,
+            this.description});
             this.traitsGrid.Location = new System.Drawing.Point(430, 181);
             this.traitsGrid.Name = "traitsGrid";
             this.traitsGrid.Size = new System.Drawing.Size(240, 150);
@@ -1106,6 +1114,24 @@
             this.strModLabel.Text = "0";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Trait
+            // 
+            this.Trait.HeaderText = "Trait";
+            this.Trait.Name = "Trait";
+            this.Trait.ReadOnly = true;
+            // 
+            // description
+            // 
+            this.description.HeaderText = "Description";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            // 
+            // languages
+            // 
+            this.languages.HeaderText = "Languages";
+            this.languages.Name = "languages";
+            this.languages.ReadOnly = true;
+            // 
             // fCChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1257,6 +1283,9 @@
         private System.Windows.Forms.Label costLabel;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.DataGridView flawGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn languages;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Trait;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
     }
 }
 

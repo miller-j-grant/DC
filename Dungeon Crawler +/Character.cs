@@ -17,23 +17,24 @@ namespace Dungeon_Crawler__
                 Proficiencies, Spells
             Ability scores (str, dex, con, intel, wis, cha)
                 Hit points, hit dice, proficiency bonus, initiative, passive wisdom
+            Skills
             Background
             Equipment
-                AC, attack bonus, packs and packs and packs and packs, $$ALL THAT SICK GP YO$$
+                AC, attack bonus, $$ALL THAT SICK GP YO$$
         */
 
-        private string name;
-        private int level;
+        private string name { get; set; }
+        private int level { get; set; }
 
-        private Race race;
+        private Race race { get; set; }
 
-        private int speed;
-        private string[] lang;
+        private int speed { get; set; }
+        private ArrayList language { get; set; }
 
-        private Class pClass;
-        private ArrayList prof;
-        private ArrayList spells;
-        
+        private Class pClass { get; set; }
+        private ArrayList proficiency { get; set; }
+        private ArrayList spellbook { get; set; }
+
         // base ability scores for when changing race
         // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha 
         private int[] baseAS;
@@ -43,57 +44,48 @@ namespace Dungeon_Crawler__
 
         // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
         private int[] statmods;
-       
-        private Background bg = new Background();
-        private ArrayList inventory = new ArrayList();
-        private Equipment equip = new Equipment();
+
+        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
+        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
+        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
+        // 15 Sleight of Hand, 16 Stealth, 17 Survival
+        private int[] skills;
+
+        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+        private int[] saves;
+
+        private Background bg { get; set; }
+        private ArrayList inventory { get; set; }
+        // private Equipment equip = new Equipment();
 
         //calculated stats
-        private int hp;
-        private int initiative;
-        private int passwis;
-        private int profbonus;
-        private int ac;
-        private int atk;
-        private int wealth;
+        private int hp { get; set; }
+        private int initiative { get; set; }
+        private int passwis { get; set; }
+        private int profbonus { get; set; }
+        private int ac { get; set; }
+        private int atk { get; set; }
+        private int wealth { get; set; }
 
 
         public Character()
         {
-            name = null;
-            race = null;
-            pClass = null;
-            stats = new int[6]{ 0,0,0,0,0,0};
+            language = new ArrayList();
+            proficiency = new ArrayList();
+            spellbook = new ArrayList();
+            baseAS = new int[6] { 0, 0, 0, 0, 0, 0 };
+            stats = new int[6] { 0, 0, 0, 0, 0, 0 };
             statmods = new int[6] { 0, 0, 0, 0, 0, 0 };
-            bg = null;
-            equip = null;
+            skills = new int[18] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            saves = new int[6] { 0, 0, 0, 0, 0, 0 };
+            inventory = new ArrayList();
         }
 
-        // setters
-
-        public void setName(String n)
-        {
-            name = n;
-        }
-
-        public void setRace(String r)
-        {
-            race = new Race(r);
-        }
-
-        public void setClass(string c)
-        {
-            pClass = new Class(c);
-        }
-
-        // setters for base ability scores
-
-
-        // setters for ability scores 
+        // setters for base ability scores 
         public void setBaseStats(int[] s)
         {
             // save for later stats.Zip(s, (x, y) => x + y);
-            for(int z = 0; z < 5; z++)
+            for (int z = 0; z < 5; z++)
             {
                 baseAS[z] = s[z];
             }
@@ -214,14 +206,452 @@ namespace Dungeon_Crawler__
             statmods[5] = cha;
         }
 
-        public void setBG(string background)
+        // setters for calculated values...
+        // should the set send values to methods?
+
+        // setters for skills
+        public void setSkills(int[] s)
         {
-            bg = new Background(background);
+            for (int x = 0; x < 16; x++)
+            {
+                skills[x] = s[x];
+            }
+        }
+
+        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
+        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
+        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
+        // 15 Sleight of Hand, 16 Stealth, 17 Survival
+
+        public void setAcrobatics(int a)
+        {
+            skills[0] = a;
+        }
+
+        public void setAnimalHanding(int a)
+        {
+            skills[1] = a;
+        }
+
+        public void setArcana(int a)
+        {
+            skills[2] = a;
+        }
+
+        public void setAthletics(int a)
+        {
+            skills[3] = a;
+        }
+
+        public void setDeception(int d)
+        {
+            skills[4] = d;
+        }
+
+        public void setHistory(int h)
+        {
+            skills[5] = h;
+        }
+
+        public void setInsight(int i)
+        {
+            skills[6] = i;
+        }
+
+        public void setIntimidation(int i)
+        {
+            skills[7] = i;
+        }
+
+        public void setInvestigation(int i)
+        {
+            skills[8] = i;
+        }
+
+        public void setMedicine(int m)
+        {
+            skills[9] = m;
+        }
+
+        public void setNature(int n)
+        {
+            skills[10] = n;
+        }
+
+        public void setPerception(int p)
+        {
+            skills[11] = p;
+        }
+
+        public void setPerformance(int p)
+        {
+            skills[12] = p;
+        }
+
+        public void setPersuasion(int p)
+        {
+            skills[13] = p;
+        }
+
+        public void setReligion(int r)
+        {
+            skills[14] = r;
+        }
+
+        public void setSleightofHand(int s)
+        {
+            skills[15] = s;
+        }
+
+        public void setStealth(int s)
+        {
+            skills[16] = s;
+        }
+
+        public void setSurvival(int s)
+        {
+            skills[17] = s;
+        }
+
+        // setters for ability scores plus racial bonuses
+        public void setSaves(int[] s)
+        {
+            // save for later stats.Zip(s, (x, y) => x + y);
+            for (int z = 0; z < 5; z++)
+            {
+                saves[z] = s[z];
+            }
+        }
+
+        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+
+        public void setStrSave(int str)
+        {
+            saves[0] = str;
+        }
+
+        public void setDexSave(int dex)
+        {
+            saves[1] = dex;
+        }
+
+        public void setConSave(int con)
+        {
+            saves[2] = con;
+        }
+
+        public void setIntelSave(int intel)
+        {
+            saves[3] = intel;
+        }
+
+        public void setWisSave(int wis)
+        {
+            saves[4] = wis;
+        }
+
+        public void setChaSave(int cha)
+        {
+            saves[5] = cha;
+        }
+
+        public void setHP(int health)
+        {
+            hp = health;
+        }
+
+        public void setAC(int armorclass)
+        {
+            ac = armorclass;
+        }
+
+        public void setInitiative(int init)
+        {
+            initiative = init;
+        }
+
+        public void setPassiveWisdom(int pw)
+        {
+            passwis = pw;
+        }
+
+        public void setProfBonus(int pb)
+        {
+            profbonus = pb;
+        }
+
+        // ArrayList adders
+
+        public void addLanguage(string lang)
+        {
+            language.Add(lang);
+        }
+
+        public void addProficiency(string prof)
+        {
+            proficiency.Add(prof);
+        }
+
+        public void addSpell(string spell)
+        {
+            spellbook.Add(spell);
         }
 
         public void addEquipment(Equipment eq)
         {
             inventory.Add(eq);
         }
+
+        //getters
+
+        // get Base Ability Scores
+        public int[] getBaseAS()
+        {
+            return baseAS;
+        }
+
+        public int getBaseSTR()
+        {
+            return baseAS[0];
+        }
+
+        public int getBaseDEX()
+        {
+            return baseAS[1];
+        }
+
+        public int getBaseCON()
+        {
+            return baseAS[2];
+        }
+
+        public int getBaseINT()
+        {
+            return baseAS[3];
+        }
+
+        public int getBaseWIS()
+        {
+            return baseAS[4];
+        }
+
+        public int getBaseCHA()
+        {
+            return baseAS[5];
+        }
+
+        // get current ability scores
+
+        public int[] getStats()
+        {
+            return stats;
+        }
+
+        public int getSTR()
+        {
+            return stats[0];
+        }
+
+        public int getDEX()
+        {
+            return stats[1];
+        }
+
+        public int getCON()
+        {
+            return stats[2];
+        }
+
+        public int getINT()
+        {
+            return stats[3];
+        }
+
+        public int getWIS()
+        {
+            return stats[4];
+        }
+
+        public int getCHA()
+        {
+            return stats[5];
+        }
+
+        // get ability score modifiers
+
+        public int[] getStatMod()
+        {
+            return statmods;
+        }
+
+        public int getSTRMod()
+        {
+            return statmods[0];
+        }
+
+        public int getDEXMod()
+        {
+            return statmods[1];
+        }
+
+        public int getCONMod()
+        {
+            return statmods[2];
+        }
+
+        public int getINTMod()
+        {
+            return statmods[3];
+        }
+
+        public int getWISMod()
+        {
+            return statmods[4];
+        }
+
+        public int getCHAMod()
+        {
+            return statmods[5];
+        }
+
+        // get skills
+
+        public int[] getSkills()
+        {
+            return skills;
+        }
+
+        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
+        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
+        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
+        // 15 Sleight of Hand, 16 Stealth, 17 Survival
+
+        public int getAcrobatics()
+        {
+            return skills[0];
+        }
+
+        public int getAnimalHanding()
+        {
+            return skills[1];
+        }
+
+        public int getArcana()
+        {
+            return skills[2];
+        }
+
+        public int getAthletics()
+        {
+            return skills[3];
+        }
+
+        public int getDeception()
+        {
+            return skills[4];
+        }
+
+        public int getHistory()
+        {
+            return skills[5];
+        }
+
+        public int getInsight()
+        {
+            return skills[6];
+        }
+
+        public int getIntimidation()
+        {
+            return skills[7];
+        }
+
+        public int getInvestigation()
+        {
+            return skills[8];
+        }
+
+        public int getMedicine()
+        {
+            return skills[9];
+        }
+        
+        public int Nature()
+        {
+           return skills[10];
+        }
+
+        public int getPerception()
+        {
+            return skills[11];
+        }
+
+        public int getPerformance()
+        {
+            return skills[12];
+        }
+
+        public int getPersuasion()
+        {
+            return skills[13];
+        }
+
+        public int getReligion()
+        {
+            return skills[14];
+        }
+
+        public int getSleightofHand()
+        {
+            return skills[15];
+        }
+
+        public int getStealth()
+        {
+            return skills[16];
+        }
+
+        public int getSurvival()
+        {
+            return skills[17];
+        }
+
+        // get saves
+
+        public int[] getSaves()
+        {
+            return saves;
+        }
+
+        public int getSTRSave()
+        {
+            return saves[0];
+        }
+
+        public int getDEXSave()
+        {
+            return saves[1];
+        }
+
+        public int getCONSave()
+        {
+            return saves[2];
+        }
+
+        public int getINTSave()
+        {
+            return saves[3];
+        }
+
+        public int getWISSave()
+        {
+            return saves[4];
+        }
+
+        public int getCHASave()
+        {
+            return saves[5];
+        }
+
     }
 }

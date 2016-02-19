@@ -13,20 +13,21 @@ namespace Dungeon_Crawler__
     // but it is technically optional, sooooooo ><
     class Background
     {
-        private ArrayList prof;
-        private ArrayList lang;
-        private ArrayList equip;
-        private int wealth;
-        private string ft;
+        private ArrayList prof { get; }
+        private ArrayList lang { get; }
+        private ArrayList equip { get; }
+        private int wealth { get; }
+        private string ft { get; }
 
         // extra is for like Charlatan "Favorite Schemes"
-        private ArrayList extra;
+        private string []extra { get; }
 
         // Personality Trait
-        private ArrayList person;
-        private ArrayList ideal;
-        private ArrayList bond;
-        private ArrayList flaw;
+        private ArrayList person { get; }
+        private ArrayList ideal { get; }
+        private ArrayList bond { get; }
+        private ArrayList flaw { get; }
+
 
         public Background()
         {
