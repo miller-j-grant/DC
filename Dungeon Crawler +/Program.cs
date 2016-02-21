@@ -8,26 +8,58 @@ namespace Dungeon_Crawler__
 {
     class Program
     {
-        private Character pc;
+        private static Character pc;
 
         private string pClass;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void main(String[] args)
+        static void Main(String[] args)
         {
+            createChar();
+            initRaces();
+            initClasses();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new fCChar());
+            
         }
 
-        public void createChar()
+        public static void createChar()
         {
             pc = new Character();
         }
 
+        public static void initRaces()
+        {
+            Race dwarf = new Race("Dwarf");
+            Race elf = new Race("Elf");
+            Race halfling = new Race("Halfling");
+            Race human = new Race("Human");
+            Race dragonborn = new Race("Dragonborn");
+            Race gnome = new Race("Gnome");
+            Race halfElf = new Race("Half-Elf");
+            Race halfOrc = new Race("Half-Orc");
+            Race tiefling = new Race("Tiefling");
+        }
 
+        public static void initClasses()
+        {
+            Class barbarian = new Class("Barbarian");
+            Class bard = new Class("Bard");
+            Class cleric = new Class("Cleric");
+            Class druid = new Class("Druid");
+            Class fighter = new Class("Fighter");
+            Class monk = new Class("Monk");
+            Class paladin = new Class("Paladin");
+            Class ranger = new Class("Ranger");
+            Class rogue = new Class("Rogue");
+            Class sorcerer = new Class("Sorcerer");
+            Class warlock = new Class("Warlock");
+            Class wizard= new Class("Wizard");
+        }
          
     }
 }

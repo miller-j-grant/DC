@@ -23,10 +23,11 @@ namespace Dungeon_Crawler__
         private string []extra { get; }
 
         // Personality Trait
-        private string[] person { get; }
-        private string[] ideal { get; }
-        private string[] bond { get; }
-        private string[] flaw { get; }
+        private ArrayList person { get; }
+        private ArrayList ideal { get; }
+        private ArrayList bond { get; }
+        private ArrayList flaw { get; }
+
 
         public Background()
         {
@@ -53,17 +54,17 @@ namespace Dungeon_Crawler__
                 ft = "Shelther of the Faithful";
 
                 // OTL fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-                person = new string[] { "1: I idolize a particular hero of my faith, and constantly refer to that person's deeds and example.",
+                person = new ArrayList { "1: I idolize a particular hero of my faith, and constantly refer to that person's deeds and example.",
                     "2: I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
                     "etc" };
 
-                ideal = new string[] { "1: Tradtion - The ancient traditions of worship and sacrifice must be preserved and upheld.",
+                ideal = new ArrayList { "1: Tradtion - The ancient traditions of worship and sacrifice must be preserved and upheld.",
                     "etc." };
 
-                bond = new string[] { "1: I would die to recover an ancient relic of m faith that was lost long ago.",
+                bond = new ArrayList { "1: I would die to recover an ancient relic of m faith that was lost long ago.",
                     "etc." };
 
-                flaw = new string[] { "1: I judge others harshly, and myself even more severely.",
+                flaw = new ArrayList { "1: I judge others harshly, and myself even more severely.",
                     "etc." };
 
                 if(bg.Equals("Charlatan"))

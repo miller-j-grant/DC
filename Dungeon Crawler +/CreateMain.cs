@@ -26,10 +26,5 @@ namespace Dungeon_Crawler__
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

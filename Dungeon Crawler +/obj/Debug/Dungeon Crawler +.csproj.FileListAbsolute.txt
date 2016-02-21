@@ -1,0 +1,24 @@
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe.config
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csprojResolveAssemblyReference.cache
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.CChar.resources
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Splash.resources
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.pdb
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe.config
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csprojResolveAssemblyReference.cache
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCChar.resources
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Splash.resources
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\Background.mdf
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\Background_log.ldf
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\Database1.mdf
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\Database1_log.ldf
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.pdb
