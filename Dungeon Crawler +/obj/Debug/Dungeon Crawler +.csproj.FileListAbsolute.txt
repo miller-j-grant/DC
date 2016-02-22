@@ -8,3 +8,4 @@ C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.pdb
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCChar.resources
