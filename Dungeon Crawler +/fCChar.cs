@@ -415,6 +415,36 @@ namespace Dungeon_Crawler__
                 row.Cells["desc"].Value = barbarian.getPDesc[0];
                 featuresGrid.Rows.Add(row);
 
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = barbarian.getProf[1];
+                row.Cells["desc"].Value = barbarian.getPDesc[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = barbarian.getProf[2];
+                row.Cells["desc"].Value = barbarian.getPDesc[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = barbarian.getProf[3];
+                row.Cells["desc"].Value = barbarian.getPDesc[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = barbarian.getProf[4];
+                row.Cells["desc"].Value = barbarian.getPDesc[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = barbarian.getProf[5];
+                row.Cells["desc"].Value = barbarian.getPDesc[5];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                row.Cells["name"].Value = barbarian.getProf[6];
+                row.Cells["desc"].Value = barbarian.getPDesc[6];
+                featuresGrid.Rows.Add(row);
+
                 //Clear the Leveling Table DataGrid of all columns and rows.
                 levelingGrid.Columns.Clear();
                 levelingGrid.Rows.Clear();
@@ -599,7 +629,47 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d8 per Bard level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = bard.getProf[0];
+                row.Cells["desc"].Value = bard.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = bard.getProf[1];
+                row.Cells["desc"].Value = bard.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = bard.getProf[2];
+                row.Cells["desc"].Value = bard.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = bard.getProf[3];
+                row.Cells["desc"].Value = bard.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = bard.getProf[4];
+                row.Cells["desc"].Value = bard.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = bard.getProf[5];
+                row.Cells["desc"].Value = bard.getDProf[5];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                row.Cells["name"].Value = bard.getProf[6];
+                row.Cells["desc"].Value = bard.getDProf[6];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[8].Clone();
+                row.Cells["name"].Value = bard.getProf[7];
+                row.Cells["desc"].Value = bard.getDProf[7];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -784,7 +854,37 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d8 per Cleric level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = cleric.getProf[0];
+                row.Cells["desc"].Value = cleric.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = cleric.getProf[1];
+                row.Cells["desc"].Value = cleric.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = cleric.getProf[2];
+                row.Cells["desc"].Value = cleric.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = cleric.getProf[3];
+                row.Cells["desc"].Value = cleric.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = cleric.getProf[4];
+                row.Cells["desc"].Value = cleric.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = cleric.getProf[5];
+                row.Cells["desc"].Value = cleric.getDProf[5];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -823,7 +923,87 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d8 per Druid level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = druid.getProf[0];
+                row.Cells["desc"].Value = druid.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = druid.getProf[1];
+                row.Cells["desc"].Value = druid.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = druid.getProf[2];
+                row.Cells["desc"].Value = druid.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = druid.getProf[3];
+                row.Cells["desc"].Value = druid.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = druid.getProf[4];
+                row.Cells["desc"].Value = druid.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = druid.getProf[5];
+                row.Cells["desc"].Value = druid.getDProf[5];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                row.Cells["name"].Value = druid.getProf[6];
+                row.Cells["desc"].Value = druid.getDProf[6];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[8].Clone();
+                row.Cells["name"].Value = druid.getProf[7];
+                row.Cells["desc"].Value = druid.getDProf[7];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[9].Clone();
+                row.Cells["name"].Value = druid.getProf[8];
+                row.Cells["desc"].Value = druid.getDProf[8];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[10].Clone();
+                row.Cells["name"].Value = druid.getProf[9];
+                row.Cells["desc"].Value = druid.getDProf[9];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[11].Clone();
+                row.Cells["name"].Value = druid.getProf[10];
+                row.Cells["desc"].Value = druid.getDProf[10];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[12].Clone();
+                row.Cells["name"].Value = druid.getProf[11];
+                row.Cells["desc"].Value = druid.getDProf[11];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[13].Clone();
+                row.Cells["name"].Value = druid.getProf[12];
+                row.Cells["desc"].Value = druid.getDProf[12];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[14].Clone();
+                row.Cells["name"].Value = druid.getProf[13];
+                row.Cells["desc"].Value = druid.getDProf[13];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[15].Clone();
+                row.Cells["name"].Value = druid.getProf[14];
+                row.Cells["desc"].Value = druid.getDProf[14];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[16].Clone();
+                row.Cells["name"].Value = druid.getProf[15];
+                row.Cells["desc"].Value = druid.getDProf[15];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -862,8 +1042,39 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d10 per Fighter level";
                 featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = fighter.getProf[0];
+                row.Cells["desc"].Value = fighter.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = fighter.getProf[1];
+                row.Cells["desc"].Value = fighter.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = fighter.getProf[2];
+                row.Cells["desc"].Value = fighter.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = fighter.getProf[3];
+                row.Cells["desc"].Value = fighter.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = fighter.getProf[4];
+                row.Cells["desc"].Value = fighter.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = fighter.getProf[5];
+                row.Cells["desc"].Value = fighter.getDProf[5];
+                featuresGrid.Rows.Add(row);
+
 
                 levelingGrid.Columns.Clear();
                 levelingGrid.Rows.Clear();
@@ -889,7 +1100,32 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d8 per Monk level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = monk.getProf[0];
+                row.Cells["desc"].Value = monk.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = monk.getProf[1];
+                row.Cells["desc"].Value = monk.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = monk.getProf[2];
+                row.Cells["desc"].Value = monk.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = monk.getProf[3];
+                row.Cells["desc"].Value = monk.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = monk.getProf[4];
+                row.Cells["desc"].Value = monk.getDProf[4];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -922,7 +1158,37 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d10 per Paladin level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = paladin.getProf[0];
+                row.Cells["desc"].Value = paladin.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = paladin.getProf[1];
+                row.Cells["desc"].Value = paladin.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = paladin.getProf[2];
+                row.Cells["desc"].Value = paladin.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = paladin.getProf[3];
+                row.Cells["desc"].Value = paladin.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = paladin.getProf[4];
+                row.Cells["desc"].Value = paladin.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = paladin.getProf[5];
+                row.Cells["desc"].Value = paladin.getDProf[5];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -955,7 +1221,42 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d10 per Ranger level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = ranger.getProf[0];
+                row.Cells["desc"].Value = ranger.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = ranger.getProf[1];
+                row.Cells["desc"].Value = ranger.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = ranger.getProf[2];
+                row.Cells["desc"].Value = ranger.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = ranger.getProf[3];
+                row.Cells["desc"].Value = ranger.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = ranger.getProf[4];
+                row.Cells["desc"].Value = ranger.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = ranger.getProf[5];
+                row.Cells["desc"].Value = ranger.getDProf[5];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                row.Cells["name"].Value = ranger.getProf[6];
+                row.Cells["desc"].Value = ranger.getDProf[6];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -990,7 +1291,52 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d8 per Rogue level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = rogue.getProf[0];
+                row.Cells["desc"].Value = rogue.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = rogue.getProf[1];
+                row.Cells["desc"].Value = rogue.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = rogue.getProf[2];
+                row.Cells["desc"].Value = rogue.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = rogue.getProf[3];
+                row.Cells["desc"].Value = rogue.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = rogue.getProf[4];
+                row.Cells["desc"].Value = rogue.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = rogue.getProf[5];
+                row.Cells["desc"].Value = rogue.getDProf[5];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                row.Cells["name"].Value = rogue.getProf[6];
+                row.Cells["desc"].Value = rogue.getDProf[6];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[8].Clone();
+                row.Cells["name"].Value = rogue.getProf[7];
+                row.Cells["desc"].Value = rogue.getDProf[7];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[9].Clone();
+                row.Cells["name"].Value = rogue.getProf[8];
+                row.Cells["desc"].Value = rogue.getDProf[8];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -1019,7 +1365,42 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d6 per Sorcerer level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = sorcerer.getProf[0];
+                row.Cells["desc"].Value = sorcerer.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = sorcerer.getProf[1];
+                row.Cells["desc"].Value = sorcerer.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = sorcerer.getProf[2];
+                row.Cells["desc"].Value = sorcerer.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = sorcerer.getProf[3];
+                row.Cells["desc"].Value = sorcerer.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = sorcerer.getProf[4];
+                row.Cells["desc"].Value = sorcerer.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = sorcerer.getProf[5];
+                row.Cells["desc"].Value = sorcerer.getDProf[5];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                row.Cells["name"].Value = sorcerer.getProf[6];
+                row.Cells["desc"].Value = sorcerer.getDProf[6];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -1061,7 +1442,27 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d8 per Warlock level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = warlock.getProf[0];
+                row.Cells["desc"].Value = warlock.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = warlock.getProf[1];
+                row.Cells["desc"].Value = warlock.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = warlock.getProf[2];
+                row.Cells["desc"].Value = warlock.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = warlock.getProf[3];
+                row.Cells["desc"].Value = warlock.getDProf[3];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();
@@ -1094,7 +1495,42 @@ namespace Dungeon_Crawler__
 
                 DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
                 row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
+                row.Cells["desc"].Value = "1d6 per Warlock level";
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                row.Cells["name"].Value = wizard.getProf[0];
+                row.Cells["desc"].Value = wizard.getDProf[0];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                row.Cells["name"].Value = wizard.getProf[1];
+                row.Cells["desc"].Value = wizard.getDProf[1];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                row.Cells["name"].Value = wizard.getProf[2];
+                row.Cells["desc"].Value = wizard.getDProf[2];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                row.Cells["name"].Value = wizard.getProf[3];
+                row.Cells["desc"].Value = wizard.getDProf[3];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                row.Cells["name"].Value = wizard.getProf[4];
+                row.Cells["desc"].Value = wizard.getDProf[4];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                row.Cells["name"].Value = wizard.getProf[5];
+                row.Cells["desc"].Value = wizard.getDProf[5];
+                featuresGrid.Rows.Add(row);
+
+                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                row.Cells["name"].Value = wizard.getProf[6];
+                row.Cells["desc"].Value = wizard.getDProf[6];
                 featuresGrid.Rows.Add(row);
 
                 levelingGrid.Columns.Clear();

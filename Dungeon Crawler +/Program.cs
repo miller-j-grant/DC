@@ -9,6 +9,7 @@ namespace Dungeon_Crawler__
     class Program
     {
         private Character pc;
+        global Race dwarf;
 
         private string pClass;
         /// <summary>
