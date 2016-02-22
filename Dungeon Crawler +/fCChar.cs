@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,17 +43,24 @@ namespace Dungeon_Crawler__
             //Get the currently selected item.
             string curItem = raceBox.SelectedItem.ToString();
 
+            //Call to create a new Race object, same name as currently selected item.
+            Race selectRace = new Race(curItem);
+
             //Update data and display based on the currently selected item.
-            if (curItem.Equals("Dwarf"))
-            {
+            //if (curItem.Equals("Dwarf"))
+            //{
+
+            int[] stat = new int[6];
+            stat = selectRace.getStats();
+
                 //Set Ability Score Modifier text display for each race.
-                asmDisplayLabel.Text = "STR: " + dwarf.getStats[0] + " DEX: " + dwarf.getStats[1] + " CON: " + dwarf.getStats[2] + " INT: " + dwarf.getStats[3] + " WIS: " + dwarf.getStats[4] + " CHA: " + dwarf.getStats[5];
+                asmDisplayLabel.Text = "STR: " + stat[0] + " DEX: " + stat[1] + " CON: " + stat[2] + " INT: " + stat[3] + " WIS: " + stat[4] + " CHA: " + stat[5];
 
                 //Set Size text display for each race.
-                sizeDisplayLabel.Text = dwarf.getSize() ;
+                sizeDisplayLabel.Text = selectRace.getSize() ;
 
                 //Set Speed text display for each race.
-                speedDisplayLabel.Text = dwarf.getSpeed();
+                speedDisplayLabel.Text = "" + selectRace.getSpeed();
 
                 //Clear the Trait DataGrid of all columns and rows.
                 traitsGrid.Columns.Clear();
@@ -60,333 +68,357 @@ namespace Dungeon_Crawler__
 
                 //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
                 DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = dwarf.getTrait[0];
-                row.Cells["Description"].Value = dwarf.getTDesc[0];
-                traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = dwarf.getTrait[1];
-                row.Cells["Description"].Value = dwarf.getTDesc[1];
-                traitsGrid.Rows.Add(row);
+            ArrayList trait = new ArrayList();
+            trait = selectRace.getTraits();
+            ArrayList tDesc = new ArrayList();
+            tDesc = selectRace.getTDesc();
+            ArrayList lang = new ArrayList();
+            lang = selectRace.getLanguages();
 
-                row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
-                row.Cells["Trait"].Value = dwarf.getTrait[2];
-                row.Cells["Description"].Value = dwarf.getTDesc[2];
-                traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)traitsGrid.Rows[3].Clone();
-                row.Cells["Trait"].Value = dwarf.getTrait[3];
-                row.Cells["Description"].Value = dwarf.getTDesc[3];
+            for (int i = 0; i <= trait.Count; i++)
+            {
+                row = (DataGridViewRow)traitsGrid.Rows[i].Clone();
+                row.Cells["Trait"].Value = trait[i];
+                row.Cells["Description"].Value = tDesc[i];
                 traitsGrid.Rows.Add(row);
+            }
 
-                row = (DataGridViewRow)traitsGrid.Rows[4].Clone();
-                row.Cells["Trait"].Value = dwarf.getTrait[4];
-                row.Cells["Description"].Value = dwarf.getTDesc[4];
-                traitsGrid.Rows.Add(row);
+                //row.Cells["Trait"].Value = selectRace.getTrait[0];
+                //row.Cells["Description"].Value = selectRace.getTDesc[0];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+                //row.Cells["Trait"].Value = selectRace.getTrait[1];
+                //row.Cells["Description"].Value = .getTDesc[1];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+                //row.Cells["Trait"].Value = dwarf.getTrait[2];
+                //row.Cells["Description"].Value = dwarf.getTDesc[2];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[3].Clone();
+                //row.Cells["Trait"].Value = dwarf.getTrait[3];
+                //row.Cells["Description"].Value = dwarf.getTDesc[3];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[4].Clone();
+                //row.Cells["Trait"].Value = dwarf.getTrait[4];
+                //row.Cells["Description"].Value = dwarf.getTDesc[4];
+                //traitsGrid.Rows.Add(row);
 
                 //Clear the Language DataGrid of all columns and rows.
                 languagesGrid.Columns.Clear();
                 languagesGrid.Rows.Clear();
 
-                //Add Language information to the Language DataGrid.
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = dwarf.getLanguage[0];
-                languagesGrid.Rows.Add(row);
-
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = dwarf.getLanguage[1];
-                languagesGrid.Rows.Add(row);
-            }
-
-            if (curItem.Equals("Elf"))
+            //Add Language information to the Language DataGrid.
+            for (int j = 0; j <= lang.Count; j++)
             {
-                asmDisplayLabel.Text = "STR: " + elf.getStats[0] + " DEX: " + elf.getStats[1] + " CON: " + elf.getStats[2] + " INT: " + elf.getStats[3] + " WIS: " + elf.getStats[4] + " CHA: " + elf.getStats[5];
-
-                sizeDisplayLabel.Text = elf.getSize();
-
-                speedDisplayLabel.Text = elf.getSpeed();
-
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
-
-                DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = elf.getTrait[0];
-                row.Cells["Description"].Value = elf.getTDesc[0];
-                traitsGrid.Rows.Add(row);
-
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = elf.getTrait[1];
-                row.Cells["Description"].Value = elf.getTDesc[1];
-                traitsGrid.Rows.Add(row);
-
-                row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
-                row.Cells["Trait"].Value = elf.getTrait[2];
-                row.Cells["Description"].Value = elf.getTDesc[2];
-                traitsGrid.Rows.Add(row);
-
-                row = (DataGridViewRow)traitsGrid.Rows[3].Clone();
-                row.Cells["Trait"].Value = elf.getTrait[3];
-                row.Cells["Description"].Value = elf.getTDesc[3];
-                traitsGrid.Rows.Add(row);
-
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
-
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = elf.getLanguage[0];
-                languagesGrid.Rows.Add(row);
-
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = elf.getLanguage[1];
+                row = (DataGridViewRow)languagesGrid.Rows[j].Clone();
+                row.Cells["Languages"].Value = lang[j];
                 languagesGrid.Rows.Add(row);
             }
 
-            if (curItem.Equals("Halfling"))
-            {
-                asmDisplayLabel.Text = "STR: " + halfling.getStats[0] + " DEX: " + halfling.getStats[1] + " CON: " + halfling.getStats[2] + " INT: " + halfling.getStats[3] + " WIS: " + halfling.getStats[4] + " CHA: " + halfling.getStats[5];
+                //row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+                //row.Cells["Languages"].Value = dwarf.getLanguage[0];
+                //languagesGrid.Rows.Add(row);
 
-                sizeDisplayLabel.Text = halfling.getSize();
+                //row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+                //row.Cells["Languages"].Value = dwarf.getLanguage[1];
+                //languagesGrid.Rows.Add(row);
+            //}
 
-                speedDisplayLabel.Text = halfling.getSpeed();
+            //if (curItem.Equals("Elf"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + elf.getStats[0] + " DEX: " + elf.getStats[1] + " CON: " + elf.getStats[2] + " INT: " + elf.getStats[3] + " WIS: " + elf.getStats[4] + " CHA: " + elf.getStats[5];
 
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
+            //    sizeDisplayLabel.Text = elf.getSize();
 
-                DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = halfling.getTrait[0];
-                row.Cells["Description"].Value = halfling.getTDesc[0];
-                traitsGrid.Rows.Add(row);
+            //    speedDisplayLabel.Text = elf.getSpeed();
 
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = halfling.getTrait[1];
-                row.Cells["Description"].Value = halfling.getTDesc[1];
-                traitsGrid.Rows.Add(row);
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
 
-                row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
-                row.Cells["Trait"].Value = halfling.getTrait[2];
-                row.Cells["Description"].Value = halfling.getTDesc[2];
-                traitsGrid.Rows.Add(row);
+            //    DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //    row.Cells["Trait"].Value = elf.getTrait[0];
+            //    row.Cells["Description"].Value = elf.getTDesc[0];
+            //    traitsGrid.Rows.Add(row);
 
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
+            //    row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+            //    row.Cells["Trait"].Value = elf.getTrait[1];
+            //    row.Cells["Description"].Value = elf.getTDesc[1];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = halfling.getLanguage[0];
-                languagesGrid.Rows.Add(row);
+            //    row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+            //    row.Cells["Trait"].Value = elf.getTrait[2];
+            //    row.Cells["Description"].Value = elf.getTDesc[2];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = halfling.getLanguage[1];
-                languagesGrid.Rows.Add(row);
-            }
+            //    row = (DataGridViewRow)traitsGrid.Rows[3].Clone();
+            //    row.Cells["Trait"].Value = elf.getTrait[3];
+            //    row.Cells["Description"].Value = elf.getTDesc[3];
+            //    traitsGrid.Rows.Add(row);
 
-            if (curItem.Equals("Human"))
-            {
-                asmDisplayLabel.Text = "STR: " + human.getStats[0] + " DEX: " + human.getStats[1] + " CON: " + human.getStats[2] + " INT: " + human.getStats[3] + " WIS: " + human.getStats[4] + " CHA: " + human.getStats[5];
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
 
-                sizeDisplayLabel.Text = human.getSize();
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = elf.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
 
-                speedDisplayLabel.Text = human.getSpeed();
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = elf.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
 
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
+            //if (curItem.Equals("Halfling"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + halfling.getStats[0] + " DEX: " + halfling.getStats[1] + " CON: " + halfling.getStats[2] + " INT: " + halfling.getStats[3] + " WIS: " + halfling.getStats[4] + " CHA: " + halfling.getStats[5];
 
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
+            //    sizeDisplayLabel.Text = halfling.getSize();
 
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = human.getLanguage[0];
-                languagesGrid.Rows.Add(row);
-            }
+            //    speedDisplayLabel.Text = halfling.getSpeed();
 
-            if (curItem.Equals("Dragonborn"))
-            {
-                asmDisplayLabel.Text = "STR: " + dragonborn.getStats[0] + " DEX: " + dragonborn.getStats[1] + " CON: " + dragonborn.getStats[2] + " INT: " + dragonborn.getStats[3] + " WIS: " + dragonborn.getStats[4] + " CHA: " + dragonborn.getStats[5];
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
 
-                sizeDisplayLabel.Text = dragonborn.getSize();
+            //    DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //    row.Cells["Trait"].Value = halfling.getTrait[0];
+            //    row.Cells["Description"].Value = halfling.getTDesc[0];
+            //    traitsGrid.Rows.Add(row);
 
-                speedDisplayLabel.Text = dragonborn.getSpeed();
+            //    row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+            //    row.Cells["Trait"].Value = halfling.getTrait[1];
+            //    row.Cells["Description"].Value = halfling.getTDesc[1];
+            //    traitsGrid.Rows.Add(row);
 
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
+            //    row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+            //    row.Cells["Trait"].Value = halfling.getTrait[2];
+            //    row.Cells["Description"].Value = halfling.getTDesc[2];
+            //    traitsGrid.Rows.Add(row);
 
-                DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = dragonborn.getTrait[0];
-                row.Cells["Description"].Value = dragonborn.getTDesc[0];
-                traitsGrid.Rows.Add(row);
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
 
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = dragonborn.getTrait[1];
-                row.Cells["Description"].Value = dragonborn.getTDesc[1];
-                traitsGrid.Rows.Add(row);
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = halfling.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
-                row.Cells["Trait"].Value = dragonborn.getTrait[2];
-                row.Cells["Description"].Value = dragonborn.getTDesc[2];
-                traitsGrid.Rows.Add(row);
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = halfling.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
 
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
+            //if (curItem.Equals("Human"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + human.getStats[0] + " DEX: " + human.getStats[1] + " CON: " + human.getStats[2] + " INT: " + human.getStats[3] + " WIS: " + human.getStats[4] + " CHA: " + human.getStats[5];
 
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = dragonborn.getLanguage[0];
-                languagesGrid.Rows.Add(row);
+            //    sizeDisplayLabel.Text = human.getSize();
 
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = dragonborn.getLanguage[1];
-                languagesGrid.Rows.Add(row);
-            }
+            //    speedDisplayLabel.Text = human.getSpeed();
 
-            if (curItem.Equals("Gnome"))
-            {
-                asmDisplayLabel.Text = "STR: " + gnome.getStats[0] + " DEX: " + gnome.getStats[1] + " CON: " + gnome.getStats[2] + " INT: " + gnome.getStats[3] + " WIS: " + gnome.getStats[4] + " CHA: " + gnome.getStats[5];
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
 
-                sizeDisplayLabel.Text = gnome.getSize();
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
 
-                speedDisplayLabel.Text = gnome.getSpeed();
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = human.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
+            //}
 
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
+            //if (curItem.Equals("Dragonborn"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + dragonborn.getStats[0] + " DEX: " + dragonborn.getStats[1] + " CON: " + dragonborn.getStats[2] + " INT: " + dragonborn.getStats[3] + " WIS: " + dragonborn.getStats[4] + " CHA: " + dragonborn.getStats[5];
 
-                DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = gnome.getTrait[0];
-                row.Cells["Description"].Value = gnome.getTDesc[0];
-                traitsGrid.Rows.Add(row);
+            //    sizeDisplayLabel.Text = dragonborn.getSize();
 
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = gnome.getTrait[1];
-                row.Cells["Description"].Value = gnome.getTDesc[1];
-                traitsGrid.Rows.Add(row);
+            //    speedDisplayLabel.Text = dragonborn.getSpeed();
 
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
 
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = gnome.getLanguage[0];
-                languagesGrid.Rows.Add(row);
+            //    DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //    row.Cells["Trait"].Value = dragonborn.getTrait[0];
+            //    row.Cells["Description"].Value = dragonborn.getTDesc[0];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = gnome.getLanguage[1];
-                languagesGrid.Rows.Add(row);
-            }
+            //    row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+            //    row.Cells["Trait"].Value = dragonborn.getTrait[1];
+            //    row.Cells["Description"].Value = dragonborn.getTDesc[1];
+            //    traitsGrid.Rows.Add(row);
 
-            if (curItem.Equals("Half-Elf"))
-            {
-                asmDisplayLabel.Text = "STR: " + halfElf.getStats[0] + " DEX: " + halfElf.getStats[1] + " CON: " + halfElf.getStats[2] + " INT: " + halfElf.getStats[3] + " WIS: " + halfElf.getStats[4] + " CHA: " + halfElf.getStats[5];
+            //    row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+            //    row.Cells["Trait"].Value = dragonborn.getTrait[2];
+            //    row.Cells["Description"].Value = dragonborn.getTDesc[2];
+            //    traitsGrid.Rows.Add(row);
 
-                sizeDisplayLabel.Text = halfElf.getSize();
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
 
-                speedDisplayLabel.Text = halfElf.getSpeed();
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = dragonborn.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
 
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = dragonborn.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
 
-                DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = halfElf.getTrait[0];
-                row.Cells["Description"].Value = halfElf.getTDesc[0];
-                traitsGrid.Rows.Add(row);
+            //if (curItem.Equals("Gnome"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + gnome.getStats[0] + " DEX: " + gnome.getStats[1] + " CON: " + gnome.getStats[2] + " INT: " + gnome.getStats[3] + " WIS: " + gnome.getStats[4] + " CHA: " + gnome.getStats[5];
 
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = halfElf.getTrait[1];
-                row.Cells["Description"].Value = halfElf.getTDesc[1];
-                traitsGrid.Rows.Add(row);
+            //    sizeDisplayLabel.Text = gnome.getSize();
 
-                row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
-                row.Cells["Trait"].Value = halfElf.getTrait[2];
-                row.Cells["Description"].Value = halfElf.getTDesc[2];
-                traitsGrid.Rows.Add(row);
+            //    speedDisplayLabel.Text = gnome.getSpeed();
 
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
 
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = halfElf.getLanguage[0];
-                languagesGrid.Rows.Add(row);
+            //    DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //    row.Cells["Trait"].Value = gnome.getTrait[0];
+            //    row.Cells["Description"].Value = gnome.getTDesc[0];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = halfElf.getLanguage[1];
-                languagesGrid.Rows.Add(row);
-            }
+            //    row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+            //    row.Cells["Trait"].Value = gnome.getTrait[1];
+            //    row.Cells["Description"].Value = gnome.getTDesc[1];
+            //    traitsGrid.Rows.Add(row);
 
-            if (curItem.Equals("Half-Orc"))
-            {
-                asmDisplayLabel.Text = "STR: " + halfOrc.getStats[0] + " DEX: " + halfOrc.getStats[1] + " CON: " + halfOrc.getStats[2] + " INT: " + halfOrc.getStats[3] + " WIS: " + halfOrc.getStats[4] + " CHA: " + halfOrc.getStats[5];
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
 
-                sizeDisplayLabel.Text = halfOrc.getSize();
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = gnome.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
 
-                speedDisplayLabel.Text = halfOrc.getSpeed();
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = gnome.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
 
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
+            //if (curItem.Equals("Half-Elf"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + halfElf.getStats[0] + " DEX: " + halfElf.getStats[1] + " CON: " + halfElf.getStats[2] + " INT: " + halfElf.getStats[3] + " WIS: " + halfElf.getStats[4] + " CHA: " + halfElf.getStats[5];
 
-                DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = halfOrc.getTrait[0];
-                row.Cells["Description"].Value = halfOrc.getTDesc[0];
-                traitsGrid.Rows.Add(row);
+            //    sizeDisplayLabel.Text = halfElf.getSize();
 
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = halfOrc.getTrait[1];
-                row.Cells["Description"].Value = halfOrc.getTDesc[1];
-                traitsGrid.Rows.Add(row);
+            //    speedDisplayLabel.Text = halfElf.getSpeed();
 
-                row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
-                row.Cells["Trait"].Value = halfOrc.getTrait[2];
-                row.Cells["Description"].Value = halfOrc.getTDesc[2];
-                traitsGrid.Rows.Add(row);
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
 
-                row = (DataGridViewRow)traitsGrid.Rows[3].Clone();
-                row.Cells["Trait"].Value = halfOrc.getTrait[3];
-                row.Cells["Description"].Value = halfOrc.getTDesc[3];
-                traitsGrid.Rows.Add(row);
+            //    DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //    row.Cells["Trait"].Value = halfElf.getTrait[0];
+            //    row.Cells["Description"].Value = halfElf.getTDesc[0];
+            //    traitsGrid.Rows.Add(row);
 
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
+            //    row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+            //    row.Cells["Trait"].Value = halfElf.getTrait[1];
+            //    row.Cells["Description"].Value = halfElf.getTDesc[1];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = halfOrc.getLanguage[0];
-                languagesGrid.Rows.Add(row);
+            //    row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+            //    row.Cells["Trait"].Value = halfElf.getTrait[2];
+            //    row.Cells["Description"].Value = halfElf.getTDesc[2];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = halfOrc.getLanguage[1];
-                languagesGrid.Rows.Add(row);
-            }
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
 
-            if (curItem.Equals("Tiefling"))
-            {
-                asmDisplayLabel.Text = "STR: " + tiefling.getStats[0] + " DEX: " + tiefling.getStats[1] + " CON: " + tiefling.getStats[2] + " INT: " + tiefling.getStats[3] + " WIS: " + tiefling.getStats[4] + " CHA: " + tiefling.getStats[5];
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = halfElf.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
 
-                sizeDisplayLabel.Text = tiefling.getSize();
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = halfElf.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
 
-                speedDisplayLabel.Text = tiefling.getSpeed();
+            //if (curItem.Equals("Half-Orc"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + halfOrc.getStats[0] + " DEX: " + halfOrc.getStats[1] + " CON: " + halfOrc.getStats[2] + " INT: " + halfOrc.getStats[3] + " WIS: " + halfOrc.getStats[4] + " CHA: " + halfOrc.getStats[5];
 
-                traitsGrid.Columns.Clear();
-                traitsGrid.Rows.Clear();
+            //    sizeDisplayLabel.Text = halfOrc.getSize();
 
-                DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-                row.Cells["Trait"].Value = tiefling.getTrait[0];
-                row.Cells["Description"].Value = tiefling.getTDesc[0];
-                traitsGrid.Rows.Add(row);
+            //    speedDisplayLabel.Text = halfOrc.getSpeed();
 
-                row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
-                row.Cells["Trait"].Value = tiefling.getTrait[1];
-                row.Cells["Description"].Value = tiefling.getTDesc[1];
-                traitsGrid.Rows.Add(row);
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
 
-                row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
-                row.Cells["Trait"].Value = tiefling.getTrait[2];
-                row.Cells["Description"].Value = tiefling.getTDesc[2];
-                traitsGrid.Rows.Add(row);
+            //    DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //    row.Cells["Trait"].Value = halfOrc.getTrait[0];
+            //    row.Cells["Description"].Value = halfOrc.getTDesc[0];
+            //    traitsGrid.Rows.Add(row);
 
-                languagesGrid.Columns.Clear();
-                languagesGrid.Rows.Clear();
+            //    row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+            //    row.Cells["Trait"].Value = halfOrc.getTrait[1];
+            //    row.Cells["Description"].Value = halfOrc.getTDesc[1];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
-                row.Cells["Languages"].Value = tiefling.getLanguage[0];
-                languagesGrid.Rows.Add(row);
+            //    row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+            //    row.Cells["Trait"].Value = halfOrc.getTrait[2];
+            //    row.Cells["Description"].Value = halfOrc.getTDesc[2];
+            //    traitsGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
-                row.Cells["Languages"].Value = tiefling.getLanguage[1];
-                languagesGrid.Rows.Add(row);
-            }
+            //    row = (DataGridViewRow)traitsGrid.Rows[3].Clone();
+            //    row.Cells["Trait"].Value = halfOrc.getTrait[3];
+            //    row.Cells["Description"].Value = halfOrc.getTDesc[3];
+            //    traitsGrid.Rows.Add(row);
+
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
+
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = halfOrc.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
+
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = halfOrc.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
+
+            //if (curItem.Equals("Tiefling"))
+            //{
+            //    asmDisplayLabel.Text = "STR: " + tiefling.getStats[0] + " DEX: " + tiefling.getStats[1] + " CON: " + tiefling.getStats[2] + " INT: " + tiefling.getStats[3] + " WIS: " + tiefling.getStats[4] + " CHA: " + tiefling.getStats[5];
+
+            //    sizeDisplayLabel.Text = tiefling.getSize();
+
+            //    speedDisplayLabel.Text = tiefling.getSpeed();
+
+            //    traitsGrid.Columns.Clear();
+            //    traitsGrid.Rows.Clear();
+
+            //    DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //    row.Cells["Trait"].Value = tiefling.getTrait[0];
+            //    row.Cells["Description"].Value = tiefling.getTDesc[0];
+            //    traitsGrid.Rows.Add(row);
+
+            //    row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+            //    row.Cells["Trait"].Value = tiefling.getTrait[1];
+            //    row.Cells["Description"].Value = tiefling.getTDesc[1];
+            //    traitsGrid.Rows.Add(row);
+
+            //    row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+            //    row.Cells["Trait"].Value = tiefling.getTrait[2];
+            //    row.Cells["Description"].Value = tiefling.getTDesc[2];
+            //    traitsGrid.Rows.Add(row);
+
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
+
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = tiefling.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
+
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = tiefling.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
         }
 
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -394,8 +426,10 @@ namespace Dungeon_Crawler__
             //Get the currently selected item.
             string curItem = classBox.SelectedItem.ToString();
 
-            if (curItem.Equals("Barbarian"))
-            {
+            Class selectClass = new Class(curItem);
+
+            //if (curItem.Equals("Barbarian"))
+            //{
                 //Clear the Features DataGrid of all columns and rows.
                 featuresGrid.Columns.Clear();
                 featuresGrid.Rows.Clear();
@@ -404,58 +438,92 @@ namespace Dungeon_Crawler__
                 featuresGrid.Columns.Add("name","Name");
                 featuresGrid.Columns.Add("desc","Description");
 
+            DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
+            row.Cells["name"].Value = "Hit Dice: ";
+            row.Cells["desc"].Value = "1d" + selectClass.getHit() + " per " + selectClass.getName() + " level";
+            featuresGrid.Rows.Add(row);
+
+            ArrayList prof = new ArrayList();
+            prof = selectClass.getProf();
+            ArrayList pDesc = new ArrayList();
+            pDesc = selectClass.getPDesc();
+
+            for (int i = 1; i <= prof.Count; i++)
+            {
+                row = (DataGridViewRow)featuresGrid.Rows[i].Clone();
+                row.Cells["name"].Value = prof[i];
+                row.Cells["desc"].Value = pDesc[i];
+                featuresGrid.Rows.Add(row);
+            }
                 //Set the rows for the Features DataGrid.
-                DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
-                row.Cells["name"].Value = "Hit Dice: ";
-                row.Cells["desc"].Value = "1d12 per Barbarian level";
-                featuresGrid.Rows.Add(row);
+                //DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
+                //row.Cells["name"].Value = "Hit Dice: ";
+                //row.Cells["desc"].Value = "1d12 per Barbarian level";
+                //featuresGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
-                row.Cells["name"].Value = barbarian.getProf[0];
-                row.Cells["desc"].Value = barbarian.getPDesc[0];
-                featuresGrid.Rows.Add(row);
+                //row = (DataGridViewRow)featuresGrid.Rows[1].Clone();
+                //row.Cells["name"].Value = barbarian.getProf[0];
+                //row.Cells["desc"].Value = barbarian.getPDesc[0];
+                //featuresGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
-                row.Cells["name"].Value = barbarian.getProf[1];
-                row.Cells["desc"].Value = barbarian.getPDesc[1];
-                featuresGrid.Rows.Add(row);
+                //row = (DataGridViewRow)featuresGrid.Rows[2].Clone();
+                //row.Cells["name"].Value = barbarian.getProf[1];
+                //row.Cells["desc"].Value = barbarian.getPDesc[1];
+                //featuresGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
-                row.Cells["name"].Value = barbarian.getProf[2];
-                row.Cells["desc"].Value = barbarian.getPDesc[2];
-                featuresGrid.Rows.Add(row);
+                //row = (DataGridViewRow)featuresGrid.Rows[3].Clone();
+                //row.Cells["name"].Value = barbarian.getProf[2];
+                //row.Cells["desc"].Value = barbarian.getPDesc[2];
+                //featuresGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
-                row.Cells["name"].Value = barbarian.getProf[3];
-                row.Cells["desc"].Value = barbarian.getPDesc[3];
-                featuresGrid.Rows.Add(row);
+                //row = (DataGridViewRow)featuresGrid.Rows[4].Clone();
+                //row.Cells["name"].Value = barbarian.getProf[3];
+                //row.Cells["desc"].Value = barbarian.getPDesc[3];
+                //featuresGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
-                row.Cells["name"].Value = barbarian.getProf[4];
-                row.Cells["desc"].Value = barbarian.getPDesc[4];
-                featuresGrid.Rows.Add(row);
+                //row = (DataGridViewRow)featuresGrid.Rows[5].Clone();
+                //row.Cells["name"].Value = barbarian.getProf[4];
+                //row.Cells["desc"].Value = barbarian.getPDesc[4];
+                //featuresGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
-                row.Cells["name"].Value = barbarian.getProf[5];
-                row.Cells["desc"].Value = barbarian.getPDesc[5];
-                featuresGrid.Rows.Add(row);
+                //row = (DataGridViewRow)featuresGrid.Rows[6].Clone();
+                //row.Cells["name"].Value = barbarian.getProf[5];
+                //row.Cells["desc"].Value = barbarian.getPDesc[5];
+                //featuresGrid.Rows.Add(row);
 
-                row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
-                row.Cells["name"].Value = barbarian.getProf[6];
-                row.Cells["desc"].Value = barbarian.getPDesc[6];
-                featuresGrid.Rows.Add(row);
+                //row = (DataGridViewRow)featuresGrid.Rows[7].Clone();
+                //row.Cells["name"].Value = barbarian.getProf[6];
+                //row.Cells["desc"].Value = barbarian.getPDesc[6];
+                //featuresGrid.Rows.Add(row);
 
                 //Clear the Leveling Table DataGrid of all columns and rows.
                 levelingGrid.Columns.Clear();
                 levelingGrid.Rows.Clear();
 
+            ArrayList col = new ArrayList();
+            col = selectClass.geLCol();
 
-                //Set the columns for the Leveling Table DataGrid.
-                levelingGrid.Columns.Add("level","Level");
-                levelingGrid.Columns.Add("proficiency","Proficiency Bonus");
-                levelingGrid.Columns.Add("features", "Features");
-                levelingGrid.Columns.Add("rages", "Rages");
-                levelingGrid.Columns.Add("damage", "Rage Damage");
+            for (int j = 0; j <= ; j++)
+            {
+                levelingGrid.Columns.Add(""+j,col[j]);
+            }
+
+            //Set the columns for the Leveling Table DataGrid.
+            //levelingGrid.Columns.Add("level","Level");
+            //levelingGrid.Columns.Add("proficiency","Proficiency Bonus");
+            //levelingGrid.Columns.Add("features", "Features");
+            //levelingGrid.Columns.Add("rages", "Rages");
+            //levelingGrid.Columns.Add("damage", "Rage Damage");
+
+            //THINK THIS OVER, NEED TO FILL THE LEVELING GRID WITH ROWS VALUES BASED ON THE COLUMNS.
+            for (int z = 0; z <= ; z++)
+            {
+                row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
+                for (int y = 0; y <= col.Count; y++)
+                {
+                    row.Cells[col[y]].Value = ;
+                }
+            }
 
                 //Set the rows for the Leveling Table DataGrid.
                 row = (DataGridViewRow)levelingGrid.Rows[0].Clone();

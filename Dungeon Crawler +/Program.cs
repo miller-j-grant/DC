@@ -8,8 +8,6 @@ namespace Dungeon_Crawler__
 {
     class Program
     {
-        private Character pc;
-        global Race dwarf;
 
         private string pClass;
         /// <summary>
@@ -18,6 +16,7 @@ namespace Dungeon_Crawler__
         [STAThread]
         static void main(String[] args)
         {
+            createChar();
             initRaces();
             initClasses();
 
@@ -27,10 +26,15 @@ namespace Dungeon_Crawler__
             Application.Run(new fCChar());
         }
 
-        public void createChar()
+        public static void createChar()
         {
-            pc = new Character();
+            Character pc = new Character();
         }
+
+        //public Race createRace(string s)
+        //{
+        //    return new Race(s);
+        //}
 
         public static void initRaces()
         {
