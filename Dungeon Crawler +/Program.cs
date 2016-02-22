@@ -9,6 +9,9 @@ namespace Dungeon_Crawler__
     class Program
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> DC/Grant
 
 =======
 >>>>>>> 76351322e827d5d322d27f43a08038f1861cbf82
@@ -32,6 +35,9 @@ namespace Dungeon_Crawler__
         public static void createChar()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> DC/Grant
             Character pc = new Character();
         }
 
@@ -39,6 +45,7 @@ namespace Dungeon_Crawler__
         //{
         //    return new Race(s);
         //}
+<<<<<<< HEAD
 =======
            Character pc = new Character();
         }
@@ -48,6 +55,8 @@ namespace Dungeon_Crawler__
             return new Race(s);
         }
 >>>>>>> 76351322e827d5d322d27f43a08038f1861cbf82
+=======
+>>>>>>> DC/Grant
 
         public static void initRaces()
         {

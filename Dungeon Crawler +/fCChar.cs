@@ -1,8 +1,12 @@
 ﻿using System;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using System.Collections;
 =======
 >>>>>>> 76351322e827d5d322d27f43a08038f1861cbf82
+=======
+using System.Collections;
+>>>>>>> DC/Grant
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,15 +57,27 @@ namespace Dungeon_Crawler__
             //if (curItem.Equals("Dwarf"))
             //{
 
+<<<<<<< HEAD
                 //Set Ability Score Modifier text display for each race.
                 asmDisplayLabel.Text = "STR: " + selectRace.getStats()[0] + "\nDEX: " + selectRace.getStats()[1] + "\nCON: " + selectRace.getStats()[2] + 
                 "\nINT: " + selectRace.getStats()[3] + "\nWIS: " + selectRace.getStats()[4] + "\nCHA: " + selectRace.getStats()[5];
+=======
+            int[] stat = new int[6];
+            stat = selectRace.getStats();
+
+                //Set Ability Score Modifier text display for each race.
+                asmDisplayLabel.Text = "STR: " + stat[0] + " DEX: " + stat[1] + " CON: " + stat[2] + " INT: " + stat[3] + " WIS: " + stat[4] + " CHA: " + stat[5];
+>>>>>>> DC/Grant
 
                 //Set Size text display for each race.
                 sizeDisplayLabel.Text = selectRace.getSize() ;
 
                 //Set Speed text display for each race.
+<<<<<<< HEAD
                 speedDisplayLabel.Text = selectRace.getSpeed().ToString();
+=======
+                speedDisplayLabel.Text = "" + selectRace.getSpeed();
+>>>>>>> DC/Grant
 
                 //Clear the Trait DataGrid of all columns and rows.
                 traitsGrid.Columns.Clear();
@@ -73,7 +89,11 @@ namespace Dungeon_Crawler__
             ArrayList trait = new ArrayList();
             trait = selectRace.getTraits();
             ArrayList tDesc = new ArrayList();
+<<<<<<< HEAD
             //tDesc = selectRace.getTDesc();
+=======
+            tDesc = selectRace.getTDesc();
+>>>>>>> DC/Grant
             ArrayList lang = new ArrayList();
             lang = selectRace.getLanguages();
 
@@ -85,6 +105,7 @@ namespace Dungeon_Crawler__
                 row.Cells["Description"].Value = tDesc[i];
                 traitsGrid.Rows.Add(row);
             }
+<<<<<<< HEAD
 
                 //row.Cells["Trait"].Value = selectRace.getTrait[0];
                 //row.Cells["Description"].Value = selectRace.getTDesc[0];
@@ -110,6 +131,32 @@ namespace Dungeon_Crawler__
                 //row.Cells["Description"].Value = dwarf.getTDesc[4];
                 //traitsGrid.Rows.Add(row);
 
+=======
+
+                //row.Cells["Trait"].Value = selectRace.getTrait[0];
+                //row.Cells["Description"].Value = selectRace.getTDesc[0];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[1].Clone();
+                //row.Cells["Trait"].Value = selectRace.getTrait[1];
+                //row.Cells["Description"].Value = .getTDesc[1];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[2].Clone();
+                //row.Cells["Trait"].Value = dwarf.getTrait[2];
+                //row.Cells["Description"].Value = dwarf.getTDesc[2];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[3].Clone();
+                //row.Cells["Trait"].Value = dwarf.getTrait[3];
+                //row.Cells["Description"].Value = dwarf.getTDesc[3];
+                //traitsGrid.Rows.Add(row);
+
+                //row = (DataGridViewRow)traitsGrid.Rows[4].Clone();
+                //row.Cells["Trait"].Value = dwarf.getTrait[4];
+                //row.Cells["Description"].Value = dwarf.getTDesc[4];
+                //traitsGrid.Rows.Add(row);
+>>>>>>> DC/Grant
 
                 //Clear the Language DataGrid of all columns and rows.
                 languagesGrid.Columns.Clear();
@@ -409,6 +456,7 @@ namespace Dungeon_Crawler__
             //    row.Cells["Trait"].Value = tiefling.getTrait[2];
             //    row.Cells["Description"].Value = tiefling.getTDesc[2];
             //    traitsGrid.Rows.Add(row);
+<<<<<<< HEAD
 
             //    languagesGrid.Columns.Clear();
             //    languagesGrid.Rows.Clear();
@@ -422,6 +470,20 @@ namespace Dungeon_Crawler__
             //    languagesGrid.Rows.Add(row);
             //}
 
+=======
+
+            //    languagesGrid.Columns.Clear();
+            //    languagesGrid.Rows.Clear();
+
+            //    row = (DataGridViewRow)languagesGrid.Rows[0].Clone();
+            //    row.Cells["Languages"].Value = tiefling.getLanguage[0];
+            //    languagesGrid.Rows.Add(row);
+
+            //    row = (DataGridViewRow)languagesGrid.Rows[1].Clone();
+            //    row.Cells["Languages"].Value = tiefling.getLanguage[1];
+            //    languagesGrid.Rows.Add(row);
+            //}
+>>>>>>> DC/Grant
         }
 
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -433,7 +495,10 @@ namespace Dungeon_Crawler__
 
             //if (curItem.Equals("Barbarian"))
             //{
+<<<<<<< HEAD
 
+=======
+>>>>>>> DC/Grant
                 //Clear the Features DataGrid of all columns and rows.
                 featuresGrid.Columns.Clear();
                 featuresGrid.Rows.Clear();
@@ -444,7 +509,11 @@ namespace Dungeon_Crawler__
 
             DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
             row.Cells["name"].Value = "Hit Dice: ";
+<<<<<<< HEAD
             row.Cells["desc"].Value = "1d" + selectClass.getHit() + " per " + selectClass.getClassName() + " level";
+=======
+            row.Cells["desc"].Value = "1d" + selectClass.getHit() + " per " + selectClass.getName() + " level";
+>>>>>>> DC/Grant
             featuresGrid.Rows.Add(row);
 
             ArrayList prof = new ArrayList();
@@ -499,7 +568,10 @@ namespace Dungeon_Crawler__
                 //row.Cells["name"].Value = barbarian.getProf[6];
                 //row.Cells["desc"].Value = barbarian.getPDesc[6];
                 //featuresGrid.Rows.Add(row);
+<<<<<<< HEAD
 
+=======
+>>>>>>> DC/Grant
 
                 //Clear the Leveling Table DataGrid of all columns and rows.
                 levelingGrid.Columns.Clear();
