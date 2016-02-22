@@ -48,7 +48,6 @@ namespace Dungeon_Crawler__
             return hit;
         }
 
-
         public Class()
         {
 

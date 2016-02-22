@@ -1,5 +1,8 @@
 ﻿using System;
+<<<<<<< HEAD
 using System.Collections;
+=======
+>>>>>>> 76351322e827d5d322d27f43a08038f1861cbf82
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -106,6 +109,7 @@ namespace Dungeon_Crawler__
                 //row.Cells["Trait"].Value = dwarf.getTrait[4];
                 //row.Cells["Description"].Value = dwarf.getTDesc[4];
                 //traitsGrid.Rows.Add(row);
+
 
                 //Clear the Language DataGrid of all columns and rows.
                 languagesGrid.Columns.Clear();
@@ -417,6 +421,7 @@ namespace Dungeon_Crawler__
             //    row.Cells["Languages"].Value = tiefling.getLanguage[1];
             //    languagesGrid.Rows.Add(row);
             //}
+
         }
 
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -428,6 +433,7 @@ namespace Dungeon_Crawler__
 
             //if (curItem.Equals("Barbarian"))
             //{
+
                 //Clear the Features DataGrid of all columns and rows.
                 featuresGrid.Columns.Clear();
                 featuresGrid.Rows.Clear();
@@ -493,6 +499,7 @@ namespace Dungeon_Crawler__
                 //row.Cells["name"].Value = barbarian.getProf[6];
                 //row.Cells["desc"].Value = barbarian.getPDesc[6];
                 //featuresGrid.Rows.Add(row);
+
 
                 //Clear the Leveling Table DataGrid of all columns and rows.
                 levelingGrid.Columns.Clear();
