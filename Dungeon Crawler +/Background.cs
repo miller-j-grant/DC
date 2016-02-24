@@ -36,6 +36,9 @@ namespace Dungeon_Crawler__
 
         public Background(string bg)
         {
+            prof = new ArrayList();
+            lang = new ArrayList();
+            equip = new ArrayList();
             if (bg.Equals("Acolyte"))
             {
                 prof.Add("Insight");

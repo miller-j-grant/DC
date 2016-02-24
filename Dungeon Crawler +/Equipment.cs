@@ -73,13 +73,13 @@ namespace Dungeon_Crawler__
             if (name.Equals("Padded"))
             {
                 // converted to cp
-                cost = 500;
-                lb = 8;
-                subtype = "Light";
-                ac = 11;
-                maxdex = 0;
-                reqstr = 0;
-                steath = true;
+                //cost = 500;
+                //lb = 8;
+                //subtype = "Light";
+                //ac = 11;
+                //maxdex = 0;
+                //reqstr = 0;
+                //steath = true;
             }
 
             if (name.Equals("Leather"))

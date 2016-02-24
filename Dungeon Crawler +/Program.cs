@@ -8,19 +8,12 @@ namespace Dungeon_Crawler__
 {
     class Program
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> DC/Grant
-
-=======
->>>>>>> 76351322e827d5d322d27f43a08038f1861cbf82
         private string pClass;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void main(String[] args)
+        static void Main(String[] args)
         {
             createChar();
             initRaces();
@@ -34,29 +27,8 @@ namespace Dungeon_Crawler__
 
         public static void createChar()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> DC/Grant
             Character pc = new Character();
         }
-
-        //public Race createRace(string s)
-        //{
-        //    return new Race(s);
-        //}
-<<<<<<< HEAD
-=======
-           Character pc = new Character();
-        }
-
-        public static Race createChar(string s)
-        {
-            return new Race(s);
-        }
->>>>>>> 76351322e827d5d322d27f43a08038f1861cbf82
-=======
->>>>>>> DC/Grant
 
         public static void initRaces()
         {

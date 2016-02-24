@@ -4,17 +4,17 @@ namespace Dungeon_Crawler__
 {
     class Class
     {
-        private string className { get; }
-        private int hit { get; }
+        public string className { get; }
+        public int hit { get; }
 
         // Proficiences ArrayList contains saves, skills, equipment
-        private ArrayList prof { get; }
+        public ArrayList prof { get; }
 
         // Static Array for now, might make it an ArrayList later
 
         private ArrayList skillSelection;
 
-        private ArrayList skills { get; }
+        public ArrayList skills { get; }
         private int choose { get; }
 
 
@@ -23,30 +23,25 @@ namespace Dungeon_Crawler__
         // Will need to seperate into armor, weapons, tools
         // private Item() equip; <- jk not in this class or right now, but commenting as we might do something with it laster
 
-        private ArrayList equip { get; }
-        private int wealth { get; }
+        public ArrayList equip { get; }
+        public int wealth { get; }
 
         // Features
-        private ArrayList ft { get; }
+        public ArrayList ft { get; }
 
         // might need its own class @_@
-        private int firstSpells;
-        private int spellsKnown;
-        private int cantripsKnown;
+        public int firstSpells { get; }
+        public int spellsKnown { get; }
+        public int cantripsKnown { get; }
 
-        private string martialArts;
-        private int ki;
+        public string martialArts { get; }
+        public int ki { get; }
 
-        private string sneakAttack;
+        public string sneakAttack { get; }
 
-        private int invocations;
+        public int invocations { get; }
 
-        private ArrayList spells { get; }
-
-        public int getHit()
-        {
-            return hit;
-        }
+        public ArrayList spells { get; }
 
         public Class()
         {
@@ -55,6 +50,11 @@ namespace Dungeon_Crawler__
 
         public Class(string conClass)
         {
+            prof = new ArrayList();
+            skillSelection = new ArrayList();
+            equip = new ArrayList();
+            ft = new ArrayList();
+            spells = new ArrayList();
             if (conClass.Equals("Barbarian"))
             {
                 className = "Barbarian";

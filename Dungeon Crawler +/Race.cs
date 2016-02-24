@@ -44,6 +44,9 @@ namespace Dungeon_Crawler__
 
         public Race(string race)
         {
+            traits = new ArrayList();
+            languages = new ArrayList();
+            subrace = new ArrayList();
             if (race.Equals("Dwarf"))
             {
                 raceName = "Dwarf";
