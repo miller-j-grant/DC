@@ -29,6 +29,8 @@ namespace Dungeon_Crawler__
 
         private ArrayList traits { get; }
 
+        private ArrayList tDesc { get; }
+
         private ArrayList languages { get; }
 
         // this might be dumb, but it's like 3:45am so whatever
@@ -52,6 +54,8 @@ namespace Dungeon_Crawler__
                 size = "Medium";
                 speed = 25;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
                 traits.Add("Darkvision");
                 traits.Add("Dwarven Resilience");
@@ -59,8 +63,20 @@ namespace Dungeon_Crawler__
                 traits.Add("Tool Proficiency");
                 traits.Add("Stonecunning");
 
+                tDesc.Clear();
+
+                tDesc.Add("You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.");
+                tDesc.Add("You have advantage on saving throws against poison, and you have resistance against poison damage.");
+                tDesc.Add("You have proficiency with the battleaxe, handaxe, throwing hammer, and warhammer.");
+                tDesc.Add("You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.");
+                tDesc.Add("Whenever you make an Intelligence(History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check.");
+
+                languages.Clear();
+
                 languages.Add("Common");
                 languages.Add("Dwarvish");
+
+                subrace.Clear();
 
                 subrace.Add("Hill Dwarf");
                 subrace.Add("Mountain Dwarf");
@@ -74,13 +90,26 @@ namespace Dungeon_Crawler__
                 size = "Medium";
                 speed = 30;
 
+                traits.Clear();
+
                 traits.Add("Darkvision");
                 traits.Add("Keen Senses");
                 traits.Add("Fey Ancestry");
                 traits.Add("Trance");
 
+                tDesc.Clear();
+
+                tDesc.Add("You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.");
+                tDesc.Add("You have proficiency in the Perception skill.");
+                tDesc.Add("You have advantage on saving throws against being charmed, and magic can't put you to sleep.");
+                tDesc.Add("Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious for 4 hours a day. After resting this way, you gain the same benefit that a human does from 8 hours of sleep.");
+
+                languages.Clear();
+
                 languages.Add("Common");
                 languages.Add("Elvish");
+
+                subrace.Clear();
 
                 subrace.Add("High Elf");
                 subrace.Add("Wood Elves");
@@ -95,13 +124,25 @@ namespace Dungeon_Crawler__
                 size = "Small";
                 speed = 25;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
                 traits.Add("Lucky");
                 traits.Add("Brave");
                 traits.Add("Halfling Nimbleness");
 
+                tDesc.Clear();
+
+                tDesc.Add("When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.");
+                tDesc.Add("You have advantage on saving throws against being frightened.");
+                tDesc.Add("You can move throught the space of any creature that is of a size larger than yours.");
+
+                languages.Clear();
+
                 languages.Add("Common");
                 languages.Add("Halfling");
+
+                subrace.Clear();
 
                 subrace.Add("Lightfoot");
                 subrace.Add("Stout");
@@ -117,6 +158,8 @@ namespace Dungeon_Crawler__
 
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
 
+                languages.Clear();
+
                 languages.Add("Common");
                 //HUMANS GET AN EXTRA LANGUAGE, WHICH NEEDS TO BE PICKED BY THE USER languages.Add();
 
@@ -131,11 +174,21 @@ namespace Dungeon_Crawler__
                 size = "Medium";
                 speed = 30;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
                 traits.Add("Draconic Ancestry");
                 //USER MUST PICK A DRAGON ANCESTRY FROM THE INCLUDED TABLE.
                 traits.Add("Breath Weapon");
                 traits.Add("Damage Resistance");
+
+                tDesc.Clear();
+
+                tDesc.Add("Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the type.");
+                tDesc.Add("You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage of the exhalation.");
+                tDesc.Add("You have resistance to the damage type associated with your draconic ancestry.");
+
+                languages.Clear();
 
                 languages.Add("Common");
                 languages.Add("Draconic");
@@ -151,12 +204,23 @@ namespace Dungeon_Crawler__
                 size = "Small";
                 speed = 25;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
                 traits.Add("Darkvision");
                 traits.Add("Gnome Cunning");
 
+                tDesc.Clear();
+
+                tDesc.Add("You can see in dim light 60 feet of you as if it were bright light, and in darkness as if it were dim light.");
+                tDesc.Add("You have advantage on all Intellegence, Wisdom, and Charisma saving throws against magic.");
+
+                languages.Clear();
+
                 languages.Add("Common");
                 languages.Add("Gnomish");
+
+                subrace.Clear();
 
                 subrace.Add("Forest Gnome");
                 subrace.Add("Rock Gnome");
@@ -171,11 +235,21 @@ namespace Dungeon_Crawler__
                 size = "Medium";
                 speed = 30;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
                 traits.Add("Darkvision");
                 traits.Add("Fey Ancestry");
                 traits.Add("Skill Versatility");
                 //USER MUST SELECT TWO SKILLS TO GET PROFICIENCY IN.
+
+                tDesc.Clear();
+
+                tDesc.Add("You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.");
+                tDesc.Add("You have advantage on saving throws against being charmed, and magic can't put you to sleep.");
+                tDesc.Add("You gain proficiency in two skills of your choice.");
+
+                languages.Clear();
 
                 languages.Add("Common");
                 languages.Add("Elvish");
@@ -192,11 +266,22 @@ namespace Dungeon_Crawler__
                 size = "Medium";
                 speed = 30;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
                 traits.Add("Darkvision");
                 traits.Add("Menacing");
                 traits.Add("Relentless Endurance");
                 traits.Add("Savage Attacks");
+
+                tDesc.Clear();
+
+                tDesc.Add("You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light.");
+                tDesc.Add("You gain proficiency in the Intimidation skill.");
+                tDesc.Add("When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature agiain until you finish a long rest.");
+                tDesc.Add("When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.");
+
+                languages.Clear();
 
                 languages.Add("Common");
                 languages.Add("Orc");
@@ -212,10 +297,20 @@ namespace Dungeon_Crawler__
                 size = "Medium";
                 speed = 30;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
                 traits.Add("Darkvision");
                 traits.Add("Hellish Resistance");
                 traits.Add("Infernal Legacy");
+
+                tDesc.Clear();
+
+                tDesc.Add("You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light.");
+                tDesc.Add("You have resistance to fire damage.");
+                tDesc.Add("You know the thaumaturgy cantrip. At 3rd level, you can cast hellish rebuke 1/day. At 5th level, you can cast darkness 1/day. These are tested as CHA.");
+
+                languages.Clear();
 
                 languages.Add("Common");
                 languages.Add("Infernal");
@@ -257,6 +352,11 @@ namespace Dungeon_Crawler__
         public int getSpeed()
         {
             return speed;
+        }
+
+        public ArrayList getTDesc()
+        {
+            return tDesc;
         }
     }
 }
