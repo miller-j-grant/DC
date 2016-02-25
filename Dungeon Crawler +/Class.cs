@@ -55,6 +55,7 @@ namespace Dungeon_Crawler__
             equip = new ArrayList();
             ft = new ArrayList();
             spells = new ArrayList();
+
             if (conClass.Equals("Barbarian"))
             {
                 className = "Barbarian";
