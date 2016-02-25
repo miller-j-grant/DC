@@ -67,10 +67,6 @@ namespace Dungeon_Crawler__
             traitsGrid.Columns[0].Name = "Trait";
             traitsGrid.Columns[1].Name = "Description";
 
-            //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
-            DataGridViewRow row = new DataGridViewRow();
-
-
             ArrayList trait = new ArrayList();
             trait = selectRace.getTraits();
             ArrayList tDesc = new ArrayList();
@@ -90,7 +86,7 @@ namespace Dungeon_Crawler__
             languagesGrid.Rows.Clear();
 
             languagesGrid.ColumnCount = 1;
-            traitsGrid.Columns[0].Name = "Languages";
+            languagesGrid.Columns[0].Name = "Languages";
             //Add Language information to the Language DataGrid.
             for (int j = 0; j < lang.Count; j++)
             {
@@ -110,26 +106,20 @@ namespace Dungeon_Crawler__
             featuresGrid.Rows.Clear();
 
             //Set the columns for the Features DataGrid.
-            featuresGrid.Columns.Add("name", "Name");
-            featuresGrid.Columns.Add("desc", "Description");
+            featuresGrid.ColumnCount = 2;
+            featuresGrid.Columns[0].Name = "Name";
+            featuresGrid.Columns[1].Name = "Description";
 
-            DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
-            row.Cells["name"].Value = "Hit Dice: ";
-            row.Cells["desc"].Value = "1d" + selectClass.hit + " per " + selectClass.className + " level";
-
-            featuresGrid.Rows.Add(row);
+            featuresGrid.Rows.Add("Hit Dice:", "1d" + selectClass.hit + " per " + selectClass.className + " level");
 
             ArrayList prof = new ArrayList();
             prof = selectClass.prof;
-            // ArrayList pDesc = new ArrayList();
+            //ArrayList pDesc = new ArrayList();
             // pDesc = selectClass.getPDesc();
 
-            for (int i = 1; i <= prof.Count; i++)
+            for (int i = 0; i < prof.Count; i++)
             {
-                row = (DataGridViewRow)featuresGrid.Rows[i].Clone();
-                row.Cells["name"].Value = prof[i];
-            //    row.Cells["desc"].Value = pDesc[i];
-                featuresGrid.Rows.Add(row);
+                featuresGrid.Rows.Add(prof[i]/*, pDesc[i]*/);
             }
             
 
@@ -172,7 +162,6 @@ namespace Dungeon_Crawler__
             //Get currently selected item.
             string curItem = backgroundBox.SelectedItem.ToString();
             Background selectBG = new Background(curItem);
-
             Background selectBack = new Background(curItem);
 
             ArrayList bProf = new ArrayList();
@@ -190,80 +179,88 @@ namespace Dungeon_Crawler__
             ArrayList bFlaw = new ArrayList();
             bFlaw = selectBack.flaw;
 
-            proficienciesGrid.Columns.Add("name", "Name");
-            //proficienciesGrid.Columns.Add("desc", "Description");
+            proficienciesGrid.Columns.Clear();
+            proficienciesGrid.Rows.Clear();
 
-            DataGridViewRow row = (DataGridViewRow)proficienciesGrid.Rows[0].Clone();
+            proficienciesGrid.ColumnCount = 2;
+            proficienciesGrid.Columns[0].Name = "Name";
+            proficienciesGrid.Columns[1].Name = "Description";
 
-            for (int i = 0; i <= bProf.Count; i++)
+            for (int i = 0; i < bProf.Count; i++)
             {
-                row = (DataGridViewRow)proficienciesGrid.Rows[i].Clone();
-                row.Cells["name"].Value = bProf[i];
-                proficienciesGrid.Rows.Add(row);
+                proficienciesGrid.Rows.Add(bProf[i]/*, bProf description[i]*/);
             }
 
-            languagesGrid.Columns.Add("name", "Name");
-            //languagesGrid.Columns.Add("desc", "Description");
+            bLanguagesGrid.Columns.Clear();
+            bLanguagesGrid.Rows.Clear();
 
-            for (int j = 0; j <= bLang.Count; j++)
+            bLanguagesGrid.ColumnCount = 1;
+            bLanguagesGrid.Columns[0].Name = "Language";
+
+            for (int j = 0; j < bLang.Count; j++)
             {
-                row = (DataGridViewRow)languagesGrid.Rows[j].Clone();
-                row.Cells["name"].Value = bLang[j];
-                languagesGrid.Rows.Add(row);
+                bLanguagesGrid.Rows.Add(bLang[j]);
             }
 
-            bEquipmentGrid.Columns.Add("name", "Name");
-            //equipGrid.Columns.Add("desc", "Description");
+            bEquipmentGrid.Columns.Clear();
+            bEquipmentGrid.Rows.Clear();
 
-            for (int z = 0; z <= bEquip.Count; z++)
+            bEquipmentGrid.ColumnCount = 2;
+            bEquipmentGrid.Columns[0].Name = "Equipment";
+            bEquipmentGrid.Columns[1].Name = "Description";
+
+            for (int z = 0; z < bEquip.Count; z++)
             {
-                row = (DataGridViewRow)bEquipmentGrid.Rows[z].Clone();
-                row.Cells["name"].Value = bEquip[z];
-                bEquipmentGrid.Rows.Add(row);
+                bEquipmentGrid.Rows.Add(bEquip[z]/*, bEquip description[z]*/);
+
             }
 
-            personalityGrid.Columns.Add("num", "Number");
-            personalityGrid.Columns.Add("desc", "Description");
+            personalityGrid.Columns.Clear();
+            personalityGrid.Rows.Clear();
 
-            for (int y = 0; y <= bPers.Count; y++)
+            personalityGrid.ColumnCount = 2;
+            personalityGrid.Columns[0].Name = "Number";
+            personalityGrid.Columns[1].Name = "Description";
+
+            for (int y = 0; y < bPers.Count; y++)
             {
-                row = (DataGridViewRow)personalityGrid.Rows[y].Clone();
-                row.Cells["num"].Value = "" + y + 1;
-                row.Cells["desc"].Value = bPers[y];
-                personalityGrid.Rows.Add(row);
+                personalityGrid.Rows.Add((y+1).ToString(), bPers[y]);
             }
 
-            idealGrid.Columns.Add("num", "Number");
-            idealGrid.Columns.Add("desc", "Description");
+            idealGrid.Columns.Clear();
+            idealGrid.Rows.Clear();
 
-            for (int x = 0; x <= bIdeal.Count; x++)
+            idealGrid.ColumnCount = 2;
+            idealGrid.Columns[0].Name = "Number";
+            idealGrid.Columns[1].Name = "Description";
+
+            for (int x = 0; x < bIdeal.Count; x++)
             {
-                row = (DataGridViewRow)idealGrid.Rows[x].Clone();
-                row.Cells["num"].Value = "" + x + 1;
-                row.Cells["desc"].Value = bIdeal[x];
-                idealGrid.Rows.Add(row);
+                idealGrid.Rows.Add((x + 1).ToString(), bIdeal[x]);
             }
 
-            bondGrid.Columns.Add("num", "Number");
-            bondGrid.Columns.Add("desc", "Description");
+            bondGrid.Columns.Clear();
+            bondGrid.Rows.Clear();
 
-            for (int w = 0; w <= bBond.Count; w++)
+            bondGrid.ColumnCount = 2;
+            bondGrid.Columns[0].Name = "Number";
+            bondGrid.Columns[1].Name = "Description";
+
+            for (int w = 0; w < bBond.Count; w++)
             {
-                row = (DataGridViewRow)bondGrid.Rows[w].Clone();
-                row.Cells["num"].Value = "" + w + 1;
-                row.Cells["desc"].Value = bBond[w];
-                bondGrid.Rows.Add(row);
+                bondGrid.Rows.Add((w + 1).ToString(), bBond[w]);
             }
 
-            flawGrid.Columns.Add("num", "Number");
-            flawGrid.Columns.Add("desc", "Description");
+            flawGrid.Columns.Clear();
+            flawGrid.Rows.Clear();
 
-            for (int v = 0; v <= bFlaw.Count; v++)
+            flawGrid.ColumnCount = 2;
+            flawGrid.Columns[0].Name = "Number";
+            flawGrid.Columns[1].Name = "Description";
+
+            for (int v = 0; v < bFlaw.Count; v++)
             {
-                row = (DataGridViewRow)flawGrid.Rows[v].Clone();
-                row.Cells["num"].Value = "" + v + 1;
-                row.Cells["desc"].Value = bFlaw[v];
-                flawGrid.Rows.Add(row);
+                flawGrid.Rows.Add((v + 1).ToString(), bFlaw[v]);
             }
         }
 
