@@ -148,10 +148,6 @@ namespace Dungeon_Crawler__
                 levelingGrid.Rows.Clear();
 
 
-            ArrayList col = new ArrayList();
-            col = selectClass.columns;
-            ArrayList rows = new ArrayList();
-            rows = selectClass.vrow;
             ArrayList vRows = new ArrayList();
 
             //ArrayList col = new ArrayList();
@@ -163,13 +159,12 @@ namespace Dungeon_Crawler__
             //    levelingGrid.Columns.Add(""+j,col[j]);
             //}
 
-            for (int z = 0; z <= rows.Count; z++)
+            for (int z = 0; z <= selectClass.vrow.Count; z++)
             {
-                vRows = selectClass.getVRows(z);
                 row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
-                for (int y = 0; y <= col.Count; y++)
+                for (int y = 0; y <= selectClass.columns.Count; y++)
                 {
-                    row.Cells[selectClass.columns].Value = vRows[y];
+                    row.Cells[y].Value = selectClass.vrow[y];
                 }
             }
         }
@@ -192,19 +187,19 @@ namespace Dungeon_Crawler__
             Background selectBack = new Background(curItem);
 
             ArrayList bProf = new ArrayList();
-            bProf = selectBack.getProf();
+            bProf = selectBack.prof;
             ArrayList bLang = new ArrayList();
-            bLang = selectBack.getLang();
+            bLang = selectBack.lang;
             ArrayList bEquip = new ArrayList();
-            bEquip = selectBack.getEquip();
+            bEquip = selectBack.equip;
             ArrayList bPers = new ArrayList();
-            bPers = selectBack.getPers();
+            bPers = selectBack.person;
             ArrayList bIdeal = new ArrayList();
-            bIdeal = selectBack.getIdeal();
+            bIdeal = selectBack.ideal;
             ArrayList bBond = new ArrayList();
-            bBond = selectBack.getBond();
+            bBond = selectBack.bond;
             ArrayList bFlaw = new ArrayList();
-            bFlaw = selectBack.getFlaw();
+            bFlaw = selectBack.flaw;
 
             proficienciesGrid.Columns.Add("name","Name");
             //proficienciesGrid.Columns.Add("desc", "Description");

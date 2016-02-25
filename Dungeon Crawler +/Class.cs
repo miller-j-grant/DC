@@ -59,13 +59,15 @@ namespace Dungeon_Crawler__
             equip = new ArrayList();
             ft = new ArrayList();
             spells = new ArrayList();
+            columns = new ArrayList();
+            vrow = new ArrayList();
 
             if (conClass.Equals("Barbarian"))
             {
                 className = "Barbarian";
                 hit = 12;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -80,7 +82,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+               // skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Animal Handling");
@@ -90,7 +92,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Preception");
                 skillSelection.Add("Survival");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Greataxe or other Martial Weapon");
@@ -110,7 +112,7 @@ namespace Dungeon_Crawler__
                 //ft.Add("Rage");
                 //ft.Add("Unarmored Defense");
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -118,7 +120,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Rages");
                 columns.Add("Rage Damage");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -132,7 +134,7 @@ namespace Dungeon_Crawler__
                 className = "Bard";
                 hit = 8;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -148,7 +150,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 3;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Acrobatics");
@@ -170,7 +172,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Stealth");
                 skillSelection.Add("Survival");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Rapier, Longsword, or any Simple Weapon");
@@ -196,7 +198,7 @@ namespace Dungeon_Crawler__
                 spellsKnown = 4;
                 firstSpells = 2;
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency");
@@ -205,7 +207,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Spells Known");
                 columns.Add("1st");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -220,7 +222,7 @@ namespace Dungeon_Crawler__
                 className = "Cleric";
                 hit = 8;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -234,7 +236,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("History");
@@ -243,7 +245,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Persuasion");
                 skillSelection.Add("Religion");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Mace or a Warhammer");
@@ -270,7 +272,7 @@ namespace Dungeon_Crawler__
                 spellsKnown = 0;
                 firstSpells = 2;
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -278,7 +280,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Cantrips Known");
                 columns.Add("1st");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -292,7 +294,7 @@ namespace Dungeon_Crawler__
                 className = "Druid";
                 hit = 8;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -316,7 +318,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Animal Handling");
@@ -328,7 +330,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Religion");
                 skillSelection.Add("Survival");
 
-                equip.Clear();
+               // equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Wooden Shield or any Simple Weapon");
@@ -354,7 +356,7 @@ namespace Dungeon_Crawler__
                 spellsKnown = 0;
                 firstSpells = 2;
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -362,7 +364,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Cantrips Known");
                 columns.Add("1st");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -376,7 +378,7 @@ namespace Dungeon_Crawler__
                 className = "Fighter";
                 hit = 10;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -390,7 +392,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Acrobatics");
@@ -402,7 +404,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Preception");
                 skillSelection.Add("Survival");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Chain Mail or Leather, Longbow, and 20 arrows");
@@ -422,13 +424,13 @@ namespace Dungeon_Crawler__
                 //ft.Add("Fighting Style");
                 //ft.Add("Second Wind");
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
                 columns.Add("Features");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -440,7 +442,7 @@ namespace Dungeon_Crawler__
                 className = "Monk";
                 hit = 8;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -453,7 +455,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Acrobatics");
@@ -463,7 +465,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Religion");
                 skillSelection.Add("Stealth");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Shortsword, or any Simple Weapon");
@@ -486,7 +488,7 @@ namespace Dungeon_Crawler__
                 ki = 0;
                 martialArts = "1d4";
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -495,7 +497,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Unarmored Movement");
                 columns.Add("Features");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -510,7 +512,7 @@ namespace Dungeon_Crawler__
                 className = "Paladin";
                 hit = 10;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -524,7 +526,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Athletics");
@@ -534,7 +536,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Persuasion");
                 skillSelection.Add("Religion");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Martial Weapon and Shield, or two Martial Weapons");
@@ -559,14 +561,14 @@ namespace Dungeon_Crawler__
                 spellsKnown = 0;
                 firstSpells = 0;
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
                 columns.Add("Features");
                 columns.Add("1st");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -579,7 +581,7 @@ namespace Dungeon_Crawler__
                 className = "Ranger";
                 hit = 10;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -594,7 +596,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 3;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Animal Handling");
@@ -606,7 +608,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Stealth");
                 skillSelection.Add("Survival");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Scale Mail or Leather Armor");
@@ -631,7 +633,7 @@ namespace Dungeon_Crawler__
                 spellsKnown = 0;
                 firstSpells = 0;
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -639,7 +641,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Spells Known");
                 columns.Add("1st");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -653,7 +655,7 @@ namespace Dungeon_Crawler__
                 className = "Rogue";
                 hit = 8;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -670,7 +672,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 4;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Acrobatics");
@@ -685,7 +687,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Slight of Hand");
                 skillSelection.Add("Stealth");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Rapier or a Shortsword");
@@ -708,14 +710,14 @@ namespace Dungeon_Crawler__
 
                 sneakAttack = "1d6";
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
                 columns.Add("Sneak Attack");
                 columns.Add("Features");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -728,7 +730,7 @@ namespace Dungeon_Crawler__
                 className = "Sorcerer";
                 hit = 6;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -743,7 +745,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Arcana");
@@ -753,7 +755,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Persuasion");
                 skillSelection.Add("Religion");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Light Crossbow and 20 bolts or any Simple Weapon");
@@ -778,7 +780,7 @@ namespace Dungeon_Crawler__
                 spellsKnown = 2;
                 firstSpells = 2;
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -788,7 +790,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Spells Known");
                 columns.Add("1st");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -804,7 +806,7 @@ namespace Dungeon_Crawler__
                 className = "Warlock";
                 hit = 8;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -816,7 +818,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Arcana");
@@ -827,7 +829,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Nature");
                 skillSelection.Add("Religion");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Light Crossbow and 20 bolts or any Simple Weapon");
@@ -855,7 +857,7 @@ namespace Dungeon_Crawler__
                 firstSpells = 1;
                 invocations = 0;
                 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -866,7 +868,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Slot Level");
                 columns.Add("Invocations Known");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
@@ -882,7 +884,7 @@ namespace Dungeon_Crawler__
                 className = "Wizard";
                 hit = 6;
 
-                prof.Clear();
+                //prof.Clear();
 
                 // long strings might get long
                 //CLASS PROFICIENCIES.
@@ -897,7 +899,7 @@ namespace Dungeon_Crawler__
                 // number of skills to be selected FOR PROFICIENCY
                 choose = 2;
 
-                skillSelection.Clear();
+                //skillSelection.Clear();
 
                 //skills are to be selected from the options below at the amount above and then added to the prof Arraylist
                 skillSelection.Add("Arcana");
@@ -907,7 +909,7 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Medicine");
                 skillSelection.Add("Religion");
 
-                equip.Clear();
+                //equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
                 equip.Add("Quarterstaff or a Dagger");
@@ -932,7 +934,7 @@ namespace Dungeon_Crawler__
                 spellsKnown = 0;
                 firstSpells = 2;
 
-                columns.Clear();
+                //columns.Clear();
 
                 columns.Add("Level");
                 columns.Add("Proficiency Bonus");
@@ -940,7 +942,7 @@ namespace Dungeon_Crawler__
                 columns.Add("Cantrips Known");
                 columns.Add("1st");
 
-                vrow.Clear();
+                //vrow.Clear();
 
                 vrow.Add("1st");
                 vrow.Add("+2");
