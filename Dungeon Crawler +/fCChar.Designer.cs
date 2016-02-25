@@ -77,7 +77,10 @@
             this.rollButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.languagesGrid = new System.Windows.Forms.DataGridView();
+            this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.traitsGrid = new System.Windows.Forms.DataGridView();
+            this.Trait = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.languagesLabel = new System.Windows.Forms.Label();
             this.traitsLabel = new System.Windows.Forms.Label();
             this.speedDisplayLabel = new System.Windows.Forms.Label();
@@ -120,9 +123,6 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
-            this.Trait = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -552,6 +552,7 @@
             this.chaButton.TabIndex = 8;
             this.chaButton.Text = "Charisma";
             this.chaButton.UseVisualStyleBackColor = true;
+            this.chaButton.Click += new System.EventHandler(this.chaButton_Click);
             // 
             // wisButton
             // 
@@ -561,6 +562,7 @@
             this.wisButton.TabIndex = 7;
             this.wisButton.Text = "Wisdom";
             this.wisButton.UseVisualStyleBackColor = true;
+            this.wisButton.Click += new System.EventHandler(this.wisButton_Click);
             // 
             // intButton
             // 
@@ -570,6 +572,7 @@
             this.intButton.TabIndex = 6;
             this.intButton.Text = "Intelligence";
             this.intButton.UseVisualStyleBackColor = true;
+            this.intButton.Click += new System.EventHandler(this.intButton_Click);
             // 
             // conButton
             // 
@@ -579,6 +582,7 @@
             this.conButton.TabIndex = 5;
             this.conButton.Text = "Constitution";
             this.conButton.UseVisualStyleBackColor = true;
+            this.conButton.Click += new System.EventHandler(this.conButton_Click);
             // 
             // dexButton
             // 
@@ -588,6 +592,7 @@
             this.dexButton.TabIndex = 4;
             this.dexButton.Text = "Dexterity";
             this.dexButton.UseVisualStyleBackColor = true;
+            this.dexButton.Click += new System.EventHandler(this.dexButton_Click);
             // 
             // strButton
             // 
@@ -597,6 +602,7 @@
             this.strButton.TabIndex = 3;
             this.strButton.Text = "Strength";
             this.strButton.UseVisualStyleBackColor = true;
+            this.strButton.Click += new System.EventHandler(this.strButton_Click);
             // 
             // pointBuyLabel
             // 
@@ -624,6 +630,7 @@
             this.rollButton.TabIndex = 0;
             this.rollButton.Text = "Roll! (4d6)";
             this.rollButton.UseVisualStyleBackColor = true;
+            this.rollButton.Click += new System.EventHandler(this.rollButton_Click);
             // 
             // tabPage1
             // 
@@ -657,6 +664,12 @@
             this.languagesGrid.Size = new System.Drawing.Size(240, 151);
             this.languagesGrid.TabIndex = 22;
             // 
+            // languages
+            // 
+            this.languages.HeaderText = "Languages";
+            this.languages.Name = "languages";
+            this.languages.ReadOnly = true;
+            // 
             // traitsGrid
             // 
             this.traitsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -667,6 +680,18 @@
             this.traitsGrid.Name = "traitsGrid";
             this.traitsGrid.Size = new System.Drawing.Size(240, 150);
             this.traitsGrid.TabIndex = 21;
+            // 
+            // Trait
+            // 
+            this.Trait.HeaderText = "Trait";
+            this.Trait.Name = "Trait";
+            this.Trait.ReadOnly = true;
+            // 
+            // description
+            // 
+            this.description.HeaderText = "Description";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
             // 
             // languagesLabel
             // 
@@ -992,7 +1017,7 @@
             // 
             this.strLabel.AutoSize = true;
             this.strLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strLabel.Location = new System.Drawing.Point(25, 74);
+            this.strLabel.Location = new System.Drawing.Point(29, 73);
             this.strLabel.Name = "strLabel";
             this.strLabel.Size = new System.Drawing.Size(51, 37);
             this.strLabel.TabIndex = 4;
@@ -1114,29 +1139,11 @@
             this.strModLabel.Text = "0";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Trait
-            // 
-            this.Trait.HeaderText = "Trait";
-            this.Trait.Name = "Trait";
-            this.Trait.ReadOnly = true;
-            // 
-            // description
-            // 
-            this.description.HeaderText = "Description";
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
-            // 
-            // languages
-            // 
-            this.languages.HeaderText = "Languages";
-            this.languages.Name = "languages";
-            this.languages.ReadOnly = true;
-            // 
             // fCChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 775);
+            this.ClientSize = new System.Drawing.Size(1319, 733);
             this.Controls.Add(this.chaModLabel);
             this.Controls.Add(this.wisModLabel);
             this.Controls.Add(this.intModLabel);

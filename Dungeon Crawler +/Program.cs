@@ -8,13 +8,12 @@ namespace Dungeon_Crawler__
 {
     class Program
     {
-
         private string pClass;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void main(String[] args)
+        static void Main(String[] args)
         {
             createChar();
             initRaces();
@@ -30,11 +29,6 @@ namespace Dungeon_Crawler__
         {
             Character pc = new Character();
         }
-
-        //public Race createRace(string s)
-        //{
-        //    return new Race(s);
-        //}
 
         public static void initRaces()
         {

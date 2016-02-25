@@ -40,7 +40,7 @@ namespace Dungeon_Crawler__
 
         public static int rollD(int d)
         {
-            roll = r.Next(1, d);
+            roll = r.Next(1, (d+1));
             return roll;
         }
 
@@ -50,7 +50,7 @@ namespace Dungeon_Crawler__
             abilityscore = 0;
             for (int x = 0; x < 3; x++)
             {
-                roll = r.Next(1, 6);
+                roll = r.Next(1, 7);
                 abilityscore = abilityscore + roll;
                 if (drop > roll)
                 {
@@ -241,6 +241,95 @@ namespace Dungeon_Crawler__
                 }
             }
             return saves;
+        }
+
+        public static int calcMod(int m)
+        {
+            if (m == 1)
+            {
+                return -5;
+            }
+
+            if (m == 2 || m == 3)
+            {
+                return -4;
+            }
+
+            if (m == 4 || m == 5)
+            {
+                return -3;
+            }
+
+            if (m == 6 || m == 7)
+            {
+                return -2;
+            }
+
+            if (m == 8 || m == 9)
+            {
+                return -1;
+            }
+
+            if (m == 10 || m == 11)
+            {
+                return 0;
+            }
+
+            if (m == 12 || m == 13)
+            {
+                return 1;
+            }
+
+            if (m == 14 || m == 15)
+            {
+                return 2;
+            }
+
+            if (m == 16 || m == 17)
+            {
+                return 3;
+            }
+
+            if (m == 18 || m == 19)
+            {
+                return 4;
+            }
+
+            if (m == 20 || m == 21)
+            {
+                return 5;
+            }
+
+            if (m == 22 || m == 23)
+            {
+                return 6;
+            }
+
+            if (m == 24 || m == 25)
+            {
+                return 7;
+            }
+
+            if (m == 26 || m == 27)
+            {
+                return 8;
+            }
+
+            if (m == 28 || m == 29)
+            {
+                return 9;
+            }
+
+            if (m == 30)
+            {
+                return 10;
+            }
+
+            else
+            {
+                return 0;
+            }
+
         }
 
         public static int[] calcMods(int[] m)
