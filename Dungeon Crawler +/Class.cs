@@ -59,11 +59,9 @@ namespace Dungeon_Crawler__
             equip = new ArrayList();
             ft = new ArrayList();
             spells = new ArrayList();
-<<<<<<< HEAD
             columns = new ArrayList();
             vrow = new ArrayList();
-=======
->>>>>>> 58e013039b3a783b9c0b1239e98906ab193a190d
+
 
             if (conClass.Equals("Barbarian"))
             {

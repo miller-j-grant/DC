@@ -50,10 +50,7 @@ namespace Dungeon_Crawler__
             languages = new ArrayList();
             subrace = new ArrayList();
             tDesc = new ArrayList();
-<<<<<<< HEAD
-=======
 
->>>>>>> 58e013039b3a783b9c0b1239e98906ab193a190d
             if (race.Equals("Dwarf"))
             {
                 raceName = "Dwarf";
