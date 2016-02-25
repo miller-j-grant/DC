@@ -50,6 +50,10 @@ namespace Dungeon_Crawler__
             //Call to create a new Race object, same name as currently selected item.
             Race selectRace = new Race(curItem);
 
+
+            //Update data and display based on the currently selected item.
+
+
             //Set Ability Score Modifier text display for each race.
             asmDisplayLabel.Text = "STR: " + selectRace.getStats()[0] + "   DEX: " + selectRace.getStats()[1] + "\nCON: " + selectRace.getStats()[2] +
             "   INT: " + selectRace.getStats()[3] + "\nWIS: " + selectRace.getStats()[4] + "    CHA: " + selectRace.getStats()[5];
@@ -65,7 +69,7 @@ namespace Dungeon_Crawler__
             traitsGrid.Rows.Clear();
 
             //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
-            DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
+            //DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
 
             //  ArrayList trait = new ArrayList();
             //  trait = selectRace.getTraits();
@@ -88,12 +92,12 @@ namespace Dungeon_Crawler__
             //    languagesGrid.Rows.Clear();
 
             //Add Language information to the Language DataGrid.
-            for (int j = 0; j <= selectRace.getLanguages().Count; j++)
-            {
-                row = (DataGridViewRow)languagesGrid.Rows[j].Clone();
-                row.Cells["Languages"].Value = selectRace.getLanguages()[j];
-                languagesGrid.Rows.Add(row);
-            }
+            //for (int j = 0; j <= selectRace.getLanguages().Count; j++)
+            //{
+            //    row = (DataGridViewRow)languagesGrid.Rows[j].Clone();
+            //    row.Cells["Languages"].Value = selectRace.getLanguages()[j];
+            //    languagesGrid.Rows.Add(row);
+            //}
 
             ////Add Language information to the Language DataGrid.
             //for (int j = 0; j <= lang.Count; j++)
@@ -102,6 +106,39 @@ namespace Dungeon_Crawler__
             //    row.Cells["Languages"].Value = lang[j];
             //    languagesGrid.Rows.Add(row);
             //}
+            traitsGrid.ColumnCount = 2;
+            traitsGrid.Columns[0].Name = "Trait";
+            traitsGrid.Columns[1].Name = "Description";
+
+            //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
+            DataGridViewRow row = new DataGridViewRow();
+
+
+            ArrayList trait = new ArrayList();
+            trait = selectRace.getTraits();
+            ArrayList tDesc = new ArrayList();
+            tDesc = selectRace.getTDesc();
+            ArrayList lang = new ArrayList();
+            lang = selectRace.getLanguages();
+
+
+            for (int i = 0; i < trait.Count; i++)
+            {
+                traitsGrid.Rows.Add(trait[i], tDesc[i]);
+
+            }
+
+            //Clear the Language DataGrid of all columns and rows.
+            languagesGrid.Columns.Clear();
+            languagesGrid.Rows.Clear();
+
+            languagesGrid.ColumnCount = 1;
+            traitsGrid.Columns[0].Name = "Languages";
+            //Add Language information to the Language DataGrid.
+            for (int j = 0; j < lang.Count; j++)
+            {
+                languagesGrid.Rows.Add(lang[j]);
+            }
         }
 
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -111,15 +148,13 @@ namespace Dungeon_Crawler__
 
             Class selectClass = new Class(curItem);
 
-            //if (curItem.Equals("Barbarian"))
-            //{
-                //Clear the Features DataGrid of all columns and rows.
-                featuresGrid.Columns.Clear();
-                featuresGrid.Rows.Clear();
+            //Clear the Features DataGrid of all columns and rows.
+            featuresGrid.Columns.Clear();
+            featuresGrid.Rows.Clear();
 
-                //Set the columns for the Features DataGrid.
-                featuresGrid.Columns.Add("name","Name");
-                featuresGrid.Columns.Add("desc","Description");
+            //Set the columns for the Features DataGrid.
+            featuresGrid.Columns.Add("name", "Name");
+            featuresGrid.Columns.Add("desc", "Description");
 
             DataGridViewRow row = (DataGridViewRow)featuresGrid.Rows[0].Clone();
             row.Cells["name"].Value = "Hit Dice: ";
@@ -129,54 +164,75 @@ namespace Dungeon_Crawler__
 
             ArrayList prof = new ArrayList();
             prof = selectClass.prof;
-            ArrayList pDesc = new ArrayList();
-          //  pDesc = selectClass.getPDesc();
+            // ArrayList pDesc = new ArrayList();
+            // pDesc = selectClass.getPDesc();
 
             for (int i = 1; i <= prof.Count; i++)
             {
                 row = (DataGridViewRow)featuresGrid.Rows[i].Clone();
                 row.Cells["name"].Value = prof[i];
-                row.Cells["desc"].Value = pDesc[i];
+            //    row.Cells["desc"].Value = pDesc[i];
                 featuresGrid.Rows.Add(row);
             }
                 //Set the rows for the Features DataGrid.
                
 
 
-                //Clear the Leveling Table DataGrid of all columns and rows.
-                levelingGrid.Columns.Clear();
-                levelingGrid.Rows.Clear();
+            //    //Clear the Leveling Table DataGrid of all columns and rows.
+            //    levelingGrid.Columns.Clear();
+            //    levelingGrid.Rows.Clear();
 
 
-            ArrayList vRows = new ArrayList();
+            //ArrayList vRows = new ArrayList();
 
-            //ArrayList col = new ArrayList();
-            //col = selectClass.getCol();
+            ////ArrayList col = new ArrayList();
+            ////col = selectClass.getCol();
+            
 
+            //Clear the Leveling Table DataGrid of all columns and rows.
+            levelingGrid.Columns.Clear();
+            levelingGrid.Rows.Clear();
+
+
+           //ArrayList col = new ArrayList();
+           //col = selectClass.getLCol();
+           // ArrayList rows = new ArrayList();
+           // rows = selectClass.getRows();
+           // ArrayList vRows = new ArrayList();
 
             //for (int j = 0; j <= ; j++)
             //{
             //    levelingGrid.Columns.Add(""+j,col[j]);
             //}
 
-            for (int z = 0; z <= selectClass.vrow.Count; z++)
-            {
-                row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
-                for (int y = 0; y <= selectClass.columns.Count; y++)
-                {
-                    row.Cells[y].Value = selectClass.vrow[y];
-                }
-            }
-        }
+        //    for (int z = 0; z <= selectClass.vrow.Count; z++)
+        //    {
+        //        row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
+        //        for (int y = 0; y <= selectClass.columns.Count; y++)
+        //        {
+        //            row.Cells[y].Value = selectClass.vrow[y];
+        //        }
+        //    }
+        //}
             //THINK THIS OVER, NEED TO FILL THE LEVELING GRID WITH ROWS VALUES BASED ON THE COLUMNS.
             //for (int z = 0; z <= ; z++)
+            //Set the columns for the Leveling Table DataGrid.
+            //levelingGrid.Columns.Add("level","Level");
+            //levelingGrid.Columns.Add("proficiency","Proficiency Bonus");
+            //levelingGrid.Columns.Add("features", "Features");
+            //levelingGrid.Columns.Add("rages", "Rages");
+            //levelingGrid.Columns.Add("damage", "Rage Damage");
+
+            //for (int z = 0; z <= rows.Count; z++)
             //{
+            //    vRows = selectClass.getVRows(z);
             //    row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
             //    for (int y = 0; y <= col.Count; y++)
             //    {
-            //        row.Cells[col[y]].Value = ;
+            //        row.Cells[col[y]].Value = vRows[y];
             //    }
             //}
+        }
 
         private void backgroundBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -201,7 +257,7 @@ namespace Dungeon_Crawler__
             ArrayList bFlaw = new ArrayList();
             bFlaw = selectBack.flaw;
 
-            proficienciesGrid.Columns.Add("name","Name");
+            proficienciesGrid.Columns.Add("name", "Name");
             //proficienciesGrid.Columns.Add("desc", "Description");
 
             DataGridViewRow row = (DataGridViewRow)proficienciesGrid.Rows[0].Clone();

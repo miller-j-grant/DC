@@ -20,7 +20,11 @@ namespace Dungeon_Crawler__
         public string ft { get; }
 
         // extra is for like Charlatan "Favorite Schemes"
+<<<<<<< HEAD
         public ArrayList extra { get; }
+=======
+        public string[]extra { get; }
+>>>>>>> 58e013039b3a783b9c0b1239e98906ab193a190d
 
         // Personality Trait
         public ArrayList person { get; }
@@ -642,6 +646,7 @@ namespace Dungeon_Crawler__
                     "I can't help but pocket loose coins and other trinkets I come across.",
                     "My pride will probably lead to my destruction."};
             }
+<<<<<<< HEAD
 
             if (bg.Equals("Soldier"))
             {
@@ -753,6 +758,9 @@ namespace Dungeon_Crawler__
                     "It's not stealing if I need it more than someone else.",
                     "People who can't take care of themselves get what they deserve."};
             }
+=======
+            
+>>>>>>> 58e013039b3a783b9c0b1239e98906ab193a190d
         }
     }
 }
