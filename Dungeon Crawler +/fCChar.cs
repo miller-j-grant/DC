@@ -13,6 +13,9 @@ namespace Dungeon_Crawler__
 {
     public partial class fCChar : Form
     {
+        Race selectRace;
+        Class selectClass;
+        Background selectBack;
         Character pc = new Character();
         public fCChar()
         {
@@ -39,6 +42,117 @@ namespace Dungeon_Crawler__
 
         }
 
+        private void rollButton_Click(object sender, EventArgs e)
+        {
+            rollLabel1.Text = Calculations.rollAbilityScore().ToString();
+            rollLabel2.Text = Calculations.rollAbilityScore().ToString();
+            rollLabel3.Text = Calculations.rollAbilityScore().ToString();
+            rollLabel4.Text = Calculations.rollAbilityScore().ToString();
+            rollLabel5.Text = Calculations.rollAbilityScore().ToString();
+            rollLabel6.Text = Calculations.rollAbilityScore().ToString();
+        }
+
+        private void strButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pc.setBaseStr(Int32.Parse(strTextBox.Text));
+                strLabel.Text = strTextBox.Text;
+                pc.setStrMod(Calculations.calcMod(Int32.Parse(strTextBox.Text)));
+                strModLabel.Text = pc.getSTRMod().ToString();
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void dexButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pc.setBaseDex(Int32.Parse(dexTextBox.Text));
+                dexLabel.Text = dexTextBox.Text;
+                pc.setDexMod(Calculations.calcMod(Int32.Parse(dexTextBox.Text)));
+                dexModLabel.Text = pc.getDEXMod().ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void conButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pc.setBaseCon(Int32.Parse(conTextBox.Text));
+                conLabel.Text = conTextBox.Text;
+                pc.setConMod(Calculations.calcMod(Int32.Parse(conTextBox.Text)));
+                conModLabel.Text = pc.getCONMod().ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void intButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pc.setBaseIntel(Int32.Parse(intTextBox.Text));
+                intLabel.Text = intTextBox.Text;
+                pc.setIntelMod(Calculations.calcMod(Int32.Parse(intTextBox.Text)));
+                intModLabel.Text = pc.getINTMod().ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void wisButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pc.setBaseWis(Int32.Parse(wisTextBox.Text));
+                wisLabel.Text = wisTextBox.Text;
+                pc.setWisMod(Calculations.calcMod(Int32.Parse(wisTextBox.Text)));
+                wisModLabel.Text = pc.getWISMod().ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void chaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pc.setBaseCha(Int32.Parse(chaTextBox.Text));
+                chaLabel.Text = chaTextBox.Text;
+                pc.setChaMod(Calculations.calcMod(Int32.Parse(chaTextBox.Text)));
+                chaModLabel.Text = pc.getCHAMod().ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void commitButton_Click(object sender, EventArgs e)
+        {
+            strButton_Click(sender, e);
+            dexButton_Click(sender, e);
+            conButton_Click(sender, e);
+            intButton_Click(sender, e);
+            wisButton_Click(sender, e);
+            chaButton_Click(sender, e);
+        }
+
         private void raceBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Get the currently selected item.
@@ -47,7 +161,9 @@ namespace Dungeon_Crawler__
             //Call to create a new Race object, same name as currently selected item.
             Race selectRace = new Race(curItem);
 
+
             //Update data and display based on the currently selected item.
+
 
             //Set Ability Score Modifier text display for each race.
             asmDisplayLabel.Text = "STR: " + selectRace.getStats()[0] + "   DEX: " + selectRace.getStats()[1] + "\nCON: " + selectRace.getStats()[2] +
@@ -63,6 +179,7 @@ namespace Dungeon_Crawler__
             traitsGrid.Columns.Clear();
             traitsGrid.Rows.Clear();
 
+            //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
             traitsGrid.ColumnCount = 2;
             traitsGrid.Columns[0].Name = "Trait";
             traitsGrid.Columns[1].Name = "Description";
@@ -94,6 +211,46 @@ namespace Dungeon_Crawler__
             }
         }
 
+        private void raceButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string curItem = raceBox.SelectedItem.ToString();
+                pc.setRace(curItem);
+                pc.setStats(pc.race.getStats());
+
+                strLabel.Text = pc.getSTR().ToString();
+                pc.setStrMod(Calculations.calcMod(pc.getSTR()));
+                strModLabel.Text = pc.getSTRMod().ToString();
+
+                dexLabel.Text = pc.getDEX().ToString();
+                pc.setDexMod(Calculations.calcMod(pc.getDEX()));
+                dexModLabel.Text = pc.getDEXMod().ToString();
+
+                conLabel.Text = pc.getCON().ToString();
+                pc.setConMod(Calculations.calcMod(pc.getCON()));
+                conModLabel.Text = pc.getCONMod().ToString();
+
+                intLabel.Text = pc.getINT().ToString();
+                pc.setIntelMod(Calculations.calcMod(pc.getINT()));
+                intModLabel.Text = pc.getINTMod().ToString();
+
+                wisLabel.Text = pc.getWIS().ToString();
+                pc.setWisMod(Calculations.calcMod(pc.getWIS()));
+                wisModLabel.Text = pc.getWISMod().ToString();
+
+                chaLabel.Text = pc.getCHA().ToString();
+                pc.setChaMod(Calculations.calcMod(pc.getCHA()));
+                chaModLabel.Text = pc.getCHAMod().ToString();
+            }
+            catch
+            {
+
+            }
+
+        }
+
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Get the currently selected item.
@@ -121,24 +278,48 @@ namespace Dungeon_Crawler__
             {
                 featuresGrid.Rows.Add(prof[i]/*, pDesc[i]*/);
             }
-            
+            //Set the rows for the Features DataGrid.
+
+
+
+            //    //Clear the Leveling Table DataGrid of all columns and rows.
+            //    levelingGrid.Columns.Clear();
+            //    levelingGrid.Rows.Clear();
+
+
+            //ArrayList vRows = new ArrayList();
+
+            ////ArrayList col = new ArrayList();
+            ////col = selectClass.getCol();
+
 
             //Clear the Leveling Table DataGrid of all columns and rows.
             levelingGrid.Columns.Clear();
             levelingGrid.Rows.Clear();
 
 
-           //ArrayList col = new ArrayList();
-           //col = selectClass.getLCol();
-           // ArrayList rows = new ArrayList();
-           // rows = selectClass.getRows();
-           // ArrayList vRows = new ArrayList();
+            //ArrayList col = new ArrayList();
+            //col = selectClass.getLCol();
+            // ArrayList rows = new ArrayList();
+            // rows = selectClass.getRows();
+            // ArrayList vRows = new ArrayList();
 
             //for (int j = 0; j <= ; j++)
             //{
             //    levelingGrid.Columns.Add(""+j,col[j]);
             //}
 
+            //    for (int z = 0; z <= selectClass.vrow.Count; z++)
+            //    {
+            //        row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
+            //        for (int y = 0; y <= selectClass.columns.Count; y++)
+            //        {
+            //            row.Cells[y].Value = selectClass.vrow[y];
+            //        }
+            //    }
+            //}
+            //THINK THIS OVER, NEED TO FILL THE LEVELING GRID WITH ROWS VALUES BASED ON THE COLUMNS.
+            //for (int z = 0; z <= ; z++)
             //Set the columns for the Leveling Table DataGrid.
             //levelingGrid.Columns.Add("level","Level");
             //levelingGrid.Columns.Add("proficiency","Proficiency Bonus");
@@ -224,7 +405,7 @@ namespace Dungeon_Crawler__
 
             for (int y = 0; y < bPers.Count; y++)
             {
-                personalityGrid.Rows.Add((y+1).ToString(), bPers[y]);
+                personalityGrid.Rows.Add((y + 1).ToString(), bPers[y]);
             }
 
             idealGrid.Columns.Clear();
@@ -264,63 +445,6 @@ namespace Dungeon_Crawler__
             }
         }
 
-        private void rollButton_Click(object sender, EventArgs e)
-        {
-            rollLabel1.Text = Calculations.rollAbilityScore().ToString();
-            rollLabel2.Text = Calculations.rollAbilityScore().ToString();
-            rollLabel3.Text = Calculations.rollAbilityScore().ToString();
-            rollLabel4.Text = Calculations.rollAbilityScore().ToString();
-            rollLabel5.Text = Calculations.rollAbilityScore().ToString();
-            rollLabel6.Text = Calculations.rollAbilityScore().ToString();
-        }
-
-        private void strButton_Click(object sender, EventArgs e)
-        {
-            pc.setBaseStr(Int32.Parse(strTextBox.Text));
-            strLabel.Text = strTextBox.Text;
-            pc.setStrMod(Calculations.calcMod(Int32.Parse(strTextBox.Text)));
-            strModLabel.Text = pc.getSTRMod().ToString();
-        }
-
-        private void dexButton_Click(object sender, EventArgs e)
-        {
-            pc.setBaseDex(Int32.Parse(dexTextBox.Text));
-            dexLabel.Text = dexTextBox.Text;
-            pc.setDexMod(Calculations.calcMod(Int32.Parse(dexTextBox.Text)));
-            dexModLabel.Text = pc.getDEXMod().ToString();
-        }
-
-        private void conButton_Click(object sender, EventArgs e)
-        {
-            pc.setBaseCon(Int32.Parse(conTextBox.Text));
-            conLabel.Text = conTextBox.Text;
-            pc.setConMod(Calculations.calcMod(Int32.Parse(conTextBox.Text)));
-            conModLabel.Text = pc.getCONMod().ToString();
-        }
-
-        private void intButton_Click(object sender, EventArgs e)
-        {
-            pc.setBaseIntel(Int32.Parse(intTextBox.Text));
-            intLabel.Text = intTextBox.Text;
-            pc.setIntelMod(Calculations.calcMod(Int32.Parse(intTextBox.Text)));
-            intModLabel.Text = pc.getINTMod().ToString();
-        }
-
-        private void wisButton_Click(object sender, EventArgs e)
-        {
-            pc.setBaseWis(Int32.Parse(wisTextBox.Text));
-            wisLabel.Text = wisTextBox.Text;
-            pc.setWisMod(Calculations.calcMod(Int32.Parse(wisTextBox.Text)));
-            wisModLabel.Text = pc.getWISMod().ToString();
-        }
-
-        private void chaButton_Click(object sender, EventArgs e)
-        {
-            pc.setBaseCon(Int32.Parse(chaTextBox.Text));
-            chaLabel.Text = chaTextBox.Text;
-            pc.setChaMod(Calculations.calcMod(Int32.Parse(chaTextBox.Text)));
-            chaModLabel.Text = pc.getCHAMod().ToString();
-        }
 
     }
 }
