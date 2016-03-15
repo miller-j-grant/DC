@@ -38,6 +38,13 @@ namespace Dungeon_Crawler__
         private static int drop;
         private static int abilityscore;
 
+        private static int[] pbSTR = new int[2];
+        private static int[] pbCON = new int[2];
+        private static int[] pbDEX = new int[2];
+        private static int[] pbINT = new int[2];
+        private static int[] pbWIS = new int[2];
+        private static int[] pbCHA = new int[2];
+
         public static int rollD(int d)
         {
             roll = r.Next(1, (d+1));
@@ -520,6 +527,98 @@ namespace Dungeon_Crawler__
         public static int addToSkill(int[] skills, int s, int amount)
         {
             return (skills[s] + amount);
+        }
+
+        public static int pointBuyCost(decimal attribute)
+        {
+            int cost = 0;
+            if (attribute == 8)
+                cost = 0;
+            else if (attribute == 9)
+                cost = 1;
+            else if (attribute == 10)
+                cost = 2;
+            else if (attribute == 11)
+                cost = 3;
+            else if (attribute == 12)
+                cost = 4;
+            else if (attribute == 13)
+                cost = 5;
+            else if (attribute == 14)
+                cost = 7;
+            else if (attribute == 15)
+                cost = 9;
+            return cost;
+        }
+
+        public static int pointBuyPoints(int points, decimal newValue, string name)
+        {
+            if (name == "str")
+            {
+                if (pbSTR[0].Equals(null))
+                {
+                    pbSTR[0] = 8;
+                    pbSTR[1] = 8;
+                }
+                pbSTR[0] = pbSTR[1];
+                pbSTR[1] = Convert.ToInt32(newValue);
+                return points + pointBuyCost(pbSTR[0]) - pointBuyCost(pbSTR[1]);
+            }   
+            else if (name == "con")
+            {
+                if (pbCON[0].Equals(null))
+                {
+                    pbCON[0] = 8;
+                    pbCON[1] = 8;
+                }
+                pbCON[0] = pbCON[1];
+                pbCON[1] = Convert.ToInt32(newValue);
+                return points + pointBuyCost(pbCON[0]) - pointBuyCost(pbCON[1]);
+            }
+            else if (name == "dex")
+            {
+                if (pbDEX[0].Equals(null))
+                {
+                    pbDEX[0] = 8;
+                    pbDEX[1] = 8;
+                }
+                pbDEX[0] = pbDEX[1];
+                pbDEX[1] = Convert.ToInt32(newValue);
+                return points + pointBuyCost(pbDEX[0]) - pointBuyCost(pbDEX[1]);
+            }
+            else if (name == "int")
+            {
+                if (pbINT[0].Equals(null))
+                {
+                    pbINT[0] = 8;
+                    pbINT[1] = 8;
+                }
+                pbINT[0] = pbINT[1];
+                pbINT[1] = Convert.ToInt32(newValue);
+                return points + pointBuyCost(pbINT[0]) - pointBuyCost(pbINT[1]);
+            }
+            else if (name == "wis")
+            {
+                if (pbWIS[0].Equals(null))
+                {
+                    pbWIS[0] = 8;
+                    pbWIS[1] = 8;
+                }
+                pbWIS[0] = pbWIS[1];
+                pbWIS[1] = Convert.ToInt32(newValue);
+                return points + pointBuyCost(pbWIS[0]) - pointBuyCost(pbWIS[1]);
+            }
+            else
+            {
+                if (pbCHA[0].Equals(null))
+                {
+                    pbCHA[0] = 8;
+                    pbCHA[1] = 8;
+                }
+                pbCHA[0] = pbCHA[1];
+                pbCHA[1] = Convert.ToInt32(newValue);
+                return points + pointBuyCost(pbCHA[0]) - pointBuyCost(pbCHA[1]);
+            }
         }
 
 

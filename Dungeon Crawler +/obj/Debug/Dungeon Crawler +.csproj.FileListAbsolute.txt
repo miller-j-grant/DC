@@ -22,3 +22,4 @@ C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Splash.resources
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache
+C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCCSelection.resources

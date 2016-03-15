@@ -32,6 +32,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CCharTab = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.commitButton = new System.Windows.Forms.Button();
             this.pointsLabel = new System.Windows.Forms.Label();
             this.pointsRemainingLabel = new System.Windows.Forms.Label();
             this.strCostLabel = new System.Windows.Forms.Label();
@@ -109,7 +110,23 @@
             this.bLanguagesLabel = new System.Windows.Forms.Label();
             this.proficienciesLabel = new System.Windows.Forms.Label();
             this.backgroundBox = new System.Windows.Forms.ListBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.hairTextBox = new System.Windows.Forms.TextBox();
+            this.skinTextBox = new System.Windows.Forms.TextBox();
+            this.eyesLabel = new System.Windows.Forms.Label();
+            this.hairLabel = new System.Windows.Forms.Label();
+            this.skinLabel = new System.Windows.Forms.Label();
+            this.weightTextBox = new System.Windows.Forms.TextBox();
+            this.heightTextBox = new System.Windows.Forms.TextBox();
+            this.heightLabel = new System.Windows.Forms.Label();
+            this.weightLabel = new System.Windows.Forms.Label();
+            this.ageTextBox = new System.Windows.Forms.TextBox();
+            this.ageLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.finalButton = new System.Windows.Forms.Button();
             this.AbilityPic = new System.Windows.Forms.PictureBox();
             this.strLabel = new System.Windows.Forms.Label();
             this.dexLabel = new System.Windows.Forms.Label();
@@ -123,23 +140,13 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
-            this.commitButton = new System.Windows.Forms.Button();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.ageLabel = new System.Windows.Forms.Label();
-            this.ageTextBox = new System.Windows.Forms.TextBox();
-            this.weightLabel = new System.Windows.Forms.Label();
-            this.heightLabel = new System.Windows.Forms.Label();
-            this.heightTextBox = new System.Windows.Forms.TextBox();
-            this.weightTextBox = new System.Windows.Forms.TextBox();
-            this.finalButton = new System.Windows.Forms.Button();
-            this.skinLabel = new System.Windows.Forms.Label();
-            this.hairLabel = new System.Windows.Forms.Label();
-            this.eyesLabel = new System.Windows.Forms.Label();
-            this.skinTextBox = new System.Windows.Forms.TextBox();
-            this.hairTextBox = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pbSTRButton = new System.Windows.Forms.Button();
+            this.pbCHAButton = new System.Windows.Forms.Button();
+            this.pbWISButton = new System.Windows.Forms.Button();
+            this.pbINTButton = new System.Windows.Forms.Button();
+            this.pbCONButton = new System.Windows.Forms.Button();
+            this.pbDEXButton = new System.Windows.Forms.Button();
+            this.pbCommitButton = new System.Windows.Forms.Button();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -163,9 +170,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).BeginInit();
+            this.tabPage6.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
-            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // CCharMenuStrip
@@ -201,6 +208,13 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.pbCommitButton);
+            this.tabPage5.Controls.Add(this.pbDEXButton);
+            this.tabPage5.Controls.Add(this.pbCONButton);
+            this.tabPage5.Controls.Add(this.pbINTButton);
+            this.tabPage5.Controls.Add(this.pbWISButton);
+            this.tabPage5.Controls.Add(this.pbCHAButton);
+            this.tabPage5.Controls.Add(this.pbSTRButton);
             this.tabPage5.Controls.Add(this.commitButton);
             this.tabPage5.Controls.Add(this.pointsLabel);
             this.tabPage5.Controls.Add(this.pointsRemainingLabel);
@@ -252,6 +266,15 @@
             this.tabPage5.Text = "Ability Score";
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
+            // 
+            // commitButton
+            // 
+            this.commitButton.Location = new System.Drawing.Point(39, 138);
+            this.commitButton.Name = "commitButton";
+            this.commitButton.Size = new System.Drawing.Size(75, 23);
+            this.commitButton.TabIndex = 50;
+            this.commitButton.Text = "Commit All";
+            this.commitButton.UseVisualStyleBackColor = true;
             // 
             // pointsLabel
             // 
@@ -342,78 +365,145 @@
             this.resetButton.TabIndex = 40;
             this.resetButton.Text = "Reset Scores";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // DEXUpDown
             // 
             this.DEXUpDown.Location = new System.Drawing.Point(224, 341);
+            this.DEXUpDown.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.DEXUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.DEXUpDown.Name = "DEXUpDown";
             this.DEXUpDown.Size = new System.Drawing.Size(41, 20);
             this.DEXUpDown.TabIndex = 39;
             this.DEXUpDown.Value = new decimal(new int[] {
-            10,
+            8,
             0,
             0,
             0});
+            this.DEXUpDown.ValueChanged += new System.EventHandler(this.DEXUpDown_ValueChanged);
             // 
             // CONUpDown
             // 
             this.CONUpDown.Location = new System.Drawing.Point(224, 378);
+            this.CONUpDown.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.CONUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.CONUpDown.Name = "CONUpDown";
             this.CONUpDown.Size = new System.Drawing.Size(41, 20);
             this.CONUpDown.TabIndex = 38;
             this.CONUpDown.Value = new decimal(new int[] {
-            10,
+            8,
             0,
             0,
             0});
+            this.CONUpDown.ValueChanged += new System.EventHandler(this.CONUpDown_ValueChanged);
             // 
             // INTUpDown
             // 
             this.INTUpDown.Location = new System.Drawing.Point(224, 412);
+            this.INTUpDown.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.INTUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.INTUpDown.Name = "INTUpDown";
             this.INTUpDown.Size = new System.Drawing.Size(41, 20);
             this.INTUpDown.TabIndex = 37;
             this.INTUpDown.Value = new decimal(new int[] {
-            10,
+            8,
             0,
             0,
             0});
+            this.INTUpDown.ValueChanged += new System.EventHandler(this.INTUpDown_ValueChanged);
             // 
             // WISUpDown
             // 
             this.WISUpDown.Location = new System.Drawing.Point(224, 446);
+            this.WISUpDown.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.WISUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.WISUpDown.Name = "WISUpDown";
             this.WISUpDown.Size = new System.Drawing.Size(41, 20);
             this.WISUpDown.TabIndex = 36;
             this.WISUpDown.Value = new decimal(new int[] {
-            10,
+            8,
             0,
             0,
             0});
+            this.WISUpDown.ValueChanged += new System.EventHandler(this.WISUpDown_ValueChanged);
             // 
             // CHAUpDown
             // 
             this.CHAUpDown.Location = new System.Drawing.Point(224, 481);
+            this.CHAUpDown.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.CHAUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.CHAUpDown.Name = "CHAUpDown";
             this.CHAUpDown.Size = new System.Drawing.Size(41, 20);
             this.CHAUpDown.TabIndex = 35;
             this.CHAUpDown.Value = new decimal(new int[] {
-            10,
+            8,
             0,
             0,
             0});
+            this.CHAUpDown.ValueChanged += new System.EventHandler(this.CHAUpDown_ValueChanged);
             // 
             // STRUpDown
             // 
             this.STRUpDown.Location = new System.Drawing.Point(224, 303);
+            this.STRUpDown.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.STRUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.STRUpDown.Name = "STRUpDown";
             this.STRUpDown.Size = new System.Drawing.Size(41, 20);
             this.STRUpDown.TabIndex = 34;
             this.STRUpDown.Value = new decimal(new int[] {
-            10,
+            8,
             0,
             0,
             0});
+            this.STRUpDown.ValueChanged += new System.EventHandler(this.STRUpDown_ValueChanged);
             // 
             // pbDexLabel
             // 
@@ -1036,6 +1126,141 @@
             this.backgroundBox.TabIndex = 0;
             this.backgroundBox.SelectedIndexChanged += new System.EventHandler(this.backgroundBox_SelectedIndexChanged);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.textBox3);
+            this.tabPage6.Controls.Add(this.hairTextBox);
+            this.tabPage6.Controls.Add(this.skinTextBox);
+            this.tabPage6.Controls.Add(this.eyesLabel);
+            this.tabPage6.Controls.Add(this.hairLabel);
+            this.tabPage6.Controls.Add(this.skinLabel);
+            this.tabPage6.Controls.Add(this.weightTextBox);
+            this.tabPage6.Controls.Add(this.heightTextBox);
+            this.tabPage6.Controls.Add(this.heightLabel);
+            this.tabPage6.Controls.Add(this.weightLabel);
+            this.tabPage6.Controls.Add(this.ageTextBox);
+            this.tabPage6.Controls.Add(this.ageLabel);
+            this.tabPage6.Controls.Add(this.nameLabel);
+            this.tabPage6.Controls.Add(this.nameTextBox);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1203, 683);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Info";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(547, 31);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(167, 20);
+            this.textBox3.TabIndex = 13;
+            // 
+            // hairTextBox
+            // 
+            this.hairTextBox.Location = new System.Drawing.Point(547, 95);
+            this.hairTextBox.Name = "hairTextBox";
+            this.hairTextBox.Size = new System.Drawing.Size(167, 20);
+            this.hairTextBox.TabIndex = 12;
+            // 
+            // skinTextBox
+            // 
+            this.skinTextBox.Location = new System.Drawing.Point(547, 161);
+            this.skinTextBox.Name = "skinTextBox";
+            this.skinTextBox.Size = new System.Drawing.Size(167, 20);
+            this.skinTextBox.TabIndex = 11;
+            // 
+            // eyesLabel
+            // 
+            this.eyesLabel.AutoSize = true;
+            this.eyesLabel.Location = new System.Drawing.Point(427, 34);
+            this.eyesLabel.Name = "eyesLabel";
+            this.eyesLabel.Size = new System.Drawing.Size(82, 13);
+            this.eyesLabel.TabIndex = 10;
+            this.eyesLabel.Text = "Character Eyes:";
+            // 
+            // hairLabel
+            // 
+            this.hairLabel.AutoSize = true;
+            this.hairLabel.Location = new System.Drawing.Point(427, 98);
+            this.hairLabel.Name = "hairLabel";
+            this.hairLabel.Size = new System.Drawing.Size(78, 13);
+            this.hairLabel.TabIndex = 9;
+            this.hairLabel.Text = "Character Hair:";
+            // 
+            // skinLabel
+            // 
+            this.skinLabel.AutoSize = true;
+            this.skinLabel.Location = new System.Drawing.Point(427, 164);
+            this.skinLabel.Name = "skinLabel";
+            this.skinLabel.Size = new System.Drawing.Size(80, 13);
+            this.skinLabel.TabIndex = 8;
+            this.skinLabel.Text = "Character Skin:";
+            // 
+            // weightTextBox
+            // 
+            this.weightTextBox.Location = new System.Drawing.Point(159, 231);
+            this.weightTextBox.Name = "weightTextBox";
+            this.weightTextBox.Size = new System.Drawing.Size(167, 20);
+            this.weightTextBox.TabIndex = 7;
+            // 
+            // heightTextBox
+            // 
+            this.heightTextBox.Location = new System.Drawing.Point(159, 161);
+            this.heightTextBox.Name = "heightTextBox";
+            this.heightTextBox.Size = new System.Drawing.Size(167, 20);
+            this.heightTextBox.TabIndex = 6;
+            // 
+            // heightLabel
+            // 
+            this.heightLabel.AutoSize = true;
+            this.heightLabel.Location = new System.Drawing.Point(44, 164);
+            this.heightLabel.Name = "heightLabel";
+            this.heightLabel.Size = new System.Drawing.Size(90, 13);
+            this.heightLabel.TabIndex = 5;
+            this.heightLabel.Text = "Character Height:";
+            // 
+            // weightLabel
+            // 
+            this.weightLabel.AutoSize = true;
+            this.weightLabel.Location = new System.Drawing.Point(44, 234);
+            this.weightLabel.Name = "weightLabel";
+            this.weightLabel.Size = new System.Drawing.Size(93, 13);
+            this.weightLabel.TabIndex = 4;
+            this.weightLabel.Text = "Character Weight:";
+            // 
+            // ageTextBox
+            // 
+            this.ageTextBox.Location = new System.Drawing.Point(159, 95);
+            this.ageTextBox.Name = "ageTextBox";
+            this.ageTextBox.Size = new System.Drawing.Size(167, 20);
+            this.ageTextBox.TabIndex = 3;
+            // 
+            // ageLabel
+            // 
+            this.ageLabel.AutoSize = true;
+            this.ageLabel.Location = new System.Drawing.Point(44, 98);
+            this.ageLabel.Name = "ageLabel";
+            this.ageLabel.Size = new System.Drawing.Size(78, 13);
+            this.ageLabel.TabIndex = 2;
+            this.ageLabel.Text = "Character Age:";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(44, 34);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(87, 13);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "Character Name:";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(159, 31);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(167, 20);
+            this.nameTextBox.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.finalButton);
@@ -1046,6 +1271,15 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Finish";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // finalButton
+            // 
+            this.finalButton.Location = new System.Drawing.Point(441, 285);
+            this.finalButton.Name = "finalButton";
+            this.finalButton.Size = new System.Drawing.Size(119, 23);
+            this.finalButton.TabIndex = 0;
+            this.finalButton.Text = "Finalize Character";
+            this.finalButton.UseVisualStyleBackColor = true;
             // 
             // AbilityPic
             // 
@@ -1183,158 +1417,69 @@
             this.strModLabel.Text = "0";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // commitButton
+            // pbSTRButton
             // 
-            this.commitButton.Location = new System.Drawing.Point(39, 138);
-            this.commitButton.Name = "commitButton";
-            this.commitButton.Size = new System.Drawing.Size(75, 23);
-            this.commitButton.TabIndex = 50;
-            this.commitButton.Text = "Commit All";
-            this.commitButton.UseVisualStyleBackColor = true;
+            this.pbSTRButton.Location = new System.Drawing.Point(375, 300);
+            this.pbSTRButton.Name = "pbSTRButton";
+            this.pbSTRButton.Size = new System.Drawing.Size(75, 23);
+            this.pbSTRButton.TabIndex = 51;
+            this.pbSTRButton.Text = "Strength";
+            this.pbSTRButton.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // pbCHAButton
             // 
-            this.tabPage6.Controls.Add(this.textBox3);
-            this.tabPage6.Controls.Add(this.hairTextBox);
-            this.tabPage6.Controls.Add(this.skinTextBox);
-            this.tabPage6.Controls.Add(this.eyesLabel);
-            this.tabPage6.Controls.Add(this.hairLabel);
-            this.tabPage6.Controls.Add(this.skinLabel);
-            this.tabPage6.Controls.Add(this.weightTextBox);
-            this.tabPage6.Controls.Add(this.heightTextBox);
-            this.tabPage6.Controls.Add(this.heightLabel);
-            this.tabPage6.Controls.Add(this.weightLabel);
-            this.tabPage6.Controls.Add(this.ageTextBox);
-            this.tabPage6.Controls.Add(this.ageLabel);
-            this.tabPage6.Controls.Add(this.nameLabel);
-            this.tabPage6.Controls.Add(this.nameTextBox);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Info";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.pbCHAButton.Location = new System.Drawing.Point(375, 478);
+            this.pbCHAButton.Name = "pbCHAButton";
+            this.pbCHAButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCHAButton.TabIndex = 52;
+            this.pbCHAButton.Text = "Charisma";
+            this.pbCHAButton.UseVisualStyleBackColor = true;
             // 
-            // nameTextBox
+            // pbWISButton
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(159, 31);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(167, 20);
-            this.nameTextBox.TabIndex = 0;
+            this.pbWISButton.Location = new System.Drawing.Point(375, 443);
+            this.pbWISButton.Name = "pbWISButton";
+            this.pbWISButton.Size = new System.Drawing.Size(75, 23);
+            this.pbWISButton.TabIndex = 53;
+            this.pbWISButton.Text = "Wisdom";
+            this.pbWISButton.UseVisualStyleBackColor = true;
             // 
-            // nameLabel
+            // pbINTButton
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(44, 34);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(87, 13);
-            this.nameLabel.TabIndex = 1;
-            this.nameLabel.Text = "Character Name:";
+            this.pbINTButton.Location = new System.Drawing.Point(375, 409);
+            this.pbINTButton.Name = "pbINTButton";
+            this.pbINTButton.Size = new System.Drawing.Size(75, 23);
+            this.pbINTButton.TabIndex = 54;
+            this.pbINTButton.Text = "Intelligence";
+            this.pbINTButton.UseVisualStyleBackColor = true;
             // 
-            // ageLabel
+            // pbCONButton
             // 
-            this.ageLabel.AutoSize = true;
-            this.ageLabel.Location = new System.Drawing.Point(44, 98);
-            this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(78, 13);
-            this.ageLabel.TabIndex = 2;
-            this.ageLabel.Text = "Character Age:";
+            this.pbCONButton.Location = new System.Drawing.Point(375, 375);
+            this.pbCONButton.Name = "pbCONButton";
+            this.pbCONButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCONButton.TabIndex = 55;
+            this.pbCONButton.Text = "Constitution";
+            this.pbCONButton.UseVisualStyleBackColor = true;
             // 
-            // ageTextBox
+            // pbDEXButton
             // 
-            this.ageTextBox.Location = new System.Drawing.Point(159, 95);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(167, 20);
-            this.ageTextBox.TabIndex = 3;
+            this.pbDEXButton.Location = new System.Drawing.Point(375, 338);
+            this.pbDEXButton.Name = "pbDEXButton";
+            this.pbDEXButton.Size = new System.Drawing.Size(75, 23);
+            this.pbDEXButton.TabIndex = 56;
+            this.pbDEXButton.Text = "Dexterity";
+            this.pbDEXButton.UseVisualStyleBackColor = true;
             // 
-            // weightLabel
+            // pbCommitButton
             // 
-            this.weightLabel.AutoSize = true;
-            this.weightLabel.Location = new System.Drawing.Point(44, 234);
-            this.weightLabel.Name = "weightLabel";
-            this.weightLabel.Size = new System.Drawing.Size(93, 13);
-            this.weightLabel.TabIndex = 4;
-            this.weightLabel.Text = "Character Weight:";
-            // 
-            // heightLabel
-            // 
-            this.heightLabel.AutoSize = true;
-            this.heightLabel.Location = new System.Drawing.Point(44, 164);
-            this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(90, 13);
-            this.heightLabel.TabIndex = 5;
-            this.heightLabel.Text = "Character Height:";
-            // 
-            // heightTextBox
-            // 
-            this.heightTextBox.Location = new System.Drawing.Point(159, 161);
-            this.heightTextBox.Name = "heightTextBox";
-            this.heightTextBox.Size = new System.Drawing.Size(167, 20);
-            this.heightTextBox.TabIndex = 6;
-            // 
-            // weightTextBox
-            // 
-            this.weightTextBox.Location = new System.Drawing.Point(159, 231);
-            this.weightTextBox.Name = "weightTextBox";
-            this.weightTextBox.Size = new System.Drawing.Size(167, 20);
-            this.weightTextBox.TabIndex = 7;
-            // 
-            // finalButton
-            // 
-            this.finalButton.Location = new System.Drawing.Point(441, 285);
-            this.finalButton.Name = "finalButton";
-            this.finalButton.Size = new System.Drawing.Size(119, 23);
-            this.finalButton.TabIndex = 0;
-            this.finalButton.Text = "Finalize Character";
-            this.finalButton.UseVisualStyleBackColor = true;
-            // 
-            // skinLabel
-            // 
-            this.skinLabel.AutoSize = true;
-            this.skinLabel.Location = new System.Drawing.Point(427, 164);
-            this.skinLabel.Name = "skinLabel";
-            this.skinLabel.Size = new System.Drawing.Size(80, 13);
-            this.skinLabel.TabIndex = 8;
-            this.skinLabel.Text = "Character Skin:";
-            // 
-            // hairLabel
-            // 
-            this.hairLabel.AutoSize = true;
-            this.hairLabel.Location = new System.Drawing.Point(427, 98);
-            this.hairLabel.Name = "hairLabel";
-            this.hairLabel.Size = new System.Drawing.Size(78, 13);
-            this.hairLabel.TabIndex = 9;
-            this.hairLabel.Text = "Character Hair:";
-            // 
-            // eyesLabel
-            // 
-            this.eyesLabel.AutoSize = true;
-            this.eyesLabel.Location = new System.Drawing.Point(427, 34);
-            this.eyesLabel.Name = "eyesLabel";
-            this.eyesLabel.Size = new System.Drawing.Size(82, 13);
-            this.eyesLabel.TabIndex = 10;
-            this.eyesLabel.Text = "Character Eyes:";
-            // 
-            // skinTextBox
-            // 
-            this.skinTextBox.Location = new System.Drawing.Point(547, 161);
-            this.skinTextBox.Name = "skinTextBox";
-            this.skinTextBox.Size = new System.Drawing.Size(167, 20);
-            this.skinTextBox.TabIndex = 11;
-            // 
-            // hairTextBox
-            // 
-            this.hairTextBox.Location = new System.Drawing.Point(547, 95);
-            this.hairTextBox.Name = "hairTextBox";
-            this.hairTextBox.Size = new System.Drawing.Size(167, 20);
-            this.hairTextBox.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(547, 31);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 13;
+            this.pbCommitButton.Location = new System.Drawing.Point(39, 338);
+            this.pbCommitButton.Name = "pbCommitButton";
+            this.pbCommitButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCommitButton.TabIndex = 57;
+            this.pbCommitButton.Text = "Commit All";
+            this.pbCommitButton.UseVisualStyleBackColor = true;
+            this.pbCommitButton.Click += new System.EventHandler(this.pbCommitButton_Click);
             // 
             // fCChar
             // 
@@ -1387,10 +1532,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1510,6 +1655,13 @@
         private System.Windows.Forms.Label eyesLabel;
         private System.Windows.Forms.Label hairLabel;
         private System.Windows.Forms.Label skinLabel;
+        private System.Windows.Forms.Button pbCommitButton;
+        private System.Windows.Forms.Button pbDEXButton;
+        private System.Windows.Forms.Button pbCONButton;
+        private System.Windows.Forms.Button pbINTButton;
+        private System.Windows.Forms.Button pbWISButton;
+        private System.Windows.Forms.Button pbCHAButton;
+        private System.Windows.Forms.Button pbSTRButton;
     }
 }
 

@@ -17,6 +17,7 @@ namespace Dungeon_Crawler__
         Class selectClass;
         Background selectBack;
         Character pc = new Character();
+
         public fCChar()
         {
             InitializeComponent();
@@ -68,44 +69,6 @@ namespace Dungeon_Crawler__
             traitsGrid.Columns.Clear();
             traitsGrid.Rows.Clear();
 
-            //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
-            //DataGridViewRow row = (DataGridViewRow)traitsGrid.Rows[0].Clone();
-
-            //  ArrayList trait = new ArrayList();
-            //  trait = selectRace.getTraits();
-            //  ArrayList tDesc = new ArrayList();
-            ////  tDesc = selectRace.getTDesc();
-            //  ArrayList lang = new ArrayList();
-            //  lang = selectRace.getLanguages();
-
-
-            //  for (int i = 0; i <= trait.Count; i++)
-            //  {
-            //      row = (DataGridViewRow)traitsGrid.Rows[i].Clone();
-            //      row.Cells["Trait"].Value = trait[i];
-            //      row.Cells["Description"].Value = tDesc[i];
-            //      traitsGrid.Rows.Add(row);
-            //  }
-
-            //Clear the Language DataGrid of all columns and rows.
-            //    languagesGrid.Columns.Clear();
-            //    languagesGrid.Rows.Clear();
-
-            //Add Language information to the Language DataGrid.
-            //for (int j = 0; j <= selectRace.getLanguages().Count; j++)
-            //{
-            //    row = (DataGridViewRow)languagesGrid.Rows[j].Clone();
-            //    row.Cells["Languages"].Value = selectRace.getLanguages()[j];
-            //    languagesGrid.Rows.Add(row);
-            //}
-
-            ////Add Language information to the Language DataGrid.
-            //for (int j = 0; j <= lang.Count; j++)
-            //{
-            //    row = (DataGridViewRow)languagesGrid.Rows[j].Clone();
-            //    row.Cells["Languages"].Value = lang[j];
-            //    languagesGrid.Rows.Add(row);
-            //}
             traitsGrid.ColumnCount = 2;
             traitsGrid.Columns[0].Name = "Trait";
             traitsGrid.Columns[1].Name = "Description";
@@ -174,64 +137,11 @@ namespace Dungeon_Crawler__
             //    row.Cells["desc"].Value = pDesc[i];
                 featuresGrid.Rows.Add(row);
             }
-                //Set the rows for the Features DataGrid.
-               
-
-
-            //    //Clear the Leveling Table DataGrid of all columns and rows.
-            //    levelingGrid.Columns.Clear();
-            //    levelingGrid.Rows.Clear();
-
-
-            //ArrayList vRows = new ArrayList();
-
-            ////ArrayList col = new ArrayList();
-            ////col = selectClass.getCol();
-            
+                //Set the rows for the Features DataGrid.        
 
             //Clear the Leveling Table DataGrid of all columns and rows.
             levelingGrid.Columns.Clear();
             levelingGrid.Rows.Clear();
-
-
-           //ArrayList col = new ArrayList();
-           //col = selectClass.getLCol();
-           // ArrayList rows = new ArrayList();
-           // rows = selectClass.getRows();
-           // ArrayList vRows = new ArrayList();
-
-            //for (int j = 0; j <= ; j++)
-            //{
-            //    levelingGrid.Columns.Add(""+j,col[j]);
-            //}
-
-        //    for (int z = 0; z <= selectClass.vrow.Count; z++)
-        //    {
-        //        row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
-        //        for (int y = 0; y <= selectClass.columns.Count; y++)
-        //        {
-        //            row.Cells[y].Value = selectClass.vrow[y];
-        //        }
-        //    }
-        //}
-            //THINK THIS OVER, NEED TO FILL THE LEVELING GRID WITH ROWS VALUES BASED ON THE COLUMNS.
-            //for (int z = 0; z <= ; z++)
-            //Set the columns for the Leveling Table DataGrid.
-            //levelingGrid.Columns.Add("level","Level");
-            //levelingGrid.Columns.Add("proficiency","Proficiency Bonus");
-            //levelingGrid.Columns.Add("features", "Features");
-            //levelingGrid.Columns.Add("rages", "Rages");
-            //levelingGrid.Columns.Add("damage", "Rage Damage");
-
-            //for (int z = 0; z <= rows.Count; z++)
-            //{
-            //    vRows = selectClass.getVRows(z);
-            //    row = (DataGridViewRow)levelingGrid.Rows[z].Clone();
-            //    for (int y = 0; y <= col.Count; y++)
-            //    {
-            //        row.Cells[col[y]].Value = vRows[y];
-            //    }
-            //}
         }
 
         private void backgroundBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -392,5 +302,68 @@ namespace Dungeon_Crawler__
             chaModLabel.Text = pc.getCHAMod().ToString();
         }
 
+        private void STRUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            strCostLabel.Text = "" + Calculations.pointBuyCost(STRUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "str";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), STRUpDown.Value, name);
+        }
+
+        private void DEXUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            dexCostLabel.Text = "" + Calculations.pointBuyCost(DEXUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "dex";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), DEXUpDown.Value, name);
+        }
+
+        private void CONUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            conCostLabel.Text = "" + Calculations.pointBuyCost(CONUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "con";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), CONUpDown.Value, name);
+        }
+
+        private void INTUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            intCostLabel.Text = "" + Calculations.pointBuyCost(INTUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "int";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), INTUpDown.Value, name);
+        }
+
+        private void WISUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            wisCostLabel.Text = "" + Calculations.pointBuyCost(WISUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "wis";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), WISUpDown.Value, name);
+        }
+
+        private void CHAUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            chaCostLabel.Text = "" + Calculations.pointBuyCost(CHAUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "cha";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), CHAUpDown.Value, name);
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pbCommitButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
