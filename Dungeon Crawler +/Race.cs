@@ -161,7 +161,13 @@ namespace Dungeon_Crawler__
                 size = "Medium";
                 speed = 30;
 
+                traits.Clear();
+
                 //MAKE TRAITS INTO DATABASE AT LATER TIME IN ORDER TO FETCH DESCRIPTIONS EASIER.
+                traits.Add("None");
+
+                tDesc.Add("Humans have no traits");
+
 
                 languages.Clear();
 

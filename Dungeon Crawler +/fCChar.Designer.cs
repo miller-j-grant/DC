@@ -77,6 +77,7 @@
             this.classicLabel = new System.Windows.Forms.Label();
             this.rollButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.raceButton = new System.Windows.Forms.Button();
             this.languagesGrid = new System.Windows.Forms.DataGridView();
             this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.traitsGrid = new System.Windows.Forms.DataGridView();
@@ -140,6 +141,7 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.pbSTRButton = new System.Windows.Forms.Button();
             this.pbCHAButton = new System.Windows.Forms.Button();
             this.pbWISButton = new System.Windows.Forms.Button();
@@ -147,6 +149,8 @@
             this.pbCONButton = new System.Windows.Forms.Button();
             this.pbDEXButton = new System.Windows.Forms.Button();
             this.pbCommitButton = new System.Windows.Forms.Button();
+=======
+>>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -275,6 +279,10 @@
             this.commitButton.TabIndex = 50;
             this.commitButton.Text = "Commit All";
             this.commitButton.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+=======
+            this.commitButton.Click += new System.EventHandler(this.commitButton_Click);
+>>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
             // 
             // pointsLabel
             // 
@@ -745,6 +753,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.raceButton);
             this.tabPage1.Controls.Add(this.languagesGrid);
             this.tabPage1.Controls.Add(this.traitsGrid);
             this.tabPage1.Controls.Add(this.languagesLabel);
@@ -764,6 +773,16 @@
             this.tabPage1.Text = "Race";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // raceButton
+            // 
+            this.raceButton.Location = new System.Drawing.Point(913, 523);
+            this.raceButton.Name = "raceButton";
+            this.raceButton.Size = new System.Drawing.Size(110, 52);
+            this.raceButton.TabIndex = 23;
+            this.raceButton.Text = "Select this Race";
+            this.raceButton.UseVisualStyleBackColor = true;
+            this.raceButton.Click += new System.EventHandler(this.raceButton_Click);
             // 
             // languagesGrid
             // 
@@ -1146,7 +1165,11 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1203, 683);
             this.tabPage6.TabIndex = 5;
+<<<<<<< HEAD
             this.tabPage6.Text = "Info";
+=======
+            this.tabPage6.Text = "Details";
+>>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // textBox3
@@ -1306,7 +1329,7 @@
             // 
             this.dexLabel.AutoSize = true;
             this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexLabel.Location = new System.Drawing.Point(25, 185);
+            this.dexLabel.Location = new System.Drawing.Point(29, 184);
             this.dexLabel.Name = "dexLabel";
             this.dexLabel.Size = new System.Drawing.Size(51, 37);
             this.dexLabel.TabIndex = 5;
@@ -1316,8 +1339,9 @@
             // conLabel
             // 
             this.conLabel.AutoSize = true;
+            this.conLabel.BackColor = System.Drawing.Color.Transparent;
             this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conLabel.Location = new System.Drawing.Point(25, 294);
+            this.conLabel.Location = new System.Drawing.Point(29, 294);
             this.conLabel.Name = "conLabel";
             this.conLabel.Size = new System.Drawing.Size(51, 37);
             this.conLabel.TabIndex = 6;
@@ -1327,8 +1351,9 @@
             // intLabel
             // 
             this.intLabel.AutoSize = true;
+            this.intLabel.BackColor = System.Drawing.Color.Transparent;
             this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intLabel.Location = new System.Drawing.Point(25, 407);
+            this.intLabel.Location = new System.Drawing.Point(29, 407);
             this.intLabel.Name = "intLabel";
             this.intLabel.Size = new System.Drawing.Size(51, 37);
             this.intLabel.TabIndex = 7;
@@ -1338,8 +1363,9 @@
             // chaLabel
             // 
             this.chaLabel.AutoSize = true;
+            this.chaLabel.BackColor = System.Drawing.Color.Transparent;
             this.chaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chaLabel.Location = new System.Drawing.Point(25, 628);
+            this.chaLabel.Location = new System.Drawing.Point(29, 628);
             this.chaLabel.Name = "chaLabel";
             this.chaLabel.Size = new System.Drawing.Size(51, 37);
             this.chaLabel.TabIndex = 6;
@@ -1349,8 +1375,9 @@
             // wisLabel
             // 
             this.wisLabel.AutoSize = true;
+            this.wisLabel.BackColor = System.Drawing.Color.Transparent;
             this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisLabel.Location = new System.Drawing.Point(25, 519);
+            this.wisLabel.Location = new System.Drawing.Point(28, 519);
             this.wisLabel.Name = "wisLabel";
             this.wisLabel.Size = new System.Drawing.Size(51, 37);
             this.wisLabel.TabIndex = 7;
@@ -1417,6 +1444,7 @@
             this.strModLabel.Text = "0";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+<<<<<<< HEAD
             // pbSTRButton
             // 
             this.pbSTRButton.Location = new System.Drawing.Point(375, 300);
@@ -1481,6 +1509,8 @@
             this.pbCommitButton.UseVisualStyleBackColor = true;
             this.pbCommitButton.Click += new System.EventHandler(this.pbCommitButton_Click);
             // 
+=======
+>>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
             // fCChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1655,6 +1685,7 @@
         private System.Windows.Forms.Label eyesLabel;
         private System.Windows.Forms.Label hairLabel;
         private System.Windows.Forms.Label skinLabel;
+<<<<<<< HEAD
         private System.Windows.Forms.Button pbCommitButton;
         private System.Windows.Forms.Button pbDEXButton;
         private System.Windows.Forms.Button pbCONButton;
@@ -1662,6 +1693,9 @@
         private System.Windows.Forms.Button pbWISButton;
         private System.Windows.Forms.Button pbCHAButton;
         private System.Windows.Forms.Button pbSTRButton;
+=======
+        private System.Windows.Forms.Button raceButton;
+>>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
     }
 }
 

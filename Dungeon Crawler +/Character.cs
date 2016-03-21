@@ -23,49 +23,49 @@ namespace Dungeon_Crawler__
                 AC, attack bonus, $$ALL THAT SICK GP YO$$
         */
 
-        private string name { get; set; }
-        private int level { get; set; }
+        public string name { get; set; }
+        public int level { get; set; }
 
-        private Race race { get; set; }
+        public Race race { get; set; }
 
-        private int speed { get; set; }
-        private ArrayList language { get; set; }
+        public int speed { get; set; }
+        public ArrayList language { get; set; }
 
-        private Class pClass { get; set; }
-        private ArrayList proficiency { get; set; }
-        private ArrayList spellbook { get; set; }
+        public Class pClass { get; set; }
+        public ArrayList proficiency { get; set; }
+        public ArrayList spellbook { get; set; }
 
         // base ability scores for when changing race
         // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha 
-        private int[] baseAS;
+        public int[] baseAS;
 
         // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
-        private int[] stats;
+        public int[] stats;
 
         // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
-        private int[] statmods;
+        public int[] statmods;
 
         // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
         // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
         // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
         // 15 Sleight of Hand, 16 Stealth, 17 Survival
-        private int[] skills;
+        public int[] skills;
 
         // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
-        private int[] saves;
+        public int[] saves;
 
-        private Background bg { get; set; }
-        private ArrayList inventory { get; set; }
+        public Background bg { get; set; }
+        public ArrayList inventory { get; set; }
         // private Equipment equip = new Equipment();
 
         //calculated stats
-        private int hp { get; set; }
-        private int initiative { get; set; }
-        private int passwis { get; set; }
-        private int profbonus { get; set; }
-        private int ac { get; set; }
-        private int atk { get; set; }
-        private int wealth { get; set; }
+        public int hp { get; set; }
+        public int initiative { get; set; }
+        public int passwis { get; set; }
+        public int profbonus { get; set; }
+        public int ac { get; set; }
+        public int atk { get; set; }
+        public int wealth { get; set; }
 
 
         public Character()
@@ -80,6 +80,12 @@ namespace Dungeon_Crawler__
             saves = new int[6] { 0, 0, 0, 0, 0, 0 };
             inventory = new ArrayList();
         }
+
+        public void setRace(string s)
+        {
+            race = new Race(s);
+        }
+
 
         // setters for base ability scores 
         public void setBaseStats(int[] s)
@@ -127,7 +133,7 @@ namespace Dungeon_Crawler__
         public void setStats(int[] s)
         {
             // save for later stats.Zip(s, (x, y) => x + y);
-            for (int z = 0; z < 5; z++)
+            for (int z = 0; z < 6; z++)
             {
                 stats[z] = baseAS[z] + s[z];
             }
