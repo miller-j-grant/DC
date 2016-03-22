@@ -11,6 +11,11 @@ using System.Windows.Forms;
 
 namespace Dungeon_Crawler__
 {
+	/// <summary>
+	/// The form that a character is created in </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     public partial class fCChar : Form
     {
         Race selectRace;

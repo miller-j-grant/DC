@@ -6,6 +6,11 @@ using System.Windows.Forms;
 
 namespace Dungeon_Crawler__
 {
+	/// <summary>
+	/// Runs the application character creater </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     class Program
     {
         private string pClass;
@@ -19,17 +24,22 @@ namespace Dungeon_Crawler__
             initRaces();
             initClasses();
 
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fCChar());
         }
 
+		/// <summary>
+		/// creates a new character
+		/// </summary>
         public static void createChar()
         {
             Character pc = new Character();
         }
 
+		/// <summary>
+		/// initializes all Character Races
+		/// </summary>
         public static void initRaces()
         {
             Race dwarf = new Race("Dwarf");
@@ -43,6 +53,9 @@ namespace Dungeon_Crawler__
             Race tiefling = new Race("Tiefling");
         }
 
+		/// <summary>
+		/// initializes all Character Classes
+		/// </summary>
         public static void initClasses()
         {
             Class barbarian = new Class("Barbarian");

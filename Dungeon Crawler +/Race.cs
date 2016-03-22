@@ -5,37 +5,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
-
 namespace Dungeon_Crawler__
 {
-
-
+	/// <summary>
+	/// A class that contains all details specific to races, including specific states, traits, 
+	/// languages, and subraces </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     class Race
     {
         private string raceName;
         
-        // racial ability score bonuses
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+        /// <summary> racial ability score bonuses (0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha) </summary>
         private int[] stats { get; }
 
-        // size could either be a String that we read or a number that we correspond with a size
-        // might be easier to do number, but we'll see
+        /// <summary> physical size of the race </summary>
         private string size { get; }
 
+		/// <summary> speed of the race </summary>
         private int speed { get; }
 
+		/// <summary> contains the traits options for the race </summary>
         private ArrayList traits { get; }
 
+		/// <summary> contains the descriptions for the traits (tDesc[0] correpsonds to traits[0] and etc.) </summary>
         private ArrayList tDesc { get; }
 
+		/// <summary> contains the languages for the race </summary>
         private ArrayList languages { get; }
 
-        // this might be dumb, but it's like 3:45am so whatever
+		/// <summary> contains subrace options for the race </summary>
         private ArrayList subrace { get; }
 
+		/// <summary>
+		/// Basic constructor with blank values
+		///</summary>
         public Race()
         {
             stats = new int[6] { 0, 0, 0, 0, 0, 0 };
@@ -44,17 +49,21 @@ namespace Dungeon_Crawler__
             subrace = new ArrayList();
         }
 
+		/// <summary>
+		/// Main constructor that initializes the race based on the race
+		/// parameter. 
+		/// </summary>
+		/// <param name="race"> String that represents the race of the character </param>
         public Race(string race)
         {
             traits = new ArrayList();
             languages = new ArrayList();
             subrace = new ArrayList();
             tDesc = new ArrayList();
-
+			raceName = race;
+			
             if (race.Equals("Dwarf"))
             {
-                raceName = "Dwarf";
-
                 stats = new int[6] { 0, 0, 2, 0, 0, 0 };
                 size = "Medium";
                 speed = 25;
@@ -89,8 +98,6 @@ namespace Dungeon_Crawler__
 
             if (race.Equals("Elf"))
             {
-                raceName = "Elf";
-
                 stats = new int[6] { 0, 2, 0, 0, 0, 0 };
                 size = "Medium";
                 speed = 30;
@@ -123,9 +130,7 @@ namespace Dungeon_Crawler__
 
             if (race.Equals("Halfling"))
             {
-                raceName = "Halfling";
-
-                stats = new int[6] { 0, 2, 0, 0, 0, 0 };
+                 stats = new int[6] { 0, 2, 0, 0, 0, 0 };
                 size = "Small";
                 speed = 25;
 
@@ -155,8 +160,6 @@ namespace Dungeon_Crawler__
 
             if (race.Equals("Human"))
             {
-                raceName = "Human";
-
                 stats = new int[6] { 1, 1, 1, 1, 1, 1};
                 size = "Medium";
                 speed = 30;
@@ -179,8 +182,6 @@ namespace Dungeon_Crawler__
 
             if (race.Equals("Dragonborn"))
             {
-                raceName = "Dragonborn";
-
                 stats = new int[6] { 2, 0, 0, 0, 0, 1};
                 size = "Medium";
                 speed = 30;
@@ -209,8 +210,6 @@ namespace Dungeon_Crawler__
 
             if (race.Equals("Gnome"))
             {
-                raceName = "Gnome";
-
                 stats = new int[6] { 0, 0, 0, 2, 0, 0 };
                 size = "Small";
                 speed = 25;
@@ -239,8 +238,6 @@ namespace Dungeon_Crawler__
 
             if (race.Equals("Half-Elf"))
             {
-                raceName = "Half-Elf";
-
                 stats = new int[6] { 0, 0, 0, 0, 0, 2};
                 //USER MUST PICK TWO DIFFERENT ATTRIBUTES TO PUT 1 POINT INTO.
                 size = "Medium";
@@ -271,8 +268,6 @@ namespace Dungeon_Crawler__
 
             if (race.Equals("Half-Orc"))
             {
-                raceName = "Half-Orc";
-
                 stats = new int[6] { 2, 0, 1, 0, 0, 0 };
                 size = "Medium";
                 speed = 30;
@@ -299,11 +294,9 @@ namespace Dungeon_Crawler__
 
                 //HALF-ORC DOES NOT HAVE ANY SUBRACES.
             }
-
+			
             if (race.Equals("Tiefling"))
             {
-                raceName = "Tiefling";
-
                 stats = new int[6] { 0, 0, 0, 1, 0, 2};
                 size = "Medium";
                 speed = 30;
