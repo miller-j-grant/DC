@@ -32,6 +32,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CCharTab = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pbCommitButton = new System.Windows.Forms.Button();
             this.commitButton = new System.Windows.Forms.Button();
             this.pointsLabel = new System.Windows.Forms.Label();
             this.pointsRemainingLabel = new System.Windows.Forms.Label();
@@ -142,6 +143,7 @@
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.pbSTRButton = new System.Windows.Forms.Button();
             this.pbCHAButton = new System.Windows.Forms.Button();
             this.pbWISButton = new System.Windows.Forms.Button();
@@ -151,6 +153,11 @@
             this.pbCommitButton = new System.Windows.Forms.Button();
 =======
 >>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
+=======
+            this.selectionButton = new System.Windows.Forms.Button();
+            this.skillSelectionButton = new System.Windows.Forms.Button();
+            this.equipSelectionButton = new System.Windows.Forms.Button();
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -213,12 +220,6 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.pbCommitButton);
-            this.tabPage5.Controls.Add(this.pbDEXButton);
-            this.tabPage5.Controls.Add(this.pbCONButton);
-            this.tabPage5.Controls.Add(this.pbINTButton);
-            this.tabPage5.Controls.Add(this.pbWISButton);
-            this.tabPage5.Controls.Add(this.pbCHAButton);
-            this.tabPage5.Controls.Add(this.pbSTRButton);
             this.tabPage5.Controls.Add(this.commitButton);
             this.tabPage5.Controls.Add(this.pointsLabel);
             this.tabPage5.Controls.Add(this.pointsRemainingLabel);
@@ -271,6 +272,16 @@
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // pbCommitButton
+            // 
+            this.pbCommitButton.Location = new System.Drawing.Point(39, 338);
+            this.pbCommitButton.Name = "pbCommitButton";
+            this.pbCommitButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCommitButton.TabIndex = 57;
+            this.pbCommitButton.Text = "Commit All";
+            this.pbCommitButton.UseVisualStyleBackColor = true;
+            this.pbCommitButton.Click += new System.EventHandler(this.pbCommitButton_Click);
+            // 
             // commitButton
             // 
             this.commitButton.Location = new System.Drawing.Point(39, 138);
@@ -280,9 +291,13 @@
             this.commitButton.Text = "Commit All";
             this.commitButton.UseVisualStyleBackColor = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             this.commitButton.Click += new System.EventHandler(this.commitButton_Click);
 >>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
+=======
+            this.commitButton.Click += new System.EventHandler(this.commitButton_Click);
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
             // 
             // pointsLabel
             // 
@@ -753,6 +768,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.selectionButton);
             this.tabPage1.Controls.Add(this.raceButton);
             this.tabPage1.Controls.Add(this.languagesGrid);
             this.tabPage1.Controls.Add(this.traitsGrid);
@@ -920,6 +936,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.equipSelectionButton);
+            this.tabPage2.Controls.Add(this.skillSelectionButton);
             this.tabPage2.Controls.Add(this.levelingGrid);
             this.tabPage2.Controls.Add(this.featuresGrid);
             this.tabPage2.Controls.Add(this.levelingLabel);
@@ -1166,10 +1184,14 @@
             this.tabPage6.Size = new System.Drawing.Size(1203, 683);
             this.tabPage6.TabIndex = 5;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage6.Text = "Info";
 =======
             this.tabPage6.Text = "Details";
 >>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
+=======
+            this.tabPage6.Text = "Details";
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // textBox3
@@ -1445,6 +1467,7 @@
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // pbSTRButton
             // 
             this.pbSTRButton.Location = new System.Drawing.Point(375, 300);
@@ -1498,19 +1521,42 @@
             this.pbDEXButton.TabIndex = 56;
             this.pbDEXButton.Text = "Dexterity";
             this.pbDEXButton.UseVisualStyleBackColor = true;
+=======
+            // selectionButton
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
             // 
-            // pbCommitButton
+            this.selectionButton.Location = new System.Drawing.Point(693, 24);
+            this.selectionButton.Name = "selectionButton";
+            this.selectionButton.Size = new System.Drawing.Size(106, 41);
+            this.selectionButton.TabIndex = 24;
+            this.selectionButton.Text = "Make Available Selections";
+            this.selectionButton.UseVisualStyleBackColor = true;
+            this.selectionButton.Click += new System.EventHandler(this.selectionButton_Click);
             // 
-            this.pbCommitButton.Location = new System.Drawing.Point(39, 338);
-            this.pbCommitButton.Name = "pbCommitButton";
-            this.pbCommitButton.Size = new System.Drawing.Size(75, 23);
-            this.pbCommitButton.TabIndex = 57;
-            this.pbCommitButton.Text = "Commit All";
-            this.pbCommitButton.UseVisualStyleBackColor = true;
-            this.pbCommitButton.Click += new System.EventHandler(this.pbCommitButton_Click);
+            // skillSelectionButton
             // 
+            this.skillSelectionButton.Location = new System.Drawing.Point(253, 376);
+            this.skillSelectionButton.Name = "skillSelectionButton";
+            this.skillSelectionButton.Size = new System.Drawing.Size(133, 23);
+            this.skillSelectionButton.TabIndex = 29;
+            this.skillSelectionButton.Text = "Make Skill Selections";
+            this.skillSelectionButton.UseVisualStyleBackColor = true;
+            this.skillSelectionButton.Click += new System.EventHandler(this.skillSelectionButton_Click);
+            // 
+            // equipSelectionButton
+            // 
+            this.equipSelectionButton.Location = new System.Drawing.Point(253, 414);
+            this.equipSelectionButton.Name = "equipSelectionButton";
+            this.equipSelectionButton.Size = new System.Drawing.Size(158, 23);
+            this.equipSelectionButton.TabIndex = 30;
+            this.equipSelectionButton.Text = "Make Equipment Selections";
+            this.equipSelectionButton.UseVisualStyleBackColor = true;
+            // 
+<<<<<<< HEAD
 =======
 >>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
+=======
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
             // fCChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1686,6 +1732,7 @@
         private System.Windows.Forms.Label hairLabel;
         private System.Windows.Forms.Label skinLabel;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.Button pbCommitButton;
         private System.Windows.Forms.Button pbDEXButton;
         private System.Windows.Forms.Button pbCONButton;
@@ -1696,6 +1743,13 @@
 =======
         private System.Windows.Forms.Button raceButton;
 >>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
+=======
+        private System.Windows.Forms.Button pbCommitButton;
+        private System.Windows.Forms.Button raceButton;
+        private System.Windows.Forms.Button selectionButton;
+        private System.Windows.Forms.Button equipSelectionButton;
+        private System.Windows.Forms.Button skillSelectionButton;
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
     }
 }
 

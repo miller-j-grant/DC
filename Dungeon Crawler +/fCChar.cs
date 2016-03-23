@@ -186,9 +186,13 @@ namespace Dungeon_Crawler__
             traitsGrid.Rows.Clear();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
 >>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
+=======
+            //Add Trait information to the Traits DataGrid based on the amount of racial traits each race has.
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
             traitsGrid.ColumnCount = 2;
             traitsGrid.Columns[0].Name = "Trait";
             traitsGrid.Columns[1].Name = "Description";
@@ -288,6 +292,7 @@ namespace Dungeon_Crawler__
                 featuresGrid.Rows.Add(prof[i]/*, pDesc[i]*/);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //Set the rows for the Features DataGrid.        
 =======
             //Set the rows for the Features DataGrid.
@@ -352,6 +357,14 @@ namespace Dungeon_Crawler__
             //    }
             //}
 >>>>>>> decf8fd9c3c8480e76fb7d7b3db5242cca5b2a74
+=======
+            //Set the rows for the Features DataGrid.        
+            //Set the rows for the Features DataGrid.
+
+            //Clear the Leveling Table DataGrid of all columns and rows.
+            levelingGrid.Columns.Clear();
+            levelingGrid.Rows.Clear();
+>>>>>>> 6efcf61ef4014aad1265c67f241ff5ea6e05eae9
         }
 
         private void backgroundBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -523,7 +536,56 @@ namespace Dungeon_Crawler__
 
         private void pbCommitButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                pc.setBaseStr(Convert.ToInt32(STRUpDown.Value));
+                strLabel.Text = STRUpDown.Value.ToString();
+                pc.setStrMod(Calculations.calcMod(Int32.Parse(STRUpDown.Value.ToString())));
+                strModLabel.Text = pc.getSTRMod().ToString();
 
+                pc.setBaseDex(Convert.ToInt32(DEXUpDown.Value));
+                dexLabel.Text = DEXUpDown.Value.ToString();
+                pc.setDexMod(Calculations.calcMod(Int32.Parse(DEXUpDown.Value.ToString())));
+                dexModLabel.Text = pc.getDEXMod().ToString();
+
+                pc.setBaseCon(Convert.ToInt32(CONUpDown.Value));
+                conLabel.Text = CONUpDown.Value.ToString();
+                pc.setConMod(Calculations.calcMod(Int32.Parse(CONUpDown.Value.ToString())));
+                conModLabel.Text = pc.getCONMod().ToString();
+
+                pc.setBaseIntel(Convert.ToInt32(INTUpDown.Value));
+                intLabel.Text = INTUpDown.Value.ToString();
+                pc.setIntelMod(Calculations.calcMod(Int32.Parse(INTUpDown.Value.ToString())));
+                intModLabel.Text = pc.getINTMod().ToString();
+
+                pc.setBaseWis(Convert.ToInt32(WISUpDown.Value));
+                wisLabel.Text = WISUpDown.Value.ToString();
+                pc.setWisMod(Calculations.calcMod(Int32.Parse(WISUpDown.Value.ToString())));
+                wisModLabel.Text = pc.getWISMod().ToString();
+
+                pc.setBaseCha(Convert.ToInt32(CHAUpDown.Value));
+                chaLabel.Text = CHAUpDown.Value.ToString();
+                pc.setChaMod(Calculations.calcMod(Int32.Parse(CHAUpDown.Value.ToString())));
+                chaModLabel.Text = pc.getCHAMod().ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void selectionButton_Click(object sender, EventArgs e)
+        {
+            fCCSelection fCC = new fCCSelection();
+            fCC.fCCLoadSelections("Race: " + raceBox.SelectedItem, pc);
+            fCC.ShowDialog();
+        }
+
+        private void skillSelectionButton_Click(object sender, EventArgs e)
+        {
+            fCCSelection fCC = new fCCSelection();
+            fCC.fCCLoadSelections("Class: " + classBox.SelectedItem, pc);
+            fCC.ShowDialog();
         }
     }
 }
