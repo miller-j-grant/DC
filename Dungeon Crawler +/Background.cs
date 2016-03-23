@@ -42,6 +42,11 @@ namespace Dungeon_Crawler__
             prof = new ArrayList();
             lang = new ArrayList();
             equip = new ArrayList();
+            person = new ArrayList();
+            ideal = new ArrayList();
+            bond = new ArrayList();
+            flaw = new ArrayList();
+
             if (bg.Equals("Acolyte"))
             {
                 lang.Clear();

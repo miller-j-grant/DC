@@ -32,6 +32,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CCharTab = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pbCommitButton = new System.Windows.Forms.Button();
             this.commitButton = new System.Windows.Forms.Button();
             this.pointsLabel = new System.Windows.Forms.Label();
             this.pointsRemainingLabel = new System.Windows.Forms.Label();
@@ -77,6 +78,7 @@
             this.classicLabel = new System.Windows.Forms.Label();
             this.rollButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.raceButton = new System.Windows.Forms.Button();
             this.languagesGrid = new System.Windows.Forms.DataGridView();
             this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.traitsGrid = new System.Windows.Forms.DataGridView();
@@ -140,13 +142,9 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
-            this.pbSTRButton = new System.Windows.Forms.Button();
-            this.pbCHAButton = new System.Windows.Forms.Button();
-            this.pbWISButton = new System.Windows.Forms.Button();
-            this.pbINTButton = new System.Windows.Forms.Button();
-            this.pbCONButton = new System.Windows.Forms.Button();
-            this.pbDEXButton = new System.Windows.Forms.Button();
-            this.pbCommitButton = new System.Windows.Forms.Button();
+            this.selectionButton = new System.Windows.Forms.Button();
+            this.skillSelectionButton = new System.Windows.Forms.Button();
+            this.equipSelectionButton = new System.Windows.Forms.Button();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -209,12 +207,6 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.pbCommitButton);
-            this.tabPage5.Controls.Add(this.pbDEXButton);
-            this.tabPage5.Controls.Add(this.pbCONButton);
-            this.tabPage5.Controls.Add(this.pbINTButton);
-            this.tabPage5.Controls.Add(this.pbWISButton);
-            this.tabPage5.Controls.Add(this.pbCHAButton);
-            this.tabPage5.Controls.Add(this.pbSTRButton);
             this.tabPage5.Controls.Add(this.commitButton);
             this.tabPage5.Controls.Add(this.pointsLabel);
             this.tabPage5.Controls.Add(this.pointsRemainingLabel);
@@ -267,6 +259,16 @@
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // pbCommitButton
+            // 
+            this.pbCommitButton.Location = new System.Drawing.Point(39, 338);
+            this.pbCommitButton.Name = "pbCommitButton";
+            this.pbCommitButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCommitButton.TabIndex = 57;
+            this.pbCommitButton.Text = "Commit All";
+            this.pbCommitButton.UseVisualStyleBackColor = true;
+            this.pbCommitButton.Click += new System.EventHandler(this.pbCommitButton_Click);
+            // 
             // commitButton
             // 
             this.commitButton.Location = new System.Drawing.Point(39, 138);
@@ -275,6 +277,7 @@
             this.commitButton.TabIndex = 50;
             this.commitButton.Text = "Commit All";
             this.commitButton.UseVisualStyleBackColor = true;
+            this.commitButton.Click += new System.EventHandler(this.commitButton_Click);
             // 
             // pointsLabel
             // 
@@ -745,6 +748,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.selectionButton);
+            this.tabPage1.Controls.Add(this.raceButton);
             this.tabPage1.Controls.Add(this.languagesGrid);
             this.tabPage1.Controls.Add(this.traitsGrid);
             this.tabPage1.Controls.Add(this.languagesLabel);
@@ -764,6 +769,16 @@
             this.tabPage1.Text = "Race";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // raceButton
+            // 
+            this.raceButton.Location = new System.Drawing.Point(913, 523);
+            this.raceButton.Name = "raceButton";
+            this.raceButton.Size = new System.Drawing.Size(110, 52);
+            this.raceButton.TabIndex = 23;
+            this.raceButton.Text = "Select this Race";
+            this.raceButton.UseVisualStyleBackColor = true;
+            this.raceButton.Click += new System.EventHandler(this.raceButton_Click);
             // 
             // languagesGrid
             // 
@@ -901,6 +916,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.equipSelectionButton);
+            this.tabPage2.Controls.Add(this.skillSelectionButton);
             this.tabPage2.Controls.Add(this.levelingGrid);
             this.tabPage2.Controls.Add(this.featuresGrid);
             this.tabPage2.Controls.Add(this.levelingLabel);
@@ -1146,7 +1163,7 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1203, 683);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Info";
+            this.tabPage6.Text = "Details";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // textBox3
@@ -1306,7 +1323,7 @@
             // 
             this.dexLabel.AutoSize = true;
             this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexLabel.Location = new System.Drawing.Point(25, 185);
+            this.dexLabel.Location = new System.Drawing.Point(29, 184);
             this.dexLabel.Name = "dexLabel";
             this.dexLabel.Size = new System.Drawing.Size(51, 37);
             this.dexLabel.TabIndex = 5;
@@ -1316,8 +1333,9 @@
             // conLabel
             // 
             this.conLabel.AutoSize = true;
+            this.conLabel.BackColor = System.Drawing.Color.Transparent;
             this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conLabel.Location = new System.Drawing.Point(25, 294);
+            this.conLabel.Location = new System.Drawing.Point(29, 294);
             this.conLabel.Name = "conLabel";
             this.conLabel.Size = new System.Drawing.Size(51, 37);
             this.conLabel.TabIndex = 6;
@@ -1327,8 +1345,9 @@
             // intLabel
             // 
             this.intLabel.AutoSize = true;
+            this.intLabel.BackColor = System.Drawing.Color.Transparent;
             this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intLabel.Location = new System.Drawing.Point(25, 407);
+            this.intLabel.Location = new System.Drawing.Point(29, 407);
             this.intLabel.Name = "intLabel";
             this.intLabel.Size = new System.Drawing.Size(51, 37);
             this.intLabel.TabIndex = 7;
@@ -1338,8 +1357,9 @@
             // chaLabel
             // 
             this.chaLabel.AutoSize = true;
+            this.chaLabel.BackColor = System.Drawing.Color.Transparent;
             this.chaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chaLabel.Location = new System.Drawing.Point(25, 628);
+            this.chaLabel.Location = new System.Drawing.Point(29, 628);
             this.chaLabel.Name = "chaLabel";
             this.chaLabel.Size = new System.Drawing.Size(51, 37);
             this.chaLabel.TabIndex = 6;
@@ -1349,8 +1369,9 @@
             // wisLabel
             // 
             this.wisLabel.AutoSize = true;
+            this.wisLabel.BackColor = System.Drawing.Color.Transparent;
             this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisLabel.Location = new System.Drawing.Point(25, 519);
+            this.wisLabel.Location = new System.Drawing.Point(28, 519);
             this.wisLabel.Name = "wisLabel";
             this.wisLabel.Size = new System.Drawing.Size(51, 37);
             this.wisLabel.TabIndex = 7;
@@ -1417,69 +1438,34 @@
             this.strModLabel.Text = "0";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbSTRButton
+            // selectionButton
             // 
-            this.pbSTRButton.Location = new System.Drawing.Point(375, 300);
-            this.pbSTRButton.Name = "pbSTRButton";
-            this.pbSTRButton.Size = new System.Drawing.Size(75, 23);
-            this.pbSTRButton.TabIndex = 51;
-            this.pbSTRButton.Text = "Strength";
-            this.pbSTRButton.UseVisualStyleBackColor = true;
+            this.selectionButton.Location = new System.Drawing.Point(693, 24);
+            this.selectionButton.Name = "selectionButton";
+            this.selectionButton.Size = new System.Drawing.Size(106, 41);
+            this.selectionButton.TabIndex = 24;
+            this.selectionButton.Text = "Make Available Selections";
+            this.selectionButton.UseVisualStyleBackColor = true;
+            this.selectionButton.Click += new System.EventHandler(this.selectionButton_Click);
             // 
-            // pbCHAButton
+            // skillSelectionButton
             // 
-            this.pbCHAButton.Location = new System.Drawing.Point(375, 478);
-            this.pbCHAButton.Name = "pbCHAButton";
-            this.pbCHAButton.Size = new System.Drawing.Size(75, 23);
-            this.pbCHAButton.TabIndex = 52;
-            this.pbCHAButton.Text = "Charisma";
-            this.pbCHAButton.UseVisualStyleBackColor = true;
+            this.skillSelectionButton.Location = new System.Drawing.Point(253, 376);
+            this.skillSelectionButton.Name = "skillSelectionButton";
+            this.skillSelectionButton.Size = new System.Drawing.Size(133, 23);
+            this.skillSelectionButton.TabIndex = 29;
+            this.skillSelectionButton.Text = "Make Skill Selections";
+            this.skillSelectionButton.UseVisualStyleBackColor = true;
+            this.skillSelectionButton.Click += new System.EventHandler(this.skillSelectionButton_Click);
             // 
-            // pbWISButton
+            // equipSelectionButton
             // 
-            this.pbWISButton.Location = new System.Drawing.Point(375, 443);
-            this.pbWISButton.Name = "pbWISButton";
-            this.pbWISButton.Size = new System.Drawing.Size(75, 23);
-            this.pbWISButton.TabIndex = 53;
-            this.pbWISButton.Text = "Wisdom";
-            this.pbWISButton.UseVisualStyleBackColor = true;
-            // 
-            // pbINTButton
-            // 
-            this.pbINTButton.Location = new System.Drawing.Point(375, 409);
-            this.pbINTButton.Name = "pbINTButton";
-            this.pbINTButton.Size = new System.Drawing.Size(75, 23);
-            this.pbINTButton.TabIndex = 54;
-            this.pbINTButton.Text = "Intelligence";
-            this.pbINTButton.UseVisualStyleBackColor = true;
-            // 
-            // pbCONButton
-            // 
-            this.pbCONButton.Location = new System.Drawing.Point(375, 375);
-            this.pbCONButton.Name = "pbCONButton";
-            this.pbCONButton.Size = new System.Drawing.Size(75, 23);
-            this.pbCONButton.TabIndex = 55;
-            this.pbCONButton.Text = "Constitution";
-            this.pbCONButton.UseVisualStyleBackColor = true;
-            // 
-            // pbDEXButton
-            // 
-            this.pbDEXButton.Location = new System.Drawing.Point(375, 338);
-            this.pbDEXButton.Name = "pbDEXButton";
-            this.pbDEXButton.Size = new System.Drawing.Size(75, 23);
-            this.pbDEXButton.TabIndex = 56;
-            this.pbDEXButton.Text = "Dexterity";
-            this.pbDEXButton.UseVisualStyleBackColor = true;
-            // 
-            // pbCommitButton
-            // 
-            this.pbCommitButton.Location = new System.Drawing.Point(39, 338);
-            this.pbCommitButton.Name = "pbCommitButton";
-            this.pbCommitButton.Size = new System.Drawing.Size(75, 23);
-            this.pbCommitButton.TabIndex = 57;
-            this.pbCommitButton.Text = "Commit All";
-            this.pbCommitButton.UseVisualStyleBackColor = true;
-            this.pbCommitButton.Click += new System.EventHandler(this.pbCommitButton_Click);
+            this.equipSelectionButton.Location = new System.Drawing.Point(253, 414);
+            this.equipSelectionButton.Name = "equipSelectionButton";
+            this.equipSelectionButton.Size = new System.Drawing.Size(158, 23);
+            this.equipSelectionButton.TabIndex = 30;
+            this.equipSelectionButton.Text = "Make Equipment Selections";
+            this.equipSelectionButton.UseVisualStyleBackColor = true;
             // 
             // fCChar
             // 
@@ -1656,12 +1642,10 @@
         private System.Windows.Forms.Label hairLabel;
         private System.Windows.Forms.Label skinLabel;
         private System.Windows.Forms.Button pbCommitButton;
-        private System.Windows.Forms.Button pbDEXButton;
-        private System.Windows.Forms.Button pbCONButton;
-        private System.Windows.Forms.Button pbINTButton;
-        private System.Windows.Forms.Button pbWISButton;
-        private System.Windows.Forms.Button pbCHAButton;
-        private System.Windows.Forms.Button pbSTRButton;
+        private System.Windows.Forms.Button raceButton;
+        private System.Windows.Forms.Button selectionButton;
+        private System.Windows.Forms.Button equipSelectionButton;
+        private System.Windows.Forms.Button skillSelectionButton;
     }
 }
 

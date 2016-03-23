@@ -32,6 +32,7 @@
             this.selectLabel = new System.Windows.Forms.Label();
             this.numberLabel = new System.Windows.Forms.Label();
             this.descGrid = new System.Windows.Forms.DataGridView();
+            this.finishButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.descGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,11 +75,22 @@
             this.descGrid.Size = new System.Drawing.Size(356, 329);
             this.descGrid.TabIndex = 3;
             // 
+            // finishButton
+            // 
+            this.finishButton.Location = new System.Drawing.Point(457, 381);
+            this.finishButton.Name = "finishButton";
+            this.finishButton.Size = new System.Drawing.Size(75, 23);
+            this.finishButton.TabIndex = 4;
+            this.finishButton.Text = "Finish";
+            this.finishButton.UseVisualStyleBackColor = true;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
+            // 
             // fCCSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 375);
+            this.ClientSize = new System.Drawing.Size(556, 416);
+            this.Controls.Add(this.finishButton);
             this.Controls.Add(this.descGrid);
             this.Controls.Add(this.numberLabel);
             this.Controls.Add(this.selectLabel);
@@ -98,5 +110,6 @@
         private System.Windows.Forms.Label selectLabel;
         private System.Windows.Forms.Label numberLabel;
         private System.Windows.Forms.DataGridView descGrid;
+        private System.Windows.Forms.Button finishButton;
     }
 }
