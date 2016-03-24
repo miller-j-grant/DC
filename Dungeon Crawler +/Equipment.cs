@@ -13,47 +13,34 @@ namespace Dungeon_Crawler__
 	/// version: 2/22/2016 </remarks>
     class Equipment
     {
-		/// <summary>  </summary>
+		/// <summary> name of item </summary>
         private string equip { get; }
-		
-		/// <summary>  </summary>
+		/// <summary> type of item </summary>
         private string type { get; }
-		
-		/// <summary>  </summary>
+		/// <summary> subtype of item </summary>
         private string subtype { get; }
-
         // might wanna do this in terms of cp and convert?
-		/// <summary>  </summary>
+		/// <summary> cost of the item </summary>
         private int cost { get; }
-
-        //weight
-		/// <summary>  </summary>
+		/// <summary> weight of the item </summary>
         private int lb { get; }
-
+		
         //=====ARMOR ONLY======
 		/// <summary>  </summary>
         private int ac { get; }
-		
 		/// <summary>  </summary>
         private int maxdex { get; }
-		
 		/// <summary>  </summary>
         private int reqstr { get; }
-		
-        // true: gives disadvantage to steath; false: does not
-		/// <summary>  </summary>
+		/// <summary> true: gives disadvantage to steath; false: does not </summary>
         Boolean steath { get; }
 
         //=====WEAPON ONLY======
 		/// <summary>  </summary>
         private string roll { get; }
-		
-        // damage type: piercing, bludgeoning, slashing, -
-		/// <summary>  </summary>
+		/// <summary> damage type: piercing, bludgeoning, slashing, - </summary>
         private string damage { get; }
-		
-        // properties
-		/// <summary>  </summary>
+		/// <summary> properties </summary>
         private string[] prop { get; }
 
 		/// <summary>

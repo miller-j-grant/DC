@@ -13,7 +13,9 @@ namespace Dungeon_Crawler__
 	/// version: 2/22/2016 </remarks>
     class Program
     {
+		/// <summary>  </summary>
         private string pClass;
+		
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

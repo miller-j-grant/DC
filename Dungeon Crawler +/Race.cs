@@ -15,26 +15,20 @@ namespace Dungeon_Crawler__
 	/// version: 2/22/2016 </remarks>
     class Race
     {
+		/// <summary> name of the race </summary>
         private string raceName;
-        
         /// <summary> racial ability score bonuses (0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha) </summary>
         private int[] stats { get; }
-
         /// <summary> physical size of the race </summary>
         private string size { get; }
-
 		/// <summary> speed of the race </summary>
         private int speed { get; }
-
 		/// <summary> contains the traits options for the race </summary>
         private ArrayList traits { get; }
-
 		/// <summary> contains the descriptions for the traits (tDesc[0] correpsonds to traits[0] and etc.) </summary>
         private ArrayList tDesc { get; }
-
 		/// <summary> contains the languages for the race </summary>
         private ArrayList languages { get; }
-
 		/// <summary> contains subrace options for the race </summary>
         private ArrayList subrace { get; }
 

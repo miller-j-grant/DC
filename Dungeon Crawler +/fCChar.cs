@@ -48,6 +48,8 @@ namespace Dungeon_Crawler__
 
         }
 
+		/// <summary>
+		/// Executed when the rollButton is clicked. Rolls random ability scores </summary>
         private void rollButton_Click(object sender, EventArgs e)
         {
             rollLabel1.Text = Calculations.rollAbilityScore().ToString();
