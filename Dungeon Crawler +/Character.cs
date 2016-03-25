@@ -7,67 +7,80 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Crawler__
 {
+	/// <summary>
+	/// A class that contains all details specific to a character. 
+	/// Every character has the following:
+    ///   Name
+    ///   Race
+    ///       Speed, Languages
+    ///   Class
+    ///      Proficiencies, Spells
+    ///   Ability scores (str, dex, con, intel, wis, cha)
+    ///       Hit points, hit dice, proficiency bonus, initiative, passive wisdom
+    ///   Skills
+    ///   Background
+    ///   Equipment
+    ///       AC, attack bonus, $$ALL THAT SICK GP YO$$</summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     class Character
     {
-        /* Every character has the following:
-            Name
-            Race
-                Speed, Languages
-            Class
-                Proficiencies, Spells
-            Ability scores (str, dex, con, intel, wis, cha)
-                Hit points, hit dice, proficiency bonus, initiative, passive wisdom
-            Skills
-            Background
-            Equipment
-                AC, attack bonus, $$ALL THAT SICK GP YO$$
-        */
-
+		/// <summary> Name of the character </summary>
         public string name { get; set; }
+		/// <summary> Level of the character </summary>
         public int level { get; set; }
-
+		/// <summary> Race of the character </summary>
         public Race race { get; set; }
-
+		/// <summary> Speed of the character </summary>
         public int speed { get; set; }
+		/// <summary> Languages spoken by the character </summary>
         public ArrayList language { get; set; }
-
+		/// <summary> Class of the character </summary>
         public Class pClass { get; set; }
+		/// <summary> Proficiencies of the character </summary>
         public ArrayList proficiency { get; set; }
+		/// <summary> Spells known by the character </summary>
         public ArrayList spellbook { get; set; }
-
-        // base ability scores for when changing race
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha 
+		/// <summary> base ability scores for when changing race - 
+		/// {0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha} </summary>
         public int[] baseAS;
-
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+		/// <summary> stats for when changing race -  
+		/// {0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha} </summary>
         public int[] stats;
-
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+		/// <summary> stat mods for when changing race -  
+		/// {0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha} </summary>
         public int[] statmods;
-
-        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
-        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
-        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
-        // 15 Sleight of Hand, 16 Stealth, 17 Survival
+		/// <summary> 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception 
+		/// 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine 
+		/// 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion 
+		/// 15 Sleight of Hand, 16 Stealth, 17 Survival </summary>
         public int[] skills;
-
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+		/// <summary> {0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha} </summary>
         public int[] saves;
-
+		/// <summary> Background of the character </summary>
         public Background bg { get; set; }
+		/// <summary> Inventory of the character </summary>
         public ArrayList inventory { get; set; }
-        // private Equipment equip = new Equipment();
 
-        //calculated stats
+        //=====calculated stats=====
+		/// <summary> Health Points of the character</summary>
         public int hp { get; set; }
+		/// <summary> Initiative of the character </summary>
         public int initiative { get; set; }
+		/// <summary> </summary>
         public int passwis { get; set; }
+		/// <summary> Proficiency Bonus of the character</summary>
         public int profbonus { get; set; }
+		/// <summary> </summary>
         public int ac { get; set; }
+		/// <summary> Attack of the character</summary>
         public int atk { get; set; }
+		/// <summary> Wealth of the character</summary>
         public int wealth { get; set; }
 
-
+		/// <summary>
+        /// Main constructor for the Character class </summary>
         public Character()
         {
             language = new ArrayList();
@@ -81,13 +94,17 @@ namespace Dungeon_Crawler__
             inventory = new ArrayList();
         }
 
+		/// <summary>
+        /// Sets the Race for the character </summary>
+		/// <param name="s"> String representation of the Race </param>
         public void setRace(string s)
         {
             race = new Race(s);
         }
 
-
-        // setters for base ability scores 
+		//======SETTER METHODS======
+		//======BASE STATS SETTERS======
+		
         public void setBaseStats(int[] s)
         {
             // save for later stats.Zip(s, (x, y) => x + y);
@@ -96,8 +113,6 @@ namespace Dungeon_Crawler__
                 baseAS[z] = s[z];
             }
         }
-
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
 
         public void setBaseStr(int str)
         {
@@ -129,7 +144,6 @@ namespace Dungeon_Crawler__
             baseAS[5] = cha;
         }
 
-        // setters for ability scores plus racial bonuses
         public void setStats(int[] s)
         {
             // save for later stats.Zip(s, (x, y) => x + y);
@@ -138,8 +152,8 @@ namespace Dungeon_Crawler__
                 stats[z] = baseAS[z] + s[z];
             }
         }
-
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+		
+		//======SETTERS FOR CURRENT STATS=======
 
         public void setStr(int str)
         {
@@ -180,7 +194,7 @@ namespace Dungeon_Crawler__
             }
         }
 
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
+		//======SETTERS FOR STAT MODS======
 
         public void setStrMod(int str)
         {
@@ -212,10 +226,8 @@ namespace Dungeon_Crawler__
             statmods[5] = cha;
         }
 
-        // setters for calculated values...
-        // should the set send values to methods?
-
-        // setters for skills
+        //======SETTERS FOR SKILLS======
+		
         public void setSkills(int[] s)
         {
             for (int x = 0; x < 16; x++)
@@ -223,11 +235,6 @@ namespace Dungeon_Crawler__
                 skills[x] = s[x];
             }
         }
-
-        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
-        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
-        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
-        // 15 Sleight of Hand, 16 Stealth, 17 Survival
 
         public void setAcrobatics(int a)
         {
@@ -319,7 +326,8 @@ namespace Dungeon_Crawler__
             skills[17] = s;
         }
 
-        // setters for ability scores plus racial bonuses
+		//======SETTERS FOR ABILITY SCORES PLUS RACIAL BONUSES======
+
         public void setSaves(int[] s)
         {
             // save for later stats.Zip(s, (x, y) => x + y);
@@ -328,8 +336,6 @@ namespace Dungeon_Crawler__
                 saves[z] = s[z];
             }
         }
-
-        // 0 Str, 1 Dex, 2 Con, 3 Int, 4 Wis, 5 Cha
 
         public void setStrSave(int str)
         {
@@ -386,7 +392,7 @@ namespace Dungeon_Crawler__
             profbonus = pb;
         }
 
-        // ArrayList adders
+        //======ARRAYLIST ADDERS======
 
         public void addLanguage(string lang)
         {
@@ -408,9 +414,9 @@ namespace Dungeon_Crawler__
             inventory.Add(eq);
         }
 
-        //getters
+        //======GETTER METHODS======
+		//======BASE ABILITY GETTERS======
 
-        // get Base Ability Scores
         public int[] getBaseAS()
         {
             return baseAS;
@@ -446,7 +452,7 @@ namespace Dungeon_Crawler__
             return baseAS[5];
         }
 
-        // get current ability scores
+        //======CURRENT ABILITY GETTERS=====
 
         public int[] getStats()
         {
@@ -483,7 +489,7 @@ namespace Dungeon_Crawler__
             return stats[5];
         }
 
-        // get ability score modifiers
+        //======ABILITY SCORE MODIFIER GETTERS======
 
         public int[] getStatMod()
         {
@@ -520,17 +526,12 @@ namespace Dungeon_Crawler__
             return statmods[5];
         }
 
-        // get skills
+        //======SKILLS GETTERS======
 
         public int[] getSkills()
         {
             return skills;
         }
-
-        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
-        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
-        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
-        // 15 Sleight of Hand, 16 Stealth, 17 Survival
 
         public int getAcrobatics()
         {
@@ -622,7 +623,7 @@ namespace Dungeon_Crawler__
             return skills[17];
         }
 
-        // get saves
+        //======SAVES GETTERS======
 
         public int[] getSaves()
         {
