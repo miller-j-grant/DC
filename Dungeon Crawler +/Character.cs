@@ -68,11 +68,11 @@ namespace Dungeon_Crawler__
         public int hp { get; set; }
 		/// <summary> Initiative of the character </summary>
         public int initiative { get; set; }
-		/// <summary> </summary>
+		/// <summary> Passive Wisdom of the character </summary>
         public int passwis { get; set; }
 		/// <summary> Proficiency Bonus of the character</summary>
         public int profbonus { get; set; }
-		/// <summary> </summary>
+		/// <summary> Armor Class of the character </summary>
         public int ac { get; set; }
 		/// <summary> Attack of the character</summary>
         public int atk { get; set; }

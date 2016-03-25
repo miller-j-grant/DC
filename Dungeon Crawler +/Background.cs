@@ -22,9 +22,6 @@ namespace Dungeon_Crawler__
         // extra is for like Charlatan "Favorite Schemes"
         public ArrayList extra { get; }
 
-       // public string[]extra { get; }
-
-
         // Personality Trait
         public ArrayList person { get; }
         public ArrayList ideal { get; }

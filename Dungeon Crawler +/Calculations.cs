@@ -7,50 +7,72 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Crawler__
 {
+	/// <summary>
+	/// This class is for any and all calculations needed in the program. 
+	/// this includes: stat mods, hit points, initiavtive, passive wisdom,
+	/// proficiency bonus, armor class, attack bonus, and wealth. </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     public class Calculations
     {
-
-        // This class is for any and all calculations needed in the program
-        // this includes: stat mods, hit points, initiavtive, passive wisdom, 
-        // proficiency bonus, armor class, attack bonus, and wealth
-
         //calculated stats
-
+		/// <summary> Health Points of a character </summary>
         private static int hp;
+		/// <summary> Initiative of a character </summary>
         private static int initiative;
+		/// <summary> Passive Wisdom of a character </summary>
         private static int passwis;
+		/// <summary> Proficiency Bonus of a character </summary>
         private static int profbonus;
+		/// <summary> Armor Class of a character </summary>
         private static int ac;
+		/// <summary> Attack of a character </summary>
         private static int atk;
+		/// <summary> Wealth of a character </summary>
         private static int wealth;
-
+		/// <summary> Array of mods for a character </summary>
         private static int[] mods;
-
-        // 0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception
-        // 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine
-        // 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion
-        // 15 Sleight of Hand, 16 Stealth, 17 Survival
+		/// <summary> Skills of a character. 
+		/// {0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception, 
+		/// 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine, 
+		/// 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion, 
+		/// 15 Sleight of Hand, 16 Stealth, 17 Survival. </summary>
         private static int[] skills;
+		/// <summary> Array of saves of a character </summary>
         private static int[] saves;
-
+		/// <summary> used to generate a random number </summary>
         private static Random r = new Random();
+		/// <summary> represents a random number simulating a roll of die </summary>
         private static int roll;
+		/// <summary>  </summary>
         private static int drop;
+		/// <summary> Ability Score </summary>
         private static int abilityscore;
-
+		/// <summary> Point Buy Strength </summary>
         private static int[] pbSTR = new int[2];
+		/// <summary> Point Buy Constitution </summary>
         private static int[] pbCON = new int[2];
+		/// <summary> Point Buy Dexterity </summary>
         private static int[] pbDEX = new int[2];
+		/// <summary> Point Buy Intelligence </summary>
         private static int[] pbINT = new int[2];
+		/// <summary> Point Buy Wisdom </summary>
         private static int[] pbWIS = new int[2];
+		/// <summary> Point Buy Charisma </summary>
         private static int[] pbCHA = new int[2];
 
+		/// <summary>
+        /// Rolls a random number between 1 and d and sets the number to roll </summary>
+		/// <param name="d"> The limit of the roll </param>
         public static int rollD(int d)
         {
             roll = r.Next(1, (d+1));
             return roll;
         }
 
+		/// <summary>
+        /// Rolls a randomized number for the ability score </summary>
         public static int rollAbilityScore()
         {
             drop = 0;
@@ -68,6 +90,11 @@ namespace Dungeon_Crawler__
             return abilityscore;
         }
 
+		/// <summary>
+        /// Calculates skills of a character, based on parameters </summary>
+		/// <param name="mod"> Contains mods of a character </param>
+		/// <param name="prof"> Contains proficiencies of a character </param>
+		/// <param name="profbonus"> Contains proficiency bonus of a character </param>
         public static int[] calcSkills(int[] mod, ArrayList prof, int probonus)
         {
             skills = new int[18];
@@ -194,6 +221,11 @@ namespace Dungeon_Crawler__
             return skills;
         }
 
+		/// <summary>
+        /// Calculates saves of a character, based on parameters </summary>
+		/// <param name="mod"> Contains mods of a character </param>
+		/// <param name="prof"> Contains proficiencies of a character </param>
+		/// <param name="profbonus"> Contains proficiency bonus of a character </param>
         public static int[] calcSaves(int[] mod, ArrayList prof, int probonus)
         {
             saves = new int[6];
@@ -250,6 +282,9 @@ namespace Dungeon_Crawler__
             return saves;
         }
 
+		/// <summary>
+        /// Calculates mod </summary>
+		/// <param name="m"> mod being calculated </param>
         public static int calcMod(int m)
         {
             if (m == 1)
@@ -339,6 +374,9 @@ namespace Dungeon_Crawler__
 
         }
 
+		/// <summary>
+        /// Calculates array of mods </summary>
+		/// <param name="m"> array of mods being calculated </param>
         public static int[] calcMods(int[] m)
         {
             mods = new int[6];
@@ -428,6 +466,11 @@ namespace Dungeon_Crawler__
             return mods;
         }
 
+		/// <summary>
+        /// Calculates Health Points of a character, based on parameters </summary>
+		/// <param name="lvl"> Level of a character </param>
+		/// <param name="conMod"> Constitution Modifier of a character </param>
+		/// <param name="hd"> Hit Dice of a character </param>
         public static int calcHP(int lvl, int conMod, int hd)
         {
             hp = hd + conMod;
@@ -438,11 +481,19 @@ namespace Dungeon_Crawler__
             return hp;
         }
 
+		/// <summary>
+        /// Calculates Armor Class of a character, based on parameters </summary>
+		/// <param name="armor"> Armor level of a character </param>
+		/// <param name="dexMod"> Dexterity Modifier of a character </param>
+		/// <param name="extra"> extra of a character </param>
         public static int calcAC(int armor, int dexMod, int extra)
         {
             return (armor + dexMod + extra);
         }
 
+		/// <summary>
+        /// Calculates Proficiency of a character </summary>
+		/// <param name="lvl"> Level of a character </param>
         public static int calcProf(int lvl)
         {
             if (lvl > 4 && lvl < 9)
@@ -457,16 +508,26 @@ namespace Dungeon_Crawler__
                 return 2;
         }
 
+		/// <summary>
+        /// Calculates Passive Wisdom of a character </summary>
+		/// <param name="percep"> Perception of a character </param>
         public static int calcPassWis(int percep)
         {
             return (10 + percep);
         }
 
+		/// <summary>
+        /// Calculates Initiative of a character, based on parameters </summary>
+		/// <param name="dexMod"> Dexterity Modifier of a character </param>
+		/// <param name="extra"> extra of a character </param>
         public static int calcInitiative(int dexMod, int extra)
         {
             return dexMod + extra;
         }
 
+		/// <summary>
+        /// Calculates Wealth of a character </summary>
+		/// <param name="pClass"> String representation of a character's Class </param>
         public static int calcWealth(String pClass)
         {
             wealth = 0;
@@ -517,18 +578,31 @@ namespace Dungeon_Crawler__
 
         }
 
-        //addTo calculators
+        //======addTo calculators======
 
+		/// <summary>
+        /// Adds a specified value to a character stat </summary>
+		/// <param name="stats"> array of stats of a character </param>
+		/// <param name="s"> index of the stat of interest in the stats array</param>
+		/// <param name="amount"> amount to be added to the stat </param>
         public static int addToStat(int[] stats, int s, int amount)
         {
             return (stats[s] + amount);
         }
 
+		/// <summary>
+        /// Adds a specified value to a character skill </summary>
+		/// <param name="skills"> array of skills of a character </param>
+		/// <param name="s"> index of the stat of interest in the skills array</param>
+		/// <param name="amount"> amount to be added to the skill </param>
         public static int addToSkill(int[] skills, int s, int amount)
         {
             return (skills[s] + amount);
         }
 
+		/// <summary>
+        /// Computes to Point Buy Cost depending on the attribute </summary>
+		/// <param name="attribute"> attribute that determines point buy cost </param>
         public static int pointBuyCost(decimal attribute)
         {
             int cost = 0;
@@ -551,6 +625,11 @@ namespace Dungeon_Crawler__
             return cost;
         }
 
+		/// <summary>
+        /// Calulates the point buy points after updating a specified attribute </summary>
+		/// <param name="points"> current point buy points </param>
+		/// <param name="newValue"> newValue for the specified attribute </param>
+		/// <param name="name"> name of the specific value (Str, Con, Dex, Int, Wis, Cha) </param>
         public static int pointBuyPoints(int points, decimal newValue, string name)
         {
             if (name == "str")

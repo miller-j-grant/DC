@@ -317,6 +317,8 @@ namespace Dungeon_Crawler__
             }
         }
 
+		//======GETTER METHODS======
+		
         public ArrayList getTraits()
         {
             return traits;
