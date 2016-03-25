@@ -7,33 +7,52 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Crawler__
 {
-
-    // not entirely sold on this class
-    // honestly, Backgrounds are the biggest drawback to 5E
-    // but it is technically optional, sooooooo ><
+	/// <summary>
+	/// A class that contains all details specific to a character's Background </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     class Background
     {
+		/// <summary> Procifiencies of the character </summary>
         public ArrayList prof { get; }
+		/// <summary> Languages spoken by the character </summary>
         public ArrayList lang { get; }
+		/// <summary> Equipment held by the character </summary>
         public ArrayList equip { get; }
+		/// <summary> Wealth of the character </summary>
         public int wealth { get; }
+		/// <summary> Feats </summary>
         public string ft { get; }
-
-        // extra is for like Charlatan "Favorite Schemes"
+		/// <summary> extra is for like Charlatan "Favorite Schemes" </summary>
         public ArrayList extra { get; }
 
-        // Personality Trait
+        //======Personality Traits======
+		/// <summary> list of options that describes what kind of person
+		/// the character is </summary>
         public ArrayList person { get; }
+		/// <summary> list of options that describes what ideals
+		/// the character has </summary>
         public ArrayList ideal { get; }
+		/// <summary> list of options that describes what bonds
+		/// the character has </summary>
         public ArrayList bond { get; }
+		/// <summary> list of options that describes what flaws
+		/// the character has </summary>
         public ArrayList flaw { get; }
 
 
+		/// <summary>
+		/// lol </summary>
         public Background()
         {
 
         }
 
+		/// <summary>
+        /// Main constructor for the Character class that sets all instance
+		/// variables based on the Background given to the character </summary>
+		/// <param name="bg"> Background name </param>
         public Background(string bg)
         {
             prof = new ArrayList();
