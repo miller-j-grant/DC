@@ -239,7 +239,7 @@ namespace Dungeon_Crawler__
         {
             for (int i = 0; i < selectionListBox.SelectedItems.Count; i++) 
                 spc.addProficiency("" + selectionListBox.SelectedItems[i]);
-            fCCSelection.ActiveForm.Close();
+            fCChar.ActiveForm.Close();
         }
     }
 }
