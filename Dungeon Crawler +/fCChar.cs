@@ -8,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BitMiracle.Docotic.Pdf;
+using System.Diagnostics;
+
+
 
 namespace Dungeon_Crawler__
 {
@@ -250,6 +254,36 @@ namespace Dungeon_Crawler__
 
             }
 
+        }
+
+        private void classButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string curItem = classBox.SelectedItem.ToString();
+                pc.setClass(curItem);
+                
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void backgroundButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string curItem = backgroundBox.SelectedItem.ToString();
+                pc.setBackground(curItem);
+
+            }
+            catch
+            {
+
+            }
         }
 
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -506,6 +540,141 @@ namespace Dungeon_Crawler__
             fCCSelection fCC = new fCCSelection();
             fCC.fCCLoadSelections("Class: " + classBox.SelectedItem, pc);
             fCC.ShowDialog();
+        }
+
+        private void finalButton_Click(object sender, EventArgs e)
+        {
+            BitMiracle.Docotic.LicenseManager.AddLicenseData("4L4F2-CN67H-38NDJ-2K1HA-NBODQ");
+            string pathToFile = "FilledSheet.pdf";
+
+            using (PdfDocument pdf = new PdfDocument("CharacterSheet.pdf"))
+            {
+                PdfTextBox classBox = (PdfTextBox)pdf.Widgets[0];
+                classBox.Text = pc.pClass.className + " 1";
+
+                PdfTextBox backgroundBox = (PdfTextBox)pdf.Widgets[1];
+                backgroundBox.Text = pc.bg.background;
+
+                PdfTextBox playerBox = (PdfTextBox)pdf.Widgets[2];
+                playerBox.Text = playerTextBox.Text;
+
+                PdfTextBox characterBox = (PdfTextBox)pdf.Widgets[3];
+                characterBox.Text = nameTextBox.Text;
+
+                PdfTextBox raceBox = (PdfTextBox)pdf.Widgets[4];
+                raceBox.Text = pc.race.getRaceName();
+
+                PdfTextBox alignmentBox = (PdfTextBox)pdf.Widgets[5];
+                alignmentBox.Text = "";
+                
+                //assuming level 1 character
+                PdfTextBox expBox = (PdfTextBox)pdf.Widgets[6];
+                expBox.Text = "0 / 300";
+
+                PdfTextBox inspirationBox = (PdfTextBox)pdf.Widgets[7];
+                inspirationBox.Text = "";
+
+                PdfTextBox strengthBox = (PdfTextBox)pdf.Widgets[8];
+                strengthBox.Text = pc.getSTR().ToString();
+
+                //assuming level 1 character
+                PdfTextBox proficiencyBox = (PdfTextBox)pdf.Widgets[9];
+                proficiencyBox.Text = "2";
+
+                PdfTextBox armorclassBox = (PdfTextBox)pdf.Widgets[10];
+                armorclassBox.Text = Calculations.calcAC(10, pc.getDEXMod(), 0).ToString();
+
+                PdfTextBox initiativeBox = (PdfTextBox)pdf.Widgets[11];
+                initiativeBox.Text = Calculations.calcInitiative(pc.getDEXMod(),0).ToString();
+
+                PdfTextBox speedBox = (PdfTextBox)pdf.Widgets[12];
+                speedBox.Text = pc.race.getSpeed().ToString();
+
+                PdfTextBox personalityBox = (PdfTextBox)pdf.Widgets[13];
+                personalityBox.Text = "Background Personality Traits";
+
+                PdfTextBox strmodBox = (PdfTextBox)pdf.Widgets[14];
+                strmodBox.Text = pc.getSTRMod().ToString();
+
+                //assuming level 1 character
+                PdfTextBox maxhpBox = (PdfTextBox)pdf.Widgets[15];
+                maxhpBox.Text = pc.pClass.hit.ToString();
+
+                PdfTextBox strsaveBox = (PdfTextBox)pdf.Widgets[16];
+                //strsaveBox.Text = pc.getSTRSave().ToString();
+                strsaveBox.Text = pc.getSTRMod().ToString();
+
+                PdfTextBox dexterityBox = (PdfTextBox)pdf.Widgets[17];
+                dexterityBox.Text = pc.getDEX().ToString();
+
+                //Widget 18: Current HP; leaving blank
+
+                PdfTextBox idealsBox = (PdfTextBox)pdf.Widgets[19];
+                idealsBox.Text = "Background Ideal";
+
+                PdfTextBox dexmodBox = (PdfTextBox)pdf.Widgets[20];
+                dexmodBox.Text = pc.getDEXMod().ToString();
+
+                //Widget 21: Temp HP; leaving blank
+
+                PdfTextBox bondsBox = (PdfTextBox)pdf.Widgets[22];
+                bondsBox.Text = "Background Bond";
+
+                PdfTextBox constitutionBox = (PdfTextBox)pdf.Widgets[23];
+                constitutionBox.Text = pc.getCON().ToString();
+
+                //assuming level 1 character
+                PdfTextBox hitdicetotalBox = (PdfTextBox)pdf.Widgets[24];
+                hitdicetotalBox.Text = "1";
+
+                //Widgets 25, 26, & 27: Death Saves; leaving unchecked
+
+                PdfTextBox conmodBox = (PdfTextBox)pdf.Widgets[28];
+                conmodBox.Text = pc.getCONMod().ToString();
+
+                //Widgets 29, 30, & 31: Death Saves; leaving unchecked
+
+                PdfTextBox hitdiceBox = (PdfTextBox)pdf.Widgets[32];
+                hitdiceBox.Text = "d" + pc.pClass.hit.ToString();
+
+                PdfTextBox flawsBox = (PdfTextBox)pdf.Widgets[33];
+                flawsBox.Text = "Character Flaws";
+
+                PdfTextBox intelligenceBox = (PdfTextBox)pdf.Widgets[34];
+                intelligenceBox.Text = pc.getINT().ToString();
+
+                PdfTextBox dexsaveBox = (PdfTextBox)pdf.Widgets[35];
+                //dexsaveBox.Text = pc.getDEXSave().ToString();
+                dexsaveBox.Text = pc.getDEXMod().ToString();
+
+                PdfTextBox consaveBox = (PdfTextBox)pdf.Widgets[36];
+                //consaveBox.Text = pc.getCONSave().ToString();
+                consaveBox.Text = pc.getCONMod().ToString();
+
+                PdfTextBox intsaveBox = (PdfTextBox)pdf.Widgets[37];
+                //intsaveBox.Text = pc.getINTSave().ToString();
+                intsaveBox.Text = pc.getINTMod().ToString();
+
+                PdfTextBox wissaveBox = (PdfTextBox)pdf.Widgets[38];
+                //wissaveBox.Text = pc.getWISSave().ToString();
+                wissaveBox.Text = pc.getWISMod().ToString();
+
+                PdfTextBox chasaveBox = (PdfTextBox)pdf.Widgets[39];
+                //chasaveBox.Text = pc.getCHASave().ToString();
+                chasaveBox.Text = pc.getCHAMod().ToString();
+
+                PdfTextBox acrobaticsBox = (PdfTextBox)pdf.Widgets[40];
+                acrobaticsBox.Text = pc.getAcrobatics().ToString();
+
+                PdfTextBox animalhandlingBox = (PdfTextBox)pdf.Widgets[41];
+                animalhandlingBox.Text = pc.getAnimalHanding().ToString();
+
+
+                pdf.Save(pathToFile);
+            }
+
+            Process.Start(pathToFile);
+
         }
     }
 }

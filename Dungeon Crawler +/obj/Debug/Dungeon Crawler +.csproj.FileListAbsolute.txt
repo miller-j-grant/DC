@@ -23,3 +23,6 @@ C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache
 C:\Users\Grant\Documents\VS DS\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCCSelection.resources
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCCSelection.resources
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\BitMiracle.Docotic.Pdf.dll
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\bin\Debug\BitMiracle.Docotic.Pdf.xml

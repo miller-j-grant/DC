@@ -237,8 +237,9 @@ namespace Dungeon_Crawler__
 
         private void finishButton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < selectionListBox.SelectedItems.Count; i++)
+            for (int i = 0; i < selectionListBox.SelectedItems.Count; i++) 
                 spc.addProficiency("" + selectionListBox.SelectedItems[i]);
+            fCCSelection.ActiveForm.Close();
         }
     }
 }

@@ -78,6 +78,7 @@
             this.classicLabel = new System.Windows.Forms.Label();
             this.rollButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.selectionButton = new System.Windows.Forms.Button();
             this.raceButton = new System.Windows.Forms.Button();
             this.languagesGrid = new System.Windows.Forms.DataGridView();
             this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,6 +95,8 @@
             this.asmLabel = new System.Windows.Forms.Label();
             this.raceBox = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.equipSelectionButton = new System.Windows.Forms.Button();
+            this.skillSelectionButton = new System.Windows.Forms.Button();
             this.levelingGrid = new System.Windows.Forms.DataGridView();
             this.featuresGrid = new System.Windows.Forms.DataGridView();
             this.levelingLabel = new System.Windows.Forms.Label();
@@ -127,8 +130,6 @@
             this.ageLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.finalButton = new System.Windows.Forms.Button();
             this.AbilityPic = new System.Windows.Forms.PictureBox();
             this.strLabel = new System.Windows.Forms.Label();
             this.dexLabel = new System.Windows.Forms.Label();
@@ -142,9 +143,11 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
-            this.selectionButton = new System.Windows.Forms.Button();
-            this.skillSelectionButton = new System.Windows.Forms.Button();
-            this.equipSelectionButton = new System.Windows.Forms.Button();
+            this.finalButton = new System.Windows.Forms.Button();
+            this.playerTextBox = new System.Windows.Forms.TextBox();
+            this.playerLabel = new System.Windows.Forms.Label();
+            this.backgroundButton = new System.Windows.Forms.Button();
+            this.classButton = new System.Windows.Forms.Button();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -169,7 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).BeginInit();
             this.tabPage6.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,9 +199,9 @@
             this.CCharTab.Controls.Add(this.tabPage2);
             this.CCharTab.Controls.Add(this.tabPage3);
             this.CCharTab.Controls.Add(this.tabPage6);
-            this.CCharTab.Controls.Add(this.tabPage4);
             this.CCharTab.Location = new System.Drawing.Point(108, 23);
             this.CCharTab.Name = "CCharTab";
+            this.CCharTab.Padding = new System.Drawing.Point(50, 3);
             this.CCharTab.SelectedIndex = 0;
             this.CCharTab.Size = new System.Drawing.Size(1211, 709);
             this.CCharTab.TabIndex = 1;
@@ -770,6 +772,16 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // selectionButton
+            // 
+            this.selectionButton.Location = new System.Drawing.Point(693, 24);
+            this.selectionButton.Name = "selectionButton";
+            this.selectionButton.Size = new System.Drawing.Size(106, 41);
+            this.selectionButton.TabIndex = 24;
+            this.selectionButton.Text = "Make Available Selections";
+            this.selectionButton.UseVisualStyleBackColor = true;
+            this.selectionButton.Click += new System.EventHandler(this.selectionButton_Click);
+            // 
             // raceButton
             // 
             this.raceButton.Location = new System.Drawing.Point(913, 523);
@@ -916,6 +928,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.classButton);
             this.tabPage2.Controls.Add(this.equipSelectionButton);
             this.tabPage2.Controls.Add(this.skillSelectionButton);
             this.tabPage2.Controls.Add(this.levelingGrid);
@@ -930,6 +943,25 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Class";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // equipSelectionButton
+            // 
+            this.equipSelectionButton.Location = new System.Drawing.Point(253, 414);
+            this.equipSelectionButton.Name = "equipSelectionButton";
+            this.equipSelectionButton.Size = new System.Drawing.Size(158, 23);
+            this.equipSelectionButton.TabIndex = 30;
+            this.equipSelectionButton.Text = "Make Equipment Selections";
+            this.equipSelectionButton.UseVisualStyleBackColor = true;
+            // 
+            // skillSelectionButton
+            // 
+            this.skillSelectionButton.Location = new System.Drawing.Point(253, 376);
+            this.skillSelectionButton.Name = "skillSelectionButton";
+            this.skillSelectionButton.Size = new System.Drawing.Size(133, 23);
+            this.skillSelectionButton.TabIndex = 29;
+            this.skillSelectionButton.Text = "Make Skill Selections";
+            this.skillSelectionButton.UseVisualStyleBackColor = true;
+            this.skillSelectionButton.Click += new System.EventHandler(this.skillSelectionButton_Click);
             // 
             // levelingGrid
             // 
@@ -993,6 +1025,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.backgroundButton);
             this.tabPage3.Controls.Add(this.flawGrid);
             this.tabPage3.Controls.Add(this.bondGrid);
             this.tabPage3.Controls.Add(this.idealGrid);
@@ -1145,6 +1178,9 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.playerLabel);
+            this.tabPage6.Controls.Add(this.playerTextBox);
+            this.tabPage6.Controls.Add(this.finalButton);
             this.tabPage6.Controls.Add(this.textBox3);
             this.tabPage6.Controls.Add(this.hairTextBox);
             this.tabPage6.Controls.Add(this.skinTextBox);
@@ -1163,34 +1199,37 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1203, 683);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Details";
+            this.tabPage6.Text = "Final Details";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(547, 31);
+            this.textBox3.Location = new System.Drawing.Point(547, 99);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 20);
             this.textBox3.TabIndex = 13;
+            this.textBox3.Text = " ";
             // 
             // hairTextBox
             // 
-            this.hairTextBox.Location = new System.Drawing.Point(547, 95);
+            this.hairTextBox.Location = new System.Drawing.Point(547, 163);
             this.hairTextBox.Name = "hairTextBox";
             this.hairTextBox.Size = new System.Drawing.Size(167, 20);
             this.hairTextBox.TabIndex = 12;
+            this.hairTextBox.Text = " ";
             // 
             // skinTextBox
             // 
-            this.skinTextBox.Location = new System.Drawing.Point(547, 161);
+            this.skinTextBox.Location = new System.Drawing.Point(547, 229);
             this.skinTextBox.Name = "skinTextBox";
             this.skinTextBox.Size = new System.Drawing.Size(167, 20);
             this.skinTextBox.TabIndex = 11;
+            this.skinTextBox.Text = " ";
             // 
             // eyesLabel
             // 
             this.eyesLabel.AutoSize = true;
-            this.eyesLabel.Location = new System.Drawing.Point(427, 34);
+            this.eyesLabel.Location = new System.Drawing.Point(427, 102);
             this.eyesLabel.Name = "eyesLabel";
             this.eyesLabel.Size = new System.Drawing.Size(82, 13);
             this.eyesLabel.TabIndex = 10;
@@ -1199,7 +1238,7 @@
             // hairLabel
             // 
             this.hairLabel.AutoSize = true;
-            this.hairLabel.Location = new System.Drawing.Point(427, 98);
+            this.hairLabel.Location = new System.Drawing.Point(427, 166);
             this.hairLabel.Name = "hairLabel";
             this.hairLabel.Size = new System.Drawing.Size(78, 13);
             this.hairLabel.TabIndex = 9;
@@ -1208,7 +1247,7 @@
             // skinLabel
             // 
             this.skinLabel.AutoSize = true;
-            this.skinLabel.Location = new System.Drawing.Point(427, 164);
+            this.skinLabel.Location = new System.Drawing.Point(427, 232);
             this.skinLabel.Name = "skinLabel";
             this.skinLabel.Size = new System.Drawing.Size(80, 13);
             this.skinLabel.TabIndex = 8;
@@ -1220,6 +1259,7 @@
             this.weightTextBox.Name = "weightTextBox";
             this.weightTextBox.Size = new System.Drawing.Size(167, 20);
             this.weightTextBox.TabIndex = 7;
+            this.weightTextBox.Text = " ";
             // 
             // heightTextBox
             // 
@@ -1227,6 +1267,7 @@
             this.heightTextBox.Name = "heightTextBox";
             this.heightTextBox.Size = new System.Drawing.Size(167, 20);
             this.heightTextBox.TabIndex = 6;
+            this.heightTextBox.Text = " ";
             // 
             // heightLabel
             // 
@@ -1252,6 +1293,7 @@
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(167, 20);
             this.ageTextBox.TabIndex = 3;
+            this.ageTextBox.Text = " ";
             // 
             // ageLabel
             // 
@@ -1277,26 +1319,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(167, 20);
             this.nameTextBox.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.finalButton);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Finish";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // finalButton
-            // 
-            this.finalButton.Location = new System.Drawing.Point(441, 285);
-            this.finalButton.Name = "finalButton";
-            this.finalButton.Size = new System.Drawing.Size(119, 23);
-            this.finalButton.TabIndex = 0;
-            this.finalButton.Text = "Finalize Character";
-            this.finalButton.UseVisualStyleBackColor = true;
+            this.nameTextBox.Text = " ";
             // 
             // AbilityPic
             // 
@@ -1438,34 +1461,52 @@
             this.strModLabel.Text = "0";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // selectionButton
+            // finalButton
             // 
-            this.selectionButton.Location = new System.Drawing.Point(693, 24);
-            this.selectionButton.Name = "selectionButton";
-            this.selectionButton.Size = new System.Drawing.Size(106, 41);
-            this.selectionButton.TabIndex = 24;
-            this.selectionButton.Text = "Make Available Selections";
-            this.selectionButton.UseVisualStyleBackColor = true;
-            this.selectionButton.Click += new System.EventHandler(this.selectionButton_Click);
+            this.finalButton.Location = new System.Drawing.Point(83, 305);
+            this.finalButton.Name = "finalButton";
+            this.finalButton.Size = new System.Drawing.Size(667, 23);
+            this.finalButton.TabIndex = 14;
+            this.finalButton.Text = "Finalize Character";
+            this.finalButton.UseVisualStyleBackColor = true;
+            this.finalButton.Click += new System.EventHandler(this.finalButton_Click);
             // 
-            // skillSelectionButton
+            // playerTextBox
             // 
-            this.skillSelectionButton.Location = new System.Drawing.Point(253, 376);
-            this.skillSelectionButton.Name = "skillSelectionButton";
-            this.skillSelectionButton.Size = new System.Drawing.Size(133, 23);
-            this.skillSelectionButton.TabIndex = 29;
-            this.skillSelectionButton.Text = "Make Skill Selections";
-            this.skillSelectionButton.UseVisualStyleBackColor = true;
-            this.skillSelectionButton.Click += new System.EventHandler(this.skillSelectionButton_Click);
+            this.playerTextBox.Location = new System.Drawing.Point(547, 34);
+            this.playerTextBox.Name = "playerTextBox";
+            this.playerTextBox.Size = new System.Drawing.Size(167, 20);
+            this.playerTextBox.TabIndex = 15;
+            this.playerTextBox.Text = " ";
             // 
-            // equipSelectionButton
+            // playerLabel
             // 
-            this.equipSelectionButton.Location = new System.Drawing.Point(253, 414);
-            this.equipSelectionButton.Name = "equipSelectionButton";
-            this.equipSelectionButton.Size = new System.Drawing.Size(158, 23);
-            this.equipSelectionButton.TabIndex = 30;
-            this.equipSelectionButton.Text = "Make Equipment Selections";
-            this.equipSelectionButton.UseVisualStyleBackColor = true;
+            this.playerLabel.AutoSize = true;
+            this.playerLabel.Location = new System.Drawing.Point(439, 38);
+            this.playerLabel.Name = "playerLabel";
+            this.playerLabel.Size = new System.Drawing.Size(70, 13);
+            this.playerLabel.TabIndex = 16;
+            this.playerLabel.Text = "Player Name:";
+            // 
+            // backgroundButton
+            // 
+            this.backgroundButton.Location = new System.Drawing.Point(381, 509);
+            this.backgroundButton.Name = "backgroundButton";
+            this.backgroundButton.Size = new System.Drawing.Size(236, 40);
+            this.backgroundButton.TabIndex = 36;
+            this.backgroundButton.Text = "Select this Background";
+            this.backgroundButton.UseVisualStyleBackColor = true;
+            this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
+            // 
+            // classButton
+            // 
+            this.classButton.Location = new System.Drawing.Point(253, 474);
+            this.classButton.Name = "classButton";
+            this.classButton.Size = new System.Drawing.Size(240, 37);
+            this.classButton.TabIndex = 31;
+            this.classButton.Text = "Select this Class";
+            this.classButton.UseVisualStyleBackColor = true;
+            this.classButton.Click += new System.EventHandler(this.classButton_Click);
             // 
             // fCChar
             // 
@@ -1520,7 +1561,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1574,7 +1614,6 @@
         private System.Windows.Forms.Label bEquipmentLabel;
         private System.Windows.Forms.Label bLanguagesLabel;
         private System.Windows.Forms.Label proficienciesLabel;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label rollLabel2;
         private System.Windows.Forms.Label rollLabel3;
         private System.Windows.Forms.Label rollLabel4;
@@ -1634,7 +1673,6 @@
         private System.Windows.Forms.TextBox heightTextBox;
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Label weightLabel;
-        private System.Windows.Forms.Button finalButton;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox hairTextBox;
         private System.Windows.Forms.TextBox skinTextBox;
@@ -1646,6 +1684,11 @@
         private System.Windows.Forms.Button selectionButton;
         private System.Windows.Forms.Button equipSelectionButton;
         private System.Windows.Forms.Button skillSelectionButton;
+        private System.Windows.Forms.Button classButton;
+        private System.Windows.Forms.Button backgroundButton;
+        private System.Windows.Forms.Label playerLabel;
+        private System.Windows.Forms.TextBox playerTextBox;
+        private System.Windows.Forms.Button finalButton;
     }
 }
 
