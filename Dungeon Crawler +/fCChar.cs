@@ -485,46 +485,61 @@ namespace Dungeon_Crawler__
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            
+            STRUpDown.Value = 8;
+            DEXUpDown.Value = 8;
+            CONUpDown.Value = 8;
+            INTUpDown.Value = 8;
+            WISUpDown.Value = 8;
+            CHAUpDown.Value = 8;
+            pointsRemainingLabel.Text = "27";
         }
 
         private void pbCommitButton_Click(object sender, EventArgs e)
         {
-            try
+            if (Int32.Parse(pointsRemainingLabel.Text) < 0)
             {
-                pc.setBaseStr(Convert.ToInt32(STRUpDown.Value));
-                strLabel.Text = STRUpDown.Value.ToString();
-                pc.setStrMod(Calculations.calcMod(Int32.Parse(STRUpDown.Value.ToString())));
-                strModLabel.Text = pc.getSTRMod().ToString();
-
-                pc.setBaseDex(Convert.ToInt32(DEXUpDown.Value));
-                dexLabel.Text = DEXUpDown.Value.ToString();
-                pc.setDexMod(Calculations.calcMod(Int32.Parse(DEXUpDown.Value.ToString())));
-                dexModLabel.Text = pc.getDEXMod().ToString();
-
-                pc.setBaseCon(Convert.ToInt32(CONUpDown.Value));
-                conLabel.Text = CONUpDown.Value.ToString();
-                pc.setConMod(Calculations.calcMod(Int32.Parse(CONUpDown.Value.ToString())));
-                conModLabel.Text = pc.getCONMod().ToString();
-
-                pc.setBaseIntel(Convert.ToInt32(INTUpDown.Value));
-                intLabel.Text = INTUpDown.Value.ToString();
-                pc.setIntelMod(Calculations.calcMod(Int32.Parse(INTUpDown.Value.ToString())));
-                intModLabel.Text = pc.getINTMod().ToString();
-
-                pc.setBaseWis(Convert.ToInt32(WISUpDown.Value));
-                wisLabel.Text = WISUpDown.Value.ToString();
-                pc.setWisMod(Calculations.calcMod(Int32.Parse(WISUpDown.Value.ToString())));
-                wisModLabel.Text = pc.getWISMod().ToString();
-
-                pc.setBaseCha(Convert.ToInt32(CHAUpDown.Value));
-                chaLabel.Text = CHAUpDown.Value.ToString();
-                pc.setChaMod(Calculations.calcMod(Int32.Parse(CHAUpDown.Value.ToString())));
-                chaModLabel.Text = pc.getCHAMod().ToString();
+                MessageBox.Show("Points Remaining is less than 0", "Point-Buy Error", MessageBoxButtons.OK);
             }
-            catch
+            else
             {
 
+
+                try
+                {
+                    pc.setBaseStr(Convert.ToInt32(STRUpDown.Value));
+                    strLabel.Text = STRUpDown.Value.ToString();
+                    pc.setStrMod(Calculations.calcMod(Int32.Parse(STRUpDown.Value.ToString())));
+                    strModLabel.Text = pc.getSTRMod().ToString();
+
+                    pc.setBaseDex(Convert.ToInt32(DEXUpDown.Value));
+                    dexLabel.Text = DEXUpDown.Value.ToString();
+                    pc.setDexMod(Calculations.calcMod(Int32.Parse(DEXUpDown.Value.ToString())));
+                    dexModLabel.Text = pc.getDEXMod().ToString();
+
+                    pc.setBaseCon(Convert.ToInt32(CONUpDown.Value));
+                    conLabel.Text = CONUpDown.Value.ToString();
+                    pc.setConMod(Calculations.calcMod(Int32.Parse(CONUpDown.Value.ToString())));
+                    conModLabel.Text = pc.getCONMod().ToString();
+
+                    pc.setBaseIntel(Convert.ToInt32(INTUpDown.Value));
+                    intLabel.Text = INTUpDown.Value.ToString();
+                    pc.setIntelMod(Calculations.calcMod(Int32.Parse(INTUpDown.Value.ToString())));
+                    intModLabel.Text = pc.getINTMod().ToString();
+
+                    pc.setBaseWis(Convert.ToInt32(WISUpDown.Value));
+                    wisLabel.Text = WISUpDown.Value.ToString();
+                    pc.setWisMod(Calculations.calcMod(Int32.Parse(WISUpDown.Value.ToString())));
+                    wisModLabel.Text = pc.getWISMod().ToString();
+
+                    pc.setBaseCha(Convert.ToInt32(CHAUpDown.Value));
+                    chaLabel.Text = CHAUpDown.Value.ToString();
+                    pc.setChaMod(Calculations.calcMod(Int32.Parse(CHAUpDown.Value.ToString())));
+                    chaModLabel.Text = pc.getCHAMod().ToString();
+                }
+                catch
+                {
+
+                }
             }
         }
 
