@@ -32,6 +32,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CCharTab = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pbCommitButton = new System.Windows.Forms.Button();
             this.commitButton = new System.Windows.Forms.Button();
             this.pointsLabel = new System.Windows.Forms.Label();
             this.pointsRemainingLabel = new System.Windows.Forms.Label();
@@ -77,6 +78,7 @@
             this.classicLabel = new System.Windows.Forms.Label();
             this.rollButton = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.selectionButton = new System.Windows.Forms.Button();
             this.raceButton = new System.Windows.Forms.Button();
             this.languagesGrid = new System.Windows.Forms.DataGridView();
             this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,12 +95,16 @@
             this.asmLabel = new System.Windows.Forms.Label();
             this.raceBox = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.classButton = new System.Windows.Forms.Button();
+            this.equipSelectionButton = new System.Windows.Forms.Button();
+            this.skillSelectionButton = new System.Windows.Forms.Button();
             this.levelingGrid = new System.Windows.Forms.DataGridView();
             this.featuresGrid = new System.Windows.Forms.DataGridView();
             this.levelingLabel = new System.Windows.Forms.Label();
             this.featuresLabel = new System.Windows.Forms.Label();
             this.classBox = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.backgroundButton = new System.Windows.Forms.Button();
             this.flawGrid = new System.Windows.Forms.DataGridView();
             this.bondGrid = new System.Windows.Forms.DataGridView();
             this.idealGrid = new System.Windows.Forms.DataGridView();
@@ -112,6 +118,9 @@
             this.proficienciesLabel = new System.Windows.Forms.Label();
             this.backgroundBox = new System.Windows.Forms.ListBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.playerLabel = new System.Windows.Forms.Label();
+            this.playerTextBox = new System.Windows.Forms.TextBox();
+            this.finalButton = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.hairTextBox = new System.Windows.Forms.TextBox();
             this.skinTextBox = new System.Windows.Forms.TextBox();
@@ -126,8 +135,6 @@
             this.ageLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.finalButton = new System.Windows.Forms.Button();
             this.AbilityPic = new System.Windows.Forms.PictureBox();
             this.strLabel = new System.Windows.Forms.Label();
             this.dexLabel = new System.Windows.Forms.Label();
@@ -141,6 +148,8 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
+            this.alignmentButton = new System.Windows.Forms.Button();
+            this.backstoryButton = new System.Windows.Forms.Button();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -165,7 +174,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).BeginInit();
             this.tabPage6.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,15 +201,16 @@
             this.CCharTab.Controls.Add(this.tabPage2);
             this.CCharTab.Controls.Add(this.tabPage3);
             this.CCharTab.Controls.Add(this.tabPage6);
-            this.CCharTab.Controls.Add(this.tabPage4);
             this.CCharTab.Location = new System.Drawing.Point(108, 23);
             this.CCharTab.Name = "CCharTab";
+            this.CCharTab.Padding = new System.Drawing.Point(50, 3);
             this.CCharTab.SelectedIndex = 0;
             this.CCharTab.Size = new System.Drawing.Size(1211, 709);
             this.CCharTab.TabIndex = 1;
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.pbCommitButton);
             this.tabPage5.Controls.Add(this.commitButton);
             this.tabPage5.Controls.Add(this.pointsLabel);
             this.tabPage5.Controls.Add(this.pointsRemainingLabel);
@@ -254,12 +263,22 @@
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // pbCommitButton
+            // 
+            this.pbCommitButton.Location = new System.Drawing.Point(39, 338);
+            this.pbCommitButton.Name = "pbCommitButton";
+            this.pbCommitButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCommitButton.TabIndex = 21;
+            this.pbCommitButton.Text = "Commit All";
+            this.pbCommitButton.UseVisualStyleBackColor = true;
+            this.pbCommitButton.Click += new System.EventHandler(this.pbCommitButton_Click);
+            // 
             // commitButton
             // 
-            this.commitButton.Location = new System.Drawing.Point(39, 138);
+            this.commitButton.Location = new System.Drawing.Point(39, 155);
             this.commitButton.Name = "commitButton";
             this.commitButton.Size = new System.Drawing.Size(75, 23);
-            this.commitButton.TabIndex = 50;
+            this.commitButton.TabIndex = 7;
             this.commitButton.Text = "Commit All";
             this.commitButton.UseVisualStyleBackColor = true;
             this.commitButton.Click += new System.EventHandler(this.commitButton_Click);
@@ -350,81 +369,148 @@
             this.resetButton.Location = new System.Drawing.Point(39, 300);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(83, 23);
-            this.resetButton.TabIndex = 40;
+            this.resetButton.TabIndex = 20;
             this.resetButton.Text = "Reset Scores";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // DEXUpDown
             // 
             this.DEXUpDown.Location = new System.Drawing.Point(224, 341);
-            this.DEXUpDown.Name = "DEXUpDown";
-            this.DEXUpDown.Size = new System.Drawing.Size(41, 20);
-            this.DEXUpDown.TabIndex = 39;
-            this.DEXUpDown.Value = new decimal(new int[] {
-            10,
+            this.DEXUpDown.Maximum = new decimal(new int[] {
+            15,
             0,
             0,
             0});
+            this.DEXUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.DEXUpDown.Name = "DEXUpDown";
+            this.DEXUpDown.Size = new System.Drawing.Size(41, 20);
+            this.DEXUpDown.TabIndex = 15;
+            this.DEXUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.DEXUpDown.ValueChanged += new System.EventHandler(this.DEXUpDown_ValueChanged);
             // 
             // CONUpDown
             // 
             this.CONUpDown.Location = new System.Drawing.Point(224, 378);
-            this.CONUpDown.Name = "CONUpDown";
-            this.CONUpDown.Size = new System.Drawing.Size(41, 20);
-            this.CONUpDown.TabIndex = 38;
-            this.CONUpDown.Value = new decimal(new int[] {
-            10,
+            this.CONUpDown.Maximum = new decimal(new int[] {
+            15,
             0,
             0,
             0});
+            this.CONUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.CONUpDown.Name = "CONUpDown";
+            this.CONUpDown.Size = new System.Drawing.Size(41, 20);
+            this.CONUpDown.TabIndex = 16;
+            this.CONUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.CONUpDown.ValueChanged += new System.EventHandler(this.CONUpDown_ValueChanged);
             // 
             // INTUpDown
             // 
             this.INTUpDown.Location = new System.Drawing.Point(224, 412);
-            this.INTUpDown.Name = "INTUpDown";
-            this.INTUpDown.Size = new System.Drawing.Size(41, 20);
-            this.INTUpDown.TabIndex = 37;
-            this.INTUpDown.Value = new decimal(new int[] {
-            10,
+            this.INTUpDown.Maximum = new decimal(new int[] {
+            15,
             0,
             0,
             0});
+            this.INTUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.INTUpDown.Name = "INTUpDown";
+            this.INTUpDown.Size = new System.Drawing.Size(41, 20);
+            this.INTUpDown.TabIndex = 17;
+            this.INTUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.INTUpDown.ValueChanged += new System.EventHandler(this.INTUpDown_ValueChanged);
             // 
             // WISUpDown
             // 
             this.WISUpDown.Location = new System.Drawing.Point(224, 446);
-            this.WISUpDown.Name = "WISUpDown";
-            this.WISUpDown.Size = new System.Drawing.Size(41, 20);
-            this.WISUpDown.TabIndex = 36;
-            this.WISUpDown.Value = new decimal(new int[] {
-            10,
+            this.WISUpDown.Maximum = new decimal(new int[] {
+            15,
             0,
             0,
             0});
+            this.WISUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.WISUpDown.Name = "WISUpDown";
+            this.WISUpDown.Size = new System.Drawing.Size(41, 20);
+            this.WISUpDown.TabIndex = 18;
+            this.WISUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.WISUpDown.ValueChanged += new System.EventHandler(this.WISUpDown_ValueChanged);
             // 
             // CHAUpDown
             // 
             this.CHAUpDown.Location = new System.Drawing.Point(224, 481);
-            this.CHAUpDown.Name = "CHAUpDown";
-            this.CHAUpDown.Size = new System.Drawing.Size(41, 20);
-            this.CHAUpDown.TabIndex = 35;
-            this.CHAUpDown.Value = new decimal(new int[] {
-            10,
+            this.CHAUpDown.Maximum = new decimal(new int[] {
+            15,
             0,
             0,
             0});
+            this.CHAUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.CHAUpDown.Name = "CHAUpDown";
+            this.CHAUpDown.Size = new System.Drawing.Size(41, 20);
+            this.CHAUpDown.TabIndex = 19;
+            this.CHAUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.CHAUpDown.ValueChanged += new System.EventHandler(this.CHAUpDown_ValueChanged);
             // 
             // STRUpDown
             // 
             this.STRUpDown.Location = new System.Drawing.Point(224, 303);
-            this.STRUpDown.Name = "STRUpDown";
-            this.STRUpDown.Size = new System.Drawing.Size(41, 20);
-            this.STRUpDown.TabIndex = 34;
-            this.STRUpDown.Value = new decimal(new int[] {
-            10,
+            this.STRUpDown.Maximum = new decimal(new int[] {
+            15,
             0,
             0,
             0});
+            this.STRUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.STRUpDown.Name = "STRUpDown";
+            this.STRUpDown.Size = new System.Drawing.Size(41, 20);
+            this.STRUpDown.TabIndex = 14;
+            this.STRUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.STRUpDown.ValueChanged += new System.EventHandler(this.STRUpDown_ValueChanged);
             // 
             // pbDexLabel
             // 
@@ -539,49 +625,49 @@
             this.dexTextBox.Location = new System.Drawing.Point(259, 140);
             this.dexTextBox.Name = "dexTextBox";
             this.dexTextBox.Size = new System.Drawing.Size(48, 20);
-            this.dexTextBox.TabIndex = 14;
+            this.dexTextBox.TabIndex = 2;
             // 
             // conTextBox
             // 
             this.conTextBox.Location = new System.Drawing.Point(375, 140);
             this.conTextBox.Name = "conTextBox";
             this.conTextBox.Size = new System.Drawing.Size(48, 20);
-            this.conTextBox.TabIndex = 13;
+            this.conTextBox.TabIndex = 3;
             // 
             // intTextBox
             // 
             this.intTextBox.Location = new System.Drawing.Point(496, 140);
             this.intTextBox.Name = "intTextBox";
             this.intTextBox.Size = new System.Drawing.Size(48, 20);
-            this.intTextBox.TabIndex = 12;
+            this.intTextBox.TabIndex = 4;
             // 
             // wisTextBox
             // 
             this.wisTextBox.Location = new System.Drawing.Point(621, 140);
             this.wisTextBox.Name = "wisTextBox";
             this.wisTextBox.Size = new System.Drawing.Size(48, 20);
-            this.wisTextBox.TabIndex = 11;
+            this.wisTextBox.TabIndex = 5;
             // 
             // chaTextBox
             // 
             this.chaTextBox.Location = new System.Drawing.Point(739, 140);
             this.chaTextBox.Name = "chaTextBox";
             this.chaTextBox.Size = new System.Drawing.Size(48, 20);
-            this.chaTextBox.TabIndex = 10;
+            this.chaTextBox.TabIndex = 6;
             // 
             // strTextBox
             // 
             this.strTextBox.Location = new System.Drawing.Point(141, 140);
             this.strTextBox.Name = "strTextBox";
             this.strTextBox.Size = new System.Drawing.Size(48, 20);
-            this.strTextBox.TabIndex = 9;
+            this.strTextBox.TabIndex = 1;
             // 
             // chaButton
             // 
             this.chaButton.Location = new System.Drawing.Point(726, 176);
             this.chaButton.Name = "chaButton";
             this.chaButton.Size = new System.Drawing.Size(75, 23);
-            this.chaButton.TabIndex = 8;
+            this.chaButton.TabIndex = 13;
             this.chaButton.Text = "Charisma";
             this.chaButton.UseVisualStyleBackColor = true;
             this.chaButton.Click += new System.EventHandler(this.chaButton_Click);
@@ -591,7 +677,7 @@
             this.wisButton.Location = new System.Drawing.Point(607, 176);
             this.wisButton.Name = "wisButton";
             this.wisButton.Size = new System.Drawing.Size(75, 23);
-            this.wisButton.TabIndex = 7;
+            this.wisButton.TabIndex = 12;
             this.wisButton.Text = "Wisdom";
             this.wisButton.UseVisualStyleBackColor = true;
             this.wisButton.Click += new System.EventHandler(this.wisButton_Click);
@@ -601,7 +687,7 @@
             this.intButton.Location = new System.Drawing.Point(482, 176);
             this.intButton.Name = "intButton";
             this.intButton.Size = new System.Drawing.Size(75, 23);
-            this.intButton.TabIndex = 6;
+            this.intButton.TabIndex = 11;
             this.intButton.Text = "Intelligence";
             this.intButton.UseVisualStyleBackColor = true;
             this.intButton.Click += new System.EventHandler(this.intButton_Click);
@@ -611,7 +697,7 @@
             this.conButton.Location = new System.Drawing.Point(362, 176);
             this.conButton.Name = "conButton";
             this.conButton.Size = new System.Drawing.Size(75, 23);
-            this.conButton.TabIndex = 5;
+            this.conButton.TabIndex = 10;
             this.conButton.Text = "Constitution";
             this.conButton.UseVisualStyleBackColor = true;
             this.conButton.Click += new System.EventHandler(this.conButton_Click);
@@ -621,7 +707,7 @@
             this.dexButton.Location = new System.Drawing.Point(245, 176);
             this.dexButton.Name = "dexButton";
             this.dexButton.Size = new System.Drawing.Size(75, 23);
-            this.dexButton.TabIndex = 4;
+            this.dexButton.TabIndex = 9;
             this.dexButton.Text = "Dexterity";
             this.dexButton.UseVisualStyleBackColor = true;
             this.dexButton.Click += new System.EventHandler(this.dexButton_Click);
@@ -631,7 +717,7 @@
             this.strButton.Location = new System.Drawing.Point(127, 176);
             this.strButton.Name = "strButton";
             this.strButton.Size = new System.Drawing.Size(75, 23);
-            this.strButton.TabIndex = 3;
+            this.strButton.TabIndex = 8;
             this.strButton.Text = "Strength";
             this.strButton.UseVisualStyleBackColor = true;
             this.strButton.Click += new System.EventHandler(this.strButton_Click);
@@ -666,6 +752,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.selectionButton);
             this.tabPage1.Controls.Add(this.raceButton);
             this.tabPage1.Controls.Add(this.languagesGrid);
             this.tabPage1.Controls.Add(this.traitsGrid);
@@ -686,6 +773,16 @@
             this.tabPage1.Text = "Race";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // selectionButton
+            // 
+            this.selectionButton.Location = new System.Drawing.Point(693, 24);
+            this.selectionButton.Name = "selectionButton";
+            this.selectionButton.Size = new System.Drawing.Size(106, 41);
+            this.selectionButton.TabIndex = 24;
+            this.selectionButton.Text = "Make Available Selections";
+            this.selectionButton.UseVisualStyleBackColor = true;
+            this.selectionButton.Click += new System.EventHandler(this.selectionButton_Click);
             // 
             // raceButton
             // 
@@ -833,6 +930,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.classButton);
+            this.tabPage2.Controls.Add(this.equipSelectionButton);
+            this.tabPage2.Controls.Add(this.skillSelectionButton);
             this.tabPage2.Controls.Add(this.levelingGrid);
             this.tabPage2.Controls.Add(this.featuresGrid);
             this.tabPage2.Controls.Add(this.levelingLabel);
@@ -845,6 +945,35 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Class";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // classButton
+            // 
+            this.classButton.Location = new System.Drawing.Point(253, 474);
+            this.classButton.Name = "classButton";
+            this.classButton.Size = new System.Drawing.Size(240, 37);
+            this.classButton.TabIndex = 31;
+            this.classButton.Text = "Select this Class";
+            this.classButton.UseVisualStyleBackColor = true;
+            this.classButton.Click += new System.EventHandler(this.classButton_Click);
+            // 
+            // equipSelectionButton
+            // 
+            this.equipSelectionButton.Location = new System.Drawing.Point(253, 414);
+            this.equipSelectionButton.Name = "equipSelectionButton";
+            this.equipSelectionButton.Size = new System.Drawing.Size(158, 23);
+            this.equipSelectionButton.TabIndex = 30;
+            this.equipSelectionButton.Text = "Make Equipment Selections";
+            this.equipSelectionButton.UseVisualStyleBackColor = true;
+            // 
+            // skillSelectionButton
+            // 
+            this.skillSelectionButton.Location = new System.Drawing.Point(253, 376);
+            this.skillSelectionButton.Name = "skillSelectionButton";
+            this.skillSelectionButton.Size = new System.Drawing.Size(133, 23);
+            this.skillSelectionButton.TabIndex = 29;
+            this.skillSelectionButton.Text = "Make Skill Selections";
+            this.skillSelectionButton.UseVisualStyleBackColor = true;
+            this.skillSelectionButton.Click += new System.EventHandler(this.skillSelectionButton_Click);
             // 
             // levelingGrid
             // 
@@ -908,6 +1037,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.backgroundButton);
             this.tabPage3.Controls.Add(this.flawGrid);
             this.tabPage3.Controls.Add(this.bondGrid);
             this.tabPage3.Controls.Add(this.idealGrid);
@@ -928,6 +1058,16 @@
             this.tabPage3.Text = "Background";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // backgroundButton
+            // 
+            this.backgroundButton.Location = new System.Drawing.Point(381, 509);
+            this.backgroundButton.Name = "backgroundButton";
+            this.backgroundButton.Size = new System.Drawing.Size(236, 40);
+            this.backgroundButton.TabIndex = 36;
+            this.backgroundButton.Text = "Select this Background";
+            this.backgroundButton.UseVisualStyleBackColor = true;
+            this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
             // 
             // flawGrid
             // 
@@ -1060,6 +1200,11 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.backstoryButton);
+            this.tabPage6.Controls.Add(this.alignmentButton);
+            this.tabPage6.Controls.Add(this.playerLabel);
+            this.tabPage6.Controls.Add(this.playerTextBox);
+            this.tabPage6.Controls.Add(this.finalButton);
             this.tabPage6.Controls.Add(this.textBox3);
             this.tabPage6.Controls.Add(this.hairTextBox);
             this.tabPage6.Controls.Add(this.skinTextBox);
@@ -1078,34 +1223,64 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1203, 683);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Details";
+            this.tabPage6.Text = "Final Details";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // playerLabel
+            // 
+            this.playerLabel.AutoSize = true;
+            this.playerLabel.Location = new System.Drawing.Point(439, 38);
+            this.playerLabel.Name = "playerLabel";
+            this.playerLabel.Size = new System.Drawing.Size(70, 13);
+            this.playerLabel.TabIndex = 16;
+            this.playerLabel.Text = "Player Name:";
+            // 
+            // playerTextBox
+            // 
+            this.playerTextBox.Location = new System.Drawing.Point(547, 34);
+            this.playerTextBox.Name = "playerTextBox";
+            this.playerTextBox.Size = new System.Drawing.Size(167, 20);
+            this.playerTextBox.TabIndex = 1;
+            this.playerTextBox.Text = " ";
+            // 
+            // finalButton
+            // 
+            this.finalButton.Location = new System.Drawing.Point(83, 334);
+            this.finalButton.Name = "finalButton";
+            this.finalButton.Size = new System.Drawing.Size(667, 23);
+            this.finalButton.TabIndex = 14;
+            this.finalButton.Text = "Finalize Character";
+            this.finalButton.UseVisualStyleBackColor = true;
+            this.finalButton.Click += new System.EventHandler(this.finalButton_Click);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(547, 31);
+            this.textBox3.Location = new System.Drawing.Point(547, 99);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 13;
+            this.textBox3.TabIndex = 3;
+            this.textBox3.Text = " ";
             // 
             // hairTextBox
             // 
-            this.hairTextBox.Location = new System.Drawing.Point(547, 95);
+            this.hairTextBox.Location = new System.Drawing.Point(547, 163);
             this.hairTextBox.Name = "hairTextBox";
             this.hairTextBox.Size = new System.Drawing.Size(167, 20);
-            this.hairTextBox.TabIndex = 12;
+            this.hairTextBox.TabIndex = 5;
+            this.hairTextBox.Text = " ";
             // 
             // skinTextBox
             // 
-            this.skinTextBox.Location = new System.Drawing.Point(547, 161);
+            this.skinTextBox.Location = new System.Drawing.Point(547, 229);
             this.skinTextBox.Name = "skinTextBox";
             this.skinTextBox.Size = new System.Drawing.Size(167, 20);
-            this.skinTextBox.TabIndex = 11;
+            this.skinTextBox.TabIndex = 7;
+            this.skinTextBox.Text = " ";
             // 
             // eyesLabel
             // 
             this.eyesLabel.AutoSize = true;
-            this.eyesLabel.Location = new System.Drawing.Point(427, 34);
+            this.eyesLabel.Location = new System.Drawing.Point(427, 102);
             this.eyesLabel.Name = "eyesLabel";
             this.eyesLabel.Size = new System.Drawing.Size(82, 13);
             this.eyesLabel.TabIndex = 10;
@@ -1114,7 +1289,7 @@
             // hairLabel
             // 
             this.hairLabel.AutoSize = true;
-            this.hairLabel.Location = new System.Drawing.Point(427, 98);
+            this.hairLabel.Location = new System.Drawing.Point(427, 166);
             this.hairLabel.Name = "hairLabel";
             this.hairLabel.Size = new System.Drawing.Size(78, 13);
             this.hairLabel.TabIndex = 9;
@@ -1123,7 +1298,7 @@
             // skinLabel
             // 
             this.skinLabel.AutoSize = true;
-            this.skinLabel.Location = new System.Drawing.Point(427, 164);
+            this.skinLabel.Location = new System.Drawing.Point(427, 232);
             this.skinLabel.Name = "skinLabel";
             this.skinLabel.Size = new System.Drawing.Size(80, 13);
             this.skinLabel.TabIndex = 8;
@@ -1134,14 +1309,16 @@
             this.weightTextBox.Location = new System.Drawing.Point(159, 231);
             this.weightTextBox.Name = "weightTextBox";
             this.weightTextBox.Size = new System.Drawing.Size(167, 20);
-            this.weightTextBox.TabIndex = 7;
+            this.weightTextBox.TabIndex = 6;
+            this.weightTextBox.Text = " ";
             // 
             // heightTextBox
             // 
             this.heightTextBox.Location = new System.Drawing.Point(159, 161);
             this.heightTextBox.Name = "heightTextBox";
             this.heightTextBox.Size = new System.Drawing.Size(167, 20);
-            this.heightTextBox.TabIndex = 6;
+            this.heightTextBox.TabIndex = 4;
+            this.heightTextBox.Text = " ";
             // 
             // heightLabel
             // 
@@ -1166,7 +1343,8 @@
             this.ageTextBox.Location = new System.Drawing.Point(159, 95);
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(167, 20);
-            this.ageTextBox.TabIndex = 3;
+            this.ageTextBox.TabIndex = 2;
+            this.ageTextBox.Text = " ";
             // 
             // ageLabel
             // 
@@ -1192,26 +1370,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(167, 20);
             this.nameTextBox.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.finalButton);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Finish";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // finalButton
-            // 
-            this.finalButton.Location = new System.Drawing.Point(441, 285);
-            this.finalButton.Name = "finalButton";
-            this.finalButton.Size = new System.Drawing.Size(119, 23);
-            this.finalButton.TabIndex = 0;
-            this.finalButton.Text = "Finalize Character";
-            this.finalButton.UseVisualStyleBackColor = true;
+            this.nameTextBox.Text = " ";
             // 
             // AbilityPic
             // 
@@ -1225,133 +1384,148 @@
             // 
             // strLabel
             // 
-            this.strLabel.AutoSize = true;
+            this.strLabel.BackColor = System.Drawing.Color.White;
             this.strLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.strLabel.Location = new System.Drawing.Point(29, 73);
             this.strLabel.Name = "strLabel";
             this.strLabel.Size = new System.Drawing.Size(51, 37);
             this.strLabel.TabIndex = 4;
-            this.strLabel.Text = "10";
+            this.strLabel.Text = "---";
             this.strLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dexLabel
             // 
-            this.dexLabel.AutoSize = true;
+            this.dexLabel.BackColor = System.Drawing.Color.White;
             this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dexLabel.Location = new System.Drawing.Point(29, 184);
             this.dexLabel.Name = "dexLabel";
             this.dexLabel.Size = new System.Drawing.Size(51, 37);
             this.dexLabel.TabIndex = 5;
-            this.dexLabel.Text = "10";
+            this.dexLabel.Text = "---";
             this.dexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // conLabel
             // 
-            this.conLabel.AutoSize = true;
-            this.conLabel.BackColor = System.Drawing.Color.Transparent;
+            this.conLabel.BackColor = System.Drawing.Color.White;
             this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conLabel.Location = new System.Drawing.Point(29, 294);
             this.conLabel.Name = "conLabel";
             this.conLabel.Size = new System.Drawing.Size(51, 37);
             this.conLabel.TabIndex = 6;
-            this.conLabel.Text = "10";
+            this.conLabel.Text = "---";
             this.conLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // intLabel
             // 
-            this.intLabel.AutoSize = true;
-            this.intLabel.BackColor = System.Drawing.Color.Transparent;
+            this.intLabel.BackColor = System.Drawing.Color.White;
             this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.intLabel.Location = new System.Drawing.Point(29, 407);
             this.intLabel.Name = "intLabel";
             this.intLabel.Size = new System.Drawing.Size(51, 37);
             this.intLabel.TabIndex = 7;
-            this.intLabel.Text = "10";
+            this.intLabel.Text = "---";
             this.intLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chaLabel
             // 
-            this.chaLabel.AutoSize = true;
-            this.chaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.chaLabel.BackColor = System.Drawing.Color.White;
             this.chaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chaLabel.Location = new System.Drawing.Point(29, 628);
+            this.chaLabel.Location = new System.Drawing.Point(29, 631);
             this.chaLabel.Name = "chaLabel";
-            this.chaLabel.Size = new System.Drawing.Size(51, 37);
+            this.chaLabel.Size = new System.Drawing.Size(53, 40);
             this.chaLabel.TabIndex = 6;
-            this.chaLabel.Text = "10";
+            this.chaLabel.Text = "---";
             this.chaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wisLabel
             // 
-            this.wisLabel.AutoSize = true;
-            this.wisLabel.BackColor = System.Drawing.Color.Transparent;
+            this.wisLabel.BackColor = System.Drawing.Color.White;
             this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wisLabel.Location = new System.Drawing.Point(28, 519);
             this.wisLabel.Name = "wisLabel";
             this.wisLabel.Size = new System.Drawing.Size(51, 37);
             this.wisLabel.TabIndex = 7;
-            this.wisLabel.Text = "10";
+            this.wisLabel.Text = "---";
             this.wisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chaModLabel
             // 
-            this.chaModLabel.AutoSize = true;
-            this.chaModLabel.Location = new System.Drawing.Point(48, 675);
+            this.chaModLabel.BackColor = System.Drawing.Color.White;
+            this.chaModLabel.Location = new System.Drawing.Point(46, 679);
             this.chaModLabel.Name = "chaModLabel";
-            this.chaModLabel.Size = new System.Drawing.Size(13, 13);
+            this.chaModLabel.Size = new System.Drawing.Size(20, 13);
             this.chaModLabel.TabIndex = 6;
-            this.chaModLabel.Text = "0";
+            this.chaModLabel.Text = "-";
             this.chaModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wisModLabel
             // 
-            this.wisModLabel.AutoSize = true;
-            this.wisModLabel.Location = new System.Drawing.Point(48, 568);
+            this.wisModLabel.BackColor = System.Drawing.Color.White;
+            this.wisModLabel.Location = new System.Drawing.Point(46, 568);
             this.wisModLabel.Name = "wisModLabel";
-            this.wisModLabel.Size = new System.Drawing.Size(13, 13);
+            this.wisModLabel.Size = new System.Drawing.Size(20, 13);
             this.wisModLabel.TabIndex = 7;
-            this.wisModLabel.Text = "0";
+            this.wisModLabel.Text = "-";
             this.wisModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // intModLabel
             // 
-            this.intModLabel.AutoSize = true;
-            this.intModLabel.Location = new System.Drawing.Point(48, 459);
+            this.intModLabel.BackColor = System.Drawing.Color.White;
+            this.intModLabel.Location = new System.Drawing.Point(46, 459);
             this.intModLabel.Name = "intModLabel";
-            this.intModLabel.Size = new System.Drawing.Size(13, 13);
+            this.intModLabel.Size = new System.Drawing.Size(20, 13);
             this.intModLabel.TabIndex = 8;
-            this.intModLabel.Text = "0";
+            this.intModLabel.Text = "-";
             this.intModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // conModLabel
             // 
-            this.conModLabel.AutoSize = true;
-            this.conModLabel.Location = new System.Drawing.Point(48, 350);
+            this.conModLabel.BackColor = System.Drawing.Color.White;
+            this.conModLabel.Location = new System.Drawing.Point(45, 350);
             this.conModLabel.Name = "conModLabel";
-            this.conModLabel.Size = new System.Drawing.Size(13, 13);
+            this.conModLabel.Size = new System.Drawing.Size(20, 13);
             this.conModLabel.TabIndex = 9;
-            this.conModLabel.Text = "0";
+            this.conModLabel.Text = "-";
             this.conModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dexModLabel
             // 
-            this.dexModLabel.AutoSize = true;
-            this.dexModLabel.Location = new System.Drawing.Point(48, 236);
+            this.dexModLabel.BackColor = System.Drawing.Color.White;
+            this.dexModLabel.Location = new System.Drawing.Point(45, 236);
             this.dexModLabel.Name = "dexModLabel";
-            this.dexModLabel.Size = new System.Drawing.Size(13, 13);
+            this.dexModLabel.Size = new System.Drawing.Size(20, 13);
             this.dexModLabel.TabIndex = 10;
-            this.dexModLabel.Text = "0";
+            this.dexModLabel.Text = "-";
             this.dexModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // strModLabel
             // 
-            this.strModLabel.AutoSize = true;
-            this.strModLabel.Location = new System.Drawing.Point(48, 125);
+            this.strModLabel.BackColor = System.Drawing.Color.White;
+            this.strModLabel.Location = new System.Drawing.Point(45, 125);
             this.strModLabel.Name = "strModLabel";
-            this.strModLabel.Size = new System.Drawing.Size(13, 13);
+            this.strModLabel.Size = new System.Drawing.Size(20, 13);
             this.strModLabel.TabIndex = 11;
-            this.strModLabel.Text = "0";
+            this.strModLabel.Text = "-";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // alignmentButton
+            // 
+            this.alignmentButton.Location = new System.Drawing.Point(159, 283);
+            this.alignmentButton.Name = "alignmentButton";
+            this.alignmentButton.Size = new System.Drawing.Size(167, 20);
+            this.alignmentButton.TabIndex = 17;
+            this.alignmentButton.Text = "Alignment";
+            this.alignmentButton.UseVisualStyleBackColor = true;
+            // 
+            // backstoryButton
+            // 
+            this.backstoryButton.Location = new System.Drawing.Point(547, 281);
+            this.backstoryButton.Name = "backstoryButton";
+            this.backstoryButton.Size = new System.Drawing.Size(167, 22);
+            this.backstoryButton.TabIndex = 18;
+            this.backstoryButton.Text = "Backstory";
+            this.backstoryButton.UseVisualStyleBackColor = true;
             // 
             // fCChar
             // 
@@ -1406,7 +1580,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1460,7 +1633,6 @@
         private System.Windows.Forms.Label bEquipmentLabel;
         private System.Windows.Forms.Label bLanguagesLabel;
         private System.Windows.Forms.Label proficienciesLabel;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label rollLabel2;
         private System.Windows.Forms.Label rollLabel3;
         private System.Windows.Forms.Label rollLabel4;
@@ -1520,14 +1692,23 @@
         private System.Windows.Forms.TextBox heightTextBox;
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Label weightLabel;
-        private System.Windows.Forms.Button finalButton;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox hairTextBox;
         private System.Windows.Forms.TextBox skinTextBox;
         private System.Windows.Forms.Label eyesLabel;
         private System.Windows.Forms.Label hairLabel;
         private System.Windows.Forms.Label skinLabel;
+        private System.Windows.Forms.Button pbCommitButton;
         private System.Windows.Forms.Button raceButton;
+        private System.Windows.Forms.Button selectionButton;
+        private System.Windows.Forms.Button equipSelectionButton;
+        private System.Windows.Forms.Button skillSelectionButton;
+        private System.Windows.Forms.Button classButton;
+        private System.Windows.Forms.Button backgroundButton;
+        private System.Windows.Forms.Label playerLabel;
+        private System.Windows.Forms.TextBox playerTextBox;
+        private System.Windows.Forms.Button finalButton;
+        private System.Windows.Forms.Button backstoryButton;
+        private System.Windows.Forms.Button alignmentButton;
     }
 }
-
