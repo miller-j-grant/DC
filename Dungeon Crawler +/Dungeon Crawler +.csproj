@@ -186,6 +186,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Background.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\warlock0.png" />
+    <None Include="Resources\sorcerer0.png" />
+    <None Include="Resources\rogue0.png" />
+    <None Include="Resources\ranger0.png" />
+    <None Include="Resources\paladin0.png" />
+    <None Include="Resources\monk0.png" />
+    <None Include="Resources\fighter0.png" />
+    <None Include="Resources\druid0.png" />
+    <None Include="Resources\cleric0.png" />
+    <None Include="Resources\bard0.png" />
+    <None Include="Resources\barbarian0.png" />
+    <None Include="Resources\wizard0.png" />
     <None Include="Resources\background.png" />
     <None Include="Resources\tiefling.png" />
     <None Include="Resources\human.png" />

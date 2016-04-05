@@ -98,25 +98,9 @@
             this.classButton = new System.Windows.Forms.Button();
             this.equipSelectionButton = new System.Windows.Forms.Button();
             this.skillSelectionButton = new System.Windows.Forms.Button();
-            this.levelingGrid = new System.Windows.Forms.DataGridView();
             this.featuresGrid = new System.Windows.Forms.DataGridView();
-            this.levelingLabel = new System.Windows.Forms.Label();
             this.featuresLabel = new System.Windows.Forms.Label();
             this.classBox = new System.Windows.Forms.ListBox();
-            this.backgroundTab = new System.Windows.Forms.TabPage();
-            this.backgroundButton = new System.Windows.Forms.Button();
-            this.flawGrid = new System.Windows.Forms.DataGridView();
-            this.bondGrid = new System.Windows.Forms.DataGridView();
-            this.idealGrid = new System.Windows.Forms.DataGridView();
-            this.personalityGrid = new System.Windows.Forms.DataGridView();
-            this.characteristicsLabel = new System.Windows.Forms.Label();
-            this.bEquipmentGrid = new System.Windows.Forms.DataGridView();
-            this.bLanguagesGrid = new System.Windows.Forms.DataGridView();
-            this.proficienciesGrid = new System.Windows.Forms.DataGridView();
-            this.bEquipmentLabel = new System.Windows.Forms.Label();
-            this.bLanguagesLabel = new System.Windows.Forms.Label();
-            this.proficienciesLabel = new System.Windows.Forms.Label();
-            this.backgroundBox = new System.Windows.Forms.ListBox();
             this.detailsTab = new System.Windows.Forms.TabPage();
             this.backstoryButton = new System.Windows.Forms.Button();
             this.alignmentButton = new System.Windows.Forms.Button();
@@ -150,6 +134,20 @@
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
             this.AbilityPic = new System.Windows.Forms.PictureBox();
+            this.backgroundTab = new System.Windows.Forms.TabPage();
+            this.backgroundButton = new System.Windows.Forms.Button();
+            this.flawGrid = new System.Windows.Forms.DataGridView();
+            this.bondGrid = new System.Windows.Forms.DataGridView();
+            this.idealGrid = new System.Windows.Forms.DataGridView();
+            this.personalityGrid = new System.Windows.Forms.DataGridView();
+            this.characteristicsLabel = new System.Windows.Forms.Label();
+            this.bEquipmentGrid = new System.Windows.Forms.DataGridView();
+            this.bLanguagesGrid = new System.Windows.Forms.DataGridView();
+            this.proficienciesGrid = new System.Windows.Forms.DataGridView();
+            this.bEquipmentLabel = new System.Windows.Forms.Label();
+            this.bLanguagesLabel = new System.Windows.Forms.Label();
+            this.proficienciesLabel = new System.Windows.Forms.Label();
+            this.backgroundBox = new System.Windows.Forms.ListBox();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.abilitiyscoreTab.SuspendLayout();
@@ -163,8 +161,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.languagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traitsGrid)).BeginInit();
             this.classTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.levelingGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featuresGrid)).BeginInit();
+            this.detailsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
             this.backgroundTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flawGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bondGrid)).BeginInit();
@@ -173,8 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).BeginInit();
-            this.detailsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
             this.SuspendLayout();
             // 
             // CCharMenuStrip
@@ -751,6 +748,7 @@
             // 
             // raceTab
             // 
+            this.raceTab.BackColor = System.Drawing.Color.Transparent;
             this.raceTab.Controls.Add(this.selectionButton);
             this.raceTab.Controls.Add(this.raceButton);
             this.raceTab.Controls.Add(this.languagesGrid);
@@ -770,7 +768,6 @@
             this.raceTab.Size = new System.Drawing.Size(1203, 683);
             this.raceTab.TabIndex = 0;
             this.raceTab.Text = "Race";
-            this.raceTab.UseVisualStyleBackColor = true;
             // 
             // selectionButton
             // 
@@ -838,6 +835,7 @@
             // languagesLabel
             // 
             this.languagesLabel.AutoSize = true;
+            this.languagesLabel.ForeColor = System.Drawing.Color.Black;
             this.languagesLabel.Location = new System.Drawing.Point(285, 474);
             this.languagesLabel.Name = "languagesLabel";
             this.languagesLabel.Size = new System.Drawing.Size(63, 13);
@@ -847,6 +845,7 @@
             // traitsLabel
             // 
             this.traitsLabel.AutoSize = true;
+            this.traitsLabel.ForeColor = System.Drawing.Color.Black;
             this.traitsLabel.Location = new System.Drawing.Point(285, 181);
             this.traitsLabel.Name = "traitsLabel";
             this.traitsLabel.Size = new System.Drawing.Size(36, 13);
@@ -856,6 +855,7 @@
             // speedDisplayLabel
             // 
             this.speedDisplayLabel.AutoSize = true;
+            this.speedDisplayLabel.ForeColor = System.Drawing.Color.Black;
             this.speedDisplayLabel.Location = new System.Drawing.Point(427, 128);
             this.speedDisplayLabel.Name = "speedDisplayLabel";
             this.speedDisplayLabel.Size = new System.Drawing.Size(16, 13);
@@ -865,6 +865,7 @@
             // sizeDisplayLabel
             // 
             this.sizeDisplayLabel.AutoSize = true;
+            this.sizeDisplayLabel.ForeColor = System.Drawing.Color.Black;
             this.sizeDisplayLabel.Location = new System.Drawing.Point(427, 80);
             this.sizeDisplayLabel.Name = "sizeDisplayLabel";
             this.sizeDisplayLabel.Size = new System.Drawing.Size(16, 13);
@@ -874,6 +875,7 @@
             // speedLabel
             // 
             this.speedLabel.AutoSize = true;
+            this.speedLabel.ForeColor = System.Drawing.Color.Black;
             this.speedLabel.Location = new System.Drawing.Point(285, 128);
             this.speedLabel.Name = "speedLabel";
             this.speedLabel.Size = new System.Drawing.Size(41, 13);
@@ -883,6 +885,7 @@
             // sizeLabel
             // 
             this.sizeLabel.AutoSize = true;
+            this.sizeLabel.ForeColor = System.Drawing.Color.Black;
             this.sizeLabel.Location = new System.Drawing.Point(285, 80);
             this.sizeLabel.Name = "sizeLabel";
             this.sizeLabel.Size = new System.Drawing.Size(30, 13);
@@ -892,6 +895,7 @@
             // asmDisplayLabel
             // 
             this.asmDisplayLabel.AutoSize = true;
+            this.asmDisplayLabel.ForeColor = System.Drawing.Color.Black;
             this.asmDisplayLabel.Location = new System.Drawing.Point(427, 29);
             this.asmDisplayLabel.Name = "asmDisplayLabel";
             this.asmDisplayLabel.Size = new System.Drawing.Size(16, 13);
@@ -901,6 +905,7 @@
             // asmLabel
             // 
             this.asmLabel.AutoSize = true;
+            this.asmLabel.ForeColor = System.Drawing.Color.Black;
             this.asmLabel.Location = new System.Drawing.Point(285, 29);
             this.asmLabel.Name = "asmLabel";
             this.asmLabel.Size = new System.Drawing.Size(113, 13);
@@ -931,9 +936,7 @@
             this.classTab.Controls.Add(this.classButton);
             this.classTab.Controls.Add(this.equipSelectionButton);
             this.classTab.Controls.Add(this.skillSelectionButton);
-            this.classTab.Controls.Add(this.levelingGrid);
             this.classTab.Controls.Add(this.featuresGrid);
-            this.classTab.Controls.Add(this.levelingLabel);
             this.classTab.Controls.Add(this.featuresLabel);
             this.classTab.Controls.Add(this.classBox);
             this.classTab.Location = new System.Drawing.Point(4, 22);
@@ -973,16 +976,6 @@
             this.skillSelectionButton.UseVisualStyleBackColor = true;
             this.skillSelectionButton.Click += new System.EventHandler(this.skillSelectionButton_Click);
             // 
-            // levelingGrid
-            // 
-            this.levelingGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.levelingGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.levelingGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.levelingGrid.Location = new System.Drawing.Point(629, 45);
-            this.levelingGrid.Name = "levelingGrid";
-            this.levelingGrid.Size = new System.Drawing.Size(445, 466);
-            this.levelingGrid.TabIndex = 28;
-            // 
             // featuresGrid
             // 
             this.featuresGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -992,15 +985,6 @@
             this.featuresGrid.Name = "featuresGrid";
             this.featuresGrid.Size = new System.Drawing.Size(240, 310);
             this.featuresGrid.TabIndex = 27;
-            // 
-            // levelingLabel
-            // 
-            this.levelingLabel.AutoSize = true;
-            this.levelingLabel.Location = new System.Drawing.Point(802, 29);
-            this.levelingLabel.Name = "levelingLabel";
-            this.levelingLabel.Size = new System.Drawing.Size(80, 13);
-            this.levelingLabel.TabIndex = 26;
-            this.levelingLabel.Text = "Leveling Table:";
             // 
             // featuresLabel
             // 
@@ -1032,168 +1016,6 @@
             this.classBox.Size = new System.Drawing.Size(233, 563);
             this.classBox.TabIndex = 0;
             this.classBox.SelectedIndexChanged += new System.EventHandler(this.classBox_SelectedIndexChanged);
-            // 
-            // backgroundTab
-            // 
-            this.backgroundTab.Controls.Add(this.backgroundButton);
-            this.backgroundTab.Controls.Add(this.flawGrid);
-            this.backgroundTab.Controls.Add(this.bondGrid);
-            this.backgroundTab.Controls.Add(this.idealGrid);
-            this.backgroundTab.Controls.Add(this.personalityGrid);
-            this.backgroundTab.Controls.Add(this.characteristicsLabel);
-            this.backgroundTab.Controls.Add(this.bEquipmentGrid);
-            this.backgroundTab.Controls.Add(this.bLanguagesGrid);
-            this.backgroundTab.Controls.Add(this.proficienciesGrid);
-            this.backgroundTab.Controls.Add(this.bEquipmentLabel);
-            this.backgroundTab.Controls.Add(this.bLanguagesLabel);
-            this.backgroundTab.Controls.Add(this.proficienciesLabel);
-            this.backgroundTab.Controls.Add(this.backgroundBox);
-            this.backgroundTab.Location = new System.Drawing.Point(4, 22);
-            this.backgroundTab.Name = "backgroundTab";
-            this.backgroundTab.Padding = new System.Windows.Forms.Padding(3);
-            this.backgroundTab.Size = new System.Drawing.Size(1203, 683);
-            this.backgroundTab.TabIndex = 2;
-            this.backgroundTab.Text = "Background";
-            this.backgroundTab.UseVisualStyleBackColor = true;
-            // 
-            // backgroundButton
-            // 
-            this.backgroundButton.Location = new System.Drawing.Point(381, 509);
-            this.backgroundButton.Name = "backgroundButton";
-            this.backgroundButton.Size = new System.Drawing.Size(236, 40);
-            this.backgroundButton.TabIndex = 36;
-            this.backgroundButton.Text = "Select this Background";
-            this.backgroundButton.UseVisualStyleBackColor = true;
-            this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
-            // 
-            // flawGrid
-            // 
-            this.flawGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.flawGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.flawGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.flawGrid.Location = new System.Drawing.Point(731, 523);
-            this.flawGrid.Name = "flawGrid";
-            this.flawGrid.Size = new System.Drawing.Size(444, 150);
-            this.flawGrid.TabIndex = 35;
-            // 
-            // bondGrid
-            // 
-            this.bondGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.bondGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.bondGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bondGrid.Location = new System.Drawing.Point(731, 367);
-            this.bondGrid.Name = "bondGrid";
-            this.bondGrid.Size = new System.Drawing.Size(444, 150);
-            this.bondGrid.TabIndex = 34;
-            // 
-            // idealGrid
-            // 
-            this.idealGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.idealGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.idealGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.idealGrid.Location = new System.Drawing.Point(731, 211);
-            this.idealGrid.Name = "idealGrid";
-            this.idealGrid.Size = new System.Drawing.Size(444, 150);
-            this.idealGrid.TabIndex = 33;
-            // 
-            // personalityGrid
-            // 
-            this.personalityGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.personalityGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.personalityGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.personalityGrid.Location = new System.Drawing.Point(731, 54);
-            this.personalityGrid.Name = "personalityGrid";
-            this.personalityGrid.Size = new System.Drawing.Size(444, 150);
-            this.personalityGrid.TabIndex = 32;
-            // 
-            // characteristicsLabel
-            // 
-            this.characteristicsLabel.AutoSize = true;
-            this.characteristicsLabel.Location = new System.Drawing.Point(824, 28);
-            this.characteristicsLabel.Name = "characteristicsLabel";
-            this.characteristicsLabel.Size = new System.Drawing.Size(133, 13);
-            this.characteristicsLabel.TabIndex = 31;
-            this.characteristicsLabel.Text = "Suggested Characteristics:";
-            // 
-            // bEquipmentGrid
-            // 
-            this.bEquipmentGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.bEquipmentGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.bEquipmentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bEquipmentGrid.Location = new System.Drawing.Point(381, 318);
-            this.bEquipmentGrid.Name = "bEquipmentGrid";
-            this.bEquipmentGrid.Size = new System.Drawing.Size(236, 150);
-            this.bEquipmentGrid.TabIndex = 30;
-            // 
-            // bLanguagesGrid
-            // 
-            this.bLanguagesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.bLanguagesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.bLanguagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.bLanguagesGrid.Location = new System.Drawing.Point(381, 211);
-            this.bLanguagesGrid.Name = "bLanguagesGrid";
-            this.bLanguagesGrid.Size = new System.Drawing.Size(236, 75);
-            this.bLanguagesGrid.TabIndex = 29;
-            // 
-            // proficienciesGrid
-            // 
-            this.proficienciesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.proficienciesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.proficienciesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.proficienciesGrid.Location = new System.Drawing.Point(381, 29);
-            this.proficienciesGrid.Name = "proficienciesGrid";
-            this.proficienciesGrid.Size = new System.Drawing.Size(236, 150);
-            this.proficienciesGrid.TabIndex = 28;
-            // 
-            // bEquipmentLabel
-            // 
-            this.bEquipmentLabel.AutoSize = true;
-            this.bEquipmentLabel.Location = new System.Drawing.Point(268, 318);
-            this.bEquipmentLabel.Name = "bEquipmentLabel";
-            this.bEquipmentLabel.Size = new System.Drawing.Size(60, 13);
-            this.bEquipmentLabel.TabIndex = 3;
-            this.bEquipmentLabel.Text = "Equipment:";
-            // 
-            // bLanguagesLabel
-            // 
-            this.bLanguagesLabel.AutoSize = true;
-            this.bLanguagesLabel.Location = new System.Drawing.Point(268, 211);
-            this.bLanguagesLabel.Name = "bLanguagesLabel";
-            this.bLanguagesLabel.Size = new System.Drawing.Size(63, 13);
-            this.bLanguagesLabel.TabIndex = 2;
-            this.bLanguagesLabel.Text = "Languages:";
-            // 
-            // proficienciesLabel
-            // 
-            this.proficienciesLabel.AutoSize = true;
-            this.proficienciesLabel.Location = new System.Drawing.Point(268, 29);
-            this.proficienciesLabel.Name = "proficienciesLabel";
-            this.proficienciesLabel.Size = new System.Drawing.Size(70, 13);
-            this.proficienciesLabel.TabIndex = 1;
-            this.proficienciesLabel.Text = "Proficiencies:";
-            // 
-            // backgroundBox
-            // 
-            this.backgroundBox.FormattingEnabled = true;
-            this.backgroundBox.Items.AddRange(new object[] {
-            "Acolyte",
-            "Charlatan",
-            "Criminal",
-            "Entertainer",
-            "Folk Hero",
-            "Guild Artisan",
-            "Hermit",
-            "Noble",
-            "Outlander",
-            "Sage",
-            "Sailor",
-            "Soldier",
-            "Urchin"});
-            this.backgroundBox.Location = new System.Drawing.Point(0, 0);
-            this.backgroundBox.Name = "backgroundBox";
-            this.backgroundBox.Size = new System.Drawing.Size(230, 563);
-            this.backgroundBox.TabIndex = 0;
-            this.backgroundBox.SelectedIndexChanged += new System.EventHandler(this.backgroundBox_SelectedIndexChanged);
             // 
             // detailsTab
             // 
@@ -1523,6 +1345,169 @@
             this.AbilityPic.TabIndex = 3;
             this.AbilityPic.TabStop = false;
             // 
+            // backgroundTab
+            // 
+            this.backgroundTab.BackgroundImage = global::Dungeon_Crawler__.Properties.Resources.background;
+            this.backgroundTab.Controls.Add(this.backgroundButton);
+            this.backgroundTab.Controls.Add(this.flawGrid);
+            this.backgroundTab.Controls.Add(this.bondGrid);
+            this.backgroundTab.Controls.Add(this.idealGrid);
+            this.backgroundTab.Controls.Add(this.personalityGrid);
+            this.backgroundTab.Controls.Add(this.characteristicsLabel);
+            this.backgroundTab.Controls.Add(this.bEquipmentGrid);
+            this.backgroundTab.Controls.Add(this.bLanguagesGrid);
+            this.backgroundTab.Controls.Add(this.proficienciesGrid);
+            this.backgroundTab.Controls.Add(this.bEquipmentLabel);
+            this.backgroundTab.Controls.Add(this.bLanguagesLabel);
+            this.backgroundTab.Controls.Add(this.proficienciesLabel);
+            this.backgroundTab.Controls.Add(this.backgroundBox);
+            this.backgroundTab.Location = new System.Drawing.Point(4, 22);
+            this.backgroundTab.Name = "backgroundTab";
+            this.backgroundTab.Padding = new System.Windows.Forms.Padding(3);
+            this.backgroundTab.Size = new System.Drawing.Size(1203, 683);
+            this.backgroundTab.TabIndex = 2;
+            this.backgroundTab.Text = "Background";
+            this.backgroundTab.UseVisualStyleBackColor = true;
+            // 
+            // backgroundButton
+            // 
+            this.backgroundButton.Location = new System.Drawing.Point(381, 509);
+            this.backgroundButton.Name = "backgroundButton";
+            this.backgroundButton.Size = new System.Drawing.Size(236, 40);
+            this.backgroundButton.TabIndex = 36;
+            this.backgroundButton.Text = "Select this Background";
+            this.backgroundButton.UseVisualStyleBackColor = true;
+            this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
+            // 
+            // flawGrid
+            // 
+            this.flawGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.flawGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.flawGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.flawGrid.Location = new System.Drawing.Point(731, 523);
+            this.flawGrid.Name = "flawGrid";
+            this.flawGrid.Size = new System.Drawing.Size(444, 150);
+            this.flawGrid.TabIndex = 35;
+            // 
+            // bondGrid
+            // 
+            this.bondGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.bondGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.bondGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bondGrid.Location = new System.Drawing.Point(731, 367);
+            this.bondGrid.Name = "bondGrid";
+            this.bondGrid.Size = new System.Drawing.Size(444, 150);
+            this.bondGrid.TabIndex = 34;
+            // 
+            // idealGrid
+            // 
+            this.idealGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.idealGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.idealGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.idealGrid.Location = new System.Drawing.Point(731, 211);
+            this.idealGrid.Name = "idealGrid";
+            this.idealGrid.Size = new System.Drawing.Size(444, 150);
+            this.idealGrid.TabIndex = 33;
+            // 
+            // personalityGrid
+            // 
+            this.personalityGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.personalityGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.personalityGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.personalityGrid.Location = new System.Drawing.Point(731, 54);
+            this.personalityGrid.Name = "personalityGrid";
+            this.personalityGrid.Size = new System.Drawing.Size(444, 150);
+            this.personalityGrid.TabIndex = 32;
+            // 
+            // characteristicsLabel
+            // 
+            this.characteristicsLabel.AutoSize = true;
+            this.characteristicsLabel.Location = new System.Drawing.Point(824, 28);
+            this.characteristicsLabel.Name = "characteristicsLabel";
+            this.characteristicsLabel.Size = new System.Drawing.Size(133, 13);
+            this.characteristicsLabel.TabIndex = 31;
+            this.characteristicsLabel.Text = "Suggested Characteristics:";
+            // 
+            // bEquipmentGrid
+            // 
+            this.bEquipmentGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.bEquipmentGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.bEquipmentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bEquipmentGrid.Location = new System.Drawing.Point(381, 318);
+            this.bEquipmentGrid.Name = "bEquipmentGrid";
+            this.bEquipmentGrid.Size = new System.Drawing.Size(236, 150);
+            this.bEquipmentGrid.TabIndex = 30;
+            // 
+            // bLanguagesGrid
+            // 
+            this.bLanguagesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.bLanguagesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.bLanguagesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bLanguagesGrid.Location = new System.Drawing.Point(381, 211);
+            this.bLanguagesGrid.Name = "bLanguagesGrid";
+            this.bLanguagesGrid.Size = new System.Drawing.Size(236, 75);
+            this.bLanguagesGrid.TabIndex = 29;
+            // 
+            // proficienciesGrid
+            // 
+            this.proficienciesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.proficienciesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.proficienciesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.proficienciesGrid.Location = new System.Drawing.Point(381, 29);
+            this.proficienciesGrid.Name = "proficienciesGrid";
+            this.proficienciesGrid.Size = new System.Drawing.Size(236, 150);
+            this.proficienciesGrid.TabIndex = 28;
+            // 
+            // bEquipmentLabel
+            // 
+            this.bEquipmentLabel.AutoSize = true;
+            this.bEquipmentLabel.Location = new System.Drawing.Point(268, 318);
+            this.bEquipmentLabel.Name = "bEquipmentLabel";
+            this.bEquipmentLabel.Size = new System.Drawing.Size(60, 13);
+            this.bEquipmentLabel.TabIndex = 3;
+            this.bEquipmentLabel.Text = "Equipment:";
+            // 
+            // bLanguagesLabel
+            // 
+            this.bLanguagesLabel.AutoSize = true;
+            this.bLanguagesLabel.Location = new System.Drawing.Point(268, 211);
+            this.bLanguagesLabel.Name = "bLanguagesLabel";
+            this.bLanguagesLabel.Size = new System.Drawing.Size(63, 13);
+            this.bLanguagesLabel.TabIndex = 2;
+            this.bLanguagesLabel.Text = "Languages:";
+            // 
+            // proficienciesLabel
+            // 
+            this.proficienciesLabel.AutoSize = true;
+            this.proficienciesLabel.Location = new System.Drawing.Point(268, 29);
+            this.proficienciesLabel.Name = "proficienciesLabel";
+            this.proficienciesLabel.Size = new System.Drawing.Size(70, 13);
+            this.proficienciesLabel.TabIndex = 1;
+            this.proficienciesLabel.Text = "Proficiencies:";
+            // 
+            // backgroundBox
+            // 
+            this.backgroundBox.FormattingEnabled = true;
+            this.backgroundBox.Items.AddRange(new object[] {
+            "Acolyte",
+            "Charlatan",
+            "Criminal",
+            "Entertainer",
+            "Folk Hero",
+            "Guild Artisan",
+            "Hermit",
+            "Noble",
+            "Outlander",
+            "Sage",
+            "Sailor",
+            "Soldier",
+            "Urchin"});
+            this.backgroundBox.Location = new System.Drawing.Point(0, 0);
+            this.backgroundBox.Name = "backgroundBox";
+            this.backgroundBox.Size = new System.Drawing.Size(230, 563);
+            this.backgroundBox.TabIndex = 0;
+            this.backgroundBox.SelectedIndexChanged += new System.EventHandler(this.backgroundBox_SelectedIndexChanged);
+            // 
             // fCChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1563,8 +1548,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.traitsGrid)).EndInit();
             this.classTab.ResumeLayout(false);
             this.classTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.levelingGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.featuresGrid)).EndInit();
+            this.detailsTab.ResumeLayout(false);
+            this.detailsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.backgroundTab.ResumeLayout(false);
             this.backgroundTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flawGrid)).EndInit();
@@ -1574,9 +1561,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).EndInit();
-            this.detailsTab.ResumeLayout(false);
-            this.detailsTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1617,9 +1601,7 @@
         private System.Windows.Forms.Label asmLabel;
         private System.Windows.Forms.DataGridView languagesGrid;
         private System.Windows.Forms.DataGridView traitsGrid;
-        private System.Windows.Forms.DataGridView levelingGrid;
         private System.Windows.Forms.DataGridView featuresGrid;
-        private System.Windows.Forms.Label levelingLabel;
         private System.Windows.Forms.Label featuresLabel;
         private System.Windows.Forms.DataGridView personalityGrid;
         private System.Windows.Forms.Label characteristicsLabel;

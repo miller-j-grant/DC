@@ -15,11 +15,11 @@ using System.Diagnostics;
 
 namespace Dungeon_Crawler__
 {
-	/// <summary>
-	/// The form that a character is created in </summary>
-	/// <remarks>
-	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
-	/// version: 2/22/2016 </remarks>
+    /// <summary>
+    /// The form that a character is created in </summary>
+    /// <remarks>
+    /// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+    /// version: 2/22/2016 </remarks>
     public partial class fCChar : Form
     {
         Race selectRace;
@@ -32,8 +32,8 @@ namespace Dungeon_Crawler__
             InitializeComponent();
         }
 
-		/// <summary>
-		/// Executed when the rollButton is clicked. Rolls random ability scores </summary>
+        /// <summary>
+        /// Executed when the rollButton is clicked. Rolls random ability scores </summary>
         private void rollButton_Click(object sender, EventArgs e)
         {
             rollLabel1.Text = Calculations.rollAbilityScore().ToString();
@@ -145,6 +145,120 @@ namespace Dungeon_Crawler__
             chaButton_Click(sender, e);
         }
 
+        private void STRUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            strCostLabel.Text = "" + Calculations.pointBuyCost(STRUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "str";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), STRUpDown.Value, name);
+        }
+
+        private void DEXUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            dexCostLabel.Text = "" + Calculations.pointBuyCost(DEXUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "dex";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), DEXUpDown.Value, name);
+        }
+
+        private void CONUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            conCostLabel.Text = "" + Calculations.pointBuyCost(CONUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "con";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), CONUpDown.Value, name);
+        }
+
+        private void INTUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            intCostLabel.Text = "" + Calculations.pointBuyCost(INTUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "int";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), INTUpDown.Value, name);
+        }
+
+        private void WISUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            wisCostLabel.Text = "" + Calculations.pointBuyCost(WISUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "wis";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), WISUpDown.Value, name);
+        }
+
+        private void CHAUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //Change the value of the cost label.
+            chaCostLabel.Text = "" + Calculations.pointBuyCost(CHAUpDown.Value);
+            //Change the value of the points remaining label.
+            string name = "cha";
+            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), CHAUpDown.Value, name);
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            STRUpDown.Value = 8;
+            DEXUpDown.Value = 8;
+            CONUpDown.Value = 8;
+            INTUpDown.Value = 8;
+            WISUpDown.Value = 8;
+            CHAUpDown.Value = 8;
+            pointsRemainingLabel.Text = "27";
+        }
+
+        private void pbCommitButton_Click(object sender, EventArgs e)
+        {
+            if (Int32.Parse(pointsRemainingLabel.Text) < 0)
+            {
+                MessageBox.Show("Points Remaining is less than 0", "Point-Buy Error", MessageBoxButtons.OK);
+            }
+            else
+            {
+
+
+                try
+                {
+                    pc.setBaseStr(Convert.ToInt32(STRUpDown.Value));
+                    strLabel.Text = STRUpDown.Value.ToString();
+                    pc.setStrMod(Calculations.calcMod(Int32.Parse(STRUpDown.Value.ToString())));
+                    strModLabel.Text = pc.getSTRMod().ToString();
+
+                    pc.setBaseDex(Convert.ToInt32(DEXUpDown.Value));
+                    dexLabel.Text = DEXUpDown.Value.ToString();
+                    pc.setDexMod(Calculations.calcMod(Int32.Parse(DEXUpDown.Value.ToString())));
+                    dexModLabel.Text = pc.getDEXMod().ToString();
+
+                    pc.setBaseCon(Convert.ToInt32(CONUpDown.Value));
+                    conLabel.Text = CONUpDown.Value.ToString();
+                    pc.setConMod(Calculations.calcMod(Int32.Parse(CONUpDown.Value.ToString())));
+                    conModLabel.Text = pc.getCONMod().ToString();
+
+                    pc.setBaseIntel(Convert.ToInt32(INTUpDown.Value));
+                    intLabel.Text = INTUpDown.Value.ToString();
+                    pc.setIntelMod(Calculations.calcMod(Int32.Parse(INTUpDown.Value.ToString())));
+                    intModLabel.Text = pc.getINTMod().ToString();
+
+                    pc.setBaseWis(Convert.ToInt32(WISUpDown.Value));
+                    wisLabel.Text = WISUpDown.Value.ToString();
+                    pc.setWisMod(Calculations.calcMod(Int32.Parse(WISUpDown.Value.ToString())));
+                    wisModLabel.Text = pc.getWISMod().ToString();
+
+                    pc.setBaseCha(Convert.ToInt32(CHAUpDown.Value));
+                    chaLabel.Text = CHAUpDown.Value.ToString();
+                    pc.setChaMod(Calculations.calcMod(Int32.Parse(CHAUpDown.Value.ToString())));
+                    chaModLabel.Text = pc.getCHAMod().ToString();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
         private void raceBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Get the currently selected item.
@@ -153,7 +267,48 @@ namespace Dungeon_Crawler__
             //Call to create a new Race object, same name as currently selected item.
             Race selectRace = new Race(curItem);
 
-            raceTab.BackgroundImage = Properties.Resources.dragonborn;
+            // Changes label text color so it can be easier seen with backgrounds
+            asmLabel.ForeColor = Color.White;
+            asmDisplayLabel.ForeColor = Color.White;
+            sizeLabel.ForeColor = Color.White;
+            sizeDisplayLabel.ForeColor = Color.White;
+            speedLabel.ForeColor = Color.White;
+            speedDisplayLabel.ForeColor = Color.White;
+            traitsLabel.ForeColor = Color.White;
+
+            // Changes race background image based on selected Race
+            switch (curItem)
+            {
+                case "Dwarf":
+                    raceTab.BackgroundImage = Properties.Resources.dwarf;
+                    break;
+                case "Elf":
+                    raceTab.BackgroundImage = Properties.Resources.elf;
+                    break;
+                case "Halfling":
+                    raceTab.BackgroundImage = Properties.Resources.halfling;
+                    break;
+                case "Human":
+                    raceTab.BackgroundImage = Properties.Resources.human;
+                    break;
+                case "Dragonborn":
+                    raceTab.BackgroundImage = Properties.Resources.dragonborn;
+                    break;
+                case "Gnome":
+                    raceTab.BackgroundImage = Properties.Resources.gnome;
+                    break;
+                case "Half-Elf":
+                    raceTab.BackgroundImage = Properties.Resources.halfelf;
+                    break;
+                case "Half-Orc":
+                    raceTab.BackgroundImage = Properties.Resources.halforc;
+                    break;
+                case "Tiefling":
+                    raceTab.BackgroundImage = Properties.Resources.tiefling;
+                    break;
+                default:
+                    break;
+            }
 
 
             //Update data and display based on the currently selected item.
@@ -205,82 +360,58 @@ namespace Dungeon_Crawler__
             }
         }
 
-        private void raceButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                string curItem = raceBox.SelectedItem.ToString();
-                pc.setRace(curItem);
-                pc.setStats(pc.race.getStats());
-
-                strLabel.Text = pc.getSTR().ToString();
-                pc.setStrMod(Calculations.calcMod(pc.getSTR()));
-                strModLabel.Text = pc.getSTRMod().ToString();
-
-                dexLabel.Text = pc.getDEX().ToString();
-                pc.setDexMod(Calculations.calcMod(pc.getDEX()));
-                dexModLabel.Text = pc.getDEXMod().ToString();
-
-                conLabel.Text = pc.getCON().ToString();
-                pc.setConMod(Calculations.calcMod(pc.getCON()));
-                conModLabel.Text = pc.getCONMod().ToString();
-
-                intLabel.Text = pc.getINT().ToString();
-                pc.setIntelMod(Calculations.calcMod(pc.getINT()));
-                intModLabel.Text = pc.getINTMod().ToString();
-
-                wisLabel.Text = pc.getWIS().ToString();
-                pc.setWisMod(Calculations.calcMod(pc.getWIS()));
-                wisModLabel.Text = pc.getWISMod().ToString();
-
-                chaLabel.Text = pc.getCHA().ToString();
-                pc.setChaMod(Calculations.calcMod(pc.getCHA()));
-                chaModLabel.Text = pc.getCHAMod().ToString();
-            }
-            catch
-            {
-
-            }
-
-        }
-
-        private void classButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                string curItem = classBox.SelectedItem.ToString();
-                pc.setClass(curItem);
-                
-            }
-            catch
-            {
-
-            }
-        }
-
-        private void backgroundButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                string curItem = backgroundBox.SelectedItem.ToString();
-                pc.setBackground(curItem);
-
-            }
-            catch
-            {
-
-            }
-        }
-
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Get the currently selected item.
             string curItem = classBox.SelectedItem.ToString();
 
             Class selectClass = new Class(curItem);
+
+            // changes featuresLabel font color to white to be readable over backgrounds
+            featuresLabel.ForeColor = Color.White;
+
+            // changes class background image depending on what class is selected
+            switch (curItem)
+            {
+                case "Barbarian":
+                    classTab.BackgroundImage = Properties.Resources.barbarian0;
+                    break;
+                case "Bard":
+                    classTab.BackgroundImage = Properties.Resources.bard0;
+                    break;
+                case "Cleric":
+                    classTab.BackgroundImage = Properties.Resources.cleric0;
+                    break;
+                case "Druid":
+                    classTab.BackgroundImage = Properties.Resources.druid0;
+                    break;
+                case "Fighter":
+                    classTab.BackgroundImage = Properties.Resources.fighter0;
+                    break;
+                case "Monk":
+                    classTab.BackgroundImage = Properties.Resources.monk0;
+                    break;
+                case "Paladin":
+                    classTab.BackgroundImage = Properties.Resources.paladin0;
+                    break;
+                case "Ranger":
+                    classTab.BackgroundImage = Properties.Resources.ranger0;
+                    break;
+                case "Rogue":
+                    classTab.BackgroundImage = Properties.Resources.rogue0;
+                    break;
+                case "Sorcerer":
+                    classTab.BackgroundImage = Properties.Resources.sorcerer0;
+                    break;
+                case "Warlock":
+                    classTab.BackgroundImage = Properties.Resources.warlock0;
+                    break;
+                case "Wizard":
+                    classTab.BackgroundImage = Properties.Resources.wizard0;
+                    break;
+                default:
+                    break;
+            }
 
 
             //Clear the Features DataGrid of all columns and rows.
@@ -412,118 +543,81 @@ namespace Dungeon_Crawler__
             }
         }
 
-
-        private void STRUpDown_ValueChanged(object sender, EventArgs e)
+        private void raceButton_Click(object sender, EventArgs e)
         {
-            //Change the value of the cost label.
-            strCostLabel.Text = "" + Calculations.pointBuyCost(STRUpDown.Value);
-            //Change the value of the points remaining label.
-            string name = "str";
-            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), STRUpDown.Value, name);
-        }
-
-        private void DEXUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            //Change the value of the cost label.
-            dexCostLabel.Text = "" + Calculations.pointBuyCost(DEXUpDown.Value);
-            //Change the value of the points remaining label.
-            string name = "dex";
-            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), DEXUpDown.Value, name);
-        }
-
-        private void CONUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            //Change the value of the cost label.
-            conCostLabel.Text = "" + Calculations.pointBuyCost(CONUpDown.Value);
-            //Change the value of the points remaining label.
-            string name = "con";
-            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), CONUpDown.Value, name);
-        }
-
-        private void INTUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            //Change the value of the cost label.
-            intCostLabel.Text = "" + Calculations.pointBuyCost(INTUpDown.Value);
-            //Change the value of the points remaining label.
-            string name = "int";
-            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), INTUpDown.Value, name);
-        }
-
-        private void WISUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            //Change the value of the cost label.
-            wisCostLabel.Text = "" + Calculations.pointBuyCost(WISUpDown.Value);
-            //Change the value of the points remaining label.
-            string name = "wis";
-            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), WISUpDown.Value, name);
-        }
-
-        private void CHAUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            //Change the value of the cost label.
-            chaCostLabel.Text = "" + Calculations.pointBuyCost(CHAUpDown.Value);
-            //Change the value of the points remaining label.
-            string name = "cha";
-            pointsRemainingLabel.Text = "" + Calculations.pointBuyPoints(Convert.ToInt32(pointsRemainingLabel.Text), CHAUpDown.Value, name);
-        }
-
-        private void resetButton_Click(object sender, EventArgs e)
-        {
-            STRUpDown.Value = 8;
-            DEXUpDown.Value = 8;
-            CONUpDown.Value = 8;
-            INTUpDown.Value = 8;
-            WISUpDown.Value = 8;
-            CHAUpDown.Value = 8;
-            pointsRemainingLabel.Text = "27";
-        }
-
-        private void pbCommitButton_Click(object sender, EventArgs e)
-        {
-            if (Int32.Parse(pointsRemainingLabel.Text) < 0)
+            if (pc.getBaseAS().Contains(0))
             {
-                MessageBox.Show("Points Remaining is less than 0", "Point-Buy Error", MessageBoxButtons.OK);
+                MessageBox.Show("Please commit all of your Ability Scores before selecting a race.", "Race Selection Error", MessageBoxButtons.OK);
             }
             else
             {
 
-
                 try
                 {
-                    pc.setBaseStr(Convert.ToInt32(STRUpDown.Value));
-                    strLabel.Text = STRUpDown.Value.ToString();
-                    pc.setStrMod(Calculations.calcMod(Int32.Parse(STRUpDown.Value.ToString())));
+
+                    string curItem = raceBox.SelectedItem.ToString();
+                    pc.setRace(curItem);
+                    pc.setStats(pc.race.getStats());
+
+                    strLabel.Text = pc.getSTR().ToString();
+                    pc.setStrMod(Calculations.calcMod(pc.getSTR()));
                     strModLabel.Text = pc.getSTRMod().ToString();
 
-                    pc.setBaseDex(Convert.ToInt32(DEXUpDown.Value));
-                    dexLabel.Text = DEXUpDown.Value.ToString();
-                    pc.setDexMod(Calculations.calcMod(Int32.Parse(DEXUpDown.Value.ToString())));
+                    dexLabel.Text = pc.getDEX().ToString();
+                    pc.setDexMod(Calculations.calcMod(pc.getDEX()));
                     dexModLabel.Text = pc.getDEXMod().ToString();
 
-                    pc.setBaseCon(Convert.ToInt32(CONUpDown.Value));
-                    conLabel.Text = CONUpDown.Value.ToString();
-                    pc.setConMod(Calculations.calcMod(Int32.Parse(CONUpDown.Value.ToString())));
+                    conLabel.Text = pc.getCON().ToString();
+                    pc.setConMod(Calculations.calcMod(pc.getCON()));
                     conModLabel.Text = pc.getCONMod().ToString();
 
-                    pc.setBaseIntel(Convert.ToInt32(INTUpDown.Value));
-                    intLabel.Text = INTUpDown.Value.ToString();
-                    pc.setIntelMod(Calculations.calcMod(Int32.Parse(INTUpDown.Value.ToString())));
+                    intLabel.Text = pc.getINT().ToString();
+                    pc.setIntelMod(Calculations.calcMod(pc.getINT()));
                     intModLabel.Text = pc.getINTMod().ToString();
 
-                    pc.setBaseWis(Convert.ToInt32(WISUpDown.Value));
-                    wisLabel.Text = WISUpDown.Value.ToString();
-                    pc.setWisMod(Calculations.calcMod(Int32.Parse(WISUpDown.Value.ToString())));
+                    wisLabel.Text = pc.getWIS().ToString();
+                    pc.setWisMod(Calculations.calcMod(pc.getWIS()));
                     wisModLabel.Text = pc.getWISMod().ToString();
 
-                    pc.setBaseCha(Convert.ToInt32(CHAUpDown.Value));
-                    chaLabel.Text = CHAUpDown.Value.ToString();
-                    pc.setChaMod(Calculations.calcMod(Int32.Parse(CHAUpDown.Value.ToString())));
+                    chaLabel.Text = pc.getCHA().ToString();
+                    pc.setChaMod(Calculations.calcMod(pc.getCHA()));
                     chaModLabel.Text = pc.getCHAMod().ToString();
                 }
                 catch
                 {
 
                 }
+            }
+
+        }
+
+        private void classButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string curItem = classBox.SelectedItem.ToString();
+                pc.setClass(curItem);
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void backgroundButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string curItem = backgroundBox.SelectedItem.ToString();
+                pc.setBackground(curItem);
+
+            }
+            catch
+            {
+
             }
         }
 
@@ -664,7 +758,7 @@ namespace Dungeon_Crawler__
                         MessageBox.Show("Dexterity stat was not assigned", "Finalize Error", MessageBoxButtons.OK);
                         break;
                     }
-                    
+
 
                     //Widget 18: Current HP; is left blank on character sheets
 
