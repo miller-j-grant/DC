@@ -31,7 +31,7 @@
             this.CCharMenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CCharTab = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.abilitiyscoreTab = new System.Windows.Forms.TabPage();
             this.pbCommitButton = new System.Windows.Forms.Button();
             this.commitButton = new System.Windows.Forms.Button();
             this.pointsLabel = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             this.pointBuyLabel = new System.Windows.Forms.Label();
             this.classicLabel = new System.Windows.Forms.Label();
             this.rollButton = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.raceTab = new System.Windows.Forms.TabPage();
             this.selectionButton = new System.Windows.Forms.Button();
             this.raceButton = new System.Windows.Forms.Button();
             this.languagesGrid = new System.Windows.Forms.DataGridView();
@@ -94,7 +94,7 @@
             this.asmDisplayLabel = new System.Windows.Forms.Label();
             this.asmLabel = new System.Windows.Forms.Label();
             this.raceBox = new System.Windows.Forms.ListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.classTab = new System.Windows.Forms.TabPage();
             this.classButton = new System.Windows.Forms.Button();
             this.equipSelectionButton = new System.Windows.Forms.Button();
             this.skillSelectionButton = new System.Windows.Forms.Button();
@@ -103,7 +103,7 @@
             this.levelingLabel = new System.Windows.Forms.Label();
             this.featuresLabel = new System.Windows.Forms.Label();
             this.classBox = new System.Windows.Forms.ListBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.backgroundTab = new System.Windows.Forms.TabPage();
             this.backgroundButton = new System.Windows.Forms.Button();
             this.flawGrid = new System.Windows.Forms.DataGridView();
             this.bondGrid = new System.Windows.Forms.DataGridView();
@@ -117,7 +117,9 @@
             this.bLanguagesLabel = new System.Windows.Forms.Label();
             this.proficienciesLabel = new System.Windows.Forms.Label();
             this.backgroundBox = new System.Windows.Forms.ListBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.detailsTab = new System.Windows.Forms.TabPage();
+            this.backstoryButton = new System.Windows.Forms.Button();
+            this.alignmentButton = new System.Windows.Forms.Button();
             this.playerLabel = new System.Windows.Forms.Label();
             this.playerTextBox = new System.Windows.Forms.TextBox();
             this.finalButton = new System.Windows.Forms.Button();
@@ -135,7 +137,6 @@
             this.ageLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.AbilityPic = new System.Windows.Forms.PictureBox();
             this.strLabel = new System.Windows.Forms.Label();
             this.dexLabel = new System.Windows.Forms.Label();
             this.conLabel = new System.Windows.Forms.Label();
@@ -148,24 +149,23 @@
             this.conModLabel = new System.Windows.Forms.Label();
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
-            this.alignmentButton = new System.Windows.Forms.Button();
-            this.backstoryButton = new System.Windows.Forms.Button();
+            this.AbilityPic = new System.Windows.Forms.PictureBox();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.abilitiyscoreTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DEXUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CONUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.INTUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WISUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHAUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.STRUpDown)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.raceTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.languagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traitsGrid)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.classTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelingGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featuresGrid)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.backgroundTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flawGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bondGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idealGrid)).BeginInit();
@@ -173,7 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).BeginInit();
-            this.tabPage6.SuspendLayout();
+            this.detailsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,11 +196,11 @@
             // 
             // CCharTab
             // 
-            this.CCharTab.Controls.Add(this.tabPage5);
-            this.CCharTab.Controls.Add(this.tabPage1);
-            this.CCharTab.Controls.Add(this.tabPage2);
-            this.CCharTab.Controls.Add(this.tabPage3);
-            this.CCharTab.Controls.Add(this.tabPage6);
+            this.CCharTab.Controls.Add(this.abilitiyscoreTab);
+            this.CCharTab.Controls.Add(this.raceTab);
+            this.CCharTab.Controls.Add(this.classTab);
+            this.CCharTab.Controls.Add(this.backgroundTab);
+            this.CCharTab.Controls.Add(this.detailsTab);
             this.CCharTab.Location = new System.Drawing.Point(108, 23);
             this.CCharTab.Name = "CCharTab";
             this.CCharTab.Padding = new System.Drawing.Point(50, 3);
@@ -208,60 +208,59 @@
             this.CCharTab.Size = new System.Drawing.Size(1211, 709);
             this.CCharTab.TabIndex = 1;
             // 
-            // tabPage5
+            // abilitiyscoreTab
             // 
-            this.tabPage5.Controls.Add(this.pbCommitButton);
-            this.tabPage5.Controls.Add(this.commitButton);
-            this.tabPage5.Controls.Add(this.pointsLabel);
-            this.tabPage5.Controls.Add(this.pointsRemainingLabel);
-            this.tabPage5.Controls.Add(this.strCostLabel);
-            this.tabPage5.Controls.Add(this.dexCostLabel);
-            this.tabPage5.Controls.Add(this.conCostLabel);
-            this.tabPage5.Controls.Add(this.intCostLabel);
-            this.tabPage5.Controls.Add(this.wisCostLabel);
-            this.tabPage5.Controls.Add(this.chaCostLabel);
-            this.tabPage5.Controls.Add(this.costLabel);
-            this.tabPage5.Controls.Add(this.resetButton);
-            this.tabPage5.Controls.Add(this.DEXUpDown);
-            this.tabPage5.Controls.Add(this.CONUpDown);
-            this.tabPage5.Controls.Add(this.INTUpDown);
-            this.tabPage5.Controls.Add(this.WISUpDown);
-            this.tabPage5.Controls.Add(this.CHAUpDown);
-            this.tabPage5.Controls.Add(this.STRUpDown);
-            this.tabPage5.Controls.Add(this.pbDexLabel);
-            this.tabPage5.Controls.Add(this.pbConLabel);
-            this.tabPage5.Controls.Add(this.pbIntLabel);
-            this.tabPage5.Controls.Add(this.pbWisLabel);
-            this.tabPage5.Controls.Add(this.pbChaLabel);
-            this.tabPage5.Controls.Add(this.pbStrLabel);
-            this.tabPage5.Controls.Add(this.rollLabel2);
-            this.tabPage5.Controls.Add(this.rollLabel3);
-            this.tabPage5.Controls.Add(this.rollLabel4);
-            this.tabPage5.Controls.Add(this.rollLabel5);
-            this.tabPage5.Controls.Add(this.rollLabel6);
-            this.tabPage5.Controls.Add(this.rollLabel1);
-            this.tabPage5.Controls.Add(this.dexTextBox);
-            this.tabPage5.Controls.Add(this.conTextBox);
-            this.tabPage5.Controls.Add(this.intTextBox);
-            this.tabPage5.Controls.Add(this.wisTextBox);
-            this.tabPage5.Controls.Add(this.chaTextBox);
-            this.tabPage5.Controls.Add(this.strTextBox);
-            this.tabPage5.Controls.Add(this.chaButton);
-            this.tabPage5.Controls.Add(this.wisButton);
-            this.tabPage5.Controls.Add(this.intButton);
-            this.tabPage5.Controls.Add(this.conButton);
-            this.tabPage5.Controls.Add(this.dexButton);
-            this.tabPage5.Controls.Add(this.strButton);
-            this.tabPage5.Controls.Add(this.pointBuyLabel);
-            this.tabPage5.Controls.Add(this.classicLabel);
-            this.tabPage5.Controls.Add(this.rollButton);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Ability Score";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
+            this.abilitiyscoreTab.Controls.Add(this.pbCommitButton);
+            this.abilitiyscoreTab.Controls.Add(this.commitButton);
+            this.abilitiyscoreTab.Controls.Add(this.pointsLabel);
+            this.abilitiyscoreTab.Controls.Add(this.pointsRemainingLabel);
+            this.abilitiyscoreTab.Controls.Add(this.strCostLabel);
+            this.abilitiyscoreTab.Controls.Add(this.dexCostLabel);
+            this.abilitiyscoreTab.Controls.Add(this.conCostLabel);
+            this.abilitiyscoreTab.Controls.Add(this.intCostLabel);
+            this.abilitiyscoreTab.Controls.Add(this.wisCostLabel);
+            this.abilitiyscoreTab.Controls.Add(this.chaCostLabel);
+            this.abilitiyscoreTab.Controls.Add(this.costLabel);
+            this.abilitiyscoreTab.Controls.Add(this.resetButton);
+            this.abilitiyscoreTab.Controls.Add(this.DEXUpDown);
+            this.abilitiyscoreTab.Controls.Add(this.CONUpDown);
+            this.abilitiyscoreTab.Controls.Add(this.INTUpDown);
+            this.abilitiyscoreTab.Controls.Add(this.WISUpDown);
+            this.abilitiyscoreTab.Controls.Add(this.CHAUpDown);
+            this.abilitiyscoreTab.Controls.Add(this.STRUpDown);
+            this.abilitiyscoreTab.Controls.Add(this.pbDexLabel);
+            this.abilitiyscoreTab.Controls.Add(this.pbConLabel);
+            this.abilitiyscoreTab.Controls.Add(this.pbIntLabel);
+            this.abilitiyscoreTab.Controls.Add(this.pbWisLabel);
+            this.abilitiyscoreTab.Controls.Add(this.pbChaLabel);
+            this.abilitiyscoreTab.Controls.Add(this.pbStrLabel);
+            this.abilitiyscoreTab.Controls.Add(this.rollLabel2);
+            this.abilitiyscoreTab.Controls.Add(this.rollLabel3);
+            this.abilitiyscoreTab.Controls.Add(this.rollLabel4);
+            this.abilitiyscoreTab.Controls.Add(this.rollLabel5);
+            this.abilitiyscoreTab.Controls.Add(this.rollLabel6);
+            this.abilitiyscoreTab.Controls.Add(this.rollLabel1);
+            this.abilitiyscoreTab.Controls.Add(this.dexTextBox);
+            this.abilitiyscoreTab.Controls.Add(this.conTextBox);
+            this.abilitiyscoreTab.Controls.Add(this.intTextBox);
+            this.abilitiyscoreTab.Controls.Add(this.wisTextBox);
+            this.abilitiyscoreTab.Controls.Add(this.chaTextBox);
+            this.abilitiyscoreTab.Controls.Add(this.strTextBox);
+            this.abilitiyscoreTab.Controls.Add(this.chaButton);
+            this.abilitiyscoreTab.Controls.Add(this.wisButton);
+            this.abilitiyscoreTab.Controls.Add(this.intButton);
+            this.abilitiyscoreTab.Controls.Add(this.conButton);
+            this.abilitiyscoreTab.Controls.Add(this.dexButton);
+            this.abilitiyscoreTab.Controls.Add(this.strButton);
+            this.abilitiyscoreTab.Controls.Add(this.pointBuyLabel);
+            this.abilitiyscoreTab.Controls.Add(this.classicLabel);
+            this.abilitiyscoreTab.Controls.Add(this.rollButton);
+            this.abilitiyscoreTab.Location = new System.Drawing.Point(4, 22);
+            this.abilitiyscoreTab.Name = "abilitiyscoreTab";
+            this.abilitiyscoreTab.Size = new System.Drawing.Size(1203, 683);
+            this.abilitiyscoreTab.TabIndex = 4;
+            this.abilitiyscoreTab.Text = "Ability Score";
+            this.abilitiyscoreTab.UseVisualStyleBackColor = true;
             // 
             // pbCommitButton
             // 
@@ -750,29 +749,28 @@
             this.rollButton.UseVisualStyleBackColor = true;
             this.rollButton.Click += new System.EventHandler(this.rollButton_Click);
             // 
-            // tabPage1
+            // raceTab
             // 
-            this.tabPage1.Controls.Add(this.selectionButton);
-            this.tabPage1.Controls.Add(this.raceButton);
-            this.tabPage1.Controls.Add(this.languagesGrid);
-            this.tabPage1.Controls.Add(this.traitsGrid);
-            this.tabPage1.Controls.Add(this.languagesLabel);
-            this.tabPage1.Controls.Add(this.traitsLabel);
-            this.tabPage1.Controls.Add(this.speedDisplayLabel);
-            this.tabPage1.Controls.Add(this.sizeDisplayLabel);
-            this.tabPage1.Controls.Add(this.speedLabel);
-            this.tabPage1.Controls.Add(this.sizeLabel);
-            this.tabPage1.Controls.Add(this.asmDisplayLabel);
-            this.tabPage1.Controls.Add(this.asmLabel);
-            this.tabPage1.Controls.Add(this.raceBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Race";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.raceTab.Controls.Add(this.selectionButton);
+            this.raceTab.Controls.Add(this.raceButton);
+            this.raceTab.Controls.Add(this.languagesGrid);
+            this.raceTab.Controls.Add(this.traitsGrid);
+            this.raceTab.Controls.Add(this.languagesLabel);
+            this.raceTab.Controls.Add(this.traitsLabel);
+            this.raceTab.Controls.Add(this.speedDisplayLabel);
+            this.raceTab.Controls.Add(this.sizeDisplayLabel);
+            this.raceTab.Controls.Add(this.speedLabel);
+            this.raceTab.Controls.Add(this.sizeLabel);
+            this.raceTab.Controls.Add(this.asmDisplayLabel);
+            this.raceTab.Controls.Add(this.asmLabel);
+            this.raceTab.Controls.Add(this.raceBox);
+            this.raceTab.Location = new System.Drawing.Point(4, 22);
+            this.raceTab.Name = "raceTab";
+            this.raceTab.Padding = new System.Windows.Forms.Padding(3);
+            this.raceTab.Size = new System.Drawing.Size(1203, 683);
+            this.raceTab.TabIndex = 0;
+            this.raceTab.Text = "Race";
+            this.raceTab.UseVisualStyleBackColor = true;
             // 
             // selectionButton
             // 
@@ -928,23 +926,23 @@
             this.raceBox.TabIndex = 0;
             this.raceBox.SelectedIndexChanged += new System.EventHandler(this.raceBox_SelectedIndexChanged);
             // 
-            // tabPage2
+            // classTab
             // 
-            this.tabPage2.Controls.Add(this.classButton);
-            this.tabPage2.Controls.Add(this.equipSelectionButton);
-            this.tabPage2.Controls.Add(this.skillSelectionButton);
-            this.tabPage2.Controls.Add(this.levelingGrid);
-            this.tabPage2.Controls.Add(this.featuresGrid);
-            this.tabPage2.Controls.Add(this.levelingLabel);
-            this.tabPage2.Controls.Add(this.featuresLabel);
-            this.tabPage2.Controls.Add(this.classBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Class";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.classTab.Controls.Add(this.classButton);
+            this.classTab.Controls.Add(this.equipSelectionButton);
+            this.classTab.Controls.Add(this.skillSelectionButton);
+            this.classTab.Controls.Add(this.levelingGrid);
+            this.classTab.Controls.Add(this.featuresGrid);
+            this.classTab.Controls.Add(this.levelingLabel);
+            this.classTab.Controls.Add(this.featuresLabel);
+            this.classTab.Controls.Add(this.classBox);
+            this.classTab.Location = new System.Drawing.Point(4, 22);
+            this.classTab.Name = "classTab";
+            this.classTab.Padding = new System.Windows.Forms.Padding(3);
+            this.classTab.Size = new System.Drawing.Size(1203, 683);
+            this.classTab.TabIndex = 1;
+            this.classTab.Text = "Class";
+            this.classTab.UseVisualStyleBackColor = true;
             // 
             // classButton
             // 
@@ -1035,29 +1033,28 @@
             this.classBox.TabIndex = 0;
             this.classBox.SelectedIndexChanged += new System.EventHandler(this.classBox_SelectedIndexChanged);
             // 
-            // tabPage3
+            // backgroundTab
             // 
-            this.tabPage3.Controls.Add(this.backgroundButton);
-            this.tabPage3.Controls.Add(this.flawGrid);
-            this.tabPage3.Controls.Add(this.bondGrid);
-            this.tabPage3.Controls.Add(this.idealGrid);
-            this.tabPage3.Controls.Add(this.personalityGrid);
-            this.tabPage3.Controls.Add(this.characteristicsLabel);
-            this.tabPage3.Controls.Add(this.bEquipmentGrid);
-            this.tabPage3.Controls.Add(this.bLanguagesGrid);
-            this.tabPage3.Controls.Add(this.proficienciesGrid);
-            this.tabPage3.Controls.Add(this.bEquipmentLabel);
-            this.tabPage3.Controls.Add(this.bLanguagesLabel);
-            this.tabPage3.Controls.Add(this.proficienciesLabel);
-            this.tabPage3.Controls.Add(this.backgroundBox);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Background";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.backgroundTab.Controls.Add(this.backgroundButton);
+            this.backgroundTab.Controls.Add(this.flawGrid);
+            this.backgroundTab.Controls.Add(this.bondGrid);
+            this.backgroundTab.Controls.Add(this.idealGrid);
+            this.backgroundTab.Controls.Add(this.personalityGrid);
+            this.backgroundTab.Controls.Add(this.characteristicsLabel);
+            this.backgroundTab.Controls.Add(this.bEquipmentGrid);
+            this.backgroundTab.Controls.Add(this.bLanguagesGrid);
+            this.backgroundTab.Controls.Add(this.proficienciesGrid);
+            this.backgroundTab.Controls.Add(this.bEquipmentLabel);
+            this.backgroundTab.Controls.Add(this.bLanguagesLabel);
+            this.backgroundTab.Controls.Add(this.proficienciesLabel);
+            this.backgroundTab.Controls.Add(this.backgroundBox);
+            this.backgroundTab.Location = new System.Drawing.Point(4, 22);
+            this.backgroundTab.Name = "backgroundTab";
+            this.backgroundTab.Padding = new System.Windows.Forms.Padding(3);
+            this.backgroundTab.Size = new System.Drawing.Size(1203, 683);
+            this.backgroundTab.TabIndex = 2;
+            this.backgroundTab.Text = "Background";
+            this.backgroundTab.UseVisualStyleBackColor = true;
             // 
             // backgroundButton
             // 
@@ -1198,33 +1195,51 @@
             this.backgroundBox.TabIndex = 0;
             this.backgroundBox.SelectedIndexChanged += new System.EventHandler(this.backgroundBox_SelectedIndexChanged);
             // 
-            // tabPage6
+            // detailsTab
             // 
-            this.tabPage6.Controls.Add(this.backstoryButton);
-            this.tabPage6.Controls.Add(this.alignmentButton);
-            this.tabPage6.Controls.Add(this.playerLabel);
-            this.tabPage6.Controls.Add(this.playerTextBox);
-            this.tabPage6.Controls.Add(this.finalButton);
-            this.tabPage6.Controls.Add(this.textBox3);
-            this.tabPage6.Controls.Add(this.hairTextBox);
-            this.tabPage6.Controls.Add(this.skinTextBox);
-            this.tabPage6.Controls.Add(this.eyesLabel);
-            this.tabPage6.Controls.Add(this.hairLabel);
-            this.tabPage6.Controls.Add(this.skinLabel);
-            this.tabPage6.Controls.Add(this.weightTextBox);
-            this.tabPage6.Controls.Add(this.heightTextBox);
-            this.tabPage6.Controls.Add(this.heightLabel);
-            this.tabPage6.Controls.Add(this.weightLabel);
-            this.tabPage6.Controls.Add(this.ageTextBox);
-            this.tabPage6.Controls.Add(this.ageLabel);
-            this.tabPage6.Controls.Add(this.nameLabel);
-            this.tabPage6.Controls.Add(this.nameTextBox);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1203, 683);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Final Details";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.detailsTab.Controls.Add(this.backstoryButton);
+            this.detailsTab.Controls.Add(this.alignmentButton);
+            this.detailsTab.Controls.Add(this.playerLabel);
+            this.detailsTab.Controls.Add(this.playerTextBox);
+            this.detailsTab.Controls.Add(this.finalButton);
+            this.detailsTab.Controls.Add(this.textBox3);
+            this.detailsTab.Controls.Add(this.hairTextBox);
+            this.detailsTab.Controls.Add(this.skinTextBox);
+            this.detailsTab.Controls.Add(this.eyesLabel);
+            this.detailsTab.Controls.Add(this.hairLabel);
+            this.detailsTab.Controls.Add(this.skinLabel);
+            this.detailsTab.Controls.Add(this.weightTextBox);
+            this.detailsTab.Controls.Add(this.heightTextBox);
+            this.detailsTab.Controls.Add(this.heightLabel);
+            this.detailsTab.Controls.Add(this.weightLabel);
+            this.detailsTab.Controls.Add(this.ageTextBox);
+            this.detailsTab.Controls.Add(this.ageLabel);
+            this.detailsTab.Controls.Add(this.nameLabel);
+            this.detailsTab.Controls.Add(this.nameTextBox);
+            this.detailsTab.Location = new System.Drawing.Point(4, 22);
+            this.detailsTab.Name = "detailsTab";
+            this.detailsTab.Size = new System.Drawing.Size(1203, 683);
+            this.detailsTab.TabIndex = 5;
+            this.detailsTab.Text = "Final Details";
+            this.detailsTab.UseVisualStyleBackColor = true;
+            // 
+            // backstoryButton
+            // 
+            this.backstoryButton.Location = new System.Drawing.Point(547, 281);
+            this.backstoryButton.Name = "backstoryButton";
+            this.backstoryButton.Size = new System.Drawing.Size(167, 22);
+            this.backstoryButton.TabIndex = 18;
+            this.backstoryButton.Text = "Backstory";
+            this.backstoryButton.UseVisualStyleBackColor = true;
+            // 
+            // alignmentButton
+            // 
+            this.alignmentButton.Location = new System.Drawing.Point(159, 283);
+            this.alignmentButton.Name = "alignmentButton";
+            this.alignmentButton.Size = new System.Drawing.Size(167, 20);
+            this.alignmentButton.TabIndex = 17;
+            this.alignmentButton.Text = "Alignment";
+            this.alignmentButton.UseVisualStyleBackColor = true;
             // 
             // playerLabel
             // 
@@ -1240,12 +1255,12 @@
             this.playerTextBox.Location = new System.Drawing.Point(547, 34);
             this.playerTextBox.Name = "playerTextBox";
             this.playerTextBox.Size = new System.Drawing.Size(167, 20);
-            this.playerTextBox.TabIndex = 1;
+            this.playerTextBox.TabIndex = 15;
             this.playerTextBox.Text = " ";
             // 
             // finalButton
             // 
-            this.finalButton.Location = new System.Drawing.Point(83, 334);
+            this.finalButton.Location = new System.Drawing.Point(83, 305);
             this.finalButton.Name = "finalButton";
             this.finalButton.Size = new System.Drawing.Size(667, 23);
             this.finalButton.TabIndex = 14;
@@ -1372,16 +1387,6 @@
             this.nameTextBox.TabIndex = 0;
             this.nameTextBox.Text = " ";
             // 
-            // AbilityPic
-            // 
-            this.AbilityPic.Image = global::Dungeon_Crawler__.Properties.Resources.as2;
-            this.AbilityPic.Location = new System.Drawing.Point(8, 27);
-            this.AbilityPic.Name = "AbilityPic";
-            this.AbilityPic.Size = new System.Drawing.Size(98, 705);
-            this.AbilityPic.TabIndex = 3;
-            this.AbilityPic.TabStop = false;
-            this.AbilityPic.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // strLabel
             // 
             this.strLabel.BackColor = System.Drawing.Color.White;
@@ -1391,7 +1396,7 @@
             this.strLabel.Name = "strLabel";
             this.strLabel.Size = new System.Drawing.Size(51, 37);
             this.strLabel.TabIndex = 4;
-            this.strLabel.Text = "---";
+            this.strLabel.Text = "-";
             this.strLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dexLabel
@@ -1402,7 +1407,7 @@
             this.dexLabel.Name = "dexLabel";
             this.dexLabel.Size = new System.Drawing.Size(51, 37);
             this.dexLabel.TabIndex = 5;
-            this.dexLabel.Text = "---";
+            this.dexLabel.Text = "-";
             this.dexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // conLabel
@@ -1413,7 +1418,7 @@
             this.conLabel.Name = "conLabel";
             this.conLabel.Size = new System.Drawing.Size(51, 37);
             this.conLabel.TabIndex = 6;
-            this.conLabel.Text = "---";
+            this.conLabel.Text = "-";
             this.conLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // intLabel
@@ -1424,7 +1429,7 @@
             this.intLabel.Name = "intLabel";
             this.intLabel.Size = new System.Drawing.Size(51, 37);
             this.intLabel.TabIndex = 7;
-            this.intLabel.Text = "---";
+            this.intLabel.Text = "-";
             this.intLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chaLabel
@@ -1435,7 +1440,7 @@
             this.chaLabel.Name = "chaLabel";
             this.chaLabel.Size = new System.Drawing.Size(53, 40);
             this.chaLabel.TabIndex = 6;
-            this.chaLabel.Text = "---";
+            this.chaLabel.Text = "-";
             this.chaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wisLabel
@@ -1446,7 +1451,7 @@
             this.wisLabel.Name = "wisLabel";
             this.wisLabel.Size = new System.Drawing.Size(51, 37);
             this.wisLabel.TabIndex = 7;
-            this.wisLabel.Text = "---";
+            this.wisLabel.Text = "-";
             this.wisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chaModLabel
@@ -1509,23 +1514,14 @@
             this.strModLabel.Text = "-";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // alignmentButton
+            // AbilityPic
             // 
-            this.alignmentButton.Location = new System.Drawing.Point(159, 283);
-            this.alignmentButton.Name = "alignmentButton";
-            this.alignmentButton.Size = new System.Drawing.Size(167, 20);
-            this.alignmentButton.TabIndex = 17;
-            this.alignmentButton.Text = "Alignment";
-            this.alignmentButton.UseVisualStyleBackColor = true;
-            // 
-            // backstoryButton
-            // 
-            this.backstoryButton.Location = new System.Drawing.Point(547, 281);
-            this.backstoryButton.Name = "backstoryButton";
-            this.backstoryButton.Size = new System.Drawing.Size(167, 22);
-            this.backstoryButton.TabIndex = 18;
-            this.backstoryButton.Text = "Backstory";
-            this.backstoryButton.UseVisualStyleBackColor = true;
+            this.AbilityPic.Image = global::Dungeon_Crawler__.Properties.Resources.as2;
+            this.AbilityPic.Location = new System.Drawing.Point(8, 27);
+            this.AbilityPic.Name = "AbilityPic";
+            this.AbilityPic.Size = new System.Drawing.Size(98, 705);
+            this.AbilityPic.TabIndex = 3;
+            this.AbilityPic.TabStop = false;
             // 
             // fCChar
             // 
@@ -1553,24 +1549,24 @@
             this.CCharMenuStrip.ResumeLayout(false);
             this.CCharMenuStrip.PerformLayout();
             this.CCharTab.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.abilitiyscoreTab.ResumeLayout(false);
+            this.abilitiyscoreTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DEXUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CONUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.INTUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WISUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHAUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.STRUpDown)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.raceTab.ResumeLayout(false);
+            this.raceTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.languagesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traitsGrid)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.classTab.ResumeLayout(false);
+            this.classTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.levelingGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.featuresGrid)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.backgroundTab.ResumeLayout(false);
+            this.backgroundTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flawGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bondGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idealGrid)).EndInit();
@@ -1578,8 +1574,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bEquipmentGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.detailsTab.ResumeLayout(false);
+            this.detailsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1590,15 +1586,15 @@
 
         private System.Windows.Forms.MenuStrip CCharMenuStrip;
         private System.Windows.Forms.TabControl CCharTab;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage raceTab;
+        private System.Windows.Forms.TabPage classTab;
+        private System.Windows.Forms.TabPage backgroundTab;
         private System.Windows.Forms.PictureBox AbilityPic;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ListBox raceBox;
         private System.Windows.Forms.ListBox classBox;
         private System.Windows.Forms.ListBox backgroundBox;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage abilitiyscoreTab;
         private System.Windows.Forms.Label strLabel;
         private System.Windows.Forms.Label dexLabel;
         private System.Windows.Forms.Label conLabel;
@@ -1683,7 +1679,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Trait;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.Button commitButton;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage detailsTab;
         private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.Label ageLabel;
         private System.Windows.Forms.Label nameLabel;

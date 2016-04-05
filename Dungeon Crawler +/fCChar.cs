@@ -32,26 +32,6 @@ namespace Dungeon_Crawler__
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
 		/// <summary>
 		/// Executed when the rollButton is clicked. Rolls random ability scores </summary>
         private void rollButton_Click(object sender, EventArgs e)
@@ -172,6 +152,8 @@ namespace Dungeon_Crawler__
 
             //Call to create a new Race object, same name as currently selected item.
             Race selectRace = new Race(curItem);
+
+            raceTab.BackgroundImage = Properties.Resources.dragonborn;
 
 
             //Update data and display based on the currently selected item.
@@ -299,6 +281,7 @@ namespace Dungeon_Crawler__
             string curItem = classBox.SelectedItem.ToString();
 
             Class selectClass = new Class(curItem);
+
 
             //Clear the Features DataGrid of all columns and rows.
             featuresGrid.Columns.Clear();

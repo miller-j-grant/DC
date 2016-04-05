@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BitMiracle.Docotic.Pdf, Version=4.8.7331.0, Culture=neutral, PublicKeyToken=221650e173990c07, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -87,6 +88,12 @@
     <Compile Include="fCChar.Designer.cs">
       <DependentUpon>fCChar.cs</DependentUpon>
     </Compile>
+    <Compile Include="fCCSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCCSelection.Designer.cs">
+      <DependentUpon>fCCSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,23 +102,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Race.cs" />
     <EmbeddedResource Include="fCChar.resx">
       <DependentUpon>fCChar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCCSelection.resx">
+      <DependentUpon>fCCSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSplash.resx">
       <DependentUpon>fSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="BackgroundDataSet.xsc">
       <DependentUpon>BackgroundDataSet.xsd</DependentUpon>
     </None>
@@ -166,24 +176,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ability Scores.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ability score.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ability score1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\as0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\as1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\as11.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\as2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +186,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Background.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\background.png" />
+    <None Include="Resources\tiefling.png" />
+    <None Include="Resources\human.png" />
+    <None Include="Resources\halforc.png" />
+    <None Include="Resources\halfling.png" />
+    <None Include="Resources\halfelf.png" />
+    <None Include="Resources\gnome.png" />
+    <None Include="Resources\elf.png" />
+    <None Include="Resources\dwarf.png" />
+    <None Include="Resources\dragonborn.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

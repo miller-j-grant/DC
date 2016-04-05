@@ -86,6 +86,14 @@ namespace Dungeon_Crawler__
             race = new Race(s);
         }
 
+        public void setClass(string s)
+        {
+            pClass = new Class(s);
+        }
+        public void setBackground(string s)
+        {
+            bg = new Background(s);
+        }
 
         // setters for base ability scores 
         public void setBaseStats(int[] s)

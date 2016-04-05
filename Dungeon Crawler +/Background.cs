@@ -13,6 +13,7 @@ namespace Dungeon_Crawler__
     // but it is technically optional, sooooooo ><
     class Background
     {
+        public string background { get; }
         public ArrayList prof { get; }
         public ArrayList lang { get; }
         public ArrayList equip { get; }
@@ -46,6 +47,7 @@ namespace Dungeon_Crawler__
             ideal = new ArrayList();
             bond = new ArrayList();
             flaw = new ArrayList();
+            background = bg;
 
             if (bg.Equals("Acolyte"))
             {
