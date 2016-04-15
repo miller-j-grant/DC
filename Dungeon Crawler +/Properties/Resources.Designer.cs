@@ -63,6 +63,16 @@ namespace Dungeon_Crawler__.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _class {
+            get {
+                object obj = ResourceManager.GetObject("_class", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap as2 {
             get {
                 object obj = ResourceManager.GetObject("as2", resourceCulture);
@@ -113,6 +123,16 @@ namespace Dungeon_Crawler__.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dice {
+            get {
+                object obj = ResourceManager.GetObject("dice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dragonborn {
             get {
                 object obj = ResourceManager.GetObject("dragonborn", resourceCulture);
@@ -156,6 +176,16 @@ namespace Dungeon_Crawler__.Properties {
         internal static System.Drawing.Bitmap fighter0 {
             get {
                 object obj = ResourceManager.GetObject("fighter0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap final {
+            get {
+                object obj = ResourceManager.GetObject("final", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +256,16 @@ namespace Dungeon_Crawler__.Properties {
         internal static System.Drawing.Bitmap paladin0 {
             get {
                 object obj = ResourceManager.GetObject("paladin0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap race {
+            get {
+                object obj = ResourceManager.GetObject("race", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

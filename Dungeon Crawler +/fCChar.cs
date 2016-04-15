@@ -267,14 +267,19 @@ namespace Dungeon_Crawler__
             //Call to create a new Race object, same name as currently selected item.
             Race selectRace = new Race(curItem);
 
-            // Changes label text color so it can be easier seen with backgrounds
-            asmLabel.ForeColor = Color.White;
-            asmDisplayLabel.ForeColor = Color.White;
-            sizeLabel.ForeColor = Color.White;
-            sizeDisplayLabel.ForeColor = Color.White;
-            speedLabel.ForeColor = Color.White;
-            speedDisplayLabel.ForeColor = Color.White;
-            traitsLabel.ForeColor = Color.White;
+            // Changes labels, grids, and buttons to be visible
+            asmLabel.Visible = true;
+            asmDisplayLabel.Visible = true;
+            selectionButton.Visible = true;
+            sizeLabel.Visible = true;
+            sizeDisplayLabel.Visible = true;
+            speedLabel.Visible = true;
+            speedDisplayLabel.Visible = true;
+            traitsLabel.Visible = true;
+            traitsGrid.Visible = true;
+            languagesLabel.Visible = true;
+            languagesGrid.Visible = true;
+            raceButton.Visible = true;
 
             // Changes race background image based on selected Race
             switch (curItem)
@@ -362,13 +367,19 @@ namespace Dungeon_Crawler__
 
         private void classBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
             //Get the currently selected item.
             string curItem = classBox.SelectedItem.ToString();
 
             Class selectClass = new Class(curItem);
 
-            // changes featuresLabel font color to white to be readable over backgrounds
-            featuresLabel.ForeColor = Color.White;
+            // changes label, grid, and buttons to be visable
+            featuresLabel.Visible = true;
+            featuresGrid.Visible = true;
+            skillSelectionButton.Visible = true;
+            equipSelectionButton.Visible = true;
+            classButton.Visible = true;
 
             // changes class background image depending on what class is selected
             switch (curItem)

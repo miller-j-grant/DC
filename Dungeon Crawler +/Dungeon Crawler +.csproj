@@ -186,6 +186,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Background.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\race.png" />
+    <None Include="Resources\final.png" />
+    <None Include="Resources\dice.png" />
+    <None Include="Resources\class.png" />
     <None Include="Resources\warlock0.png" />
     <None Include="Resources\sorcerer0.png" />
     <None Include="Resources\rogue0.png" />
