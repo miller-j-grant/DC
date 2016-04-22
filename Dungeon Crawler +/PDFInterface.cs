@@ -80,7 +80,6 @@ namespace Dungeon_Crawler__
                         break;
                     }
 
-
                     PdfTextBox alignmentBox = (PdfTextBox)pdf.Widgets[5];
                     alignmentBox.Text = pc.alignment;
 
@@ -107,7 +106,7 @@ namespace Dungeon_Crawler__
 
                     //needs to important character's armor
                     PdfTextBox armorclassBox = (PdfTextBox)pdf.Widgets[10];
-                    if(pc.pClass.shield == true)
+                    if (pc.pClass.shield == true)
                     {
                         armorclassBox.Text = Calculations.calcAC(pc.pClass.armor.ac, pc.getDEXMod(), 2).ToString();
                     }
@@ -115,7 +114,7 @@ namespace Dungeon_Crawler__
                     {
                         armorclassBox.Text = Calculations.calcAC(pc.pClass.armor.ac, pc.getDEXMod(), 0).ToString();
                     }
-                    
+
 
                     PdfTextBox initiativeBox = (PdfTextBox)pdf.Widgets[11];
                     initiativeBox.Text = Calculations.calcInitiative(pc.getDEXMod(), 0).ToString();

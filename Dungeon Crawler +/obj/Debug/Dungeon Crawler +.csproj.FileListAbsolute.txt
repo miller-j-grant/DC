@@ -9,6 +9,8 @@ C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeo
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCCSelection.resources
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Splash.resources
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.StartUpForm.resources
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb
+C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csprojResolveAssemblyReference.cache

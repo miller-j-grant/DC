@@ -7,71 +7,71 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Crawler__
 {
-	/// <summary>
-	/// This class is for any and all calculations needed in the program. 
-	/// this includes: stat mods, hit points, initiavtive, passive wisdom,
-	/// proficiency bonus, armor class, attack bonus, and wealth. </summary>
-	/// <remarks>
-	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
-	/// version: 2/22/2016 </remarks>
+    /// <summary>
+    /// This class is for any and all calculations needed in the program. 
+    /// this includes: stat mods, hit points, initiavtive, passive wisdom,
+    /// proficiency bonus, armor class, attack bonus, and wealth. </summary>
+    /// <remarks>
+    /// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+    /// version: 2/22/2016 </remarks>
     public class Calculations
     {
         //calculated stats
-		/// <summary> Health Points of a character </summary>
+        /// <summary> Health Points of a character </summary>
         private static int hp;
-		/// <summary> Initiative of a character </summary>
+        /// <summary> Initiative of a character </summary>
         private static int initiative;
-		/// <summary> Passive Wisdom of a character </summary>
+        /// <summary> Passive Wisdom of a character </summary>
         private static int passwis;
-		/// <summary> Proficiency Bonus of a character </summary>
+        /// <summary> Proficiency Bonus of a character </summary>
         private static int profbonus;
-		/// <summary> Armor Class of a character </summary>
+        /// <summary> Armor Class of a character </summary>
         private static int ac;
-		/// <summary> Attack of a character </summary>
+        /// <summary> Attack of a character </summary>
         private static int atk;
-		/// <summary> Wealth of a character </summary>
+        /// <summary> Wealth of a character </summary>
         private static int wealth;
-		/// <summary> Array of mods for a character </summary>
+        /// <summary> Array of mods for a character </summary>
         private static int[] mods;
-		/// <summary> Skills of a character. 
-		/// {0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception, 
-		/// 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine, 
-		/// 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion, 
-		/// 15 Sleight of Hand, 16 Stealth, 17 Survival. </summary>
+        /// <summary> Skills of a character. 
+        /// {0 Acrobatics, 1 Animal Handing, 2 Arcana, 3 Athletics, 4 Deception, 
+        /// 5 History, 6 Insight, 7 Intimidation, 8 Investigation, 9 Medicine, 
+        /// 10 Nature, 11 Perception, 12 Performance, 13 Persuasion, 14 Religion, 
+        /// 15 Sleight of Hand, 16 Stealth, 17 Survival. </summary>
         private static int[] skills;
-		/// <summary> Array of saves of a character </summary>
+        /// <summary> Array of saves of a character </summary>
         private static int[] saves;
-		/// <summary> used to generate a random number </summary>
+        /// <summary> used to generate a random number </summary>
         private static Random r = new Random();
-		/// <summary> represents a random number simulating a roll of die </summary>
+        /// <summary> represents a random number simulating a roll of die </summary>
         private static int roll;
-		/// <summary>  </summary>
+        /// <summary>  </summary>
         private static int drop;
-		/// <summary> Ability Score </summary>
+        /// <summary> Ability Score </summary>
         private static int abilityscore;
-		/// <summary> Point Buy Strength </summary>
+        /// <summary> Point Buy Strength </summary>
         private static int[] pbSTR = new int[2];
-		/// <summary> Point Buy Constitution </summary>
+        /// <summary> Point Buy Constitution </summary>
         private static int[] pbCON = new int[2];
-		/// <summary> Point Buy Dexterity </summary>
+        /// <summary> Point Buy Dexterity </summary>
         private static int[] pbDEX = new int[2];
-		/// <summary> Point Buy Intelligence </summary>
+        /// <summary> Point Buy Intelligence </summary>
         private static int[] pbINT = new int[2];
-		/// <summary> Point Buy Wisdom </summary>
+        /// <summary> Point Buy Wisdom </summary>
         private static int[] pbWIS = new int[2];
-		/// <summary> Point Buy Charisma </summary>
+        /// <summary> Point Buy Charisma </summary>
         private static int[] pbCHA = new int[2];
 
-		/// <summary>
+        /// <summary>
         /// Rolls a random number between 1 and d and sets the number to roll </summary>
-		/// <param name="d"> The limit of the roll </param>
+        /// <param name="d"> The limit of the roll </param>
         public static int rollD(int d)
         {
-            roll = r.Next(1, (d+1));
+            roll = r.Next(1, (d + 1));
             return roll;
         }
 
-		/// <summary>
+        /// <summary>
         /// Rolls a randomized number for the ability score </summary>
         public static int rollAbilityScore()
         {
@@ -90,11 +90,11 @@ namespace Dungeon_Crawler__
             return abilityscore;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates skills of a character, based on parameters </summary>
-		/// <param name="mod"> Contains mods of a character </param>
-		/// <param name="prof"> Contains proficiencies of a character </param>
-		/// <param name="profbonus"> Contains proficiency bonus of a character </param>
+        /// <param name="mod"> Contains mods of a character </param>
+        /// <param name="prof"> Contains proficiencies of a character </param>
+        /// <param name="profbonus"> Contains proficiency bonus of a character </param>
         public static int[] calcSkills(int[] mod, ArrayList prof, int probonus)
         {
             skills = new int[18];
@@ -221,11 +221,11 @@ namespace Dungeon_Crawler__
             return skills;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates saves of a character, based on parameters </summary>
-		/// <param name="mod"> Contains mods of a character </param>
-		/// <param name="prof"> Contains proficiencies of a character </param>
-		/// <param name="profbonus"> Contains proficiency bonus of a character </param>
+        /// <param name="mod"> Contains mods of a character </param>
+        /// <param name="prof"> Contains proficiencies of a character </param>
+        /// <param name="profbonus"> Contains proficiency bonus of a character </param>
         public static int[] calcSaves(int[] mod, ArrayList prof, int probonus)
         {
             saves = new int[6];
@@ -234,11 +234,11 @@ namespace Dungeon_Crawler__
                 switch (x)
                 {
                     case 0:
-                            if (prof.Contains("Strength") == true)
-                                saves[x] = (mod[x] + probonus);
-                            else
-                                saves[x] = mod[x];
-                            break;
+                        if (prof.Contains("Strength") == true)
+                            saves[x] = (mod[x] + probonus);
+                        else
+                            saves[x] = mod[x];
+                        break;
 
                     case 1:
                         if (prof.Contains("Dexterity") == true)
@@ -282,9 +282,9 @@ namespace Dungeon_Crawler__
             return saves;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates mod </summary>
-		/// <param name="m"> mod being calculated </param>
+        /// <param name="m"> mod being calculated </param>
         public static int calcMod(int m)
         {
             if (m == 1)
@@ -374,9 +374,9 @@ namespace Dungeon_Crawler__
 
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates array of mods </summary>
-		/// <param name="m"> array of mods being calculated </param>
+        /// <param name="m"> array of mods being calculated </param>
         public static int[] calcMods(int[] m)
         {
             mods = new int[6];
@@ -466,11 +466,11 @@ namespace Dungeon_Crawler__
             return mods;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates Health Points of a character, based on parameters </summary>
-		/// <param name="lvl"> Level of a character </param>
-		/// <param name="conMod"> Constitution Modifier of a character </param>
-		/// <param name="hd"> Hit Dice of a character </param>
+        /// <param name="lvl"> Level of a character </param>
+        /// <param name="conMod"> Constitution Modifier of a character </param>
+        /// <param name="hd"> Hit Dice of a character </param>
         public static int calcHP(int lvl, int conMod, int hd)
         {
             hp = hd + conMod;
@@ -481,19 +481,19 @@ namespace Dungeon_Crawler__
             return hp;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates Armor Class of a character, based on parameters </summary>
-		/// <param name="armor"> Armor level of a character </param>
-		/// <param name="dexMod"> Dexterity Modifier of a character </param>
-		/// <param name="shield"> 2 if wearing a shield, 0 if not </param>
+        /// <param name="armor"> Armor level of a character </param>
+        /// <param name="dexMod"> Dexterity Modifier of a character </param>
+        /// <param name="shield"> 2 if wearing a shield, 0 if not </param>
         public static int calcAC(int armor, int dexMod, int shield)
         {
-            if(armor == 16)
+            if (armor == 16)
             {
                 return (armor + 0 + shield);
             }
 
-            if(armor == 14 && dexMod > 2)
+            if (armor == 14 && dexMod > 2)
             {
                 return (armor + 2 + shield);
             }
@@ -507,12 +507,12 @@ namespace Dungeon_Crawler__
             {
                 return (armor + dexMod + shield);
             }
-            
+
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates Proficiency of a character </summary>
-		/// <param name="lvl"> Level of a character </param>
+        /// <param name="lvl"> Level of a character </param>
         public static int calcProf(int lvl)
         {
             if (lvl > 4 && lvl < 9)
@@ -527,26 +527,26 @@ namespace Dungeon_Crawler__
                 return 2;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates Passive Wisdom of a character </summary>
-		/// <param name="percep"> Perception of a character </param>
+        /// <param name="percep"> Perception of a character </param>
         public static int calcPassWis(int percep)
         {
             return (10 + percep);
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates Initiative of a character, based on parameters </summary>
-		/// <param name="dexMod"> Dexterity Modifier of a character </param>
-		/// <param name="extra"> extra of a character </param>
+        /// <param name="dexMod"> Dexterity Modifier of a character </param>
+        /// <param name="extra"> extra of a character </param>
         public static int calcInitiative(int dexMod, int extra)
         {
             return dexMod + extra;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calculates Wealth of a character </summary>
-		/// <param name="pClass"> String representation of a character's Class </param>
+        /// <param name="pClass"> String representation of a character's Class </param>
         public static int calcWealth(String pClass)
         {
             wealth = 0;
@@ -599,29 +599,29 @@ namespace Dungeon_Crawler__
 
         //======addTo calculators======
 
-		/// <summary>
+        /// <summary>
         /// Adds a specified value to a character stat </summary>
-		/// <param name="stats"> array of stats of a character </param>
-		/// <param name="s"> index of the stat of interest in the stats array</param>
-		/// <param name="amount"> amount to be added to the stat </param>
+        /// <param name="stats"> array of stats of a character </param>
+        /// <param name="s"> index of the stat of interest in the stats array</param>
+        /// <param name="amount"> amount to be added to the stat </param>
         public static int addToStat(int[] stats, int s, int amount)
         {
             return (stats[s] + amount);
         }
 
-		/// <summary>
+        /// <summary>
         /// Adds a specified value to a character skill </summary>
-		/// <param name="skills"> array of skills of a character </param>
-		/// <param name="s"> index of the stat of interest in the skills array</param>
-		/// <param name="amount"> amount to be added to the skill </param>
+        /// <param name="skills"> array of skills of a character </param>
+        /// <param name="s"> index of the stat of interest in the skills array</param>
+        /// <param name="amount"> amount to be added to the skill </param>
         public static int addToSkill(int[] skills, int s, int amount)
         {
             return (skills[s] + amount);
         }
 
-		/// <summary>
+        /// <summary>
         /// Computes to Point Buy Cost depending on the attribute </summary>
-		/// <param name="attribute"> attribute that determines point buy cost </param>
+        /// <param name="attribute"> attribute that determines point buy cost </param>
         public static int pointBuyCost(decimal attribute)
         {
             int cost = 0;
@@ -644,11 +644,11 @@ namespace Dungeon_Crawler__
             return cost;
         }
 
-		/// <summary>
+        /// <summary>
         /// Calulates the point buy points after updating a specified attribute </summary>
-		/// <param name="points"> current point buy points </param>
-		/// <param name="newValue"> newValue for the specified attribute </param>
-		/// <param name="name"> name of the specific value (Str, Con, Dex, Int, Wis, Cha) </param>
+        /// <param name="points"> current point buy points </param>
+        /// <param name="newValue"> newValue for the specified attribute </param>
+        /// <param name="name"> name of the specific value (Str, Con, Dex, Int, Wis, Cha) </param>
         public static int pointBuyPoints(int points, decimal newValue, string name)
         {
             if (name == "str")
@@ -661,7 +661,7 @@ namespace Dungeon_Crawler__
                 pbSTR[0] = pbSTR[1];
                 pbSTR[1] = Convert.ToInt32(newValue);
                 return points + pointBuyCost(pbSTR[0]) - pointBuyCost(pbSTR[1]);
-            }   
+            }
             else if (name == "con")
             {
                 if (pbCON[0].Equals(null))
@@ -719,8 +719,154 @@ namespace Dungeon_Crawler__
             }
         }
 
+        public static string randomRace()
+        {
+            string race;
+            int roll = rollD(9);
+            switch (roll)
+            {
+                case 1:
+                    race = "Dwarf";
+                    break;
+                case 2:
+                    race = "Elf";
+                    break;
+                case 3:
+                    race = "Halfing";
+                    break;
+                case 4:
+                    race = "Human";
+                    break;
+                case 5:
+                    race = "Dragonborn";
+                    break;
+                case 6:
+                    race = "Gnome";
+                    break;
+                case 7:
+                    race = "Half-Elf";
+                    break;
+                case 8:
+                    race = "Half-Orc";
+                    break;
+                case 9:
+                    race = "Tiefling";
+                    break;
+                default:
+                    race = "";
+                    break;
+            }
+            return race;
+        }
+
+        public static string randomClass()
+        {
+            string rclass;
+            int roll = rollD(12);
+            switch (roll)
+            {
+                case 1:
+                    rclass = "Barbarian";
+                    break;
+                case 2:
+                    rclass = "Bard";
+                    break;
+                case 3:
+                    rclass = "Cleric";
+                    break;
+                case 4:
+                    rclass = "Druid";
+                    break;
+                case 5:
+                    rclass = "Fighter";
+                    break;
+                case 6:
+                    rclass = "Monk";
+                    break;
+                case 7:
+                    rclass = "Paladin";
+                    break;
+                case 8:
+                    rclass = "Ranger";
+                    break;
+                case 9:
+                    rclass = "Rogue";
+                    break;
+                case 10:
+                    rclass = "Sorcerer";
+                    break;
+                case 11:
+                    rclass = "Warlock";
+                    break;
+                case 12:
+                    rclass = "Wizard";
+                    break;
+                default:
+                    rclass = "";
+                    break;
+            }
+            return rclass;
+        }
+
+        public static string randomBackground()
+        {
+            string background;
+            int roll = rollD(13);
+            switch (roll)
+            {
+                case 1:
+                    background = "Acolyte";
+                    break;
+                case 2:
+                    background = "Charlatan";
+                    break;
+                case 3:
+                    background = "Criminal";
+                    break;
+                case 4:
+                    background = "Entertainer";
+                    break;
+                case 5:
+                    background = "Folk Hero";
+                    break;
+                case 6:
+                    background = "Guild Artisan";
+                    break;
+                case 7:
+                    background = "Hermit";
+                    break;
+                case 8:
+                    background = "Noble";
+                    break;
+                case 9:
+                    background = "Outlander";
+                    break;
+                case 10:
+                    background = "Sage";
+                    break;
+                case 11:
+                    background = "Sailor";
+                    break;
+                case 12:
+                    background = "Soldier";
+                    break;
+                case 13:
+                    background = "Urchin";
+                    break;
+                default:
+                    background = "";
+                    break;
+            }
+            return background;
+        }
+
+        public static string randomName()
+        {
+            string[] names = new string[11] { "", "Maverick Witchvictor", "Talon Floraivy", "Aeon Griffon", "Raven Honor", "Magus Legend",
+                "Lord Beastlady", "Seraphim Dawn", "King Queen", "Spirit Paradox", "Ragnarok Eternitydread"};
+            return names[rollD(10)];
+        }
 
     }
-
-
 }
+

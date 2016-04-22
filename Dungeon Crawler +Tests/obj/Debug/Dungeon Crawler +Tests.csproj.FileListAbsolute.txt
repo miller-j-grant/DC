@@ -10,3 +10,15 @@ C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeo
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +Tests\obj\Debug\Dungeon Crawler +Tests.csprojResolveAssemblyReference.cache
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +Tests\obj\Debug\Dungeon Crawler +Tests.dll
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +Tests\obj\Debug\Dungeon Crawler +Tests.pdb
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\Background.mdf
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\Background_log.ldf
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\Dungeon Crawler +Tests.dll
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\Dungeon Crawler +Tests.pdb
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\Dungeon Crawler +.exe
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\BitMiracle.Docotic.Pdf.dll
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\Dungeon Crawler +.pdb
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\bin\Debug\BitMiracle.Docotic.Pdf.xml
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\obj\Debug\Dungeon Crawler +Tests.csprojResolveAssemblyReference.cache
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\obj\Debug\Dungeon Crawler +Tests.dll
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +Tests\obj\Debug\Dungeon Crawler +Tests.pdb

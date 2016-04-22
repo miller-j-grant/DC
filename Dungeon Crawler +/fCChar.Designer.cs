@@ -1558,6 +1558,15 @@
             this.strModLabel.Text = "-";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // AbilityPic
+            // 
+            this.AbilityPic.Image = global::Dungeon_Crawler__.Properties.Resources.as2;
+            this.AbilityPic.Location = new System.Drawing.Point(8, 27);
+            this.AbilityPic.Name = "AbilityPic";
+            this.AbilityPic.Size = new System.Drawing.Size(98, 705);
+            this.AbilityPic.TabIndex = 3;
+            this.AbilityPic.TabStop = false;
+            // 
             // pbSTRButton
             // 
             this.pbSTRButton.Location = new System.Drawing.Point(375, 300);
@@ -1611,15 +1620,6 @@
             this.pbDEXButton.TabIndex = 56;
             this.pbDEXButton.Text = "Dexterity";
             this.pbDEXButton.UseVisualStyleBackColor = true;
-            //
-            // selectionButton
-            // 
-            this.AbilityPic.Image = global::Dungeon_Crawler__.Properties.Resources.as2;
-            this.AbilityPic.Location = new System.Drawing.Point(8, 27);
-            this.AbilityPic.Name = "AbilityPic";
-            this.AbilityPic.Size = new System.Drawing.Size(98, 705);
-            this.AbilityPic.TabIndex = 3;
-            this.AbilityPic.TabStop = false;
             // 
             // fCChar
             // 
@@ -1643,7 +1643,7 @@
             this.Controls.Add(this.CCharMenuStrip);
             this.MainMenuStrip = this.CCharMenuStrip;
             this.Name = "fCChar";
-            this.Text = "Dungeon Crawler +";
+            this.Text = "xx";
             this.CCharMenuStrip.ResumeLayout(false);
             this.CCharMenuStrip.PerformLayout();
             this.CCharTab.ResumeLayout(false);
