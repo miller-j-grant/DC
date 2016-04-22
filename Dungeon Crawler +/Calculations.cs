@@ -722,7 +722,7 @@ namespace Dungeon_Crawler__
         public static string randomRace()
         {
             string race;
-            int roll = rollD(9);
+            int roll = rollD(8);
             switch (roll)
             {
                 case 1:
