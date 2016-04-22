@@ -16,3 +16,15 @@ C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeo
 C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe.config
 C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
 C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\bin\Debug\Background.mdf
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\bin\Debug\Background_log.ldf
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.pdb
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\bin\Debug\BitMiracle.Docotic.Pdf.xml
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csprojResolveAssemblyReference.cache
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCChar.resources
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.fCCSelection.resources
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Splash.resources
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.Properties.Resources.resources
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon_Crawler__.StartUpForm.resources
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csproj.GenerateResource.Cache
