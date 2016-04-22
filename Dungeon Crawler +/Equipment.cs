@@ -8,32 +8,16 @@ namespace Dungeon_Crawler__
 {
     class Equipment
     {
-
-        private string equip { get; }
-
-        private string type { get; }
-        private string subtype { get; }
-
-        // might wanna do this in terms of cp and convert?
-        private int cost { get; }
-
-        //weight
-        private int lb { get; }
-
+        public string name { get; set; }
+        public string type { get; }
 
         //armor only
-        private int ac { get; }
-        private int maxdex { get; }
-        private int reqstr { get; }
-        // true: gives disadvantage to steath; false: does not
-        Boolean steath { get; }
+        public int ac { get; set; }
 
         // weapon only
-        private string roll { get; }
+        public string roll { get; set; }
         // damage type: piercing, bludgeoning, slashing, -
-        private string damage { get; }
-        // properties
-        private string[] prop { get; }
+        public string damage { get; set; }
 
 
         public Equipment()
@@ -42,22 +26,17 @@ namespace Dungeon_Crawler__
         }
 
         // equipment is split into  three categories: Armor, Weapon, Tool
-        public Equipment(string cate, string name)
+        public Equipment(string cate, string n)
         {
-
-            if (cate.Equals("Armor"))
+            
+            if (cate.Equals("ARMOR"))
             {
-                Armor(name);
+                Armor(n);
             }
 
-            if (cate.Equals("Weapon"))
+            if (cate.Equals("WEAPON"))
             {
-                Weapon(name);
-            }
-
-            if (cate.Equals("Tool"))
-            {
-                Tool(name);
+                Weapon(n);
             }
             else
             {
@@ -66,38 +45,139 @@ namespace Dungeon_Crawler__
 
         }
 
-        // doesn't like my constructors at he moment, but it's 5am and I'm tired soooooo I'll worry about that later
-
-        public void Armor(string name)
+        public Equipment Armor(string n)
         {
-            if (name.Equals("Padded"))
+            Equipment armor = new Equipment();
+            if (n.Equals("Leather armor"))
             {
-                // converted to cp
-                //cost = 500;
-                //lb = 8;
-                //subtype = "Light";
-                //ac = 11;
-                //maxdex = 0;
-                //reqstr = 0;
-                //steath = true;
+                name = "Leather Armor";
+                ac = 11;
             }
 
-            if (name.Equals("Leather"))
+            else if (n.Equals("Scale Mail"))
             {
-                //gg you're not a nerd with padded armor
+                name = "Scale Mail";
+                ac = 14;
             }
+
+            else if (n.Equals("Chain Mail"))
+            {
+                name = "Chain Mail";
+                ac = 16;
+            }
+            else
+            {
+                name = "Unarmored";
+                ac = 10;
+            }
+
+            return armor;
         }
 
-        public void Weapon(string name)
+        public Equipment Weapon(string n)
         {
+            Equipment weapon = new Equipment();
+            
+            if (n.Equals("Dagger"))
+            {
+                name = "Dagger";
+                roll = "1d4";
+                damage = "P";
+            }
 
+            else if (n.Equals("Handaxe"))
+            {
+                name = "Handaxe";
+                roll = "1d6";
+                damage = "S";
+            }
+
+            else if (n.Equals("Javelin"))
+            {
+                name = "Javelin";
+                roll = "1d6";
+                damage = "P";
+            }
+
+            else if (n.Equals("Mace"))
+            {
+                name = "Mace";
+                roll = "2d6";
+                damage = "B";
+            }
+
+            else if (n.Equals("Quarterstaff"))
+            {
+                name = "Quarterstaff";
+                roll = "1d6";
+                damage = "B";
+            }
+
+            else if (n.Equals("Light Crossbow"))
+            {
+                name = "Light Crossbow";
+                roll = "1d8";
+                damage = "P";
+            }
+
+            else if (n.Equals("Dart"))
+            {
+                name = "Dart";
+                roll = "1d4";
+                damage = "P";
+            }
+
+            else if (n.Equals("Shortbow"))
+            {
+                name = "Shortbow";
+                roll = "1d6";
+                damage = "P";
+            }
+
+            else if (n.Equals("Greataxe"))
+            {
+                name = "Greataxe";
+                roll = "1d12";
+                damage = "S";
+            }
+
+            else if (n.Equals("Rapier"))
+            {
+                name = "Rapier";
+                roll = "1d8";
+                damage = "P";
+            }
+
+            else if (n.Equals("Scimitar"))
+            {
+                name = "Scimitar";
+                roll = "1d6";
+                damage = "S";
+            }
+
+            else if (n.Equals("Shortsword"))
+            {
+                name = "Shortsword";
+                roll = "1d6";
+                damage = "P";
+            }
+
+            else if (n.Equals("Longbow"))
+            {
+                name = "Longbow";
+                roll = "1d8";
+                damage = "P";
+            }
+
+            else
+            {
+                name = "Unarmed";
+                roll = "1";
+                damage = "B";
+            }
+
+            return weapon;
         }
-
-        public void Tool(string name)
-        {
-
-        }
-
 
     }
 }

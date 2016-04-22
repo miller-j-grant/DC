@@ -31,19 +31,6 @@
             this.CCharMenuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.CCharTab = new System.Windows.Forms.TabControl();
-            this.strLabel = new System.Windows.Forms.Label();
-            this.dexLabel = new System.Windows.Forms.Label();
-            this.conLabel = new System.Windows.Forms.Label();
-            this.intLabel = new System.Windows.Forms.Label();
-            this.chaLabel = new System.Windows.Forms.Label();
-            this.wisLabel = new System.Windows.Forms.Label();
-            this.chaModLabel = new System.Windows.Forms.Label();
-            this.wisModLabel = new System.Windows.Forms.Label();
-            this.intModLabel = new System.Windows.Forms.Label();
-            this.conModLabel = new System.Windows.Forms.Label();
-            this.dexModLabel = new System.Windows.Forms.Label();
-            this.strModLabel = new System.Windows.Forms.Label();
-            this.AbilityPic = new System.Windows.Forms.PictureBox();
             this.abilitiyscoreTab = new System.Windows.Forms.TabPage();
             this.pbCommitButton = new System.Windows.Forms.Button();
             this.commitButton = new System.Windows.Forms.Button();
@@ -91,7 +78,6 @@
             this.classicLabel = new System.Windows.Forms.Label();
             this.rollButton = new System.Windows.Forms.Button();
             this.raceTab = new System.Windows.Forms.TabPage();
-            this.selectionButton = new System.Windows.Forms.Button();
             this.raceButton = new System.Windows.Forms.Button();
             this.languagesGrid = new System.Windows.Forms.DataGridView();
             this.languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,8 +95,6 @@
             this.raceBox = new System.Windows.Forms.ListBox();
             this.classTab = new System.Windows.Forms.TabPage();
             this.classButton = new System.Windows.Forms.Button();
-            this.equipSelectionButton = new System.Windows.Forms.Button();
-            this.skillSelectionButton = new System.Windows.Forms.Button();
             this.featuresGrid = new System.Windows.Forms.DataGridView();
             this.featuresLabel = new System.Windows.Forms.Label();
             this.classBox = new System.Windows.Forms.ListBox();
@@ -129,12 +113,14 @@
             this.proficienciesLabel = new System.Windows.Forms.Label();
             this.backgroundBox = new System.Windows.Forms.ListBox();
             this.detailsTab = new System.Windows.Forms.TabPage();
-            this.backstoryButton = new System.Windows.Forms.Button();
-            this.alignmentButton = new System.Windows.Forms.Button();
+            this.backstoryLabel = new System.Windows.Forms.Label();
+            this.backstoryTextBox = new System.Windows.Forms.RichTextBox();
+            this.alignmentLabel = new System.Windows.Forms.Label();
+            this.alignmentTextBox = new System.Windows.Forms.TextBox();
             this.playerLabel = new System.Windows.Forms.Label();
             this.playerTextBox = new System.Windows.Forms.TextBox();
             this.finalButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.eyesBox = new System.Windows.Forms.TextBox();
             this.hairTextBox = new System.Windows.Forms.TextBox();
             this.skinTextBox = new System.Windows.Forms.TextBox();
             this.eyesLabel = new System.Windows.Forms.Label();
@@ -148,9 +134,21 @@
             this.ageLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.strLabel = new System.Windows.Forms.Label();
+            this.dexLabel = new System.Windows.Forms.Label();
+            this.conLabel = new System.Windows.Forms.Label();
+            this.intLabel = new System.Windows.Forms.Label();
+            this.chaLabel = new System.Windows.Forms.Label();
+            this.wisLabel = new System.Windows.Forms.Label();
+            this.chaModLabel = new System.Windows.Forms.Label();
+            this.wisModLabel = new System.Windows.Forms.Label();
+            this.intModLabel = new System.Windows.Forms.Label();
+            this.conModLabel = new System.Windows.Forms.Label();
+            this.dexModLabel = new System.Windows.Forms.Label();
+            this.strModLabel = new System.Windows.Forms.Label();
+            this.AbilityPic = new System.Windows.Forms.PictureBox();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
             this.abilitiyscoreTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DEXUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CONUpDown)).BeginInit();
@@ -172,6 +170,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bLanguagesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).BeginInit();
             this.detailsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).BeginInit();
             this.SuspendLayout();
             // 
             // CCharMenuStrip
@@ -204,142 +203,6 @@
             this.CCharTab.SelectedIndex = 0;
             this.CCharTab.Size = new System.Drawing.Size(1211, 709);
             this.CCharTab.TabIndex = 1;
-            // 
-            // strLabel
-            // 
-            this.strLabel.BackColor = System.Drawing.Color.White;
-            this.strLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.strLabel.Location = new System.Drawing.Point(29, 73);
-            this.strLabel.Name = "strLabel";
-            this.strLabel.Size = new System.Drawing.Size(51, 37);
-            this.strLabel.TabIndex = 4;
-            this.strLabel.Text = "-";
-            this.strLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dexLabel
-            // 
-            this.dexLabel.BackColor = System.Drawing.Color.White;
-            this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexLabel.Location = new System.Drawing.Point(29, 184);
-            this.dexLabel.Name = "dexLabel";
-            this.dexLabel.Size = new System.Drawing.Size(51, 37);
-            this.dexLabel.TabIndex = 5;
-            this.dexLabel.Text = "-";
-            this.dexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // conLabel
-            // 
-            this.conLabel.BackColor = System.Drawing.Color.White;
-            this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conLabel.Location = new System.Drawing.Point(29, 294);
-            this.conLabel.Name = "conLabel";
-            this.conLabel.Size = new System.Drawing.Size(51, 37);
-            this.conLabel.TabIndex = 6;
-            this.conLabel.Text = "-";
-            this.conLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // intLabel
-            // 
-            this.intLabel.BackColor = System.Drawing.Color.White;
-            this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intLabel.Location = new System.Drawing.Point(29, 407);
-            this.intLabel.Name = "intLabel";
-            this.intLabel.Size = new System.Drawing.Size(51, 37);
-            this.intLabel.TabIndex = 7;
-            this.intLabel.Text = "-";
-            this.intLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // chaLabel
-            // 
-            this.chaLabel.BackColor = System.Drawing.Color.White;
-            this.chaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chaLabel.Location = new System.Drawing.Point(29, 631);
-            this.chaLabel.Name = "chaLabel";
-            this.chaLabel.Size = new System.Drawing.Size(53, 40);
-            this.chaLabel.TabIndex = 6;
-            this.chaLabel.Text = "-";
-            this.chaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // wisLabel
-            // 
-            this.wisLabel.BackColor = System.Drawing.Color.White;
-            this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wisLabel.Location = new System.Drawing.Point(28, 519);
-            this.wisLabel.Name = "wisLabel";
-            this.wisLabel.Size = new System.Drawing.Size(51, 37);
-            this.wisLabel.TabIndex = 7;
-            this.wisLabel.Text = "-";
-            this.wisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // chaModLabel
-            // 
-            this.chaModLabel.BackColor = System.Drawing.Color.White;
-            this.chaModLabel.Location = new System.Drawing.Point(46, 679);
-            this.chaModLabel.Name = "chaModLabel";
-            this.chaModLabel.Size = new System.Drawing.Size(20, 13);
-            this.chaModLabel.TabIndex = 6;
-            this.chaModLabel.Text = "-";
-            this.chaModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // wisModLabel
-            // 
-            this.wisModLabel.BackColor = System.Drawing.Color.White;
-            this.wisModLabel.Location = new System.Drawing.Point(46, 568);
-            this.wisModLabel.Name = "wisModLabel";
-            this.wisModLabel.Size = new System.Drawing.Size(20, 13);
-            this.wisModLabel.TabIndex = 7;
-            this.wisModLabel.Text = "-";
-            this.wisModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // intModLabel
-            // 
-            this.intModLabel.BackColor = System.Drawing.Color.White;
-            this.intModLabel.Location = new System.Drawing.Point(46, 459);
-            this.intModLabel.Name = "intModLabel";
-            this.intModLabel.Size = new System.Drawing.Size(20, 13);
-            this.intModLabel.TabIndex = 8;
-            this.intModLabel.Text = "-";
-            this.intModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // conModLabel
-            // 
-            this.conModLabel.BackColor = System.Drawing.Color.White;
-            this.conModLabel.Location = new System.Drawing.Point(45, 350);
-            this.conModLabel.Name = "conModLabel";
-            this.conModLabel.Size = new System.Drawing.Size(20, 13);
-            this.conModLabel.TabIndex = 9;
-            this.conModLabel.Text = "-";
-            this.conModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dexModLabel
-            // 
-            this.dexModLabel.BackColor = System.Drawing.Color.White;
-            this.dexModLabel.Location = new System.Drawing.Point(45, 236);
-            this.dexModLabel.Name = "dexModLabel";
-            this.dexModLabel.Size = new System.Drawing.Size(20, 13);
-            this.dexModLabel.TabIndex = 10;
-            this.dexModLabel.Text = "-";
-            this.dexModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // strModLabel
-            // 
-            this.strModLabel.BackColor = System.Drawing.Color.White;
-            this.strModLabel.Location = new System.Drawing.Point(45, 125);
-            this.strModLabel.Name = "strModLabel";
-            this.strModLabel.Size = new System.Drawing.Size(20, 13);
-            this.strModLabel.TabIndex = 11;
-            this.strModLabel.Text = "-";
-            this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // AbilityPic
-            // 
-            this.AbilityPic.Image = global::Dungeon_Crawler__.Properties.Resources.as2;
-            this.AbilityPic.Location = new System.Drawing.Point(8, 27);
-            this.AbilityPic.Name = "AbilityPic";
-            this.AbilityPic.Size = new System.Drawing.Size(98, 705);
-            this.AbilityPic.TabIndex = 3;
-            this.AbilityPic.TabStop = false;
             // 
             // abilitiyscoreTab
             // 
@@ -887,7 +750,6 @@
             // 
             this.raceTab.BackColor = System.Drawing.Color.Transparent;
             this.raceTab.BackgroundImage = global::Dungeon_Crawler__.Properties.Resources.race;
-            this.raceTab.Controls.Add(this.selectionButton);
             this.raceTab.Controls.Add(this.raceButton);
             this.raceTab.Controls.Add(this.languagesGrid);
             this.raceTab.Controls.Add(this.traitsGrid);
@@ -906,17 +768,6 @@
             this.raceTab.Size = new System.Drawing.Size(1203, 683);
             this.raceTab.TabIndex = 0;
             this.raceTab.Text = "Race";
-            // 
-            // selectionButton
-            // 
-            this.selectionButton.Location = new System.Drawing.Point(693, 24);
-            this.selectionButton.Name = "selectionButton";
-            this.selectionButton.Size = new System.Drawing.Size(106, 41);
-            this.selectionButton.TabIndex = 24;
-            this.selectionButton.Text = "Make Available Selections";
-            this.selectionButton.UseVisualStyleBackColor = true;
-            this.selectionButton.Visible = false;
-            this.selectionButton.Click += new System.EventHandler(this.selectionButton_Click);
             // 
             // raceButton
             // 
@@ -1093,8 +944,6 @@
             // 
             this.classTab.BackgroundImage = global::Dungeon_Crawler__.Properties.Resources._class;
             this.classTab.Controls.Add(this.classButton);
-            this.classTab.Controls.Add(this.equipSelectionButton);
-            this.classTab.Controls.Add(this.skillSelectionButton);
             this.classTab.Controls.Add(this.featuresGrid);
             this.classTab.Controls.Add(this.featuresLabel);
             this.classTab.Controls.Add(this.classBox);
@@ -1116,27 +965,6 @@
             this.classButton.UseVisualStyleBackColor = true;
             this.classButton.Visible = false;
             this.classButton.Click += new System.EventHandler(this.classButton_Click);
-            // 
-            // equipSelectionButton
-            // 
-            this.equipSelectionButton.Location = new System.Drawing.Point(253, 414);
-            this.equipSelectionButton.Name = "equipSelectionButton";
-            this.equipSelectionButton.Size = new System.Drawing.Size(158, 23);
-            this.equipSelectionButton.TabIndex = 30;
-            this.equipSelectionButton.Text = "Make Equipment Selections";
-            this.equipSelectionButton.UseVisualStyleBackColor = true;
-            this.equipSelectionButton.Visible = false;
-            // 
-            // skillSelectionButton
-            // 
-            this.skillSelectionButton.Location = new System.Drawing.Point(253, 376);
-            this.skillSelectionButton.Name = "skillSelectionButton";
-            this.skillSelectionButton.Size = new System.Drawing.Size(133, 23);
-            this.skillSelectionButton.TabIndex = 29;
-            this.skillSelectionButton.Text = "Make Skill Selections";
-            this.skillSelectionButton.UseVisualStyleBackColor = true;
-            this.skillSelectionButton.Visible = false;
-            this.skillSelectionButton.Click += new System.EventHandler(this.skillSelectionButton_Click);
             // 
             // featuresGrid
             // 
@@ -1380,12 +1208,14 @@
             // detailsTab
             // 
             this.detailsTab.BackgroundImage = global::Dungeon_Crawler__.Properties.Resources.final;
-            this.detailsTab.Controls.Add(this.backstoryButton);
-            this.detailsTab.Controls.Add(this.alignmentButton);
+            this.detailsTab.Controls.Add(this.backstoryLabel);
+            this.detailsTab.Controls.Add(this.backstoryTextBox);
+            this.detailsTab.Controls.Add(this.alignmentLabel);
+            this.detailsTab.Controls.Add(this.alignmentTextBox);
             this.detailsTab.Controls.Add(this.playerLabel);
             this.detailsTab.Controls.Add(this.playerTextBox);
             this.detailsTab.Controls.Add(this.finalButton);
-            this.detailsTab.Controls.Add(this.textBox3);
+            this.detailsTab.Controls.Add(this.eyesBox);
             this.detailsTab.Controls.Add(this.hairTextBox);
             this.detailsTab.Controls.Add(this.skinTextBox);
             this.detailsTab.Controls.Add(this.eyesLabel);
@@ -1406,23 +1236,40 @@
             this.detailsTab.Text = "Final Details";
             this.detailsTab.UseVisualStyleBackColor = true;
             // 
-            // backstoryButton
+            // backstoryLabel
             // 
-            this.backstoryButton.Location = new System.Drawing.Point(745, 390);
-            this.backstoryButton.Name = "backstoryButton";
-            this.backstoryButton.Size = new System.Drawing.Size(167, 22);
-            this.backstoryButton.TabIndex = 18;
-            this.backstoryButton.Text = "Backstory";
-            this.backstoryButton.UseVisualStyleBackColor = true;
+            this.backstoryLabel.AutoSize = true;
+            this.backstoryLabel.ForeColor = System.Drawing.Color.White;
+            this.backstoryLabel.Location = new System.Drawing.Point(231, 492);
+            this.backstoryLabel.Name = "backstoryLabel";
+            this.backstoryLabel.Size = new System.Drawing.Size(106, 13);
+            this.backstoryLabel.TabIndex = 22;
+            this.backstoryLabel.Text = "Character Backstory:";
             // 
-            // alignmentButton
+            // backstoryTextBox
             // 
-            this.alignmentButton.Location = new System.Drawing.Point(357, 392);
-            this.alignmentButton.Name = "alignmentButton";
-            this.alignmentButton.Size = new System.Drawing.Size(167, 20);
-            this.alignmentButton.TabIndex = 17;
-            this.alignmentButton.Text = "Alignment";
-            this.alignmentButton.UseVisualStyleBackColor = true;
+            this.backstoryTextBox.Location = new System.Drawing.Point(357, 410);
+            this.backstoryTextBox.Name = "backstoryTextBox";
+            this.backstoryTextBox.Size = new System.Drawing.Size(555, 200);
+            this.backstoryTextBox.TabIndex = 21;
+            this.backstoryTextBox.Text = "";
+            // 
+            // alignmentLabel
+            // 
+            this.alignmentLabel.AutoSize = true;
+            this.alignmentLabel.ForeColor = System.Drawing.Color.White;
+            this.alignmentLabel.Location = new System.Drawing.Point(232, 632);
+            this.alignmentLabel.Name = "alignmentLabel";
+            this.alignmentLabel.Size = new System.Drawing.Size(105, 13);
+            this.alignmentLabel.TabIndex = 20;
+            this.alignmentLabel.Text = "Character Alignment:";
+            // 
+            // alignmentTextBox
+            // 
+            this.alignmentTextBox.Location = new System.Drawing.Point(357, 627);
+            this.alignmentTextBox.Name = "alignmentTextBox";
+            this.alignmentTextBox.Size = new System.Drawing.Size(167, 20);
+            this.alignmentTextBox.TabIndex = 19;
             // 
             // playerLabel
             // 
@@ -1444,21 +1291,21 @@
             // 
             // finalButton
             // 
-            this.finalButton.Location = new System.Drawing.Point(283, 435);
+            this.finalButton.Location = new System.Drawing.Point(628, 627);
             this.finalButton.Name = "finalButton";
-            this.finalButton.Size = new System.Drawing.Size(667, 23);
+            this.finalButton.Size = new System.Drawing.Size(284, 23);
             this.finalButton.TabIndex = 14;
             this.finalButton.Text = "Finalize Character";
             this.finalButton.UseVisualStyleBackColor = true;
             this.finalButton.Click += new System.EventHandler(this.finalButton_Click);
             // 
-            // textBox3
+            // eyesBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(745, 208);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = " ";
+            this.eyesBox.Location = new System.Drawing.Point(745, 208);
+            this.eyesBox.Name = "eyesBox";
+            this.eyesBox.Size = new System.Drawing.Size(167, 20);
+            this.eyesBox.TabIndex = 3;
+            this.eyesBox.Text = " ";
             // 
             // hairTextBox
             // 
@@ -1525,7 +1372,7 @@
             // heightLabel
             // 
             this.heightLabel.AutoSize = true;
-            this.heightLabel.ForeColor = System.Drawing.Color.White;
+            this.heightLabel.ForeColor = System.Drawing.Color.Black;
             this.heightLabel.Location = new System.Drawing.Point(242, 273);
             this.heightLabel.Name = "heightLabel";
             this.heightLabel.Size = new System.Drawing.Size(90, 13);
@@ -1535,7 +1382,7 @@
             // weightLabel
             // 
             this.weightLabel.AutoSize = true;
-            this.weightLabel.ForeColor = System.Drawing.Color.White;
+            this.weightLabel.ForeColor = System.Drawing.Color.Black;
             this.weightLabel.Location = new System.Drawing.Point(242, 343);
             this.weightLabel.Name = "weightLabel";
             this.weightLabel.Size = new System.Drawing.Size(93, 13);
@@ -1553,7 +1400,7 @@
             // ageLabel
             // 
             this.ageLabel.AutoSize = true;
-            this.ageLabel.ForeColor = System.Drawing.Color.White;
+            this.ageLabel.ForeColor = System.Drawing.Color.Black;
             this.ageLabel.Location = new System.Drawing.Point(242, 207);
             this.ageLabel.Name = "ageLabel";
             this.ageLabel.Size = new System.Drawing.Size(78, 13);
@@ -1563,7 +1410,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.ForeColor = System.Drawing.Color.Black;
             this.nameLabel.Location = new System.Drawing.Point(242, 143);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(87, 13);
@@ -1577,6 +1424,142 @@
             this.nameTextBox.Size = new System.Drawing.Size(167, 20);
             this.nameTextBox.TabIndex = 0;
             this.nameTextBox.Text = " ";
+            // 
+            // strLabel
+            // 
+            this.strLabel.BackColor = System.Drawing.Color.White;
+            this.strLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.strLabel.Location = new System.Drawing.Point(29, 73);
+            this.strLabel.Name = "strLabel";
+            this.strLabel.Size = new System.Drawing.Size(51, 37);
+            this.strLabel.TabIndex = 4;
+            this.strLabel.Text = "-";
+            this.strLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dexLabel
+            // 
+            this.dexLabel.BackColor = System.Drawing.Color.White;
+            this.dexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dexLabel.Location = new System.Drawing.Point(29, 184);
+            this.dexLabel.Name = "dexLabel";
+            this.dexLabel.Size = new System.Drawing.Size(51, 37);
+            this.dexLabel.TabIndex = 5;
+            this.dexLabel.Text = "-";
+            this.dexLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // conLabel
+            // 
+            this.conLabel.BackColor = System.Drawing.Color.White;
+            this.conLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conLabel.Location = new System.Drawing.Point(29, 294);
+            this.conLabel.Name = "conLabel";
+            this.conLabel.Size = new System.Drawing.Size(51, 37);
+            this.conLabel.TabIndex = 6;
+            this.conLabel.Text = "-";
+            this.conLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // intLabel
+            // 
+            this.intLabel.BackColor = System.Drawing.Color.White;
+            this.intLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intLabel.Location = new System.Drawing.Point(29, 407);
+            this.intLabel.Name = "intLabel";
+            this.intLabel.Size = new System.Drawing.Size(51, 37);
+            this.intLabel.TabIndex = 7;
+            this.intLabel.Text = "-";
+            this.intLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chaLabel
+            // 
+            this.chaLabel.BackColor = System.Drawing.Color.White;
+            this.chaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chaLabel.Location = new System.Drawing.Point(29, 631);
+            this.chaLabel.Name = "chaLabel";
+            this.chaLabel.Size = new System.Drawing.Size(53, 40);
+            this.chaLabel.TabIndex = 6;
+            this.chaLabel.Text = "-";
+            this.chaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wisLabel
+            // 
+            this.wisLabel.BackColor = System.Drawing.Color.White;
+            this.wisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wisLabel.Location = new System.Drawing.Point(28, 519);
+            this.wisLabel.Name = "wisLabel";
+            this.wisLabel.Size = new System.Drawing.Size(51, 37);
+            this.wisLabel.TabIndex = 7;
+            this.wisLabel.Text = "-";
+            this.wisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chaModLabel
+            // 
+            this.chaModLabel.BackColor = System.Drawing.Color.White;
+            this.chaModLabel.Location = new System.Drawing.Point(46, 679);
+            this.chaModLabel.Name = "chaModLabel";
+            this.chaModLabel.Size = new System.Drawing.Size(20, 13);
+            this.chaModLabel.TabIndex = 6;
+            this.chaModLabel.Text = "-";
+            this.chaModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wisModLabel
+            // 
+            this.wisModLabel.BackColor = System.Drawing.Color.White;
+            this.wisModLabel.Location = new System.Drawing.Point(46, 568);
+            this.wisModLabel.Name = "wisModLabel";
+            this.wisModLabel.Size = new System.Drawing.Size(20, 13);
+            this.wisModLabel.TabIndex = 7;
+            this.wisModLabel.Text = "-";
+            this.wisModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // intModLabel
+            // 
+            this.intModLabel.BackColor = System.Drawing.Color.White;
+            this.intModLabel.Location = new System.Drawing.Point(46, 459);
+            this.intModLabel.Name = "intModLabel";
+            this.intModLabel.Size = new System.Drawing.Size(20, 13);
+            this.intModLabel.TabIndex = 8;
+            this.intModLabel.Text = "-";
+            this.intModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // conModLabel
+            // 
+            this.conModLabel.BackColor = System.Drawing.Color.White;
+            this.conModLabel.Location = new System.Drawing.Point(45, 350);
+            this.conModLabel.Name = "conModLabel";
+            this.conModLabel.Size = new System.Drawing.Size(20, 13);
+            this.conModLabel.TabIndex = 9;
+            this.conModLabel.Text = "-";
+            this.conModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dexModLabel
+            // 
+            this.dexModLabel.BackColor = System.Drawing.Color.White;
+            this.dexModLabel.Location = new System.Drawing.Point(45, 236);
+            this.dexModLabel.Name = "dexModLabel";
+            this.dexModLabel.Size = new System.Drawing.Size(20, 13);
+            this.dexModLabel.TabIndex = 10;
+            this.dexModLabel.Text = "-";
+            this.dexModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // strModLabel
+            // 
+            this.strModLabel.BackColor = System.Drawing.Color.White;
+            this.strModLabel.Location = new System.Drawing.Point(45, 125);
+            this.strModLabel.Name = "strModLabel";
+            this.strModLabel.Size = new System.Drawing.Size(20, 13);
+            this.strModLabel.TabIndex = 11;
+            this.strModLabel.Text = "-";
+            this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // AbilityPic
+            // 
+            this.AbilityPic.Image = global::Dungeon_Crawler__.Properties.Resources.as2;
+            this.AbilityPic.Location = new System.Drawing.Point(8, 27);
+            this.AbilityPic.Name = "AbilityPic";
+            this.AbilityPic.Size = new System.Drawing.Size(98, 705);
+            this.AbilityPic.TabIndex = 3;
+            this.AbilityPic.TabStop = false;
             // 
             // fCChar
             // 
@@ -1604,7 +1587,6 @@
             this.CCharMenuStrip.ResumeLayout(false);
             this.CCharMenuStrip.PerformLayout();
             this.CCharTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.abilitiyscoreTab.ResumeLayout(false);
             this.abilitiyscoreTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DEXUpDown)).EndInit();
@@ -1631,6 +1613,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.proficienciesGrid)).EndInit();
             this.detailsTab.ResumeLayout(false);
             this.detailsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbilityPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1740,7 +1723,7 @@
         private System.Windows.Forms.TextBox heightTextBox;
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Label weightLabel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox eyesBox;
         private System.Windows.Forms.TextBox hairTextBox;
         private System.Windows.Forms.TextBox skinTextBox;
         private System.Windows.Forms.Label eyesLabel;
@@ -1748,15 +1731,14 @@
         private System.Windows.Forms.Label skinLabel;
         private System.Windows.Forms.Button pbCommitButton;
         private System.Windows.Forms.Button raceButton;
-        private System.Windows.Forms.Button selectionButton;
-        private System.Windows.Forms.Button equipSelectionButton;
-        private System.Windows.Forms.Button skillSelectionButton;
         private System.Windows.Forms.Button classButton;
         private System.Windows.Forms.Button backgroundButton;
         private System.Windows.Forms.Label playerLabel;
         private System.Windows.Forms.TextBox playerTextBox;
         private System.Windows.Forms.Button finalButton;
-        private System.Windows.Forms.Button backstoryButton;
-        private System.Windows.Forms.Button alignmentButton;
+        private System.Windows.Forms.Label alignmentLabel;
+        private System.Windows.Forms.TextBox alignmentTextBox;
+        private System.Windows.Forms.Label backstoryLabel;
+        private System.Windows.Forms.RichTextBox backstoryTextBox;
     }
 }

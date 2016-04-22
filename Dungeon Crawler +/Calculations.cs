@@ -438,9 +438,28 @@ namespace Dungeon_Crawler__
             return hp;
         }
 
-        public static int calcAC(int armor, int dexMod, int extra)
+        public static int calcAC(int armor, int dexMod, int shield)
         {
-            return (armor + dexMod + extra);
+            if(armor == 16)
+            {
+                return (armor + 0 + shield);
+            }
+
+            if(armor == 14 && dexMod > 2)
+            {
+                return (armor + 2 + shield);
+            }
+
+            if (armor == 14 && dexMod < 3)
+            {
+                return (armor + dexMod + shield);
+            }
+
+            else
+            {
+                return (armor + dexMod + shield);
+            }
+            
         }
 
         public static int calcProf(int lvl)

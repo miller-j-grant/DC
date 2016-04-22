@@ -23,7 +23,12 @@ namespace Dungeon_Crawler__
         // Will need to seperate into armor, weapons, tools
         // private Item() equip; <- jk not in this class or right now, but commenting as we might do something with it laster
 
-        public ArrayList equip { get; }
+        public ArrayList equip;
+        public Equipment weapon1;
+        public Equipment weapon2;
+        public Equipment weapon3;
+        public Equipment armor;
+        public bool shield;
         public int wealth { get; }
 
         // Features
@@ -56,8 +61,8 @@ namespace Dungeon_Crawler__
         {
             prof = new ArrayList();
             skillSelection = new ArrayList();
-            equip = new ArrayList();
             ft = new ArrayList();
+            equip = new ArrayList();
             spells = new ArrayList();
             columns = new ArrayList();
             vrow = new ArrayList();
@@ -93,41 +98,19 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Preception");
                 skillSelection.Add("Survival");
 
-                //equip.Clear();
+                equip.Clear();
 
-                //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Greataxe or other Martial Weapon");
-                equip.Add("Two Handaxes or any Simple Weapon");
+                //Class equipment
+                weapon1 = new Equipment("WEAPON", "Greataxe");
+                weapon2 = new Equipment("WEAPON", "Handaxe");
+                weapon3 = new Equipment("WEAPON", "Javelin");
+                shield = false;
+                armor = new Equipment("ARMOR", "");
+                equip.Add(armor.name);
                 equip.Add("Explorer's Pack");
-                equip.Add("4 Javelins");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Rage");
-                //ft.Add("Unarmored Defense");
-
-                //columns.Clear();
-
-                columns.Add("Level");
-                columns.Add("Proficiency Bonus");
-                columns.Add("Features");
-                columns.Add("Rages");
-                columns.Add("Rage Damage");
-
-                //vrow.Clear();
-
-                vrow.Add("1st");
-                vrow.Add("+2");
-                vrow.Add("Unarmored Defense, Rage");
-                vrow.Add("2");
-                vrow.Add("+2");
             }
 
             if (conClass.Equals("Bard"))
@@ -173,26 +156,21 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Stealth");
                 skillSelection.Add("Survival");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Rapier, Longsword, or any Simple Weapon");
-                equip.Add("Diplomat's Pack or Entertainer's Pack");
-                equip.Add("Lute or other musical instrument");
-                equip.Add("Leather Armor");
-                equip.Add("Dagger");
+                weapon1 = new Equipment("WEAPON", "Rapier");
+                weapon2 = new Equipment("WEAPON", "Dagger");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = false;
+                armor = new Equipment("ARMOR", "Leather Armor");
+                equip.Add(armor.name);
+                equip.Add("Lute");
+                equip.Add("Entertainer's Pack");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
 
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Spellcasting");
-                //ft.Add("Bardic Inspiration (d6)");
 
                 //SPELLS KNOWN AND SPELL SLOTS.
                 cantripsKnown = 2;
@@ -246,27 +224,22 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Persuasion");
                 skillSelection.Add("Religion");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Mace or a Warhammer");
-                equip.Add("Scale Mail, Leather Armor, or Chain Mail");
-                equip.Add("Light Crossbow + 20 bolts or any Simple Weapon");
-                equip.Add("Priest's Pack or Explorer's Pack");
+                weapon1 = new Equipment("WEAPON", "Mace");
+                weapon2 = new Equipment("WEAPON", "Light Crossbow");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = true;
+                armor = new Equipment("ARMOR", "Scale Mail");
                 equip.Add("Sheild");
-                equip.Add("Holy Symbol");
+                equip.Add(armor.name);
+                equip.Add("20 bolts");
+                equip.Add("Priest's Pack");
+                equip.Add("Holy Symbil");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Spellcasting");
-                //ft.Add("Divine Domain");
 
                 //SPELLS KNOWN AND SPELL SLOTS.
                 cantripsKnown = 3;
@@ -331,14 +304,18 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Religion");
                 skillSelection.Add("Survival");
 
-               // equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Wooden Shield or any Simple Weapon");
-                equip.Add("Scimitar or any Simple Melee Weapon");
-                equip.Add("Explorer's Pack");
-                equip.Add("Leather Armor");
+                weapon1 = new Equipment("WEAPON", "Scimitar");
+                weapon2 = new Equipment("WEAPON", "");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = true;
+                armor = new Equipment("ARMOR", "Leather Armor");
+                equip.Add(armor.name);
+                equip.Add("Shield");
                 equip.Add("Druidic Focus");
+                equip.Add("Explorer's Pack");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
@@ -405,13 +382,18 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Preception");
                 skillSelection.Add("Survival");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Chain Mail or Leather, Longbow, and 20 arrows");
-                equip.Add("Martial Weapon and Shield or two Martial Weapons");
-                equip.Add("Light Crossbow and 20 bolts or two Handaxes");
-                equip.Add("Dungeoneer's Pack or Explorer's Pack");
+                weapon1 = new Equipment("WEAPON", "Shortsword");
+                weapon2 = new Equipment("WEAPON", "Handaxe");
+                weapon3 = new Equipment("WEAPON", "Longbow");
+                shield = true;
+                armor = new Equipment("ARMOR", "Chain Mail");
+                equip.Add(armor.name);
+                equip.Add("Shield");
+                equip.Add("20 arrows");
+                equip.Add("Dungeoneer's Pack");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
@@ -466,24 +448,20 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Religion");
                 skillSelection.Add("Stealth");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Shortsword, or any Simple Weapon");
-                equip.Add("Dungeoneer's Pack or Explorer's Pack");
+                weapon1 = new Equipment("WEAPON", "Shortsword");
+                weapon2 = new Equipment("WEAPON", "Dart");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = false;
+                armor = new Equipment("ARMOR", "");
+                equip.Add(armor.name);
                 equip.Add("10 darts");
-
+                equip.Add("Explorer's Pack");
+                
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Unarmored Defense");
-                //ft.Add("Martial Arts");
 
                 //KI AND MARTIAL ARTS.
                 ki = 0;
@@ -537,25 +515,22 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Persuasion");
                 skillSelection.Add("Religion");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Martial Weapon and Shield, or two Martial Weapons");
-                equip.Add("Five Javelins or any Simple Melee Weapon");
-                equip.Add("Priest's Pack or an Explorer's Pack");
-                equip.Add("Chain Mail and Holy Symbol");
+                weapon1 = new Equipment("WEAPON", "Shortsword");
+                weapon2 = new Equipment("WEAPON", "Javelin");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = true;
+                armor = new Equipment("ARMOR", "Chain Mail");
+                equip.Add("5 Javelins");
+                equip.Add(armor.name);
+                equip.Add("Shield");
+                equip.Add("Priest's Pack");
+                equip.Add("Holy Symbol");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Divine Sense");
-                //ft.Add("Lay on Hands");
 
                 //SPELLS KNOWN AND SPELL SLOTS.
                 cantripsKnown = 0;
@@ -609,25 +584,20 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Stealth");
                 skillSelection.Add("Survival");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Scale Mail or Leather Armor");
-                equip.Add("Two Shortswords or two Simple Melee Weapons");
-                equip.Add("Dungeoneer's Pack or Explorer's Pack");
-                equip.Add("Longbow and 20 arrows");
+                weapon1 = new Equipment("WEAPON", "Shortsword");
+                weapon2 = new Equipment("WEAPON", "Longbow");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = false;
+                armor = new Equipment("ARMOR", "Leather Armor");
+                equip.Add("20 arrows");
+                equip.Add(armor.name);
+                equip.Add("Explorer's Pack");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Favored Enemy");
-                //ft.Add("Natural Explorer");
 
                 //SPELLS KNOWN AND SPELL SLOTS.
                 cantripsKnown = 0;
@@ -688,26 +658,21 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Slight of Hand");
                 skillSelection.Add("Stealth");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Rapier or a Shortsword");
-                equip.Add("Shortbow and 20 arrows or a Shortsword");
-                equip.Add("Burglar's Pack, Dungeoneer's Pack, or an Explorer's Pack");
-                equip.Add("Leather Armor, two Daggers, and theives tools");
+                weapon1 = new Equipment("WEAPON", "Rapier");
+                weapon2 = new Equipment("WEAPON", "Dagger");
+                weapon3 = new Equipment("WEAPON", "Shortbow");
+                shield = false;
+                armor = new Equipment("ARMOR", "Leather Armor");
+                equip.Add("20 arrows");
+                equip.Add(armor.name);
+                equip.Add("Theives Tools");
+                equip.Add("Burglar's Pack");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Expertise");
-                //ft.Add("Sneak Attack");
-                //ft.Add("Thieve's Cant");
 
                 sneakAttack = "1d6";
 
@@ -756,25 +721,21 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Persuasion");
                 skillSelection.Add("Religion");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Light Crossbow and 20 bolts or any Simple Weapon");
-                equip.Add("Components pouch or Arcane Focus");
-                equip.Add("Dungeoneer's Pack or Explorer's Pack");
-                equip.Add("Two Daggers");
-
+                weapon1 = new Equipment("WEAPON", "Dagger");
+                weapon2 = new Equipment("WEAPON", "Light Crossbow");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = false;
+                armor = new Equipment("ARMOR", "");
+                equip.Add("20 bolts");
+                equip.Add(armor.name);
+                equip.Add("Arcane Focus");
+                equip.Add("Explorer's Pack");
+                
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Spellcasting");
-                //ft.Add("Sorcerous Origin");
 
                 //SPELLS KNOWN AND SPELL SLOTS.
                 cantripsKnown = 4;
@@ -830,27 +791,21 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Nature");
                 skillSelection.Add("Religion");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Light Crossbow and 20 bolts or any Simple Weapon");
-                equip.Add("Component Pouch and Arcane Focus");
-                equip.Add("Scholar's Pack or Dungeoneer's Pack");
-                equip.Add("Leather Armor");
-                equip.Add("Any Simple weapon");
-                equip.Add("Two Daggers");
+                weapon1 = new Equipment("WEAPON", "Shortsword");
+                weapon2 = new Equipment("WEAPON", "Dagger");
+                weapon3 = new Equipment("WEAPON", "Light Crossbow");
+                shield = false;
+                armor = new Equipment("ARMOR", "Leather Armor");
+                equip.Add("20 bolts");
+                equip.Add(armor.name);
+                equip.Add("Arcane Focus");
+                equip.Add("Scholar's Pack");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Otherworldly Patron");
-                //ft.Add("Pact Magic");
 
                 //SPELLS KNOWN AND SPELL SLOTS.
                 cantripsKnown = 2;
@@ -910,25 +865,21 @@ namespace Dungeon_Crawler__
                 skillSelection.Add("Medicine");
                 skillSelection.Add("Religion");
 
-                //equip.Clear();
+                equip.Clear();
 
                 //UPON CLASS SELECTION, USER MUST CHOOSE EQUIPMENT.
-                equip.Add("Quarterstaff or a Dagger");
-                equip.Add("Component Pouch or Arcane Focus");
-                equip.Add("Scholar's Pack or Explorer's Pack");
+                weapon1 = new Equipment("WEAPON", "Quarterstaff");
+                weapon2 = new Equipment("WEAPON", "Dagger");
+                weapon3 = new Equipment("WEAPON", "");
+                shield = false;
+                armor = new Equipment("ARMOR", "");
+                equip.Add(armor.name);
+                equip.Add("Arcane Focus");
                 equip.Add("Spellbook");
+                equip.Add("Scholar's Pack");
 
                 // send className to calculations to get wealth back
                 wealth = Calculations.calcWealth(className);
-
-                // we'll have to decide how to put more features if we add level > 1 characters
-                // maybe a level up method here in class. Dunno.
-
-                //ft.Clear();
-
-                ////FEATURES NEEDS A DATABASE FOR DESCRIPTIONS.
-                //ft.Add("Spellcasting");
-                //ft.Add("Arcane Recovery");
 
                 //SPELLS KNOWN AND SPELL SLOTS.
                 cantripsKnown = 3;

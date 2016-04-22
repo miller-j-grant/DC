@@ -270,7 +270,6 @@ namespace Dungeon_Crawler__
             // Changes labels, grids, and buttons to be visible
             asmLabel.Visible = true;
             asmDisplayLabel.Visible = true;
-            selectionButton.Visible = true;
             sizeLabel.Visible = true;
             sizeDisplayLabel.Visible = true;
             speedLabel.Visible = true;
@@ -314,10 +313,6 @@ namespace Dungeon_Crawler__
                 default:
                     break;
             }
-
-
-            //Update data and display based on the currently selected item.
-
 
             //Set Ability Score Modifier text display for each race.
             asmDisplayLabel.Text = "STR: " + selectRace.getStats()[0] + "   DEX: " + selectRace.getStats()[1] + "\nCON: " + selectRace.getStats()[2] +
@@ -377,8 +372,6 @@ namespace Dungeon_Crawler__
             // changes label, grid, and buttons to be visable
             featuresLabel.Visible = true;
             featuresGrid.Visible = true;
-            skillSelectionButton.Visible = true;
-            equipSelectionButton.Visible = true;
             classButton.Visible = true;
 
             // changes class background image depending on what class is selected
@@ -565,6 +558,9 @@ namespace Dungeon_Crawler__
 
                 try
                 {
+                    fCCSelection fCC = new fCCSelection();
+                    fCC.fCCLoadSelections("Race: " + raceBox.SelectedItem, pc);
+                    fCC.ShowDialog();
 
                     string curItem = raceBox.SelectedItem.ToString();
                     pc.setRace(curItem);
@@ -606,10 +602,11 @@ namespace Dungeon_Crawler__
         {
             try
             {
-
+                fCCSelection fCC = new fCCSelection();
+                fCC.fCCLoadSelections("Class: " + classBox.SelectedItem, pc);
+                fCC.ShowDialog();
                 string curItem = classBox.SelectedItem.ToString();
                 pc.setClass(curItem);
-
             }
             catch
             {
@@ -634,230 +631,29 @@ namespace Dungeon_Crawler__
 
         private void selectionButton_Click(object sender, EventArgs e)
         {
-            fCCSelection fCC = new fCCSelection();
-            fCC.fCCLoadSelections("Race: " + raceBox.SelectedItem, pc);
-            fCC.ShowDialog();
+            
         }
 
         private void skillSelectionButton_Click(object sender, EventArgs e)
         {
-            fCCSelection fCC = new fCCSelection();
-            fCC.fCCLoadSelections("Class: " + classBox.SelectedItem, pc);
-            fCC.ShowDialog();
+            
         }
 
         private void finalButton_Click(object sender, EventArgs e)
         {
-            BitMiracle.Docotic.LicenseManager.AddLicenseData("4L4F2-CN67H-38NDJ-2K1HA-NBODQ");
-            string pathToFile = "FilledSheet.pdf";
-            for (int x = 0; x < 1; x++)
-            {
-                using (PdfDocument pdf = new PdfDocument("CharacterSheet.pdf"))
-                {
-                    try
-                    {
-                        PdfTextBox classBox = (PdfTextBox)pdf.Widgets[0];
-                        classBox.Text = pc.pClass.className + " 1";
-                    }
-                    catch
-                    {
-                        MessageBox.Show("A class was not selected", "Finalize Error", MessageBoxButtons.OK);
-                        break;
-                    }
-
-                    try
-                    {
-                        PdfTextBox backgroundBox = (PdfTextBox)pdf.Widgets[1];
-                        backgroundBox.Text = pc.bg.background;
-                    }
-                    catch
-                    {
-                        MessageBox.Show("A background was not selected", "Finalize Error", MessageBoxButtons.OK);
-                        break;
-                    }
-
-                    try
-                    {
-                        PdfTextBox playerBox = (PdfTextBox)pdf.Widgets[2];
-                        playerBox.Text = playerTextBox.Text;
-                    }
-                    catch
-                    {
-                        PdfTextBox playerBox = (PdfTextBox)pdf.Widgets[2];
-                        playerBox.Text = "";
-                    }
-
-                    try
-                    {
-                        PdfTextBox characterBox = (PdfTextBox)pdf.Widgets[3];
-                        characterBox.Text = nameTextBox.Text;
-                    }
-                    catch
-                    {
-                        PdfTextBox characterBox = (PdfTextBox)pdf.Widgets[3];
-                        characterBox.Text = "";
-                    }
-
-                    try
-                    {
-                        PdfTextBox raceBox = (PdfTextBox)pdf.Widgets[4];
-                        raceBox.Text = pc.race.getRaceName();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("A race was not selected", "Finalize Error", MessageBoxButtons.OK);
-                        break;
-                    }
-
-
-                    PdfTextBox alignmentBox = (PdfTextBox)pdf.Widgets[5];
-                    alignmentBox.Text = "";
-
-                    //assuming level 1 character
-                    PdfTextBox expBox = (PdfTextBox)pdf.Widgets[6];
-                    expBox.Text = "0 / 300";
-
-                    PdfTextBox inspirationBox = (PdfTextBox)pdf.Widgets[7];
-                    inspirationBox.Text = "";
-
-                    try
-                    {
-                        PdfTextBox strengthBox = (PdfTextBox)pdf.Widgets[8];
-                        strengthBox.Text = pc.getSTR().ToString();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Strength stat was not assigned", "Finalize Error", MessageBoxButtons.OK);
-                        break;
-                    }
-
-                    //assuming level 1 character
-                    PdfTextBox proficiencyBox = (PdfTextBox)pdf.Widgets[9];
-                    proficiencyBox.Text = "2";
-
-                    //needs to important character's armor
-                    PdfTextBox armorclassBox = (PdfTextBox)pdf.Widgets[10];
-                    armorclassBox.Text = Calculations.calcAC(10, pc.getDEXMod(), 0).ToString();
-
-                    PdfTextBox initiativeBox = (PdfTextBox)pdf.Widgets[11];
-                    initiativeBox.Text = Calculations.calcInitiative(pc.getDEXMod(), 0).ToString();
-
-                    PdfTextBox speedBox = (PdfTextBox)pdf.Widgets[12];
-                    speedBox.Text = pc.race.getSpeed().ToString();
-
-                    PdfTextBox personalityBox = (PdfTextBox)pdf.Widgets[13];
-                    personalityBox.Text = "Background Personality Traits";
-
-                    PdfTextBox strmodBox = (PdfTextBox)pdf.Widgets[14];
-                    strmodBox.Text = pc.getSTRMod().ToString();
-
-                    //assuming level 1 character
-                    PdfTextBox maxhpBox = (PdfTextBox)pdf.Widgets[15];
-                    maxhpBox.Text = pc.pClass.hit.ToString();
-
-                    PdfTextBox strsaveBox = (PdfTextBox)pdf.Widgets[16];
-                    //strsaveBox.Text = pc.getSTRSave().ToString();
-                    strsaveBox.Text = pc.getSTRMod().ToString();
-
-                    try
-                    {
-                        PdfTextBox dexterityBox = (PdfTextBox)pdf.Widgets[17];
-                        dexterityBox.Text = pc.getDEX().ToString();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Dexterity stat was not assigned", "Finalize Error", MessageBoxButtons.OK);
-                        break;
-                    }
-
-
-                    //Widget 18: Current HP; is left blank on character sheets
-
-                    PdfTextBox idealsBox = (PdfTextBox)pdf.Widgets[19];
-                    idealsBox.Text = "Background Ideal";
-
-                    PdfTextBox dexmodBox = (PdfTextBox)pdf.Widgets[20];
-                    dexmodBox.Text = pc.getDEXMod().ToString();
-
-                    //Widget 21: Temp HP; leaving blank
-
-                    PdfTextBox bondsBox = (PdfTextBox)pdf.Widgets[22];
-                    bondsBox.Text = "Background Bond";
-
-                    try
-                    {
-                        PdfTextBox constitutionBox = (PdfTextBox)pdf.Widgets[23];
-                        constitutionBox.Text = pc.getCON().ToString();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Constitution stat was not assigned", "Finalize Error", MessageBoxButtons.OK);
-                        break;
-                    }
-
-                    //assuming level 1 character
-                    PdfTextBox hitdicetotalBox = (PdfTextBox)pdf.Widgets[24];
-                    hitdicetotalBox.Text = "1";
-
-                    //Widgets 25, 26, & 27: Death Saves; left unchecked on character sheets
-
-                    PdfTextBox conmodBox = (PdfTextBox)pdf.Widgets[28];
-                    conmodBox.Text = pc.getCONMod().ToString();
-
-                    //Widgets 29, 30, & 31: Death Saves; left unchecked on character sheets
-
-                    PdfTextBox hitdiceBox = (PdfTextBox)pdf.Widgets[32];
-                    hitdiceBox.Text = "d" + pc.pClass.hit.ToString();
-
-                    PdfTextBox flawsBox = (PdfTextBox)pdf.Widgets[33];
-                    flawsBox.Text = "Character Flaws";
-
-                    try
-                    {
-                        PdfTextBox intelligenceBox = (PdfTextBox)pdf.Widgets[34];
-                        intelligenceBox.Text = pc.getINT().ToString();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Intelligence stat was not assigned", "Finalize Error", MessageBoxButtons.OK);
-                        break;
-                    }
-
-                    PdfTextBox dexsaveBox = (PdfTextBox)pdf.Widgets[35];
-                    //dexsaveBox.Text = pc.getDEXSave().ToString();
-                    dexsaveBox.Text = pc.getDEXMod().ToString();
-
-                    PdfTextBox consaveBox = (PdfTextBox)pdf.Widgets[36];
-                    //consaveBox.Text = pc.getCONSave().ToString();
-                    consaveBox.Text = pc.getCONMod().ToString();
-
-                    PdfTextBox intsaveBox = (PdfTextBox)pdf.Widgets[37];
-                    //intsaveBox.Text = pc.getINTSave().ToString();
-                    intsaveBox.Text = pc.getINTMod().ToString();
-
-                    PdfTextBox wissaveBox = (PdfTextBox)pdf.Widgets[38];
-                    //wissaveBox.Text = pc.getWISSave().ToString();
-                    wissaveBox.Text = pc.getWISMod().ToString();
-
-                    PdfTextBox chasaveBox = (PdfTextBox)pdf.Widgets[39];
-                    //chasaveBox.Text = pc.getCHASave().ToString();
-                    chasaveBox.Text = pc.getCHAMod().ToString();
-
-                    PdfTextBox acrobaticsBox = (PdfTextBox)pdf.Widgets[40];
-                    acrobaticsBox.Text = pc.getAcrobatics().ToString();
-
-                    PdfTextBox animalhandlingBox = (PdfTextBox)pdf.Widgets[41];
-                    animalhandlingBox.Text = pc.getAnimalHanding().ToString();
-
-
-
-
-                    pdf.Save(pathToFile);
-                }
-
-
-                Process.Start(pathToFile);
-            }
+            pc.name = nameTextBox.Text;
+            pc.player = playerTextBox.Text;
+            pc.age = ageTextBox.Text;
+            pc.eye = eyesBox.Text;
+            pc.height = heightTextBox.Text;
+            pc.hair = hairTextBox.Text;
+            pc.weight = weightTextBox.Text;
+            pc.skin = skinTextBox.Text;
+            pc.alignment = alignmentTextBox.Text;
+            pc.backstory = backstoryTextBox.Text;
+            pc.skills = Calculations.calcSkills(pc.statmods, pc.proficiency, pc.profbonus);
+            PDFInterface.finalize(pc);
         }
+
     }
 }

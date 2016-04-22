@@ -1,0 +1,94 @@
+Widget-Field
+0- Class/level
+1- background
+2- player name
+3- character name
+4- race
+5- alignment
+6- exp
+7- inspiration
+8- STR
+9- profiency
+10- AC
+11- initiative
+12- speed
+13- personality
+14- strmod
+15- HPMAX
+16- strsave
+17- DEX
+18- current HP
+19- ideals
+20- dexmod
+21- TempHP
+22- bonds
+23- CON
+24- hitdicetotal
+25, 26, 27, 29, 30, 31- death saves
+28- conmod
+32- Hit Die
+33- flaws
+34- INT
+35- dex save
+36- consave
+37- intsave
+38- wissave
+39- chasave
+40- Acrobatics
+41- Animal Handling
+42- Athletics
+43- Deception
+44- History
+45- Insight
+46- Intimidation
+!!47-52 PDF Checkbox skill or save prof? !!
+53- Weapon name row 1
+54- Attack bonus row 1
+55- Damage/Type row 1 
+56- intmod
+57- Weapon name row 2
+58- Attack bonus row 2
+59- Damage/Type row 2
+60- Investigation
+61- WIS
+62- Weapon name row 3
+63- Attack bonus row 3
+64- Arcana (WTF WHY?)
+65- Damage/Type row 3
+66- Perception
+67- wismod
+68- CHA
+69- Nature
+70- Performance
+71- Medicine
+72- Religion
+73- Stealth
+!!74-91 PDF Checkbox probably skill !!
+92- Persuasion
+93- Sleight of Hand
+94- chamod
+95- Survival
+96- Attacks & Spellcasting
+97- Passive Wisdom
+98- CP
+99- Other proficiencies & languages
+100- SP
+101- EP
+102- GP
+103- PP
+104- Equipment
+105- Features & Traits
+106- Character name
+107- Age
+108- Height
+109- Wight
+110- Eyes
+111- Skin
+112- Hair
+113- Appearance
+114- Allies & Organizations
+115- Allies/Org Names
+116- Character Backstory
+
+
+

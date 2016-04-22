@@ -55,8 +55,6 @@ namespace Dungeon_Crawler__
         public int[] saves;
 
         public Background bg { get; set; }
-        public ArrayList inventory { get; set; }
-        // private Equipment equip = new Equipment();
 
         //calculated stats
         public int hp { get; set; }
@@ -66,6 +64,17 @@ namespace Dungeon_Crawler__
         public int ac { get; set; }
         public int atk { get; set; }
         public int wealth { get; set; }
+
+        //extra details
+        public string player { get; set; }
+        public string height { get; set; }
+        public string weight { get; set; }
+        public string age { get; set; }
+        public string eye { get; set; }
+        public string hair { get; set; }
+        public string skin { get; set; }
+        public string alignment { get; set; }
+        public string backstory { get; set; }
 
 
         public Character()
@@ -78,7 +87,6 @@ namespace Dungeon_Crawler__
             statmods = new int[6] { 0, 0, 0, 0, 0, 0 };
             skills = new int[18] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             saves = new int[6] { 0, 0, 0, 0, 0, 0 };
-            inventory = new ArrayList();
         }
 
         public void setRace(string s)
@@ -411,11 +419,6 @@ namespace Dungeon_Crawler__
             spellbook.Add(spell);
         }
 
-        public void addEquipment(Equipment eq)
-        {
-            inventory.Add(eq);
-        }
-
         //getters
 
         // get Base Ability Scores
@@ -590,7 +593,7 @@ namespace Dungeon_Crawler__
             return skills[9];
         }
         
-        public int Nature()
+        public int getNature()
         {
            return skills[10];
         }
