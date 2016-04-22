@@ -147,6 +147,12 @@
             this.dexModLabel = new System.Windows.Forms.Label();
             this.strModLabel = new System.Windows.Forms.Label();
             this.AbilityPic = new System.Windows.Forms.PictureBox();
+            this.pbSTRButton = new System.Windows.Forms.Button();
+            this.pbCHAButton = new System.Windows.Forms.Button();
+            this.pbWISButton = new System.Windows.Forms.Button();
+            this.pbINTButton = new System.Windows.Forms.Button();
+            this.pbCONButton = new System.Windows.Forms.Button();
+            this.pbDEXButton = new System.Windows.Forms.Button();
             this.CCharMenuStrip.SuspendLayout();
             this.CCharTab.SuspendLayout();
             this.abilitiyscoreTab.SuspendLayout();
@@ -1552,7 +1558,61 @@
             this.strModLabel.Text = "-";
             this.strModLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // AbilityPic
+            // pbSTRButton
+            // 
+            this.pbSTRButton.Location = new System.Drawing.Point(375, 300);
+            this.pbSTRButton.Name = "pbSTRButton";
+            this.pbSTRButton.Size = new System.Drawing.Size(75, 23);
+            this.pbSTRButton.TabIndex = 51;
+            this.pbSTRButton.Text = "Strength";
+            this.pbSTRButton.UseVisualStyleBackColor = true;
+            // 
+            // pbCHAButton
+            // 
+            this.pbCHAButton.Location = new System.Drawing.Point(375, 478);
+            this.pbCHAButton.Name = "pbCHAButton";
+            this.pbCHAButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCHAButton.TabIndex = 52;
+            this.pbCHAButton.Text = "Charisma";
+            this.pbCHAButton.UseVisualStyleBackColor = true;
+            // 
+            // pbWISButton
+            // 
+            this.pbWISButton.Location = new System.Drawing.Point(375, 443);
+            this.pbWISButton.Name = "pbWISButton";
+            this.pbWISButton.Size = new System.Drawing.Size(75, 23);
+            this.pbWISButton.TabIndex = 53;
+            this.pbWISButton.Text = "Wisdom";
+            this.pbWISButton.UseVisualStyleBackColor = true;
+            // 
+            // pbINTButton
+            // 
+            this.pbINTButton.Location = new System.Drawing.Point(375, 409);
+            this.pbINTButton.Name = "pbINTButton";
+            this.pbINTButton.Size = new System.Drawing.Size(75, 23);
+            this.pbINTButton.TabIndex = 54;
+            this.pbINTButton.Text = "Intelligence";
+            this.pbINTButton.UseVisualStyleBackColor = true;
+            // 
+            // pbCONButton
+            // 
+            this.pbCONButton.Location = new System.Drawing.Point(375, 375);
+            this.pbCONButton.Name = "pbCONButton";
+            this.pbCONButton.Size = new System.Drawing.Size(75, 23);
+            this.pbCONButton.TabIndex = 55;
+            this.pbCONButton.Text = "Constitution";
+            this.pbCONButton.UseVisualStyleBackColor = true;
+            // 
+            // pbDEXButton
+            // 
+            this.pbDEXButton.Location = new System.Drawing.Point(375, 338);
+            this.pbDEXButton.Name = "pbDEXButton";
+            this.pbDEXButton.Size = new System.Drawing.Size(75, 23);
+            this.pbDEXButton.TabIndex = 56;
+            this.pbDEXButton.Text = "Dexterity";
+            this.pbDEXButton.UseVisualStyleBackColor = true;
+            //
+            // selectionButton
             // 
             this.AbilityPic.Image = global::Dungeon_Crawler__.Properties.Resources.as2;
             this.AbilityPic.Location = new System.Drawing.Point(8, 27);
@@ -1730,6 +1790,12 @@
         private System.Windows.Forms.Label hairLabel;
         private System.Windows.Forms.Label skinLabel;
         private System.Windows.Forms.Button pbCommitButton;
+        private System.Windows.Forms.Button pbDEXButton;
+        private System.Windows.Forms.Button pbCONButton;
+        private System.Windows.Forms.Button pbINTButton;
+        private System.Windows.Forms.Button pbWISButton;
+        private System.Windows.Forms.Button pbCHAButton;
+        private System.Windows.Forms.Button pbSTRButton;
         private System.Windows.Forms.Button raceButton;
         private System.Windows.Forms.Button classButton;
         private System.Windows.Forms.Button backgroundButton;

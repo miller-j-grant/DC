@@ -15,11 +15,11 @@ using System.Diagnostics;
 
 namespace Dungeon_Crawler__
 {
-    /// <summary>
-    /// The form that a character is created in </summary>
-    /// <remarks>
-    /// author: Patrick Dishaw, Grant Miller, Mitch Couturier
-    /// version: 2/22/2016 </remarks>
+	/// <summary>
+	/// The form that a character is created in </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     public partial class fCChar : Form
     {
         Race selectRace;
@@ -32,8 +32,8 @@ namespace Dungeon_Crawler__
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Executed when the rollButton is clicked. Rolls random ability scores </summary>
+		/// <summary>
+		/// Executed when the rollButton is clicked. Rolls random ability scores </summary>
         private void rollButton_Click(object sender, EventArgs e)
         {
             rollLabel1.Text = Calculations.rollAbilityScore().ToString();

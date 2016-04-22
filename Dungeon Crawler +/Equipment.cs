@@ -6,26 +6,39 @@ using System.Threading.Tasks;
 
 namespace Dungeon_Crawler__
 {
+	/// <summary>
+	/// A class that contains all details specific to equipment </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     class Equipment
     {
         public string name { get; set; }
         public string type { get; }
-
-        //armor only
+        
+        //=====ARMOR ONLY======
+		/// <summary>  </summary>
         public int ac { get; set; }
 
-        // weapon only
+        //=====WEAPON ONLY======
+		/// <summary>  </summary>
         public string roll { get; set; }
-        // damage type: piercing, bludgeoning, slashing, -
+		/// <summary> damage type: piercing, bludgeoning, slashing, - </summary>
         public string damage { get; set; }
 
-
+		/// <summary>
+        /// lolz
+        /// </summary>
         public Equipment()
         {
 
         }
 
-        // equipment is split into  three categories: Armor, Weapon, Tool
+		/// <summary>
+        /// Determines the category of the equipment object and then initializes for 
+		/// that category </summary>
+		/// <param name="cate"> Equipment is split into  three categories: Armor, Weapon, Tool </param>
+		/// <param name="n"> This represents what the name of this item is </param>
         public Equipment(string cate, string n)
         {
             
@@ -45,6 +58,9 @@ namespace Dungeon_Crawler__
 
         }
 
+        /// <summary>
+        /// Initializes an Armor item based on the name parameter </summary>
+        /// <param name="n"> This represents what the name of this item is </param>
         public Equipment Armor(string n)
         {
             Equipment armor = new Equipment();
@@ -74,6 +90,9 @@ namespace Dungeon_Crawler__
             return armor;
         }
 
+        /// <summary>
+        /// Initializes a Weapon item based on the name parameter </summary>
+        /// <param name="n"> This represents what the name of this item is </param>
         public Equipment Weapon(string n)
         {
             Equipment weapon = new Equipment();
@@ -98,21 +117,18 @@ namespace Dungeon_Crawler__
                 roll = "1d6";
                 damage = "P";
             }
-
             else if (n.Equals("Mace"))
             {
                 name = "Mace";
                 roll = "2d6";
                 damage = "B";
             }
-
             else if (n.Equals("Quarterstaff"))
             {
                 name = "Quarterstaff";
                 roll = "1d6";
                 damage = "B";
             }
-
             else if (n.Equals("Light Crossbow"))
             {
                 name = "Light Crossbow";

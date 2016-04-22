@@ -2,27 +2,27 @@
 
 namespace Dungeon_Crawler__
 {
+	/// <summary>
+	/// A class that contains all details specific to a character's class </summary>
+	/// <remarks>
+	/// author: Patrick Dishaw, Grant Miller, Mitch Couturier
+	/// version: 2/22/2016 </remarks>
     class Class
     {
+		/// <summary> name of the character class </summary>
         public string className { get; }
+		/// <summary>  </summary>
         public int hit { get; }
-
-        // Proficiences ArrayList contains saves, skills, equipment
+		/// <summary> Proficiences ArrayList contains saves, skills, equipment </summary>
         public ArrayList prof { get; }
-
         // Static Array for now, might make it an ArrayList later
-
+		/// <summary> contains the selection of skills for each class </summary>
         private ArrayList skillSelection;
-
+		/// <summary> </summary>
         public ArrayList skills { get; }
+		/// <summary> number of skills to be selected </summary>
         private int choose { get; }
-
-
-        // Soon TM
-        // Since equipment has their own stats, probably should make a class. 
-        // Will need to seperate into armor, weapons, tools
-        // private Item() equip; <- jk not in this class or right now, but commenting as we might do something with it laster
-
+        // private Item() equip;
         public ArrayList equip;
         public Equipment weapon1;
         public Equipment weapon2;
@@ -30,33 +30,39 @@ namespace Dungeon_Crawler__
         public Equipment armor;
         public bool shield;
         public int wealth { get; }
-
-        // Features
+		/// <summary> features </summary>
         public ArrayList ft { get; }
-
-        // might need its own class @_@
+		/// <summary>  </summary>
         public int firstSpells { get; }
+		/// <summary>  </summary>
         public int spellsKnown { get; }
+		/// <summary>  </summary>
         public int cantripsKnown { get; }
-
+		/// <summary>  </summary>
         public string martialArts { get; }
+		/// <summary>  </summary>
         public int ki { get; }
-
+		/// <summary>  </summary>
         public string sneakAttack { get; }
-
+		/// <summary>  </summary>
         public int invocations { get; }
-
+		/// <summary>  </summary>
         public ArrayList spells { get; }
-
+		/// <summary> columns for the display table </summary>
         public ArrayList columns { get; }
-
+		/// <summary> rows for the display table </summary>
         public ArrayList vrow { get; }
 
+		/// <summary>
+        /// lol </summary>
         public Class()
         {
 
         }
 
+		/// <summary>
+        /// Main constructor for the Class class </summary>
+		/// <param name="conClass"> This represents what the name of character class is </param>
         public Class(string conClass)
         {
             prof = new ArrayList();
