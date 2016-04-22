@@ -13,3 +13,6 @@ C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeo
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb
 C:\Users\Paratuel\Documents\Visual Studio 2015\Projects\Dungeon Crawler +\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.csprojResolveAssemblyReference.cache
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\bin\Debug\Dungeon Crawler +.exe.config
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.exe
+C:\Users\Mitchell\Documents\GitHub\DC\Dungeon Crawler +\obj\Debug\Dungeon Crawler +.pdb
